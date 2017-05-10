@@ -1,0 +1,19 @@
+{
+  "name": "kupelanode",
+  "version": "1.0.0",
+  "description": "Backend server for KUPELA project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "deploy": "gcloud app deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Santeri Saarinen",
+  "license": "ISC",
+  "dependencies":{
+    "express":"^4.13.4",
+    "express-session":"^1.15.0",
+    "fs-extra":"^2.1.2",
+    "socket.io":"^1.7.0"
+  }
+}
