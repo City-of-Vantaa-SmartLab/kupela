@@ -14,19 +14,17 @@ var session = require('express-session');
 var app = express();
 
 //Import server side file for avatar app
-var kupelaApp = require('./kupela-server');
+var kupelaApp = require('./kupela_backend');
 
 //Session setup
 app.use(session({secret: 'secret', key: 'express.sid'}));
 
 //Serve static html page from public directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
 
 //Set response to all GET calls
 app.get('/', function(req,res){
-  //Send html file
-  console.log("Sending html to client");
-  res.status(200).sendFile(path.join(__dirname, 'index.html'));''
+  
 
 });
 
