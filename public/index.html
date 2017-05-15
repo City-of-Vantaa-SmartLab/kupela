@@ -1,17 +1,32 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <title>KUPELA Test Server</title>
+
     <!-- If Socket.IO is used with Express, then the /socket.io/ path will
         serve the proper Socket.IO javascript files used by the browser -->
     <script src="/socket.io/socket.io.js"></script>
-    <meta charset="UTF-8">
-    <title>KUPELA Test Server</title>
+
+    <!-- Import react libraries -->
+    <script src="https://npmcdn.com/react@15.3.1/dist/react.js"></script>
+    <script src="https://npmcdn.com/react-dom@15.3.1/dist/react-dom.js"></script>
+
+    <!-- Import Redux and React-Redux -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.6.0/redux.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/5.0.4/react-redux.js"></script>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.js"></script>
+
   </head>
-    <body>
 
-    </body>
-    <script>
+  <body>
+    <div id="content"></div>
+    <script type="text/babel" src="js/react-test.js"></script>
+  </body>
+  <script>
 
-      var socket = io.connect("localhost:8080/tike");
+    var socket = io.connect("localhost:8080/tike");
 
-    </script>
+  </script>
 </html>
