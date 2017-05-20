@@ -1,10 +1,6 @@
 import { SET_TABS } from './actions';
 
-const initialState = [{
-    id: 0,
-    name: null,
-    isActive: false
-}];
+const initialState = [];
 
 export default (state = initialState, action) => {
     switch (action.type) {
