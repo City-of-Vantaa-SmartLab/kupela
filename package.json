@@ -4,7 +4,7 @@
   "description": "Backend server for KUPELA project",
   "main": "app.js",
   "scripts": {
-    "start": "node babel-server.js",
+    "start": "node babel-server.js ",
     "deploy": "gcloud app deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

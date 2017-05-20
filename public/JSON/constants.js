@@ -1,3 +1,1 @@
-/**
- * Created by helent on 19.5.2017.
- */
+export const API_URL = 'http://swapi.co/api';

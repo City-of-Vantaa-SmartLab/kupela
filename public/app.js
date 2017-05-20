@@ -1,36 +1,29 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import App from './components/App';
 import { AppContainer } from 'react-hot-loader';
 import reducer from './reducer';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Route } from 'react-router';
-import Tehtava from './components/Tehtava';
-import Pohjapiirrustus from './components/Pohjapiirrustus';
-import Some from './components/Some';
-import Kuvat from './components/Kuvat';
-import Dokumentaatio from './components/Dokumentaatio';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk'
+import { getTehtavat } from './reducer/tehtavat/actions';
+import { setTabs } from './reducer/tabs/actions';
 
-require('./index.html');
-
-const store = createStore(reducer);
+//code from: https://scotch.io/courses/getting-started-with-react-and-redux/setting-up-the-redux-store
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducer, composeEnhancers(
+    applyMiddleware(thunk),
+));
 
 const container = document.querySelector('#app-container');
 
-render(
+store.dispatch(getTehtavat());
+store.dispatch(setTabs());
+
+ReactDOM.render(
     <Provider store={store}>
         <AppContainer>
-            <Router>
-                <Route path="/" component={App}>
-                    <Route path="/tehtava" component={Tehtava}/>
-                    <Route path="/pohjapiirrustus" component={Pohjapiirrustus}/>
-                    <Route path="/some" component={Some}/>
-                    <Route path="/kuvat" component={Kuvat}/>
-                    <Route path="/dokumentaatio" component={Dokumentaatio}/>
-                </Route>
-            </Router>
+            <App/>
         </AppContainer>
     </Provider>,
     container
@@ -38,18 +31,10 @@ render(
 
 if(module.hot) {
     module.hot.accept('./components/App', () => {
-        render(
+        ReactDOM.render(
             <Provider store={store}>
                 <AppContainer>
-                    <Router>
-                        <Route path="/" component={App}>
-                            <Route path="/tehtava" component={Tehtava}/>
-                            <Route path="/pohjapiirrustus" component={Pohjapiirrustus}/>
-                            <Route path="/some" component={Some}/>
-                            <Route path="/kuvat" component={Kuvat}/>
-                            <Route path="/dokumentaatio" component={Dokumentaatio}/>
-                        </Route>
-                    </Router>
+                    <App/>
                 </AppContainer>
             </Provider>,
             container

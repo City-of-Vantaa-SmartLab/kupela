@@ -1,9 +1,4 @@
 {
-  "presets": [
-    ["env", {"modules": false}],
-    "react"
-  ],
-  "plugins": [
-    "react-hot-loader/babel"
-  ]
+  "presets": ["es2015", "env", "react"],
+  "plugins": ["react-hot-loader/babel"]
 }

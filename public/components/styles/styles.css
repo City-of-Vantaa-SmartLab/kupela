@@ -1,10 +1,11 @@
 body {
     background-color: black;
-    padding: 20px;
+    padding: 30px;
     margin: 0;
 }
 h1, h2, p, ul, li {
     font-family: Helvetica, Arial, sans-serif;
+    color: darkorange;
 }
 ul.header li {
     display: inline;
@@ -24,7 +25,8 @@ ul.header li a {
 }
 .content {
     background-color: #FFF;
-    padding: 20px;
+    overflow: auto;
+    float: left;
 }
 .content h2 {
     padding: 0;
@@ -32,4 +34,23 @@ ul.header li a {
 }
 .content li {
     margin-bottom: 10px;
+}
+#teht-title {
+    text-align: center;
+}
+
+#tehtava-ul {
+    list-style-type: none;
+}
+
+#map {
+    max-width: 45%;
+    max-height: 45%;
+    min-width: 45%;
+    min-height: 45%;
+}
+
+#map, #tehtava-list {
+    float: left;
+    display: inline;
 }
