@@ -9,6 +9,7 @@ const App = (props) =>
         <div className="header">
             <Header/>
         </div>
+        <FrontPage/>
         <TehtPage/>
     </div>;
 
