@@ -13,15 +13,6 @@ export function getTehtavaProfile(id) {
         });
 }
 
-export function getTehtavaProfiili(id) {
-    return dispatch =>
-    fetch(`${API_URL}/people/${id}`)
-        .then(res => res.json())
-        .then(profile => {
-            dispatch(setTehtavaProfile(profile));
-        });
-}
-
 export function setTehtavaProfile(profile) {
     return {
         type: SET_TEHTAVA_PROFILE,

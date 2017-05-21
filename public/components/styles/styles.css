@@ -39,7 +39,7 @@ ul.header li a {
     text-align: center;
 }
 
-#tehtava-ul {
+#tehtava-ul, #tab-ul {
     list-style-type: none;
 }
 

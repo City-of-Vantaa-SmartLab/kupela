@@ -1,11 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { setCurrentTab } from '../../reducer/tab/actions';
 
-const TabNavigation = ({ tabs }) =>
+const TabNavigation = ({ tabs, setTab }) =>
     <div className="container-fluid">
-        <ul>
-            {tabs.map((c)=>
-            <li key={c.name}>
+        <ul id="tab-ul" className="nav nav-pills">
+            {tabs.map((c, i)=>
+            <li onClick={setTab(i + 1)}
+                key={c.name}>
                 <p>{c.name}</p>
             </li>
             )}
@@ -16,4 +18,12 @@ const mapStateToProps = ({ tabs }) => ({
    tabs,
 });
 
-export default connect(mapStateToProps)(TabNavigation);
+const mapDispatchToProps = dispatch => ({
+    setTab(id) {
+        return() => {
+            dispatch(setCurrentTab(id));
+        };
+    }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(TabNavigation);
