@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 const Header = ({ profile }) =>
     <div className="container">
         <div id="tehtava-profile" className="row">
-            <h1 id="teht-title">Luokitus: {profile.name}</h1>
+            <h1 id="teht-title">Luokitus / {profile.name}</h1>
         </div>
     </div>;
 
