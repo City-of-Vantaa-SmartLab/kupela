@@ -6,10 +6,10 @@ const TabNavigation = ({ tabs, getTab }) =>
     <div className="container-fluid">
         <ul id="tab-ul" className="nav nav-pills">
             {tabs.map((c, i)=>
-            <li onClick={getTab(i + 1)}
-                key={c.name}>
-                <p>{c.name}</p>
-            </li>
+                    <li onClick={getTab(i + 1)}
+                    key={c.name}>
+                        <p>{c.name}</p>
+                    </li>
             )}
         </ul>
     </div>;

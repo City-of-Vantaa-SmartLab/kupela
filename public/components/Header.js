@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { getTehtavaPage } from '../reducer/tehtava/actions';
 
 const Header = ({ profile }) =>
     <div className="container">
