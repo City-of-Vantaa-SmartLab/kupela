@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getTehtavaPage } from '../reducer/tehtava/actions';
+import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 
 const Header = ({ profile }) =>
     <div className="container">

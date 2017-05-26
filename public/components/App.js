@@ -6,10 +6,7 @@ import './styles/styles.css';
 
 const App = (props) =>
     <div className="container">
-        <div className="header">
-            <Header/>
-        </div>
-        <FrontPage/>
+        <Header/>
         <TehtPage/>
     </div>;
 

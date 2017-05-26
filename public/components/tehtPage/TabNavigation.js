@@ -1,17 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setCurrentTab, getCurrentTabcontent } from '../../reducer/tab/actions';
+import { Nav, NavItem } from 'react-bootstrap';
+import { setCurrentTab, showCurrentTabcontent } from '../../reducer/tab/actions';
 
-const TabNavigation = ({ tabs, getTab }) =>
+const TabNavigation = ({ tabs, selectTab }) =>
     <div className="container-fluid">
-        <ul id="tab-ul" className="nav nav-pills">
-            {tabs.map((c, i)=>
-                    <li onClick={getTab(i + 1)}
-                    key={c.name}>
-                        <p>{c.name}</p>
-                    </li>
+        <Nav bsStyle="pills">
+            {tabs.map((c) =>
+                    <NavItem onClick={selectTab(c.id, c)}
+                    key={c.id}>
+                        {c.name}
+                    </NavItem>
             )}
-        </ul>
+        </Nav>
     </div>;
 
 const mapStateToProps = ({ tabs }) => ({
@@ -19,10 +20,10 @@ const mapStateToProps = ({ tabs }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    getTab(id) {
+    selectTab(id, c) {
         return() => {
             dispatch(setCurrentTab(id));
-            dispatch(getCurrentTabcontent(id));
+            dispatch(showCurrentTabcontent(c));
         };
     }
 });
