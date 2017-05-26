@@ -8,9 +8,10 @@ export function setCurrentTab(id) {
     };
 }
 
-export function getCurrentTabcontent(content) {
+export function showCurrentTabcontent(content) {
     return {
         type: SHOW_CURRENT_TABCONTENT,
-        content
+        content,
     };
 }
+

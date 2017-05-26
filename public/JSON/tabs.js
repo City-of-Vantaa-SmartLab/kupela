@@ -1,33 +1,93 @@
 const tabs = [
     {
+        id: 1,
         name: "Tehtävä",
-        tabId: "tehtava",
-        isActive: true
+        nameId: "tehtava",
+        componentDirectory: [
+            "./tabsComponents/tehtava/Ilmoittajatiedot",
+            "./tabsComponents/tehtava/Asiakkaidentiedot",
+            "./tabsComponents/tehtava/Rakennuksentiedot",
+        ],
+        components: [
+            "Ilmoittajatiedot",
+            "Asiakkaidentiedot",
+            "Rakennuksentiedot",
+        ]
     },
     {
+        id: 2,
         name: "Pohjapiirrustukset",
-        tabId: "pohjapiirrustukset",
-        isActive: false
+        nameId: "pohjapiirrustukset",
+        componentDirectory: [
+            "./tabsComponents/tehtava/Ilmoittajatiedot",
+            "./tabsComponents/tehtava/Asiakkaidentiedot",
+            "./tabsComponents/tehtava/Rakennuksentiedot",
+        ],
+        components: [
+            "Ilmoittajatiedot",
+            "Asiakkaidentiedot",
+            "Rakennuksentiedot",
+        ]
     },
     {
+        id: 3,
         name: "Some ja uutiset",
-        tabId: "someuutiset",
-        isActive: false
+        nameId: "someuutiset",
+        componentDirectory: [
+            "./tabsComponents/tehtava/Ilmoittajatiedot",
+            "./tabsComponents/tehtava/Asiakkaidentiedot",
+            "./tabsComponents/tehtava/Rakennuksentiedot",
+        ],
+        components: [
+            "Ilmoittajatiedot",
+            "Asiakkaidentiedot",
+            "Rakennuksentiedot",
+        ]
     },
     {
+        id: 4,
         name: "Kuvat ja videot",
-        tabId: "kuvatvideot",
-        isActive: false
+        nameId: "kuvatvideot",
+        componentDirectory: [
+            "./tabsComponents/tehtava/Ilmoittajatiedot",
+            "./tabsComponents/tehtava/Asiakkaidentiedot",
+            "./tabsComponents/tehtava/Rakennuksentiedot",
+        ],
+        components: [
+            "Ilmoittajatiedot",
+            "Asiakkaidentiedot",
+            "Rakennuksentiedot",
+        ]
     },
     {
+        id: 5,
         name: "Dokumentaatio",
-        tabId: "dokumentaatio",
-        isActive: false
+        nameId: "dokumentaatio",
+        componentDirectory: [
+            "./tabsComponents/tehtava/Ilmoittajatiedot",
+            "./tabsComponents/tehtava/Asiakkaidentiedot",
+            "./tabsComponents/tehtava/Rakennuksentiedot",
+        ],
+        components: [
+            "Ilmoittajatiedot",
+            "Asiakkaidentiedot",
+            "Rakennuksentiedot",
+        ]
     },
     {
+        id: 6,
         name: "Adin piirrustukset",
-        tabId: "adinpiirrustukset",
-        isActive: false
+        nameId: "adinpiirrustukset",
+        componentDirectory: [
+            "./tabsComponents/tehtava/Ilmoittajatiedot",
+            "./tabsComponents/tehtava/Asiakkaidentiedot",
+            "./tabsComponents/tehtava/Rakennuksentiedot",
+        ],
+        components: [
+            "Ilmoittajatiedot",
+            "Asiakkaidentiedot",
+            "Rakennuksentiedot",
+        ]
     }
 ];
 
