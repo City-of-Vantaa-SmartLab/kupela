@@ -8,7 +8,6 @@ const TehtPage = () =>
             <TabNavigation/>
         </div>
         <div className="content">
-            <p>Tähän tulee niiden sisällöt.</p>
             <Content/>
         </div>
     </div>;

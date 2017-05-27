@@ -2,9 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const Rakennuksentiedot = ({}) =>
-    <div>
-        <p>Tähän tulee rakennuksen tiedot</p>
-        <p></p>
+    <div id="rakennustiedot" className="container">
+        <p><b>Tähän tulee rakennuksen tiedot</b></p>
     </div>;
 
 const mapStateToProps = () => ({

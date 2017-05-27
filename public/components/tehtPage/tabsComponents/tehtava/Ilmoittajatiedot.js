@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const IlmoittajaTiedot = ({}) =>
-  <div>
-      <p>Tähän tulee ilmoittajan tiedot</p>
+  <div id="ilmoitustiedot" className="container">
+      <p><b>Tähän tulee ilmoittajan tiedot</b></p>
       <p></p>
   </div>;
 

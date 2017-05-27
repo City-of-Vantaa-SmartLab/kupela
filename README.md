@@ -11,7 +11,7 @@ To run server, follow these instructions:
 1. Open cmd window
 2. Navigate to the folder containing the server code
 3. run "npm install" to install node modules
-4. run server with "node app.js"
+4. run server with "npm start"
 5. Stop with ctrl+c
 
 To connect TIKE client to server running on localhost (no web version available yet), follow these instructions:

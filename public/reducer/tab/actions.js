@@ -11,7 +11,7 @@ export function setCurrentTab(id) {
 export function showCurrentTabcontent(content) {
     return {
         type: SHOW_CURRENT_TABCONTENT,
-        content,
+        content
     };
 }
 
