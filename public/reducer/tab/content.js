@@ -1,20 +1,7 @@
+import tabs from '../../JSON/tabs';
 import { SHOW_CURRENT_TABCONTENT } from './actions';
 
-const initialState = {
-    id: 1,
-    name: "Tehtävä",
-    nameId: "tehtava",
-    componentDirectory: [
-        "./tabsComponents/tehtava/Ilmoittajatiedot",
-        "./tabsComponents/tehtava/Asiakkaidentiedot",
-        "./tabsComponents/tehtava/Rakennuksentiedot",
-    ],
-    components: [
-        "Ilmoittajatiedot",
-        "Asiakkaidentiedot",
-        "Rakennuksentiedot",
-    ]
-};
+const initialState = tabs[0];
 
 export default (state = initialState, action) => {
     switch (action.type) {

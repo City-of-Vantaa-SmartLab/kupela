@@ -1,17 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Asiakkaidentiedot from './tabsComponents/tehtava/Asiakkaidentiedot';
-import Ilmoittajatiedot from './tabsComponents/tehtava/Ilmoittajatiedot';
-import Rakennuksentiedot from './tabsComponents/tehtava/Rakennuksentiedot';
+import ComponentswithRoutes from './ComponentsRoutes';
 
 const Content = ({ content }) =>
-    <div>
-        <h1>nameId: {content.nameId}</h1>
-        <div>
-            {content.components.map((i) =>
-            <h2>{i}</h2>
-            )}
-        </div>
+    <div className="container-fluid">
+        {content.components.map((comp) =>
+                <ComponentswithRoutes key={comp.id} {...comp}/>
+        )}
     </div>;
 
 const mapStateToProps = ({ tab: { content } }) => ({

@@ -54,3 +54,9 @@ ul.header li a {
     float: left;
     display: inline;
 }
+
+#asiakastiedot, #rakennustiedot, #ilmoitustiedot {
+    width: 300px;
+    float: left;
+    display: inline;
+}

@@ -1,19 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Nav, NavItem } from 'react-bootstrap';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { setCurrentTab, showCurrentTabcontent } from '../../reducer/tab/actions';
 
-const TabNavigation = ({ tabs, selectTab }) =>
-    <div className="container-fluid">
-        <Nav bsStyle="pills">
-            {tabs.map((c) =>
-                    <NavItem onClick={selectTab(c.id, c)}
-                    key={c.id}>
-                        {c.name}
-                    </NavItem>
-            )}
-        </Nav>
-    </div>;
+const TabNavigation = ({ tabs, selectTab }) => (
+    <Router history={history}>
+        <div className="container-fluid">
+            <ul className="nav nav-pills">
+                {tabs.map((tab) =>
+                    <li onClick={selectTab(tab.id, tab)}
+                        key={tab.id}>
+                        <Link to={`/${tab.nameId}`}>{tab.name}</Link>
+                    </li>
+                )}
+            </ul>
+        </div>
+    </Router>
+);
 
 const mapStateToProps = ({ tabs }) => ({
    tabs,
