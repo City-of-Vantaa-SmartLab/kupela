@@ -1,32 +1,31 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { setCurrentTab, showCurrentTabcontent } from '../../reducer/tab/actions';
 
-const TabNavigation = ({ tabs, selectTab }) => (
-    <Router history={history}>
-        <div className="container-fluid">
-            <ul className="nav nav-pills">
-                {tabs.map((tab) =>
-                    <li onClick={selectTab(tab.id, tab)}
-                        key={tab.id}>
-                        <Link to={`/${tab.nameId}`}>{tab.name}</Link>
-                    </li>
-                )}
-            </ul>
-        </div>
-    </Router>
+const TabNavigation = ({ tabs, profile, selectTab }) => (
+    <div className="container-fluid">
+        <ul className="nav nav-pills">
+            {tabs.map((tab) =>
+                <li onClick={selectTab(tab.nameId, tab)}
+                    key={tab.id}>
+                    <Link to={`/tehtpage/${profile.name}/${tab.nameId}`}>{tab.name}</Link>
+                </li>
+            )}
+        </ul>
+    </div>
 );
 
-const mapStateToProps = ({ tabs }) => ({
-   tabs,
+const mapStateToProps = ({ tabs, tehtava: {profile} }) => ({
+    tabs,
+    profile
 });
 
 const mapDispatchToProps = dispatch => ({
-    selectTab(id, c) {
+    selectTab(id, object) {
         return() => {
             dispatch(setCurrentTab(id));
-            dispatch(showCurrentTabcontent(c));
+            dispatch(showCurrentTabcontent(object));
         };
     }
 });

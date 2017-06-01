@@ -1,6 +1,15 @@
 import Ilmoittajatiedot from '../components/tehtPage/tabsComponents/tehtava/Ilmoittajatiedot';
 import Asiakkaidentiedot from '../components/tehtPage/tabsComponents/tehtava/Asiakkaidentiedot';
 import Rakennuksentiedot from '../components/tehtPage/tabsComponents/tehtava/Rakennuksentiedot';
+import Palonsijainti from '../components/tehtPage/tabsComponents/pohjapiirrokset/Palonsijainti';
+import Saapuminen from '../components/tehtPage/tabsComponents/pohjapiirrokset/Saapuminen';
+import Pelastussuunnitelma from '../components/tehtPage/tabsComponents/pohjapiirrokset/Pelastussuunnitelma';
+import Vaarallisetaineet from '../components/tehtPage/tabsComponents/pohjapiirrokset/Vaarallisetaineet';
+import Pohjapiirrokset from '../components/tehtPage/tabsComponents/pohjapiirrokset/Pohjapiirrokset';
+import Jaetut from '../components/tehtPage/tabsComponents/someuutiset/Jaetut';
+import Kuvat from '../components/tehtPage/tabsComponents/someuutiset/Kuvat';
+import Uutiset from '../components/tehtPage/tabsComponents/someuutiset/Uutiset';
+import Tekstit from '../components/tehtPage/tabsComponents/someuutiset/Tekstit';
 
 const tabs = [
     {
@@ -11,47 +20,47 @@ const tabs = [
             {
                 name: "Ilmoittajatiedot",
                 component: Ilmoittajatiedot,
-                routes: []
             },
             {
                 name: "Asiakkaidentiedot",
                 component: Asiakkaidentiedot,
-                routes: []
             },
             {
                 name: "Rakennuksentiedot",
                 component: Rakennuksentiedot,
-                routes: []
             }
         ]
     },
     {
         id: 2,
-        name: "Pohjapiirrustukset",
-        nameId: "pohjapiirrustukset",
+        name: "Pohjapiirrokset",
+        nameId: "pohjapiirrokset",
         components: [
             {
-                name: "Asiakkaidentiedot",
-                component: Asiakkaidentiedot,
+                name: "Pohjapiirrokset",
+                component: Pohjapiirrokset,
                 routes: [
                     {
-                        name: "Asiakkaidentiedot",
-                        component: Asiakkaidentiedot,
+                        name: "Palon sijainti",
+                        nameId: "palonsijainti",
+                        component: Palonsijainti
                     },
                     {
-                        name: "Ilmoittajatiedot",
-                        component: Ilmoittajatiedot
+                        name: "Saapuminen",
+                        nameId: "saapuminen",
+                        component: Saapuminen
                     },
                     {
-                        name: "Rakennuksentiedot",
-                        component: Rakennuksentiedot
+                        name: "Pelastussuunnitelma",
+                        nameId: "pelastussuunnitelma",
+                        component: Pelastussuunnitelma
+                    },
+                    {
+                        name: "Vaaralliset aineet",
+                        nameId: "vaarallisetaineet",
+                        component: Vaarallisetaineet
                     }
                 ]
-            },
-            {
-                name: "Rakennuksentiedot",
-                component: Rakennuksentiedot,
-                routes: []
             }
         ]
     },
@@ -61,19 +70,20 @@ const tabs = [
         nameId: "someuutiset",
         components: [
             {
-                name: "Ilmoittajatiedot",
-                component: Ilmoittajatiedot,
-                routes: []
+                name: "Tekstit",
+                component: Tekstit,
             },
             {
-                name: "Asiakkaidentiedot",
-                component: Asiakkaidentiedot,
-                routes: []
+                name: "Kuvat",
+                component: Kuvat,
             },
             {
-                name: "Rakennuksentiedot",
-                component: Rakennuksentiedot,
-                routes: []
+                name: "Uutiset",
+                component: Uutiset
+            },
+            {
+                name: "Jaetut",
+                component: Jaetut
             }
         ]
     },
@@ -83,19 +93,8 @@ const tabs = [
         nameId: "kuvatvideot",
         components: [
             {
-                name: "Ilmoittajatiedot",
-                component: Ilmoittajatiedot,
-                routes: []
-            },
-            {
                 name: "Asiakkaidentiedot",
                 component: Asiakkaidentiedot,
-                routes: []
-            },
-            {
-                name: "Rakennuksentiedot",
-                component: Rakennuksentiedot,
-                routes: []
             }
         ]
     },
@@ -107,39 +106,14 @@ const tabs = [
             {
                 name: "Ilmoittajatiedot",
                 component: Ilmoittajatiedot,
-                routes: []
             },
             {
                 name: "Asiakkaidentiedot",
                 component: Asiakkaidentiedot,
-                routes: []
             },
             {
                 name: "Rakennuksentiedot",
                 component: Rakennuksentiedot,
-                routes: []
-            }
-        ]
-    },
-    {
-        id: 6,
-        name: "Adin piirrustukset",
-        nameId: "adinpiirrustukset",
-        components: [
-            {
-                name: "Ilmoittajatiedot",
-                component: Ilmoittajatiedot,
-                routes: []
-            },
-            {
-                name: "Asiakkaidentiedot",
-                component: Asiakkaidentiedot,
-                routes: []
-            },
-            {
-                name: "Rakennuksentiedot",
-                component: Rakennuksentiedot,
-                routes: []
             }
         ]
     }

@@ -23,15 +23,14 @@ app.use(session({secret: 'secret', key: 'express.sid'}));
 app.use('/', express.static(path.join(__dirname, 'public')));
 
 //Set response to all GET calls
-app.get('/', function(req,res){
-  
-
+app.get('/', function(req,res) {
+    res.sendfile(path.join(__dirname, 'index.html'));
 });
 
 //Set up http server and listen to port 8080
 var server = require('http').createServer(app).listen(process.env.PORT || '8080', function(){
   console.log('App listening on port %s', server.address().port);
   console.log('Press Ctrl+C to quit');
-})
+});
 
 kupelaApp.listen(server);
