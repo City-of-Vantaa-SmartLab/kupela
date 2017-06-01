@@ -3,19 +3,12 @@ body {
     padding: 30px;
     margin: 0;
 }
+
 h1, h2, p, ul, li {
     font-family: Helvetica, Arial, sans-serif;
     color: darkorange;
 }
-ul.header li {
-    display: inline;
-    list-style-type: none;
-    margin: 0;
-}
-ul.header {
-    background-color: steelblue;
-    padding: 0;
-}
+
 ul.header li a {
     color: #FFF;
     font-weight: bold;
@@ -27,6 +20,7 @@ ul.header li a {
     background-color: #FFF;
     overflow: auto;
     float: left;
+    padding: 10px;
 }
 .content h2 {
     padding: 0;
@@ -55,8 +49,31 @@ ul.header li a {
     display: inline;
 }
 
-#asiakastiedot, #rakennustiedot, #ilmoitustiedot {
-    width: 300px;
+#asiakastiedot, #ilmoitustiedot {
+    width: 55%;
     float: left;
     display: inline;
+}
+
+#rakennustiedot {
+    width: 45%;
+    float: left;
+    display: inline;
+}
+
+#header-box {
+    float: right;
+    display: inline;
+}
+
+#tekstit, #kuvat, #uutiset, #jaetut {
+    width: 35%;
+    float: left;
+    display: inline-block;
+}
+
+.nav-pills > li > a {
+    background-color: darkblue;
+    color: darkorange;
+    border-radius: 0;
 }

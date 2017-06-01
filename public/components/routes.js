@@ -1,3 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
+import FrontPage from './frontPage/FrontPage';
+import TehtPage from './tehtPage/TehtPage';
+import Login from './authentication/Login';
+import NotFound from './NotFound';
 
+const Routes = () => (
+    <Switch>
+        <Route exact="/tehtavat/:name" component={TehtPage}/>
+        <Route exact="/tehtavat" component={FrontPage}/>
+        <Route component={NotFound}/>
+    </Switch>
+);
+
+export default Routes;

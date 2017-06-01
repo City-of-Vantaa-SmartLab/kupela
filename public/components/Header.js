@@ -1,16 +1,35 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import { showCurrentPage } from '../reducer/page/actions';
+import Login from './authentication/Login';
 
-const Header = ({ profile }) =>
+
+const Header = ({ profile, selectTehtava, pages}) =>
     <div className="container">
-        <div id="tehtava-profile" className="row">
-            <h1 id="teht-title">Luokitus / {profile.name}</h1>
+        <div id="header-box">
+            <Login/>
+        </div>
+        <div>
+            <h1 id="teht-title"
+                key={profile.name}
+                onClick={selectTehtava(pages[1])}>
+                <Link to={`/tehtavat/${profile.name}`}>Luokitus / {profile.name}</Link>
+            </h1>
         </div>
     </div>;
 
-const mapStateToProps = ({ tehtava: { profile } }) => ({
-    profile
+const mapStateToProps = ({ tehtava: { profile }, pages}) => ({
+    profile,
+    pages
 });
 
-export default connect(mapStateToProps)(Header);
+const mapDispatchToProps = dispatch => ({
+    selectTehtava(page) {
+        return () => {
+            dispatch(showCurrentPage(page));
+        }
+    }
+});
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Header));

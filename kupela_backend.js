@@ -19,7 +19,7 @@ module.exports.listen = function(app) {
     console.log("Socket connection ready");
     initTikeApp();
   });
-}
+};
 
 
 function initTikeApp() {
