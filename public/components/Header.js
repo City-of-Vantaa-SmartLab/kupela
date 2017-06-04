@@ -6,10 +6,7 @@ import Login from './authentication/Login';
 
 
 const Header = ({ profile, selectTehtava, pages}) =>
-    <div className="container">
-        <div id="header-box">
-            <Login/>
-        </div>
+    <div className="header-box">
         <div>
             <h1 id="teht-title"
                 key={profile.name}

@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 
 const ComponentswithRoutes = (comp) => (
     <Route path={comp.nameId} render={props => (
-        <comp.component {...props} routes={comp.routes}/>
+        <comp.component key={comp.nameId} {...props} routes={comp.routes}/>
     )}/>
 );
 

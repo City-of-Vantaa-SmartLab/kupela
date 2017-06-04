@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import FrontPage from './frontPage/FrontPage';
 import TehtPage from './tehtPage/TehtPage';
-import Login from './authentication/Login';
 import NotFound from './NotFound';
 
 const Routes = () => (

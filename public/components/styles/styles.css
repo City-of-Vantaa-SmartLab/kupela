@@ -1,40 +1,24 @@
-body {
+html, body {
     background-color: black;
-    padding: 30px;
-    margin: 0;
+    overflow-x: hidden;
 }
 
 h1, h2, p, ul, li {
     font-family: Helvetica, Arial, sans-serif;
     color: darkorange;
+    list-style-type: none;
 }
 
-ul.header li a {
-    color: #FFF;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 20px;
-    display: inline-block;
-}
 .content {
     background-color: #FFF;
     overflow: auto;
-    float: left;
     padding: 10px;
-}
-.content h2 {
-    padding: 0;
-    margin: 0;
-}
-.content li {
-    margin-bottom: 10px;
-}
-#teht-title {
-    text-align: center;
+    width: 100%;
+    height: 70vh;
 }
 
-#tehtava-ul, #tab-ul {
-    list-style-type: none;
+#teht-title {
+    text-align: center;
 }
 
 #map {
@@ -49,31 +33,138 @@ ul.header li a {
     display: inline;
 }
 
-#asiakastiedot, #ilmoitustiedot {
-    width: 55%;
-    float: left;
-    display: inline;
+.header-box {
+    margin: 0;
+    padding: 30px;
 }
 
-#rakennustiedot {
-    width: 45%;
-    float: left;
-    display: inline;
-}
-
-#header-box {
-    float: right;
-    display: inline;
-}
-
-#tekstit, #kuvat, #uutiset, #jaetut {
-    width: 35%;
-    float: left;
+#maintabs.nav-pills > li {
     display: inline-block;
+    float: none;
+    margin-right: 10px;
 }
 
-.nav-pills > li > a {
+#maintabs.nav-pills {
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+#maintabs.nav-pills > li > a , #subtabs.nav-pills > li > a{
+    background-color: darkblue;
+    color: white;
+    border-radius: 0;
+}
+
+#maintabs.nav-pills > li > a:active, #maintabs.nav-pills > li > a:hover, #maintabs.nav-pills > li > a:focus {
     background-color: darkblue;
     color: darkorange;
-    border-radius: 0;
+}
+
+#subtabs.nav-pills > li > a:active, #subtabs.nav-pills > li > a:hover, #subtabs.nav-pills > li > a:focus {
+    background-color: darkorange;
+    color: white;
+}
+
+.pohjapiirrokset {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "a b"
+                         "a b";
+}
+
+.menu {
+    grid-area: b;
+}
+
+.subcontent {
+    grid-area: a;
+}
+
+.tehtava {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "a b d e"
+                         "a c d e";
+}
+
+.graphicsinfo {
+    grid-area: a;
+}
+
+.ilmoittajatiedot {
+    grid-area: b;
+}
+
+.asiakkaidentiedot {
+    grid-area: c;
+}
+
+.rakennuksentiedot {
+    grid-area: d;
+}
+
+.kohdetiedot {
+    grid-area: e;
+}
+
+.someuutiset, .kuvatvideot {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "a b c d"
+                         "a b c d";
+}
+
+.jaetut {
+    grid-area: d;
+}
+
+.uutiset {
+    grid-area: c;
+}
+
+.kuvat {
+    grid-area: b;
+}
+
+.tekstit {
+    grid-area: a;
+}
+
+.streetview {
+    grid-area: a;
+}
+
+.valvontakamerat {
+    grid-area: b;
+}
+
+.tieliikennekamerat {
+    grid-area: c;
+}
+
+.kartat {
+    grid-area: d;
+}
+
+.dokumentaatio {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "a b c"
+                         "a b c";
+}
+
+.lisatiedot {
+    grid-area: a;
+}
+
+.tilannepaivakirja {
+    grid-area: b;
+}
+
+.dokukuvat {
+    grid-area: c;
 }
