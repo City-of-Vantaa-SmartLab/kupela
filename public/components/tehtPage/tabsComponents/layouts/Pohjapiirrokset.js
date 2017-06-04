@@ -3,9 +3,9 @@ import SubTabs from './SubTabNavigation';
 import Content from './Content';
 
 const Pohjapiirrokset = (props) => (
-    <div className="content">
-        <SubTabs {...props}/>
+    <div className="pohjapiirrokset">
         <Content/>
+        <SubTabs {...props}/>
     </div>
 );
 

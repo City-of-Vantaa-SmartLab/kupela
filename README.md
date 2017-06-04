@@ -20,3 +20,11 @@ To connect TIKE client to server running on localhost (no web version available 
 "<script src="/socket.io/socket.io.js"></script>"
 2. Connect to socket on localhost:</br>
 "var socket = io.connect("localhost:8080/tike");"
+
+
+Client Side
+
+1. Navigate to the folder /public containing client code
+2. Run "npm install" to install node modules
+3. Compile and create a bundle file by running a command "npm run build"
+4. Stop with CTRL + C
