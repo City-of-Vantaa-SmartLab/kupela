@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ComponentswithRoutes from './ComponentsRoutes';
 
 const Content = ({ content }) =>
-    <div className="container-fluid">
+    <div className="content">
         {content.components.map((comp) =>
                 <ComponentswithRoutes key={comp.id} {...comp}/>
         )}

@@ -1,6 +1,6 @@
 import React from 'react';
-import SubTabs from './SubTabNavigation';
-import Content from './Content';
+import SubTabs from '../pohjapiirrokset/SubTabNavigation';
+import Content from '../pohjapiirrokset/Content';
 
 const Pohjapiirrokset = (props) => (
     <div className="pohjapiirrokset">

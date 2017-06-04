@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+}
+
+.header {
+    padding: 30px;
+}
+
+#teht-title {
+    text-align: center;
+}
+
+.content {
+    background-color: bisque;
+    width: 100%;
+}

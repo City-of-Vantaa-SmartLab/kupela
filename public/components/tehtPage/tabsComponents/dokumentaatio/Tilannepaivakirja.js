@@ -1,3 +1,9 @@
-/**
- * Created by helent on 2.6.2017.
- */
+import React from 'react';
+
+const Tilannepaivakirja = () => (
+    <div className="tilannepaivakirja">
+        <p><b>Entinen tilannepäiväkirja:</b></p>
+    </div>
+);
+
+export default Tilannepaivakirja;

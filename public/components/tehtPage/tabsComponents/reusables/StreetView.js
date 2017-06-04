@@ -1,7 +1,7 @@
 import React from 'react';
 
 const StreetView = () =>
-    <div>
+    <div className="streetview">
         <p><b>Street View:</b></p>
     </div>;
 

@@ -5,11 +5,11 @@ import { setCurrentTab, showCurrentTabcontent } from '../../reducer/tab/actions'
 
 const TabNavigation = ({ tabs, profile, selectTab }) => (
     <div className="container-fluid">
-        <ul className="nav nav-pills">
+        <ul className="nav nav-pills" id="maintabs">
             {tabs.map((tab) =>
                 <li onClick={selectTab(tab.nameId, tab)}
                     key={tab.id}>
-                    <Link to={`/tehtpage/${profile.name}/${tab.nameId}`}>{tab.name}</Link>
+                    <Link to={`/tehtavat/${profile.name}/${tab.nameId}`}>{tab.name}</Link>
                 </li>
             )}
         </ul>
