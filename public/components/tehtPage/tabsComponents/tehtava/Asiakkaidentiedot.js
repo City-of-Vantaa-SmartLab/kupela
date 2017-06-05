@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const Asiakkaidentiedot = ({}) =>
     <div className="asiakkaidentiedot">
-        <p><b>Tähän tulee asiakkaan tiedot</b></p>
+        <p><b>Asiakkaiden tiedot:</b></p>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget nibh tristique, aliquam diam eu, convallis risus.
             Nulla fringilla tortor libero.

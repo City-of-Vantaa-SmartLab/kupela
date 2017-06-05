@@ -1,4 +1,4 @@
-import { SET_CURRENT_TAB } from './actions';
+import { SET_CURRENT_TAB, SET_CURRENT_SUB_TAB } from './actions';
 
 const initialState = 1;
 

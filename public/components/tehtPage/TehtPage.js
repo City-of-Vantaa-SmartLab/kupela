@@ -3,13 +3,9 @@ import TabNavigation from './TabNavigation';
 import Content from './Content';
 
 const TehtPage = () =>
-    <div className="container">
-        <div className="header">
-            <TabNavigation/>
-        </div>
-        <div className="content">
-            <Content/>
-        </div>
+    <div>
+        <TabNavigation/>
+        <Content/>
     </div>;
 
 export default TehtPage;

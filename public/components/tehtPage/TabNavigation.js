@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { setCurrentTab, showCurrentTabcontent } from '../../reducer/tab/actions';
 
 const TabNavigation = ({ tabs, profile, selectTab }) => (
-    <div className="container-fluid">
+    <div>
         <ul className="nav nav-pills" id="maintabs">
             {tabs.map((tab) =>
                 <li onClick={selectTab(tab.nameId, tab)}

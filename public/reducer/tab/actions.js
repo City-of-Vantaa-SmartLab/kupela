@@ -17,16 +17,16 @@ export function showCurrentTabcontent(content) {
     };
 }
 
-export function setCurrentSubTab(id) {
+export function setCurrentSubTab(subid) {
     return {
         type: SET_CURRENT_SUB_TAB,
-        id
+        subid
     }
 }
 
-export function showSubTabcontent(content) {
+export function showSubTabcontent(subcontent) {
     return {
         type: SHOW_CURRENT_SUB_TABCONTENT,
-        content
+        subcontent
     }
 }
