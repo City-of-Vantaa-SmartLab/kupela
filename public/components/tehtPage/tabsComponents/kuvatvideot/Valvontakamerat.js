@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Valvontakamerat = () =>
-    <div>
+    <div className="valvontakamerat">
         <p><b>Valvontakamerat:</b></p>
     </div>;
 

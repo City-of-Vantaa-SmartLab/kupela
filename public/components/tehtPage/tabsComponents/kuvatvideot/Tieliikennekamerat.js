@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Tieliikennekamerat = () =>
-    <div>
+    <div className="tieliikennekamerat">
         <p><b>Tieliikennekamerat:</b></p>
     </div>;
 

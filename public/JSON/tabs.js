@@ -29,48 +29,60 @@ import DokuKuvat from '../components/tehtPage/tabsComponents/dokumentaatio/Kuvat
 import Dokumentaatio from '../components/tehtPage/tabsComponents/layouts/Dokumentaatio';
 
 import Ilmakuva from '../components/tehtPage/tabsComponents/reusables/Ilmakuva';
+import Yhteystiedot from '../components/tehtPage/tabsComponents/reusables/Yhteystiedot';
+import Kohdekortti from '../components/tehtPage/tabsComponents/reusables/Kohdekortti';
 
 const tabs = [
     {
         id: 1,
-        name: "Tehtävä",
-        type: "tab",
-        nameId: "tehtava",
+        name: 'Tehtävä',
+        type: 'tab',
+        nameId: 'tehtava',
         components: [
             {
-                name: "Tehtävä",
-                type: "layout",
+                name: 'tehtava',
+                type: 'layout',
                 component: Tehtava,
                 routes: [
                     {
-                        name: "GraphicsInfo",
-                        nameId: "graphicsinfo",
+                        name: 'GraphicsInfo',
+                        nameId: 'graphicsinfo',
                         component: GraphicsInfo
                     },
                     {
-                        name: "Ilmoittajatiedot",
-                        nameId: "ilmoittajatiedot",
+                        name: 'Ilmoittajatiedot',
+                        nameId: 'ilmoittajatiedot',
                         component: Ilmoittajatiedot,
                     },
                     {
-                        name: "Asiakkaidentiedot",
-                        nameId: "asiakkaidentiedot",
+                        name: 'Asiakkaidentiedot',
+                        nameId: 'asiakkaidentiedot',
                         component: Asiakkaidentiedot,
                     },
                     {
-                        name: "Rakennuksentiedot",
-                        nameId: "rakennuksentiedot",
+                        name: 'Rakennuksentiedot',
+                        nameId: 'rakennuksentiedot',
                         component: Rakennuksentiedot,
                     },
                     {
-                        name: "Kohdetiedot",
-                        nameId: "kohdetiedot",
+                        name: 'Kohdetiedot',
+                        nameId: 'kohdetiedot',
                         component: Kohdetiedot,
                         components: [
                             {
-                                name: "Ilmakuva",
-                                nameId: "ilmakuva",
+                                name: 'Ilmakuva',
+                                nameId: 'ilmakuva',
                                 component: Ilmakuva
+                            },
+                            {
+                                name: 'Yhteystiedot',
+                                nameId: 'yhteystiedot',
+                                component: Yhteystiedot
+                            },
+                            {
+                                name: 'Kohdekortti',
+                                nameId: 'kohdekortti',
+                                component: Kohdekortti
                             }
                         ]
                     }
@@ -80,33 +92,33 @@ const tabs = [
     },
     {
         id: 2,
-        name: "Pohjapiirrokset",
-        type: "tab",
-        nameId: "pohjapiirrokset",
+        name: 'Pohjapiirrokset',
+        type: 'tab',
+        nameId: 'pohjapiirrokset',
         components: [
             {
-                name: "Pohjapiirrokset",
-                type: "layout",
+                name: 'pohjapiirrokset',
+                type: 'layout',
                 component: Pohjapiirrokset,
                 routes: [
                     {
-                        name: "Palon sijainti",
-                        nameId: "palonsijainti",
+                        name: 'Palon sijainti',
+                        nameId: 'palonsijainti',
                         component: Palonsijainti
                     },
                     {
-                        name: "Saapuminen",
-                        nameId: "saapuminen",
+                        name: 'Saapuminen',
+                        nameId: 'saapuminen',
                         component: Saapuminen
                     },
                     {
-                        name: "Pelastussuunnitelma",
-                        nameId: "pelastussuunnitelma",
+                        name: 'Pelastussuunnitelma',
+                        nameId: 'pelastussuunnitelma',
                         component: Pelastussuunnitelma
                     },
                     {
-                        name: "Vaaralliset aineet",
-                        nameId: "vaarallisetaineet",
+                        name: 'Vaaralliset aineet',
+                        nameId: 'vaarallisetaineet',
                         component: Vaarallisetaineet
                     }
                 ]
@@ -115,33 +127,33 @@ const tabs = [
     },
     {
         id: 3,
-        name: "Some ja uutiset",
-        type: "tab",
-        nameId: "someuutiset",
+        name: 'Some ja uutiset',
+        type: 'tab',
+        nameId: 'someuutiset',
         components: [
             {
-                name: "SomeUutiset",
-                type: "layout",
+                name: 'someuutiset',
+                type: 'layout',
                 component: SomeUutiset,
                 routes: [
                     {
-                        name: "Tekstit",
-                        nameId: "tekstit",
+                        name: 'Tekstit',
+                        nameId: 'tekstit',
                         component: Tekstit
                     },
                     {
-                        name: "Kuvat",
-                        nameId: "kuvat",
+                        name: 'Kuvat',
+                        nameId: 'kuvat',
                         component: Kuvat
                     },
                     {
-                        name: "Uutiset",
-                        nameId: "uutiset",
+                        name: 'Uutiset',
+                        nameId: 'uutiset',
                         component: Uutiset
                     },
                     {
-                        name: "Jaetut",
-                        nameId: "jaetut",
+                        name: 'Jaetut',
+                        nameId: 'jaetut',
                         component: Jaetut
                     }
                 ]
@@ -150,33 +162,33 @@ const tabs = [
     },
     {
         id: 4,
-        name: "Kuvat ja videot",
-        type: "tab",
-        nameId: "kuvatvideot",
+        name: 'Kuvat ja videot',
+        type: 'tab',
+        nameId: 'kuvatvideot',
         components: [
             {
-                name: "KuvatVideot",
-                type: "layout",
+                name: 'kuvatvideot',
+                type: 'layout',
                 component: KuvatVideot,
                 routes: [
                     {
-                        name: "Street View",
-                        nameId: "streetview",
+                        name: 'Street View',
+                        nameId: 'streetview',
                         component: StreetView,
                     },
                     {
-                        name: "Valvontakamerat",
-                        nameId: "valvontakamerat",
+                        name: 'Valvontakamerat',
+                        nameId: 'valvontakamerat',
                         component: Valvontakamerat
                     },
                     {
-                        name: "Tieliikennekamerat",
-                        nameId: "tieliikennekamerat",
+                        name: 'Tieliikennekamerat',
+                        nameId: 'tieliikennekamerat',
                         component: Tieliikennekamerat
                     },
                     {
-                        name: "3D-kartat",
-                        nameId: "3dkartat",
+                        name: '3D-kartat',
+                        nameId: '3dkartat',
                         component: Kartat
                     }
                 ]
@@ -185,28 +197,28 @@ const tabs = [
     },
     {
         id: 5,
-        name: "Dokumentaatio",
-        type: "tab",
-        nameId: "dokumentaatio",
+        name: 'Dokumentaatio',
+        type: 'tab',
+        nameId: 'dokumentaatio',
         components: [
             {
-                name: "Dokumentaatio",
-                type: "layout",
+                name: 'dokumentaatio',
+                type: 'layout',
                 component: Dokumentaatio,
                 routes: [
                     {
-                        name: "Lisätiedot",
-                        nameId: "lisatiedot",
+                        name: 'Lisätiedot',
+                        nameId: 'lisatiedot',
                         component: Lisatiedot
                     },
                     {
-                        name: "Tilannepäiväkirja",
-                        nameId: "tilannepaivakirja",
+                        name: 'Tilannepäiväkirja',
+                        nameId: 'tilannepaivakirja',
                         component: Tilannepaivakirja
                     },
                     {
-                        name: "DokuKuvat",
-                        nameId: "dokukuvat",
+                        name: 'DokuKuvat',
+                        nameId: 'dokukuvat',
                         component: DokuKuvat
                     }
                 ]

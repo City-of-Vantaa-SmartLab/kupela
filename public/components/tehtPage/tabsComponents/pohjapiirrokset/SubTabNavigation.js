@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { setCurrentSubTab, showSubTabcontent } from '../../../../reducer/tab/actions';
 
-const SubTabs = (props, { selectSubTab }) => (
+const SubTabs = (props) => (
     <div className="menu">
         <ul className="nav nav-pills nav-stacked" id="subtabs">
             {props.routes.map((tab) =>
-                <li key={tab.nameId}
-                    onClick={() => selectSubTab(tab.nameId, tab)}>
+                <li onClick={props.selectSubTab(tab.nameId, tab)}
+                    key={tab.nameId}>
                     <Link to={tab.nameId}>{tab.name}</Link>
                 </li>
             )}
@@ -17,12 +17,12 @@ const SubTabs = (props, { selectSubTab }) => (
 );
 
 const mapDispatchToProps = dispatch => ({
-    selectSubTab (id, content) {
+    selectSubTab (id, object) {
         return () => {
             dispatch(setCurrentSubTab(id));
-            dispatch(showSubTabcontent(content));
-        }
+            dispatch(showSubTabcontent(object));
+        };
     }
 });
 
-export default connect(mapDispatchToProps)(SubTabs);
+export default connect(null, mapDispatchToProps)(SubTabs);
