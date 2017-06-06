@@ -14,7 +14,7 @@ h1, h2, p, ul, li {
     overflow: auto;
     padding: 10px;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     overflow-y: hidden;
     overflow-x: hidden;
 }
@@ -73,7 +73,7 @@ h1, h2, p, ul, li {
     grid-template-rows: 50% 50%;
     grid-template-areas: "a b"
                          "a b";
-    height: 100vh;
+    height: 75vh;
 }
 
 .tehtava {
@@ -82,7 +82,7 @@ h1, h2, p, ul, li {
     grid-template-rows: 50% 50%;
     grid-template-areas: "a b d e"
                          "a c d e";
-    height: 100vh;
+    height: 75vh;
 }
 
 .kohdetiedot {
@@ -93,7 +93,7 @@ h1, h2, p, ul, li {
                          "b"
                          "c";
     background-color: white;
-    height: 100vh;
+    height: 75vh;
 }
 
 .someuutiset, .kuvatvideot {
@@ -102,7 +102,7 @@ h1, h2, p, ul, li {
     grid-template-rows: 50% 50%;
     grid-template-areas: "a b c d"
                          "a b c d";
-    height: 100vh;
+    height: 75vh;
 }
 
 .dokumentaatio {
@@ -111,29 +111,52 @@ h1, h2, p, ul, li {
     grid-template-rows: 50% 50%;
     grid-template-areas: "a b c"
                          "a b c";
-    height: 100vh;
+    height: 75vh;
 }
 
 .graphicsinfo, .subcontent, .ilmakuva, .tekstit, .streetview, .lisatiedot {
     grid-area: a;
     background-color: white;
     display: inline-block;
+    padding: 5px;
 }
 
 .ilmoittajatiedot, .menu, .yhteystiedot, .kuvat, .valvontakamerat, .tilannepaivakirja, .yhteystiedot {
     grid-area: b;
     background-color: white;
     display: inline-block;
+    padding: 5px;
 }
 
 .asiakkaidentiedot, .kohdekortti, .uutiset, .tieliikennekamerat, .dokukuvat {
     grid-area: c;
     background-color: white;
     display: inline-block;
+    padding: 5px;
 }
 
 .rakennuksentiedot, .jaetut, .kartat {
     grid-area: d;
     background-color: white;
     display: inline-block;
+    padding: 5px;
+}
+
+.modal {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    bottom: 10%;
+    right: 15%;
+    background: #fff;
+    display: inline-block;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.15);
 }
