@@ -27,7 +27,7 @@ ReactDOM.render(
     <Provider store={store}>
         <AppContainer>
             <Router history={history}>
-                <App/>
+                <Route component={App}/>
             </Router>
         </AppContainer>
     </Provider>,
@@ -40,7 +40,7 @@ if(module.hot) {
             <Provider store={store}>
                 <AppContainer>
                     <Router history={history}>
-                        <App/>
+                        <Route component={App}/>
                     </Router>
                 </AppContainer>
             </Provider>,
