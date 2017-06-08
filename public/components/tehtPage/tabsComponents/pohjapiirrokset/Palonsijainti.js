@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 
 const Palonsijainti = () =>
     <div>
@@ -15,4 +14,4 @@ const mapDispatchToProps = () => ({
 
 });
 
-export default withRouter(Palonsijainti);
+export default connect(mapStateToProps, mapDispatchToProps)(Palonsijainti);

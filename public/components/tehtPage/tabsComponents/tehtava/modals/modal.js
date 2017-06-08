@@ -3,10 +3,10 @@ import { hideModal } from '../../../../../reducer/modal/actions';
 import { connect } from 'react-redux';
 
 const Modal = (props) => (
-    <div className="back">
+    <div className="back" onClick={() => props.dispatch(hideModal())}>
         <div className="modal">
             <props.component/>
-            <button type="button" onClick={props.close}>
+            <button type="button" onClick={() => props.dispatch(hideModal())}>
                 {props.text}
             </button>
         </div>
@@ -14,11 +14,11 @@ const Modal = (props) => (
 );
 
 const mapDispatchToProps = dispatch => ({
-    close() {
+    closeModal() {
         return() => {
-            dispatch(hideModal);
+            dispatch(hideModal());
         }
     }
 });
 
-export default connect(null, mapDispatchToProps)(Modal);
+export default connect(mapDispatchToProps)(Modal);
