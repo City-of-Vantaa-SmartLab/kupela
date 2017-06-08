@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 
 const Pelastussuunnitelma = () =>
     <div>
@@ -15,4 +14,4 @@ const mapDispatchToProps = dispatch => ({
 
 });
 
-export default withRouter(Pelastussuunnitelma);
+export default connect(mapStateToProps, mapDispatchToProps)(Pelastussuunnitelma);

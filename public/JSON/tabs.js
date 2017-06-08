@@ -104,22 +104,90 @@ const tabs = [
                     {
                         name: 'Palon sijainti',
                         nameId: 'palonsijainti',
-                        component: Palonsijainti
+                        component: Palonsijainti,
+                        routes: [
+                            {
+                                name: 'Sprinklerit',
+                                nameId: 'sprinklerit',
+                            },
+                            {
+                                name: 'Palovaroittimet',
+                                nameId: 'palovaroittimet'
+                            }
+                        ]
                     },
                     {
                         name: 'Saapuminen',
                         nameId: 'saapuminen',
-                        component: Saapuminen
+                        component: Saapuminen,
+                        routes: [
+                            {
+                                name: 'Kokoontumispaikka',
+                                nameId: 'kokoontumispaikka'
+                            },
+                            {
+                                name: 'Kartta',
+                                nameId: 'kartta'
+                            },
+                            {
+                                name: 'Street view',
+                                nameId: 'streetview'
+                            },
+                            {
+                                name: 'Ilmakuva',
+                                nameId: 'ilmakuva'
+                            }
+                        ]
                     },
                     {
                         name: 'Pelastussuunnitelma',
                         nameId: 'pelastussuunnitelma',
-                        component: Pelastussuunnitelma
+                        component: Pelastussuunnitelma,
+                        routes: [
+                            {
+                                name: 'Pohjapiirros',
+                                nameId: 'pohjapiirros'
+                            },
+                            {
+                                name: 'Turvallisuushenkilöstö',
+                                nameId: 'turvallisuushenkilosto'
+                            },
+                            {
+                                name: 'Pelastussuunnitelma',
+                                nameId: 'pelastussuunnitelma'
+                            },
+                            {
+                                name: 'Yhteystiedot',
+                                nameId: 'yhteystiedot'
+                            }
+                        ]
                     },
                     {
                         name: 'Vaaralliset aineet',
                         nameId: 'vaarallisetaineet',
-                        component: Vaarallisetaineet
+                        component: Vaarallisetaineet,
+                        routes: [
+                            {
+                                name: 'Pohjapiirros',
+                                nameId: 'pohjapiirros'
+                            },
+                            {
+                                name: 'Savun leviäminen',
+                                nameId: 'savunleviaminen'
+                            },
+                            {
+                                name: 'Kemikaalikortti',
+                                nameId: 'kemikaalikortti'
+                            },
+                            {
+                                name: 'ESCAPE',
+                                nameId: 'escape'
+                            },
+                            {
+                                name: 'Luettelo vaarallisista aineista',
+                                nameId: 'luetteloaineista'
+                            }
+                        ]
                     }
                 ]
             }

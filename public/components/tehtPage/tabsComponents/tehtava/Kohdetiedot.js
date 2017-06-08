@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { showCurrentModal, showCurrentModalContent } from '../../../../reducer/modal/actions';
+import { showCurrentModal } from '../../../../reducer/modal/actions';
 import ModalRoot from '../../tabsComponents/tehtava/modals/ModalRoot';
 
 const Kohdetiedot = (comp) => (
