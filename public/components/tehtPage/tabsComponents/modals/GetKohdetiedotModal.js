@@ -1,9 +1,9 @@
 import React from 'react';
 import Modal from './Modal';
 
-const GetInfoModal = (props) => (
+const GetKohdeTiedotModal = (props) => (
     <Modal text="Sulje"
            component={props.content.component}/>
 );
 
-export default GetInfoModal;
+export default GetKohdeTiedotModal;
