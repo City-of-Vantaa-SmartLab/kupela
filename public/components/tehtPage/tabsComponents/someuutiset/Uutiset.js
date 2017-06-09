@@ -1,17 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
 const Uutiset = () =>
     <div className="uutiset">
         <p><b>Uutiset:</b></p>
+        <p>TESTI</p>
     </div>;
-
-const mapStateToProps = () => ({
-
-});
-
-const mapDispatchToProps = dispatch => ({
-
-});
 
 export default Uutiset;

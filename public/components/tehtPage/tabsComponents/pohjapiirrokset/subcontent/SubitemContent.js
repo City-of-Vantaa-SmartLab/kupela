@@ -11,4 +11,4 @@ const mapStateToProps = ({ tab: { subitem }}) => ({
     subitem
 });
 
-export default connect(mapStateToProps)(SubitemContent);
+export default connect(mapStateToProps, null)(SubitemContent);

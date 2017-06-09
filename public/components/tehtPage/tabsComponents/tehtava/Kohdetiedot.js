@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { showCurrentModal } from '../../../../reducer/modal/actions';
-import ModalRoot from '../../tabsComponents/tehtava/modals/ModalRoot';
 
 const Kohdetiedot = (comp) => (
     <div className="kohdetiedot">
@@ -10,7 +9,6 @@ const Kohdetiedot = (comp) => (
                 <c.component key={c.nameId}/>
             </a>
         )}
-        <ModalRoot/>
     </div>
 );
 
