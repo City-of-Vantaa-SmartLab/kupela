@@ -135,19 +135,54 @@ h1, h2, p, ul, li {
     padding: 5px;
 }
 
-.rakennuksentiedot, .jaetut, .kartat {
+.rakennuksentiedot, .jaetut, .kolmiulotteinen {
     grid-area: d;
     background-color: white;
     display: inline-block;
     padding: 5px;
 }
 
-.subcontent {
+.subtablayout {
     display: grid;
     grid-template-columns: 30% 70%;
     grid-template-rows: 50% 50%;
     grid-template-areas: "a b"
                          "a b";
+}
+
+.subitemMenu {
+    display: grid;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-areas: "a"
+                         "b"
+                         "c"
+                         "d"
+                         "e";
+}
+
+.sprinklerit, .kokoontumispaikka, .pohjapiirros {
+    grid-area: a;
+    display: inline-block;
+}
+
+.palovaroittimet, .kartta, .turvallisuushenkilosto, .savunleviaminen {
+    grid-area: b;
+    display: inline-block;
+}
+
+.pelastussuunnitelma, .kemikaalikortti {
+    grid-area: c;
+    display: inline-block;
+}
+
+.ilmakuva, .yhteystiedot, .escape {
+    grid-area: d;
+    display: inline-block;
+}
+
+.luetteloaineista {
+    grid-area: e;
+    display: inline-block;
 }
 
 .modal {

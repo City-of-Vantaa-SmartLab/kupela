@@ -17,7 +17,7 @@ import Uutiset from '../components/tehtPage/tabsComponents/someuutiset/Uutiset';
 import Tekstit from '../components/tehtPage/tabsComponents/someuutiset/Tekstit';
 import SomeUutiset from '../components/tehtPage/tabsComponents/layouts/SomeUutiset';
 
-import Kartat from '../components/tehtPage/tabsComponents/reusables/Kartat';
+import Kolmiulotteinenkartta from '../components/tehtPage/tabsComponents/reusables/Kolmiulotteisetkartat';
 import StreetView from '../components/tehtPage/tabsComponents/reusables/StreetView';
 import Tieliikennekamerat from '../components/tehtPage/tabsComponents/kuvatvideot/Tieliikennekamerat';
 import Valvontakamerat from '../components/tehtPage/tabsComponents/kuvatvideot/Valvontakamerat';
@@ -31,6 +31,17 @@ import Dokumentaatio from '../components/tehtPage/tabsComponents/layouts/Dokumen
 import Ilmakuva from '../components/tehtPage/tabsComponents/reusables/Ilmakuva';
 import Yhteystiedot from '../components/tehtPage/tabsComponents/reusables/Yhteystiedot';
 import Kohdekortti from '../components/tehtPage/tabsComponents/reusables/Kohdekortti';
+import Pohjapiirros from '../components/tehtPage/tabsComponents/reusables/Pohjapiirros';
+import Turvallisuushenkilosto from '../components/tehtPage/tabsComponents/reusables/Turvallisuushenkilosto';
+import Pelastus from '../components/tehtPage/tabsComponents/reusables/Pelastus';
+import Savunleviaminen from '../components/tehtPage/tabsComponents/reusables/Savunleviaminen';
+import Kemikaalikortti from '../components/tehtPage/tabsComponents/reusables/Kemikaalikortti';
+import Escape from '../components/tehtPage/tabsComponents/reusables/Escape';
+import Luetteloaineista from '../components/tehtPage/tabsComponents/reusables/Luetteloaineista';
+import Sprinklerit from '../components/tehtPage/tabsComponents/reusables/Sprinklerit';
+import Kokoontumispaikka from '../components/tehtPage/tabsComponents/reusables/Kokoontumispaikka';
+import Palovaroittimet from '../components/tehtPage/tabsComponents/reusables/Palovaroittimet';
+import Kartta from '../components/tehtPage/tabsComponents/reusables/Kartta';
 
 const tabs = [
     {
@@ -103,89 +114,108 @@ const tabs = [
                 routes: [
                     {
                         name: 'Palon sijainti',
+                        type: 'subtab',
                         nameId: 'palonsijainti',
                         component: Palonsijainti,
                         routes: [
                             {
                                 name: 'Sprinklerit',
                                 nameId: 'sprinklerit',
+                                component: Sprinklerit
                             },
                             {
                                 name: 'Palovaroittimet',
-                                nameId: 'palovaroittimet'
+                                nameId: 'palovaroittimet',
+                                component: Palovaroittimet
                             }
                         ]
                     },
                     {
                         name: 'Saapuminen',
+                        type: 'subtab',
                         nameId: 'saapuminen',
                         component: Saapuminen,
                         routes: [
                             {
                                 name: 'Kokoontumispaikka',
-                                nameId: 'kokoontumispaikka'
+                                nameId: 'kokoontumispaikka',
+                                component: Kokoontumispaikka
                             },
                             {
                                 name: 'Kartta',
-                                nameId: 'kartta'
+                                nameId: 'kartta',
+                                component: Kartta
                             },
                             {
                                 name: 'Street view',
-                                nameId: 'streetview'
+                                nameId: 'streetview',
+                                component: StreetView
                             },
                             {
                                 name: 'Ilmakuva',
-                                nameId: 'ilmakuva'
+                                nameId: 'ilmakuva',
+                                component: Ilmakuva
                             }
                         ]
                     },
                     {
                         name: 'Pelastussuunnitelma',
+                        type: 'subtab',
                         nameId: 'pelastussuunnitelma',
                         component: Pelastussuunnitelma,
                         routes: [
                             {
                                 name: 'Pohjapiirros',
-                                nameId: 'pohjapiirros'
+                                nameId: 'pohjapiirros',
+                                component: Pohjapiirros
                             },
                             {
                                 name: 'Turvallisuushenkilöstö',
-                                nameId: 'turvallisuushenkilosto'
+                                nameId: 'turvallisuushenkilosto',
+                                component: Turvallisuushenkilosto
                             },
                             {
                                 name: 'Pelastussuunnitelma',
-                                nameId: 'pelastussuunnitelma'
+                                nameId: 'pelastussuunnitelma',
+                                component: Pelastus
                             },
                             {
                                 name: 'Yhteystiedot',
-                                nameId: 'yhteystiedot'
+                                nameId: 'yhteystiedot',
+                                component: Yhteystiedot
                             }
                         ]
                     },
                     {
                         name: 'Vaaralliset aineet',
+                        type: 'subtab',
                         nameId: 'vaarallisetaineet',
                         component: Vaarallisetaineet,
                         routes: [
                             {
                                 name: 'Pohjapiirros',
-                                nameId: 'pohjapiirros'
+                                nameId: 'pohjapiirros',
+                                component: Pohjapiirros
                             },
                             {
                                 name: 'Savun leviäminen',
-                                nameId: 'savunleviaminen'
+                                nameId: 'savunleviaminen',
+                                component: Savunleviaminen
                             },
                             {
                                 name: 'Kemikaalikortti',
-                                nameId: 'kemikaalikortti'
+                                nameId: 'kemikaalikortti',
+                                component: Kemikaalikortti
                             },
                             {
                                 name: 'ESCAPE',
-                                nameId: 'escape'
+                                nameId: 'escape',
+                                component: Escape
                             },
                             {
                                 name: 'Luettelo vaarallisista aineista',
-                                nameId: 'luetteloaineista'
+                                nameId: 'luetteloaineista',
+                                component: Luetteloaineista
                             }
                         ]
                     }
@@ -257,7 +287,7 @@ const tabs = [
                     {
                         name: '3D-kartat',
                         nameId: '3dkartat',
-                        component: Kartat
+                        component: Kolmiulotteinenkartta
                     }
                 ]
             }

@@ -1,8 +1,7 @@
 import React from 'react';
+import Basic from './templates/Basic';
 
 const StreetView = () =>
-    <div className="streetview">
-        <p><b>Street View:</b></p>
-    </div>;
+    <Basic name="streetview" title="Street view:" info="TESTI"/>;
 
 export default StreetView;

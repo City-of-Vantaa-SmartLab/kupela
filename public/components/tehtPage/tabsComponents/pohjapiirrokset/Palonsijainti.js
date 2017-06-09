@@ -1,17 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import SubitemContent from './subcontent/SubitemContent';
+import SubitemMenu from './subcontent/SubitemMenu';
 
-const Palonsijainti = () =>
-    <div>
-        <p>Tähän tulee palon sijainnin kartat</p>
+const Palonsijainti = (props) =>
+    <div className="subtablayout">
+        <SubitemMenu {...props}/>
+        <SubitemContent/>
     </div>;
 
-const mapStateToProps = () => ({
-
-});
-
-const mapDispatchToProps = () => ({
-
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Palonsijainti);
+export default Palonsijainti;

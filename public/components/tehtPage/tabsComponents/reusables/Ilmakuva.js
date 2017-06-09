@@ -1,9 +1,7 @@
 import React from 'react';
+import Basic from './templates/Basic';
 
 const Ilmakuva = () =>
-    <div className="ilmakuva">
-        <p><b>Ilmakuva:</b></p>
-        <p>TESTI</p>
-    </div>;
+    <Basic name="ilmakuva" title="Ilmakuva:" info="TESTI"/>;
 
 export default Ilmakuva;

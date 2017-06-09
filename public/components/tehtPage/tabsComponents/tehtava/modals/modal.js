@@ -21,4 +21,4 @@ const mapDispatchToProps = dispatch => ({
     }
 });
 
-export default connect(mapDispatchToProps)(Modal);
+export default connect(null, mapDispatchToProps)(Modal);

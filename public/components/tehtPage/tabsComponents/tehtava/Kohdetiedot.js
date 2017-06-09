@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { showCurrentModal } from '../../../../reducer/modal/actions';
 import ModalRoot from '../../tabsComponents/tehtava/modals/ModalRoot';
@@ -7,11 +6,9 @@ import ModalRoot from '../../tabsComponents/tehtava/modals/ModalRoot';
 const Kohdetiedot = (comp) => (
     <div className="kohdetiedot">
         {comp.components.map((c) =>
-            <Link onClick={comp.selectItem(c.nameId, 'GET_INFO', c)} key={c.nameId} to={{
-                pathname: `/kohdetiedot/${c.nameId}`
-            }}>
+            <a onClick={comp.selectItem(c.nameId, 'GET_INFO', c)} key={c.nameId}>
                 <c.component key={c.nameId}/>
-            </Link>
+            </a>
         )}
         <ModalRoot/>
     </div>

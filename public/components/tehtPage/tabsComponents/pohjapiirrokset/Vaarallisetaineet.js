@@ -1,17 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import SubitemContent from './subcontent/SubitemContent';
+import SubitemMenu from './subcontent/SubitemMenu';
 
-const Vaarallisetaineet = () =>
-    <div>
-        <p>Vaarallisetaineet-välilehden sisältö</p>
+const Vaarallisetaineet = (props) =>
+    <div className="subtablayout">
+        <SubitemMenu {...props}/>
+        <SubitemContent/>
     </div>;
 
-const mapStateToProps = () => ({
-
-});
-
-const mapDispatchToProps = dispatch => ({
-
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Vaarallisetaineet);
+export default Vaarallisetaineet;

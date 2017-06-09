@@ -1,6 +1,7 @@
-import { SET_CURRENT_TAB, SET_CURRENT_SUB_TAB } from './actions';
+import { SET_CURRENT_TAB } from './actions';
+import tabs from '../../JSON/tabs';
 
-const initialState = 1;
+const initialState = tabs[0].nameId;
 
 export default (state = initialState, action) => {
     switch (action.type) {

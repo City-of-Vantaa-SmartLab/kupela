@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const Content = ({ subcontent, subid }) =>
     <div className="subcontent">
-        <subcontent.component key={subid.subid}/>
+        <subcontent.component key={subid.subid} {...subcontent}/>
     </div>;
 
 const mapStateToProps = ({ tab: { subcontent, subid } }) => ({
@@ -11,4 +11,4 @@ const mapStateToProps = ({ tab: { subcontent, subid } }) => ({
     subid
 });
 
-export default connect(mapStateToProps)(Content);
+export default connect(mapStateToProps, null)(Content);
