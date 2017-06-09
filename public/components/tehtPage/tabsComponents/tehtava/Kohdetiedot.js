@@ -5,7 +5,7 @@ import { showCurrentModal } from '../../../../reducer/modal/actions';
 const Kohdetiedot = (comp) => (
     <div className="kohdetiedot">
         {comp.components.map((c) =>
-            <a onClick={comp.selectItem(c.nameId, 'GET_INFO', c)} key={c.nameId}>
+            <a onClick={comp.selectItem(c.nameId, 'GET_KOHDETIEDOT', c)} key={c.nameId}>
                 <c.component key={c.nameId}/>
             </a>
         )}

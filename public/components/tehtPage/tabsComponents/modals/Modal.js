@@ -1,6 +1,7 @@
 import React from 'react';
 import { hideModal } from '../../../../reducer/modal/actions';
 import { connect } from 'react-redux';
+import ModalMenu from './ModalMenu';
 
 const Modal = (props) => (
     <div className="back" onClick={props.closeModal()}>
