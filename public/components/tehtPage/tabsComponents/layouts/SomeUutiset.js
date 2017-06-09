@@ -1,10 +1,23 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { showCurrentModal } from '../../../../reducer/modal/actions';
 
 const SomeUutiset = (props) =>
     <div className="someuutiset">
         {props.routes.map((comp) =>
-            <comp.component key={comp.nameId} {...comp}/>
+            <a onClick={props.selectItem(comp.nameId, 'GET_INFO', comp)} key={comp.nameId}>
+                <comp.component key={comp.nameId} {...comp}/>
+            </a>
         )}
     </div>;
 
-export default SomeUutiset;
+const mapDispatchToProps = dispatch => ({
+    selectItem(id, type, object) {
+        return() => {
+            dispatch(showCurrentModal(id, type, object));
+        }
+    }
+});
+
+
+export default connect(null, mapDispatchToProps)(SomeUutiset);
