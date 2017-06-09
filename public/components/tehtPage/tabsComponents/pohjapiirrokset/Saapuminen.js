@@ -1,17 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import SubitemContent from './subcontent/SubitemContent';
+import SubitemMenu from './subcontent/SubitemMenu';
 
-const Saapuminen = () =>
-    <div>
-        <p>Saapuminen-välilehden sisältö</p>
+const Saapuminen = (props) =>
+    <div className="subtablayout">
+        <SubitemMenu {...props}/>
+        <SubitemContent/>
     </div>;
 
-const mapStateToProps = () => ({
-
-});
-
-const mapDispatchToProps = dispatch => ({
-
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Saapuminen);
+export default Saapuminen;

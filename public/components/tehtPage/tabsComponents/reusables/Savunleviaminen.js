@@ -1,7 +1,7 @@
 import React from 'react';
 import Basic from './templates/Basic';
 
-const Kohdekortti = () =>
+const Savunleviaminen = () =>
     <Basic name="kohdekortti" title="Kohdekortti:" info="TESTI"/>;
 
-export default Kohdekortti;
+export default Savunleviaminen;
