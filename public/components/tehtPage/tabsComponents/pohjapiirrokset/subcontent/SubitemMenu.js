@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setCurrentSubItem, showMainSubContent } from '../../../../../reducer/tab/actions';
+import { setCurrentSubItem, showSelectedSubContent } from '../../../../../reducer/tab/actions';
 
 const SubitemMenu = (props) => (
     <div className="subitemMenu">
@@ -16,7 +16,7 @@ const mapDispatchToProps = dispatch => ({
     selectSubItem(subitemId, subitemContent) {
         return () => {
             dispatch(setCurrentSubItem(subitemId));
-            dispatch(showMainSubContent(subitemContent));
+            dispatch(showSelectedSubContent(subitemContent));
         }
     }
 });

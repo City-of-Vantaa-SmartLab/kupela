@@ -5,7 +5,7 @@ import SubitemMenu from './subcontent/SubitemMenu';
 const Saapuminen = (props) =>
     <div className="subtablayout">
         <SubitemMenu {...props}/>
-        <SubitemContent/>
+        <SubitemContent />
     </div>;
 
 export default Saapuminen;
