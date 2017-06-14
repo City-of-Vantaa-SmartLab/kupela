@@ -73,6 +73,7 @@ h1, h2, p, ul, li {
     grid-template-rows: 50% 50%;
     grid-template-areas: "a b"
                          "a b";
+    background-color: white;
     height: 75vh;
 }
 
@@ -82,6 +83,7 @@ h1, h2, p, ul, li {
     grid-template-rows: 50% 50%;
     grid-template-areas: "a b d e"
                          "a c d e";
+    background-color: white;
     height: 75vh;
 }
 
@@ -102,6 +104,7 @@ h1, h2, p, ul, li {
     grid-template-rows: 50% 50%;
     grid-template-areas: "a b c d"
                          "a b c d";
+    background-color: white;
     height: 75vh;
 }
 
@@ -111,31 +114,32 @@ h1, h2, p, ul, li {
     grid-template-rows: 50% 50%;
     grid-template-areas: "a b c"
                          "a b c";
+    background-color: white;
     height: 75vh;
 }
 
-.graphicsinfo, .subcontent, .ilmakuva, .tekstit, .streetview, .lisatiedot {
+.graphicsinfo, .subcontent, .kohdetiedot > .ilmakuva, .someuutiset > .tekstit, .kuvatvideot > .streetview, .dokumentaatio > .lisatiedot {
     grid-area: a;
     background-color: white;
     display: inline-block;
     padding: 5px;
 }
 
-.ilmoittajatiedot, .subtabsmenu, .yhteystiedot, .kuvat, .valvontakamerat, .tilannepaivakirja, .yhteystiedot {
+.ilmoittajatiedot, .subtabsmenu, .kohdetiedot > .yhteystiedot, .someuutiset > .kuvat, .kuvatvideot > .valvontakamerat, .dokumentaatio > .tilannepaivakirja {
     grid-area: b;
     background-color: white;
     display: inline-block;
     padding: 5px;
 }
 
-.asiakkaidentiedot, .kohdekortti, .uutiset, .tieliikennekamerat, .dokukuvat {
+.asiakkaidentiedot, .tehtava > .kohdekortti, .someuutiset > .uutiset, .kuvatvideot > .tieliikennekamerat, .dokumentaatio > .dokukuvat {
     grid-area: c;
     background-color: white;
     display: inline-block;
     padding: 5px;
 }
 
-.rakennuksentiedot, .jaetut, .kolmiulotteinen {
+.rakennuksentiedot, .someuutiset > .jaetut, .kuvatvideot > .kolmiulotteinen {
     grid-area: d;
     background-color: white;
     display: inline-block;
@@ -151,6 +155,7 @@ h1, h2, p, ul, li {
 }
 
 .subitemMenu {
+    grid-area: a;
     display: grid;
     grid-template-rows: 20% 20% 20% 20% 20%;
     grid-template-areas: "a"
@@ -158,6 +163,11 @@ h1, h2, p, ul, li {
                          "c"
                          "d"
                          "e";
+}
+
+.subitemContent {
+    grid-area: b;
+    display: inline-block;
 }
 
 .sprinklerit, .kokoontumispaikka, .pohjapiirros {
@@ -228,11 +238,35 @@ h1, h2, p, ul, li {
     grid-template-rows: 50% 50%;
     grid-template-areas: "a b c"
                          "a b c";
+    background-color: white;
+    height: 75vh;
 }
 
 .somemenu {
     grid-area: a;
-    display: inline-block;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: "a"
+                         "b"
+                         "c"
+                         "d";
+}
+
+.somemenu > a > .uutiset {
+    grid-area: a;
+}
+
+.somemenu > a > .kuvat {
+    grid-area: b;
+}
+
+.somemenu > a > .tekstit {
+    grid-area: c;
+}
+
+.somemenu > a > .jaetut {
+    grid-area: d;
+    display: none;
 }
 
 .somecontent {
@@ -251,14 +285,40 @@ h1, h2, p, ul, li {
     grid-template-rows: 50% 50%;
     grid-template-areas: "a b"
                          "a b";
+    background-color: white;
+    height: 75vh;
 }
 
 .kuvatvideotmenu {
     grid-area: a;
-    display: inline-block;
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: "a"
+                         "b"
+                         "c"
+                         "d";
+}
+
+.kuvatvideotmenu > .streetview {
+    grid-area: a;
+}
+
+.kuvatvideotmenu > .valvontakamerat {
+    grid-area: b;
+}
+
+.kuvatvideotmenu > .tieliikennekamerat {
+    grid-area: c;
+}
+
+.kuvatvideotmenu > .kolmiulotteinen {
+    grid-area: d;
 }
 
 .kuvatvideotcontent {
     grid-area: b;
-    display: inline-block;
+}
+
+.return-btn {
+    float: right;
 }

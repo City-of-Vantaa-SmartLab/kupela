@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 
 const MainContent = (props) => (
     <div className={props.className}>
-        <props.component/>
-        <button type="button" onClick={props.goBack()}>
+        <button type="button" className="return-btn" onClick={props.goBack()}>
             X
         </button>
+        <props.component/>
     </div>
 );
 

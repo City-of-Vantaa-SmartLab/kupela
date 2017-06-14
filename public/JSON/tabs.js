@@ -242,12 +242,12 @@ const tabs = [
                     {
                         name: 'Kuvat',
                         nameId: 'kuvat',
-                        component: Kuvat
+                        component: Kuvat,
                     },
                     {
                         name: 'Uutiset',
                         nameId: 'uutiset',
-                        component: Uutiset
+                        component: Uutiset,
                     },
                     {
                         name: 'Jaetut',
