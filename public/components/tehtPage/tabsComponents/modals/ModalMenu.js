@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { selectModalcontent } from '../../../../reducer/modal/actions';
 
 const ModalMenu = (props) => (
-    <div className="modalmenu">
+    <div className={props.className}>
         {props.id.modalMenu.map((comp) =>
             <a onClick={props.selectItem(comp.nameId, comp)}>
                 <comp.component key={comp.nameId}/>

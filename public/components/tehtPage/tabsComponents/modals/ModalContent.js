@@ -1,17 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { hideModal } from '../../../../reducer/modal/actions';
 
 const ModalContent = (props) => (
-    <div className="modalcontent">
+    <div className={props.className}>
         <props.component/>
         <button type="button" onClick={props.closeModal()}>
-            {props.text}
+            X
         </button>
     </div>
 );
 
-const mapStateToProps = ({ modal: { id }}) => ({
-    id
+const mapDispatchToProps = dispatch => ({
+    closeModal() {
+        return() => {
+            dispatch(hideModal());
+        }
+    }
 });
 
-export default ModalContent;
+export default connect(null, mapDispatchToProps)(ModalContent);

@@ -185,17 +185,26 @@ h1, h2, p, ul, li {
     display: inline-block;
 }
 
-.modal {
+.infomodal {
     position: absolute;
-    top: 25%;
-    left: 10%;
+    top: 10%;
+    left: 15%;
     bottom: 10%;
     right: 15%;
     background: #fff;
     display: inline-block;
 }
 
-.modal-grid {
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.infomodal-grid {
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: 50% 50%;
@@ -213,12 +222,25 @@ h1, h2, p, ul, li {
     display: inline-block;
 }
 
-.back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.3);
+.some-grid {
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "a b c"
+                         "a b c";
 }
 
+.somemenu {
+    grid-area: a;
+    display: inline-block;
+}
+
+.somecontent {
+    grid-area: b;
+    display: inline-block;
+}
+
+.some-grid > .jaetut {
+    grid-area: c;
+    display: inline-block;
+}
