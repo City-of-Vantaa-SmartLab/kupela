@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { setCurrentTab, showCurrentTabcontent } from '../../reducer/tab/actions';
+import { setCurrentTab, showCurrentTabcontent, setOriginalTemplate } from '../../reducer/tab/actions';
 
 const TabNavigation = ({ tabs, profile, selectTab }) => (
     <div>
@@ -26,6 +26,7 @@ const mapDispatchToProps = dispatch => ({
         return() => {
             dispatch(setCurrentTab(id));
             dispatch(showCurrentTabcontent(object));
+            dispatch(setOriginalTemplate());
         };
     }
 });

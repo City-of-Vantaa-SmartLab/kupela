@@ -244,3 +244,21 @@ h1, h2, p, ul, li {
     grid-area: c;
     display: inline-block;
 }
+
+.kuvatvideot-grid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "a b"
+                         "a b";
+}
+
+.kuvatvideotmenu {
+    grid-area: a;
+    display: inline-block;
+}
+
+.kuvatvideotcontent {
+    grid-area: b;
+    display: inline-block;
+}
