@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Jaetut = () =>
+const Jaetut = (props) =>
     <div className="jaetut">
         <p><b>Jaetut:</b></p>
         <p>TESTI</p>

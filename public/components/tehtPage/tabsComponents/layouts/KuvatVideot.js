@@ -1,10 +1,18 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import KuvatVideotTemplate from '../templates/KuvatVideotTemplate';
+import KuvatComponents from '../kuvatvideot/KuvatComponents';
 
-const KuvatVideot = (props) =>
-    <div className="kuvatvideot">
-        {props.routes.map((comp) =>
-            <comp.component key={comp.nameId} {...comp}/>
-        )}
-    </div>;
+const KuvatVideot = (props) => {
+    if(!props.template.templateType) {
+        return <KuvatComponents {...props}/>;
+    } else {
+        return <KuvatVideotTemplate {...props.template.templateProps.content}/>;
+    }
+};
 
-export default KuvatVideot;
+const mapStateToProps = ({ tab: { template }}) => ({
+    template
+});
+
+export default connect(mapStateToProps, null)(KuvatVideot);
