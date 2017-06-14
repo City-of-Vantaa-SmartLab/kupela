@@ -240,6 +240,7 @@ h1, h2, p, ul, li {
                          "a b c";
     background-color: white;
     height: 75vh;
+    padding: 5px;
 }
 
 .somemenu {
@@ -287,6 +288,7 @@ h1, h2, p, ul, li {
                          "a b";
     background-color: white;
     height: 75vh;
+    padding: 5px;
 }
 
 .kuvatvideotmenu {
@@ -321,4 +323,7 @@ h1, h2, p, ul, li {
 
 .return-btn {
     float: right;
+    border-color: black;
+    border-width: 1px;
+    background-color: white;
 }
