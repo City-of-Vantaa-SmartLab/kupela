@@ -12,6 +12,7 @@ import { getTabs } from './reducer/tabs/actions';
 import { getPages } from './reducer/pages/actions';
 import { getImages } from './reducer/images/actions';
 import { getTexts } from './reducer/texts/actions';
+import { getNews } from './reducer/news/actions';
 
 //code from: https://scotch.io/courses/getting-started-with-react-and-redux/setting-up-the-redux-store
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -26,6 +27,7 @@ store.dispatch(getTabs());
 store.dispatch(getPages());
 store.dispatch(getImages());
 store.dispatch(getTexts());
+store.dispatch(getNews());
 
 ReactDOM.render(
     <Provider store={store}>
