@@ -1,9 +1,19 @@
 import React from 'react';
+import Component from '../reusables/templates/Component';
+import { connect } from 'react-redux';
 
-const Tekstit = () =>
+const Tekstit = (props) =>
     <div className="tekstit">
         <p><b>Tekstit:</b></p>
-        <p>TESTI</p>
+        {props.texts.map((text) =>
+            <a onClick={props.selectItem(text.nameId, 'GET_teksti', text)}>
+                <Component src={text.url} className={text.nameId} title={text.name}/>
+            </a>
+        )}
     </div>;
 
-export default Tekstit;
+const mapStateToProps = ({ texts }) => ({
+    texts
+});
+
+export default connect(mapStateToProps, null)(Tekstit);

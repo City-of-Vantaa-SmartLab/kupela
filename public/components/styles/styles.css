@@ -9,6 +9,11 @@ h1, h2, p, ul, li {
     list-style-type: none;
 }
 
+img {
+    width: 50%;
+    height: 50%;
+}
+
 .content {
     background-color: whitesmoke;
     overflow: auto;
@@ -231,7 +236,7 @@ h1, h2, p, ul, li {
     grid-area: a;
     display: inline-block;
 }
-
+/*
 .some-grid {
     display: grid;
     grid-template-columns: 30% 50% 20%;
@@ -241,9 +246,21 @@ h1, h2, p, ul, li {
     background-color: white;
     height: 75vh;
     padding: 5px;
+}*/
+
+.some-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "b"
+                         "b";
+    background-color: white;
+    height: 75vh;
+    padding: 5px;
 }
 
-.somemenu {
+
+/*.somemenu {
     grid-area: a;
     display: grid;
     grid-template-rows: 25% 25% 25% 25%;
@@ -268,19 +285,20 @@ h1, h2, p, ul, li {
 .somemenu > a > .jaetut {
     grid-area: d;
     display: none;
-}
+}*/
 
 .somecontent {
     grid-area: b;
     display: inline-block;
 }
 
+/*
 .some-grid > .jaetut {
     grid-area: c;
     display: inline-block;
-}
+}*/
 
-.kuvatvideot-grid {
+/*.kuvatvideot-grid {
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 50% 50%;
@@ -289,9 +307,20 @@ h1, h2, p, ul, li {
     background-color: white;
     height: 75vh;
     padding: 5px;
+}*/
+
+.kuvatvideot-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "b"
+                         "b";
+    background-color: white;
+    height: 75vh;
+    padding: 5px;
 }
 
-.kuvatvideotmenu {
+/*.kuvatvideotmenu {
     grid-area: a;
     display: grid;
     grid-template-rows: 25% 25% 25% 25%;
@@ -315,7 +344,7 @@ h1, h2, p, ul, li {
 
 .kuvatvideotmenu > .kolmiulotteinen {
     grid-area: d;
-}
+}*/
 
 .kuvatvideotcontent {
     grid-area: b;

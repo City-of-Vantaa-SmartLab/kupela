@@ -10,6 +10,8 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 import { getTehtavat } from './reducer/tehtavat/actions';
 import { getTabs } from './reducer/tabs/actions';
 import { getPages } from './reducer/pages/actions';
+import { getImages } from './reducer/images/actions';
+import { getTexts } from './reducer/texts/actions';
 
 //code from: https://scotch.io/courses/getting-started-with-react-and-redux/setting-up-the-redux-store
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -22,6 +24,8 @@ const container = document.querySelector('#app-container');
 store.dispatch(getTehtavat());
 store.dispatch(getTabs());
 store.dispatch(getPages());
+store.dispatch(getImages());
+store.dispatch(getTexts());
 
 ReactDOM.render(
     <Provider store={store}>

@@ -6,6 +6,8 @@ import tab from './tab';
 import pages from './pages';
 import page from './page';
 import modal from './modal';
+import images from './images';
+import texts from './texts';
 
 //code from: https://scotch.io/courses/getting-started-with-react-and-redux/
 export default combineReducers({
@@ -15,5 +17,7 @@ export default combineReducers({
     tab,
     pages,
     page,
-    modal
+    modal,
+    images,
+    texts
 });

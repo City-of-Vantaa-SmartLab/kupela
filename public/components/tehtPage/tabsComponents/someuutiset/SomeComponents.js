@@ -1,21 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeCurrentTemplate, setMenu } from '../../../../reducer/tab/actions';
+import { changeCurrentTemplate } from '../../../../reducer/tab/actions';
 
 const SomeComponents = (props) =>
     <div className="someuutiset">
         {props.routes.map((comp) =>
-            <a onClick={props.selectItem(comp.nameId, 'GET_some', comp, props.routes)}>
-                <comp.component key={comp.nameId} {...comp}/>
-            </a>
+            <comp.component key={comp.nameId} {...props}/>
         )}
     </div>;
 
 const mapDispatchToProps = dispatch => ({
-    selectItem(id, type, content, components) {
+    selectItem(id, type, content) {
         return () => {
             dispatch(changeCurrentTemplate(id, type, content));
-            dispatch(setMenu(components));
         }
     }
 });
