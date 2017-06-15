@@ -1,9 +1,19 @@
 import React from 'react';
+import Component from '../reusables/templates/Component';
+import { connect } from 'react-redux';
 
-const Kuvat = () =>
+const Kuvat = (props) =>
     <div className="kuvat">
         <p><b>Kuvat:</b></p>
-        <p>TESTI</p>
+        {props.images.map((img) =>
+            <a onClick={props.selectItem(img.nameId, 'GET_kuva', img)}>
+                <Component src={img.url} className={img.nameId} title={img.name} key={img.nameId}/>
+            </a>
+        )}
     </div>;
 
-export default Kuvat;
+const mapStateToProps = ({ images }) => ({
+    images
+});
+
+export default connect(mapStateToProps)(Kuvat);

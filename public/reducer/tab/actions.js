@@ -10,6 +10,7 @@ export const RETURN_ORIGINAL_TEMPLATE = 'RETURN_ORIGINAL_TEMPLATE';
 export const SET_AS_MAIN_CONTENT = 'SET_AS_MAIN_CONTENT';
 export const SET_MENU = 'SET_MENU';
 
+
 export function setCurrentTab(id) {
     return {
         type: SET_CURRENT_TAB,
