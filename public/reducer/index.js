@@ -8,6 +8,7 @@ import page from './page';
 import modal from './modal';
 import images from './images';
 import texts from './texts';
+import news from './news';
 
 //code from: https://scotch.io/courses/getting-started-with-react-and-redux/
 export default combineReducers({
@@ -19,5 +20,6 @@ export default combineReducers({
     page,
     modal,
     images,
-    texts
+    texts,
+    news
 });
