@@ -7,7 +7,7 @@ const SomeUutiset = (props) => {
     if(!props.template.templateType) {
         return <SomeComponents {...props}/>;
     } else {
-        return <SomeUutisetTemplate {...props.template.templateProps.content}/>;
+        return <SomeUutisetTemplate {...props.template.templateProps.content} />;
     }
 };
 

@@ -13,6 +13,9 @@ import { getPages } from './reducer/pages/actions';
 import { getImages } from './reducer/images/actions';
 import { getTexts } from './reducer/texts/actions';
 import { getNews } from './reducer/news/actions';
+import { getSecurityCams } from './reducer/securitycams/actions';
+import { getRoadCams } from './reducer/roadcams/actions';
+import { getMaps } from './reducer/maps/actions';
 
 //code from: https://scotch.io/courses/getting-started-with-react-and-redux/setting-up-the-redux-store
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -28,6 +31,9 @@ store.dispatch(getPages());
 store.dispatch(getImages());
 store.dispatch(getTexts());
 store.dispatch(getNews());
+store.dispatch(getSecurityCams());
+store.dispatch(getRoadCams());
+store.dispatch(getMaps());
 
 ReactDOM.render(
     <Provider store={store}>

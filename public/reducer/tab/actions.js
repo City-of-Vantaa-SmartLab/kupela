@@ -9,7 +9,8 @@ export const CHANGE_TEMPLATE = 'CHANGE_TEMPLATE';
 export const RETURN_ORIGINAL_TEMPLATE = 'RETURN_ORIGINAL_TEMPLATE';
 export const SET_AS_MAIN_CONTENT = 'SET_AS_MAIN_CONTENT';
 export const SET_MENU = 'SET_MENU';
-
+export const SET_INFO_SHARED = 'SET_INFO_SHARED';
+export const SHARE_BUTTON_CLICKED = 'SHARE_BUTTON_CLICKED';
 
 export function setCurrentTab(id) {
     return {
@@ -84,5 +85,22 @@ export function showSelectedSubContent(subitem) {
     return {
         type: SET_AS_MAIN_SUBCONTENT,
         subitem
+    }
+}
+
+export function shareInformation(id, content) {
+    return {
+        type: SET_INFO_SHARED,
+        infoProps: {
+            id,
+            content
+        }
+    }
+}
+
+export function setSharedButton(label) {
+    return {
+        type: SHARE_BUTTON_CLICKED,
+        label
     }
 }

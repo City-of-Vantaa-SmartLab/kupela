@@ -1,23 +1,18 @@
 import React from 'react';
-import { setOriginalTemplate } from '../../../../reducer/tab/actions';
+import ShareContent from './ShareContent';
+import BasicContent from './BasicContent';
 import { connect } from 'react-redux';
-import Component from '../reusables/templates/Component';
 
-const MainContent = (props) => (
-    <div className={props.className}>
-        <button type="button" className="return-btn" onClick={props.goBack()}>
-            X
-        </button>
-        <Component src={props.url} className={props.nameId} title={props.name}/>
-    </div>
-);
-
-const mapDispatchToProps = dispatch => ({
-    goBack() {
-        return() => {
-            dispatch(setOriginalTemplate());
-        }
+const MainContent = (props) => {
+    if(props.template.templateType === 'GET_some') {
+        return <ShareContent {...props}/>;
+    } else if (props.template.templateType === 'GET_kuvatvideot') {
+        return <BasicContent {...props}/>
     }
+};
+
+const mapStateToProps = ({ tab : { template }}) => ({
+    template
 });
 
-export default connect(null, mapDispatchToProps)(MainContent);
+export default connect(mapStateToProps, null)(MainContent);

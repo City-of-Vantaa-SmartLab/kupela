@@ -10,8 +10,8 @@ h1, h2, p, ul, li {
 }
 
 img {
-    width: 50%;
-    height: 50%;
+    width: 55%;
+    height: 55%;
 }
 
 .content {
@@ -355,4 +355,10 @@ img {
     border-color: black;
     border-width: 1px;
     background-color: white;
+}
+
+.share-btn {
+    background-color: darkblue;
+    color: white;
+    border: none;
 }

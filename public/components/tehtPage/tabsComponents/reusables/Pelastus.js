@@ -1,6 +1,7 @@
 import React from 'react';
-import Basic from './templates/Basic';
+import Test from './templates/Test';
+
 const Pelastus = () =>
-    <Basic name="pelastus" title="Pelastussuunnitelma:" info="TESTI"/>;
+    <Test className="pelastus" title="Pelastussuunnitelma:" info="TESTI"/>;
 
 export default Pelastus;

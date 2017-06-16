@@ -9,6 +9,9 @@ import modal from './modal';
 import images from './images';
 import texts from './texts';
 import news from './news';
+import securitycams from './securitycams';
+import roadcams from './roadcams';
+import maps from './maps';
 
 //code from: https://scotch.io/courses/getting-started-with-react-and-redux/
 export default combineReducers({
@@ -21,5 +24,8 @@ export default combineReducers({
     modal,
     images,
     texts,
-    news
+    news,
+    securitycams,
+    roadcams,
+    maps
 });
