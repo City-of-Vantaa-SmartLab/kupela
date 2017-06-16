@@ -6,9 +6,16 @@ const Uutiset = (props) =>
     <div className="uutiset">
         <p><b>Uutiset:</b></p>
         {props.news.map((n) =>
-            <a onClick={props.selectItem(n.nameId, 'GET_some', n)}>
-                <Share src={n.url} title={n.name} {...props}/>
-            </a>
+            <div>
+                <a onClick={props.selectItem(n.nameId, 'GET_some', n)}>
+                    <Share src={n.url} title={n.name} key={n.nameId}
+                           nameId={n.nameId}
+                           content={n} {...props} />
+                </a>
+                <button className="share-btn" type="button" onClick={props.clickShare("Jaettu", n.nameId, n)}>
+                    Jaa johtoautoon
+                </button>
+            </div>
         )}
     </div>;
 

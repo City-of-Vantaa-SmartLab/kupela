@@ -8,7 +8,7 @@ const ShareContent = (props) => (
         <button type="button" className="return-btn" onClick={props.goBack()}>
             X
         </button>
-        <Basic src={props.url} className={props.nameId} title={props.name}/>
+        <Basic src={props.url} title={props.name}/>
     </div>
 );
 

@@ -1,11 +1,15 @@
 import { SET_INFO_SHARED } from './actions';
 
-const initialState = [];
+const initialState = {
+    arr: []
+};
 
 export default (state = initialState, action) => {
     switch (action.type) {
         case SET_INFO_SHARED:
-            return action.infoProps;
+            return Object.assign({}, state, {
+                arr: [...state.arr, action.infoProps]
+            });
         default:
             return state;
     }

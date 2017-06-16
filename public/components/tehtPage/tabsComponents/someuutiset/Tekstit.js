@@ -6,9 +6,16 @@ const Tekstit = (props) =>
     <div className="tekstit">
         <p><b>Tekstit:</b></p>
         {props.texts.map((text) =>
-            <a onClick={props.selectItem(text.nameId, 'GET_some', text)}>
-                <Share src={text.url} title={text.name} {...props}/>
-            </a>
+            <div>
+                <a onClick={props.selectItem(text.nameId, 'GET_some', text)}>
+                    <Share src={text.url} title={text.name} key={text.nameId}
+                           nameId={text.nameId}
+                           content={text} {...props}/>
+                </a>
+                <button className="share-btn" type="button" onClick={props.clickShare("Jaettu", text.nameId, text)}>
+                    Jaa johtoautoon
+                </button>
+            </div>
         )}
     </div>;
 

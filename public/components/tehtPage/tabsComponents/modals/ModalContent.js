@@ -4,10 +4,10 @@ import { hideModal } from '../../../../reducer/modal/actions';
 
 const ModalContent = (props) => (
     <div className={props.className}>
-        <props.component/>
         <button type="button" className="return-btn" onClick={props.closeModal()}>
             X
         </button>
+        <props.component/>
     </div>
 );
 
