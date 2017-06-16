@@ -1,14 +1,14 @@
 import React from 'react';
-import Component from '../reusables/templates/Component';
+import Share from '../reusables/templates/Share';
 import { connect } from 'react-redux';
 
 const Uutiset = (props) =>
     <div className="uutiset">
         <p><b>Uutiset:</b></p>
         {props.news.map((n) =>
-        <a onClick={props.selectItem(n.nameId, 'GET_news', n)}>
-            <Component src={n.url} className={n.nameId} title={n.name}/>
-        </a>
+            <a onClick={props.selectItem(n.nameId, 'GET_some', n)}>
+                <Share src={n.url} title={n.name} {...props}/>
+            </a>
         )}
     </div>;
 

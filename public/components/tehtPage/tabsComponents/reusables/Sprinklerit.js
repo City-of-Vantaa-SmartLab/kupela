@@ -1,7 +1,7 @@
 import React from 'react';
-import Basic from './templates/Basic';
+import Test from './templates/Test';
 
 const Sprinklerit = () =>
-    <Basic name="sprinklerit" title="Sprinklerit:" info="TESTI"/>;
+    <Test className="sprinklerit" title="Sprinklerit:" info="TESTI"/>;
 
 export default Sprinklerit;

@@ -1,11 +1,9 @@
 import React from 'react';
 
 const Basic = (props) => (
-    <div className={`${props.name}`}>
-        <p><b>{props.title}</b></p>
-        <div>
-            {props.info}
-        </div>
+    <div className="component">
+        <p>{props.title}</p>
+        <img src={props.src}/>
     </div>
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import Basic from './templates/Basic';
+import Test from './templates/Test';
 
 const Palovaroittimet = () =>
-    <Basic name="palovaroittimet" title="Palovaroittimet:" info="TESTI"/>;
+    <Test className="palovaroittimet" title="Palovaroittimet:" info="TESTI"/>;
 
 export default Palovaroittimet;

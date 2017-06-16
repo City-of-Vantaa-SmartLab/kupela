@@ -1,7 +1,7 @@
 import React from 'react';
-import Basic from './templates/Basic';
+import Test from './templates/Test';
 
 const Pohjapiirros = () =>
-    <Basic name="pohjapiirros" title="Pohjapiirros:" info="TESTI"/>;
+    <Test className="pohjapiirros" title="Pohjapiirros:" info="TESTI"/>;
 
 export default Pohjapiirros;

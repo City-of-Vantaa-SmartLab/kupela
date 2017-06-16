@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import KuvatVideotTemplate from '../templates/KuvatVideotTemplate';
-import KuvatComponents from '../kuvatvideot/KuvatComponents';
+import KuvatVideotComponents from '../kuvatvideot/KuvatVideotComponents';
 
 const KuvatVideot = (props) => {
     if(!props.template.templateType) {
-        return <KuvatComponents {...props}/>;
+        return <KuvatVideotComponents {...props}/>;
     } else {
         return <KuvatVideotTemplate {...props.template.templateProps.content}/>;
     }

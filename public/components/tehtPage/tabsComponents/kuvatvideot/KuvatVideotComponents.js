@@ -2,12 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { changeCurrentTemplate } from '../../../../reducer/tab/actions';
 
-const KuvatVideot = (props) =>
+const KuvatVideotComponents = (props) =>
     <div className="kuvatvideot">
         {props.routes.map((comp) =>
-            <a onClick={props.selectItem(comp.nameId, 'GET_kuvatvideot', comp)}>
-                <comp.component key={comp.nameId} {...props}/>
-            </a>
+            <comp.component key={comp.nameId} {...props}/>
         )}
     </div>;
 
@@ -19,4 +17,4 @@ const mapDispatchToProps = dispatch => ({
     }
 });
 
-export default connect(null, mapDispatchToProps)(KuvatVideot);
+export default connect(null, mapDispatchToProps)(KuvatVideotComponents);

@@ -1,7 +1,7 @@
 import React from 'react';
-import Basic from './templates/Basic';
+import Test from './templates/Test';
 
 const Yhteystiedot = () =>
-    <Basic name="yhteystiedot" title="Yhteystiedot:" info="TESTI"/>;
+    <Test className="yhteystiedot" title="Yhteystiedot:" info="TESTI"/>;
 
 export default Yhteystiedot;
