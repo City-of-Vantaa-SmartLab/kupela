@@ -12,6 +12,7 @@ import news from './news';
 import securitycams from './securitycams';
 import roadcams from './roadcams';
 import maps from './maps';
+import streetviews from './streetviews';
 
 //code from: https://scotch.io/courses/getting-started-with-react-and-redux/
 export default combineReducers({
@@ -27,5 +28,6 @@ export default combineReducers({
     news,
     securitycams,
     roadcams,
-    maps
+    maps,
+    streetviews
 });
