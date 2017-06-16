@@ -1,7 +1,7 @@
 import React from 'react';
-import Basic from './templates/Basic';
+import Test from './templates/Test';
 
 const Escape = () =>
-    <Basic name="escape" title="ESCAPE:" info="TESTI"/>;
+    <Test name="escape" title="ESCAPE:" info="TESTI"/>;
 
 export default Escape;

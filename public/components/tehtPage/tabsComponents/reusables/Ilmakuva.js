@@ -1,7 +1,7 @@
 import React from 'react';
-import Basic from './templates/Basic';
+import Test from './templates/Test';
 
 const Ilmakuva = () =>
-    <Basic name="ilmakuva" title="Ilmakuva:" info="TESTI"/>;
+    <Test name="ilmakuva" title="Ilmakuva:" info="TESTI"/>;
 
 export default Ilmakuva;

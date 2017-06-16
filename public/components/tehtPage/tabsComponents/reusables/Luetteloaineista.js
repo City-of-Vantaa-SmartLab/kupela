@@ -1,7 +1,7 @@
 import React from 'react';
-import Basic from './templates/Basic';
+import Test from './templates/Test';
 
 const Luetteloaineista = () =>
-    <Basic name="luetteloaineista" title="Luettelo vaarallisista aineista:" info="TESTI"/>;
+    <Test name="luetteloaineista" title="Luettelo vaarallisista aineista:" info="TESTI"/>;
 
 export default Luetteloaineista;

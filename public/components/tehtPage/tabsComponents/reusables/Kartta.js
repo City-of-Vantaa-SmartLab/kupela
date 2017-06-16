@@ -1,7 +1,7 @@
 import React from 'react';
-import Basic from './templates/Basic';
+import Test from './templates/Test';
 
 const Kartta = () =>
-    <Basic name="kartta" title="Kartta:" info="TESTI"/>;
+    <Test name="kartta" title="Kartta:" info="TESTI"/>;
 
 export default Kartta;

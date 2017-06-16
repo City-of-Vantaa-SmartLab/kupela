@@ -1,7 +1,7 @@
 import React from 'react';
-import Basic from './templates/Basic';
+import Test from './templates/Test';
 
 const Kemikaalikortti = () =>
-    <Basic name="kemikaalikortti" title="Kemikaalikortti:" info="TESTI"/>;
+    <Test name="kemikaalikortti" title="Kemikaalikortti:" info="TESTI"/>;
 
 export default Kemikaalikortti;
