@@ -1,7 +1,10 @@
 import React from 'react';
 import Test from './templates/Test';
 
-const Kohdekortti = () =>
-    <Test name="kohdekortti" title="Kohdekortti:" info="TESTI"/>;
+const Kohdekortti = () => (
+    <div className="kohdekortti">
+        <Test title="Kohdekortti:" info="TESTI"/>
+    </div>
+);
 
 export default Kohdekortti;

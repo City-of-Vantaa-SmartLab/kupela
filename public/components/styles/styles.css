@@ -1,5 +1,5 @@
 html, body {
-    background-color: black;
+    background-color: #1c1c3a;
     overflow-x: hidden;
 }
 
@@ -32,6 +32,10 @@ img {
     text-align: center;
 }
 
+#teht-title > a {
+    color: white;
+}
+
 #map {
     max-width: 45%;
     max-height: 45%;
@@ -44,39 +48,44 @@ img {
     display: inline;
 }
 
-#maintabs.nav-pills > li {
+#maintabs.nav-pills > li, #subtabs.nav-pills > li {
     display: inline-block;
     float: none;
     margin-right: 10px;
 }
 
-#maintabs.nav-pills {
+#maintabs.nav-pills, #subtabs.nav-pills {
     padding-bottom: 5px;
     text-align: center;
 }
 
-#maintabs.nav-pills > li > a , #subtabs.nav-pills > li > a{
-    background-color: darkblue;
-    color: white;
+#maintabs.nav-pills > li > a {
+    color: #d9d9dd;
+    border-radius: 0;
+}
+
+#subtabs.nav-pills > li > a {
+    color: #1c1c3a;
     border-radius: 0;
 }
 
 #maintabs.nav-pills > li > a:active, #maintabs.nav-pills > li > a:hover, #maintabs.nav-pills > li > a:focus {
-    background-color: darkblue;
-    color: darkorange;
+    background-color: #1c1c3a;
+    color: #d9d9dd;
+    text-decoration: underline;
 }
 
 #subtabs.nav-pills > li > a:active, #subtabs.nav-pills > li > a:hover, #subtabs.nav-pills > li > a:focus {
-    background-color: darkorange;
-    color: white;
+    color: orange;
+    background-color: white;
+    text-decoration: underline;
 }
 
 .pohjapiirrokset {
     display: grid;
-    grid-template-columns: 75% 25%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "a b"
-                         "a b";
+    grid-template-rows: 10% 90%;
+    grid-template-areas: "b"
+                         "a";
     background-color: white;
     height: 75vh;
 }
@@ -156,26 +165,41 @@ img {
 
 .subtablayout {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 20% 20% 70% 20%;
     grid-template-rows: 50% 50%;
-    grid-template-areas: "a b"
-                         "a b";
+    grid-template-areas: "c a b d"
+                         "c a b d";
+    height: 75vh;
 }
 
 .subitemMenu {
     grid-area: a;
     display: grid;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-rows: 50% 50% 50% 50% 50%;
     grid-template-areas: "a"
                          "b"
                          "c"
                          "d"
                          "e";
+    height: 25vh;
+}
+
+.subitem_menu {
+    display: inline-block;
 }
 
 .subitemContent {
     grid-area: b;
     display: inline-block;
+    position: relative;
+    height: 55vh;
+}
+
+.subitemContent > img {
+    width: 75%;
+    height: 75%;
+    position: absolute;
+    opacity: 0.7;
 }
 
 .sprinklerit, .kokoontumispaikka, .pohjapiirros {
@@ -239,17 +263,6 @@ img {
     grid-area: a;
     display: inline-block;
 }
-/*
-.some-grid {
-    display: grid;
-    grid-template-columns: 30% 50% 20%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "a b c"
-                         "a b c";
-    background-color: white;
-    height: 75vh;
-    padding: 5px;
-}*/
 
 .some-grid {
     display: grid;
@@ -262,55 +275,10 @@ img {
     padding: 5px;
 }
 
-
-/*.somemenu {
-    grid-area: a;
-    display: grid;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template-areas: "a"
-                         "b"
-                         "c"
-                         "d";
-}
-
-.somemenu > a > .uutiset {
-    grid-area: a;
-}
-
-.somemenu > a > .kuvat {
-    grid-area: b;
-}
-
-.somemenu > a > .tekstit {
-    grid-area: c;
-}
-
-.somemenu > a > .jaetut {
-    grid-area: d;
-    display: none;
-}*/
-
 .somecontent {
     grid-area: b;
     display: inline-block;
 }
-
-/*
-.some-grid > .jaetut {
-    grid-area: c;
-    display: inline-block;
-}*/
-
-/*.kuvatvideot-grid {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "a b"
-                         "a b";
-    background-color: white;
-    height: 75vh;
-    padding: 5px;
-}*/
 
 .kuvatvideot-grid {
     display: grid;
@@ -322,32 +290,6 @@ img {
     height: 75vh;
     padding: 5px;
 }
-
-/*.kuvatvideotmenu {
-    grid-area: a;
-    display: grid;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template-areas: "a"
-                         "b"
-                         "c"
-                         "d";
-}
-
-.kuvatvideotmenu > .streetview {
-    grid-area: a;
-}
-
-.kuvatvideotmenu > .valvontakamerat {
-    grid-area: b;
-}
-
-.kuvatvideotmenu > .tieliikennekamerat {
-    grid-area: c;
-}
-
-.kuvatvideotmenu > .kolmiulotteinen {
-    grid-area: d;
-}*/
 
 .kuvatvideotcontent {
     grid-area: b;

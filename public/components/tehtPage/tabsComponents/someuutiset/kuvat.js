@@ -12,15 +12,14 @@ const Kuvat = (props) =>
                            nameId={img.nameId}
                            content={img} {...props}/>
                 </a>
-                <button className="share-btn" type="button" onClick={props.clickShare("Jaettu", img.nameId, img)}>
-                    Jaa johtoautoon
-                </button>
+                <input className="share-btn" type="button" onClick={props.clickShare("Jaettu", img.nameId, img)} value={props.button.label}/>
             </div>
         )}
     </div>;
 
-const mapStateToProps = ({ images }) => ({
-    images
+const mapStateToProps = ({ images, tab: { button } }) => ({
+    images,
+    button
 });
 
 export default connect(mapStateToProps)(Kuvat);

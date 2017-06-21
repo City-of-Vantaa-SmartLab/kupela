@@ -17,6 +17,8 @@ import { getSecurityCams } from './reducer/securitycams/actions';
 import { getRoadCams } from './reducer/roadcams/actions';
 import { getMaps } from './reducer/maps/actions';
 import { getStreetViews } from './reducer/streetviews/actions';
+import { getFirealarms } from './reducer/firealarms/actions';
+import { getSprinklers } from './reducer/sprinklers/actions';
 
 //code from: https://scotch.io/courses/getting-started-with-react-and-redux/setting-up-the-redux-store
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -36,6 +38,8 @@ store.dispatch(getSecurityCams());
 store.dispatch(getRoadCams());
 store.dispatch(getMaps());
 store.dispatch(getStreetViews());
+store.dispatch(getFirealarms());
+store.dispatch(getSprinklers());
 
 ReactDOM.render(
     <Provider store={store}>

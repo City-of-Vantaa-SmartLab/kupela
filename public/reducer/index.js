@@ -13,8 +13,10 @@ import securitycams from './securitycams';
 import roadcams from './roadcams';
 import maps from './maps';
 import streetviews from './streetviews';
+import firealarms from './firealarms';
+import sprinklers from './sprinklers';
 
-//code from: https://scotch.io/courses/getting-started-with-react-and-redux/
+//based on: https://scotch.io/courses/getting-started-with-react-and-redux/
 export default combineReducers({
     tehtavat,
     tehtava,
@@ -29,5 +31,7 @@ export default combineReducers({
     securitycams,
     roadcams,
     maps,
-    streetviews
+    streetviews,
+    firealarms,
+    sprinklers
 });

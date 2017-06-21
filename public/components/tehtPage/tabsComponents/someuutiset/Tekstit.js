@@ -12,15 +12,14 @@ const Tekstit = (props) =>
                            nameId={text.nameId}
                            content={text} {...props}/>
                 </a>
-                <button className="share-btn" type="button" onClick={props.clickShare("Jaettu", text.nameId, text)}>
-                    Jaa johtoautoon
-                </button>
+                <input className="share-btn" type="button" onClick={props.clickShare("Jaettu", text.nameId, text)} value={props.button.label}/>
             </div>
         )}
     </div>;
 
-const mapStateToProps = ({ texts }) => ({
-    texts
+const mapStateToProps = ({ texts, tab: { button } }) => ({
+    texts,
+    button
 });
 
 export default connect(mapStateToProps, null)(Tekstit);

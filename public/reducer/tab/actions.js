@@ -3,7 +3,6 @@ export const SHOW_CURRENT_TABCONTENT = 'SHOW_CURRENT_TABCONTENT';
 export const SHOW_CURRENT_SUB_TABCONTENT = 'SHOW_CURRENT_SUB_TABCONTENT';
 export const SET_CURRENT_SUB_TAB = 'SET_CURRENT_SUB_TAB';
 export const CLICKED_SUBITEM = 'CLICKED_SUBITEM';
-export const SET_AS_MAIN_SUBCONTENT = 'SET_AS_MAIN_SUBCONTENT';
 export const SET_SUBITEM_MENU = 'SET_SUBITEM_MENU';
 export const CHANGE_TEMPLATE = 'CHANGE_TEMPLATE';
 export const RETURN_ORIGINAL_TEMPLATE = 'RETURN_ORIGINAL_TEMPLATE';
@@ -11,6 +10,8 @@ export const SET_AS_MAIN_CONTENT = 'SET_AS_MAIN_CONTENT';
 export const SET_MENU = 'SET_MENU';
 export const SET_INFO_SHARED = 'SET_INFO_SHARED';
 export const SHARE_BUTTON_CLICKED = 'SHARE_BUTTON_CLICKED';
+export const ADD_SUBITEM_FILTER = 'ADD_SUBITEM_FILTER';
+export const REMOVE_SUBITEM_FILTER = 'REMOVE_SUBITEM_FILTER';
 
 export function setCurrentTab(id) {
     return {
@@ -81,13 +82,6 @@ export function setCurrentSubItem(subitemId) {
     }
 }
 
-export function showSelectedSubContent(subitem) {
-    return {
-        type: SET_AS_MAIN_SUBCONTENT,
-        subitem
-    }
-}
-
 export function shareInformation(id, content) {
     return {
         type: SET_INFO_SHARED,
@@ -102,5 +96,25 @@ export function setSharedButton(label) {
     return {
         type: SHARE_BUTTON_CLICKED,
         label
+    }
+}
+
+export function addNewFilter(id, subitem) {
+    return {
+        type: ADD_SUBITEM_FILTER,
+        filters: {
+            id,
+            subitem
+        }
+    }
+}
+
+export function removeFilter(id, subitem) {
+    return {
+        type: REMOVE_SUBITEM_FILTER,
+        filters: {
+            id,
+            subitem
+        }
     }
 }

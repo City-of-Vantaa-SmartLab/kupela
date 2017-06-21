@@ -1,14 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const SubitemContent = ({ subitem }) => (
+const SubitemContent = ({ filter }) => (
     <div className="subitemContent">
-        <subitem.component key={subitem.nameId}/>
+        {filter.arr.map((f) =>
+            <img key={f.id} src={f.subitem.url}/>
+        )}
     </div>
 );
 
-const mapStateToProps = ({ tab: { subitem }}) => ({
-    subitem
+const mapStateToProps = ({ tab: { filter }}) => ({
+    filter
 });
 
 export default connect(mapStateToProps, null)(SubitemContent);
