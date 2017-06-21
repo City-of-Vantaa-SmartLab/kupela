@@ -1,7 +1,10 @@
 import React from 'react';
-import Basic from './templates/Basic';
+import Test from './templates/Test';
 
-const Kokoontumispaikka = () =>
-    <Basic name="kokoontumispaikka" title="Kokoontumispaikka:" info="TESTI"/>;
+const Kokoontumispaikka = () => (
+    <div className="kokoontumispaikka">
+        <Test title="Kokoontumispaikka:" info="TESTI"/>
+    </div>
+);
 
 export default Kokoontumispaikka;

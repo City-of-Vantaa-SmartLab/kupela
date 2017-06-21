@@ -18,7 +18,7 @@ import Tekstit from '../components/tehtPage/tabsComponents/someuutiset/Tekstit';
 import SomeUutiset from '../components/tehtPage/tabsComponents/layouts/SomeUutiset';
 
 import Kolmiulotteinenkartta from '../components/tehtPage/tabsComponents/reusables/Kolmiulotteisetkartat';
-import StreetView from '../components/tehtPage/tabsComponents/reusables/StreetView';
+import StreetView from '../components/tehtPage/tabsComponents/kuvatvideot/StreetView';
 import Tieliikennekamerat from '../components/tehtPage/tabsComponents/kuvatvideot/Tieliikennekamerat';
 import Valvontakamerat from '../components/tehtPage/tabsComponents/kuvatvideot/Valvontakamerat';
 import KuvatVideot from '../components/tehtPage/tabsComponents/layouts/KuvatVideot';
@@ -42,6 +42,7 @@ import Sprinklerit from '../components/tehtPage/tabsComponents/reusables/Sprinkl
 import Kokoontumispaikka from '../components/tehtPage/tabsComponents/reusables/Kokoontumispaikka';
 import Palovaroittimet from '../components/tehtPage/tabsComponents/reusables/Palovaroittimet';
 import Kartta from '../components/tehtPage/tabsComponents/reusables/Kartta';
+import PohjaStreetView from '../components/tehtPage/tabsComponents/reusables/PohjaStreetView';
 
 const tabs = [
     {
@@ -149,7 +150,7 @@ const tabs = [
                             {
                                 name: 'Street view',
                                 nameId: 'streetview',
-                                component: StreetView
+                                component: PohjaStreetView
                             },
                             {
                                 name: 'Ilmakuva',

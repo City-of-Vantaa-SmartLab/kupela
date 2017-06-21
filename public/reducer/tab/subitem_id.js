@@ -1,7 +1,7 @@
 import { CLICKED_SUBITEM } from './actions';
-import tabs from '../../JSON/tabs';
+import sprinklers from '../../JSON/sprinklers';
 
-const initialState = tabs[1].components[0].routes[0].routes[0].nameId;
+const initialState = sprinklers[0].nameId;
 
 export default (state = initialState, action) => {
     switch (action.type) {

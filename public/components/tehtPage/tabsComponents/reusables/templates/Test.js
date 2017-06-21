@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Test = (props) => (
-    <div className={`${props.className}`}>
+    <div>
         <p><b>{props.title}</b></p>
         <div>
             {props.info}

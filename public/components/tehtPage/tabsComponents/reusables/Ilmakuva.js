@@ -1,7 +1,10 @@
 import React from 'react';
 import Test from './templates/Test';
 
-const Ilmakuva = () =>
-    <Test name="ilmakuva" title="Ilmakuva:" info="TESTI"/>;
+const Ilmakuva = () => (
+    <div className="ilmakuva">
+        <Test title="Ilmakuva:" info="TESTI"/>
+    </div>
+);
 
 export default Ilmakuva;

@@ -1,7 +1,20 @@
 import React from 'react';
-import Test from './templates/Test';
+import Showcase from './templates/Showcase';
+import { connect } from 'react-redux';
 
-const Palovaroittimet = () =>
-    <Test className="palovaroittimet" title="Palovaroittimet:" info="TESTI"/>;
+const Palovaroittimet = (props) => (
+    <div className="palovaroittimet">
+        <p><b>Palovaroittimet:</b></p>
+        {props.firealarms.map((alarm) =>
+            <a onClick={props.selectSubItem(alarm.nameId, alarm)}>
+                <Showcase src={alarm.url} {...props}/>
+            </a>
+        )}
+    </div>
+);
 
-export default Palovaroittimet;
+const mapStateToProps = ({ firealarms }) => ({
+    firealarms
+});
+
+export default connect(mapStateToProps, null)(Palovaroittimet);

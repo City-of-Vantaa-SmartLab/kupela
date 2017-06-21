@@ -1,7 +1,10 @@
 import React from 'react';
 import Test from './templates/Test';
 
-const Savunleviaminen = () =>
-    <Test name="kohdekortti" title="Kohdekortti:" info="TESTI"/>;
+const Savunleviaminen = () => (
+    <div className="savunleviaminen">
+        <Test title="Savun leviäminen:" info="TESTI"/>;
+    </div>
+);
 
 export default Savunleviaminen;

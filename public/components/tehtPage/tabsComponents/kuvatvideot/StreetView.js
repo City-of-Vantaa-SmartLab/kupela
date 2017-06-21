@@ -1,5 +1,5 @@
 import React from 'react';
-import Basic from './templates/Basic';
+import Basic from '../reusables/templates/Basic';
 import { connect } from 'react-redux';
 
 const StreetView = (props) =>

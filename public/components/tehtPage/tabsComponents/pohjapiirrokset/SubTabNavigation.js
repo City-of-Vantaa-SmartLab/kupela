@@ -5,7 +5,7 @@ import { setCurrentSubTab, showSubTabcontent } from '../../../../reducer/tab/act
 
 const SubTabs = (props) => (
     <div className="subtabsmenu">
-        <ul className="nav nav-pills nav-stacked" id="subtabs">
+        <ul className="nav nav-pills" id="subtabs">
             {props.routes.map((tab) =>
                 <li onClick={props.selectSubTab(tab.nameId, tab)}>
                     <Link to={tab.nameId}>{tab.name}</Link>
