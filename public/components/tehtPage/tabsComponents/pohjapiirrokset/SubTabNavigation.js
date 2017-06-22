@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { setCurrentSubTab, showSubTabcontent } from '../../../../reducer/tab/actions';
+import { setCurrentSubTab, showSubTabcontent, resetFiltersToNull } from '../../../../reducer/tab/actions';
 
 const SubTabs = (props) => (
     <div className="subtabsmenu">
@@ -20,6 +20,7 @@ const mapDispatchToProps = dispatch => ({
         return () => {
             dispatch(setCurrentSubTab(id));
             dispatch(showSubTabcontent(object));
+            dispatch(resetFiltersToNull());
         };
     }
 });
