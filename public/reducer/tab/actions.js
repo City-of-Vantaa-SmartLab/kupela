@@ -11,7 +11,7 @@ export const SET_MENU = 'SET_MENU';
 export const SET_INFO_SHARED = 'SET_INFO_SHARED';
 export const SHARE_BUTTON_CLICKED = 'SHARE_BUTTON_CLICKED';
 export const ADD_SUBITEM_FILTER = 'ADD_SUBITEM_FILTER';
-export const REMOVE_SUBITEM_FILTER = 'REMOVE_SUBITEM_FILTER';
+export const RESET_FILTER_ARRAY = 'RESET_FILTER_ARRAY';
 
 export function setCurrentTab(id) {
     return {
@@ -109,12 +109,8 @@ export function addNewFilter(id, subitem) {
     }
 }
 
-export function removeFilter(id, subitem) {
+export function resetFiltersToNull() {
     return {
-        type: REMOVE_SUBITEM_FILTER,
-        filters: {
-            id,
-            subitem
-        }
+        type: RESET_FILTER_ARRAY
     }
 }
