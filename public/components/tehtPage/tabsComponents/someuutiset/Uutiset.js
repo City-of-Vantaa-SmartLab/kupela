@@ -9,7 +9,12 @@ const Uutiset = (props) =>
                 <a onClick={props.selectItem(n.nameId, 'GET_some', n)}>
                     <Basic src={n.url} title={n.name} key={n.nameId}/>
                 </a>
-                <input className="share-btn" type="button" onClick={props.clickShare("Jaettu", n.nameId, n)} value={props.button.sharedProps.label}/>
+                <input className="share-btn"
+                       type="button"
+                       onClick={props.clickShare("Jaettu", n.nameId, n)}
+                       value={props.button.label}
+                       key={n.nameId}
+                />
             </div>
         )}
     </div>;

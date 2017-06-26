@@ -9,7 +9,10 @@ const Kuvat = (props) =>
                 <a onClick={props.selectItem(img.nameId, 'GET_some', img)}>
                     <Basic src={img.url} title={img.name} key={img.nameId}/>
                 </a>
-                <input className="share-btn" type="button" onClick={props.clickShare("Jaettu", img.nameId, img)} value={props.button.sharedProps.label}/>
+                <input className="share-btn"
+                       type="button"
+                       onClick={props.clickShare("Jaettu", img.nameId, img)}
+                       value={props.button.label}/>
             </div>
         )}
     </div>;

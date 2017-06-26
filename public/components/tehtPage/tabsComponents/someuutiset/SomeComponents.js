@@ -5,7 +5,7 @@ import { changeCurrentTemplate, shareInformation, setSharedButton } from '../../
 const SomeComponents = (props) =>
     <div className="someuutiset">
         {props.routes.map((comp) =>
-            <comp.component key={comp.nameId} {...props}/>
+            <comp.component key={comp.nameId} {...props} />
         )}
     </div>;
 

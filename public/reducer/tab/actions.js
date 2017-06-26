@@ -95,10 +95,8 @@ export function shareInformation(id, content) {
 export function setSharedButton(id, label) {
     return {
         type: SHARE_BUTTON_CLICKED,
-        sharedProps: {
-            id,
-            label
-        }
+        id,
+        label
     }
 }
 
