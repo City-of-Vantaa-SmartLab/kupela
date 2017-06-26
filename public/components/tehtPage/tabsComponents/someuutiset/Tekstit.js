@@ -1,6 +1,5 @@
 import React from 'react';
-import Share from '../reusables/templates/Share';
-import { connect } from 'react-redux';
+import Basic from '../reusables/templates/Basic';
 
 const Tekstit = (props) =>
     <div className="tekstit">
@@ -8,18 +7,11 @@ const Tekstit = (props) =>
         {props.texts.map((text) =>
             <div>
                 <a onClick={props.selectItem(text.nameId, 'GET_some', text)}>
-                    <Share src={text.url} title={text.name} key={text.nameId}
-                           nameId={text.nameId}
-                           content={text} {...props}/>
+                    <Basic src={text.url} title={text.name} key={text.nameId}/>
                 </a>
-                <input className="share-btn" type="button" onClick={props.clickShare("Jaettu", text.nameId, text)} value={props.button.label}/>
+                <input className="share-btn" type="button" onClick={props.clickShare("Jaettu", text.nameId, text)} value={props.button.sharedProps.label}/>
             </div>
         )}
     </div>;
 
-const mapStateToProps = ({ texts, tab: { button } }) => ({
-    texts,
-    button
-});
-
-export default connect(mapStateToProps, null)(Tekstit);
+export default Tekstit;

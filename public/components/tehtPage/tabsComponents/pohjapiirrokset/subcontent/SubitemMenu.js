@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { setCurrentSubItem, addNewFilter } from '../../../../../reducer/tab/actions';
 
 const SubitemMenu = (props) => (
-    <div className="subitemMenu" id="subitem_menu">
+    <div className="subitemMenu">
         {props.routes.map((item) =>
             <item.component key={item.nameId} {...props}/>
         )}

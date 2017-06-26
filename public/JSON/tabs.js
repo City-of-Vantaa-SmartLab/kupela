@@ -3,6 +3,7 @@ import Asiakkaidentiedot from '../components/tehtPage/tabsComponents/tehtava/Asi
 import Rakennuksentiedot from '../components/tehtPage/tabsComponents/tehtava/Rakennuksentiedot';
 import GraphicsInfo from '../components/tehtPage/tabsComponents/tehtava/GraphicsInfo';
 import Kohdetiedot from '../components/tehtPage/tabsComponents/tehtava/Kohdetiedot';
+import KohdeIlmakuva from '../components/tehtPage/tabsComponents/tehtava/KohdeIlmakuva';
 import Tehtava from '../components/tehtPage/tabsComponents/layouts/Tehtava';
 
 import Palonsijainti from '../components/tehtPage/tabsComponents/pohjapiirrokset/Palonsijainti';
@@ -84,7 +85,7 @@ const tabs = [
                             {
                                 name: 'Ilmakuva',
                                 nameId: 'ilmakuva',
-                                component: Ilmakuva
+                                component: KohdeIlmakuva
                             },
                             {
                                 name: 'Yhteystiedot',

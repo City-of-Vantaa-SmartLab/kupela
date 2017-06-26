@@ -15,6 +15,10 @@ import maps from './maps';
 import streetviews from './streetviews';
 import firealarms from './firealarms';
 import sprinklers from './sprinklers';
+import aerialviews from './aerialviews';
+import roadmaps from './roadmaps';
+import gatheringplaces from './gatheringplaces';
+import kohdekortit from './kohdekortit';
 
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/
 export default combineReducers({
@@ -33,5 +37,9 @@ export default combineReducers({
     maps,
     streetviews,
     firealarms,
-    sprinklers
+    sprinklers,
+    aerialviews,
+    roadmaps,
+    gatheringplaces,
+    kohdekortit
 });

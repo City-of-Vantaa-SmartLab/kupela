@@ -1,10 +1,20 @@
 import React from 'react';
-import Test from './templates/Test';
+import Showcase from './templates/Showcase';
+import { connect } from 'react-redux';
 
 const PohjaStreetView = (props) => (
     <div className="streetview">
-        <Test title="Street view:" info="TESTI"/>
+        <p><b>Street view:</b></p>
+        {props.streetviews.map((view) =>
+            <a onClick={props.selectSubItem(view.nameId, view)}>
+                <Showcase src={view.url} {...props}/>
+            </a>
+        )}
     </div>
 );
 
-export default PohjaStreetView;
+const mapStateToProps = ({ streetviews }) => ({
+    streetviews
+});
+
+export default connect(mapStateToProps, null)(PohjaStreetView);

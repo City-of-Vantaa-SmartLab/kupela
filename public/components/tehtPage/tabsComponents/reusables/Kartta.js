@@ -1,10 +1,20 @@
 import React from 'react';
-import Test from './templates/Test';
+import { connect } from 'react-redux';
+import Showcase from './templates/Showcase';
 
-const Kartta = () => (
+const Kartta = (props) => (
     <div className="kartta">
-        <Test title="Kartta:" info="TESTI"/>
+        <p><b>Kartta:</b></p>
+        {props.roadmaps.map((road) =>
+            <a onClick={props.selectSubItem(road.nameId, road)}>
+                <Showcase src={road.url} {...props}/>
+            </a>
+        )}
     </div>
 );
 
-export default Kartta;
+const mapStateToProps = ({ roadmaps }) => ({
+    roadmaps
+});
+
+export default connect(mapStateToProps, null)(Kartta);
