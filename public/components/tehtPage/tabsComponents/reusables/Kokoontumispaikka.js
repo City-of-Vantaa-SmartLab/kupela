@@ -1,10 +1,20 @@
 import React from 'react';
-import Test from './templates/Test';
+import Showcase from './templates/Showcase';
+import { connect } from 'react-redux';
 
-const Kokoontumispaikka = () => (
+const Kokoontumispaikka = (props) => (
     <div className="kokoontumispaikka">
-        <Test title="Kokoontumispaikka:" info="TESTI"/>
+        <p><b>Kokoontumispaikka:</b></p>
+        {props.gatheringplaces.map((place) =>
+            <a onClick={props.selectSubItem(place.nameId, place)}>
+                <Showcase src={place.url} {...props}/>
+            </a>
+        )}
     </div>
 );
 
-export default Kokoontumispaikka;
+const mapStateToProps = ({ gatheringplaces }) => ({
+    gatheringplaces
+});
+
+export default connect(mapStateToProps, null)(Kokoontumispaikka);

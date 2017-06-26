@@ -1,10 +1,18 @@
 import React from 'react';
-import Test from './templates/Test';
+import Showcase from './templates/Showcase';
+import { connect } from 'react-redux';
 
-const Kohdekortti = () => (
+const Kohdekortti = (props) => (
     <div className="kohdekortti">
-        <Test title="Kohdekortti:" info="TESTI"/>
+        <p><b>Kohdekortti:</b></p>
+        {props.kohdekortit.map((card) =>
+            <Showcase src={card.url}/>
+        )}
     </div>
 );
 
-export default Kohdekortti;
+const mapStateToProps = ({ kohdekortit }) => ({
+    kohdekortit
+});
+
+export default connect(mapStateToProps, null)(Kohdekortti);

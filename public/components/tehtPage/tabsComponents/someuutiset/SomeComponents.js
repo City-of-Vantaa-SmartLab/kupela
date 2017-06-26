@@ -9,6 +9,13 @@ const SomeComponents = (props) =>
         )}
     </div>;
 
+const mapStateToProps = ({ images, texts, news, tab: { button }}) => ({
+    images,
+    texts,
+    news,
+    button
+});
+
 const mapDispatchToProps = dispatch => ({
     selectItem(id, type, content) {
         return () => {
@@ -17,10 +24,10 @@ const mapDispatchToProps = dispatch => ({
     },
     clickShare(label, id, content) {
         return () => {
-            dispatch(setSharedButton(label));
+            dispatch(setSharedButton(id, label));
             dispatch(shareInformation(id, content));
         }
     }
 });
 
-export default connect(null, mapDispatchToProps)(SomeComponents);
+export default connect(mapStateToProps, mapDispatchToProps)(SomeComponents);

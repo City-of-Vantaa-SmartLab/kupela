@@ -1,10 +1,20 @@
 import React from 'react';
-import Test from './templates/Test';
+import Showcase from './templates/Showcase';
+import { connect } from 'react-redux';
 
-const Ilmakuva = () => (
+const Ilmakuva = (props) => (
     <div className="ilmakuva">
-        <Test title="Ilmakuva:" info="TESTI"/>
+        <p><b>Ilmakuva:</b></p>
+        {props.aerialviews.map((view) =>
+            <a onClick={props.selectSubItem(view.nameId, view)}>
+                <Showcase src={view.url} {...props}/>
+            </a>
+        )}
     </div>
 );
 
-export default Ilmakuva;
+const mapStateToProps = ({ aerialviews }) => ({
+    aerialviews
+});
+
+export default connect(mapStateToProps, null)(Ilmakuva);
