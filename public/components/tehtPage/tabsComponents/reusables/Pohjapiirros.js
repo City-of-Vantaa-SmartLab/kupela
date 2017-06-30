@@ -5,7 +5,7 @@ const Pohjapiirros = (props) => (
     <div className="pohjapiirros">
         <p><b>Pohjapiirros:</b></p>
         {props.floorplans.map((plan) =>
-            <a onClick={props.selectSubItem(plan.nameId, plan)}>
+            <a onClick={props.selectSubItem(plan.nameId, plan, 'yesMap')}>
                 <Showcase src={plan.url} />
             </a>
         )}

@@ -5,7 +5,7 @@ const Yhteystiedot = (props) => (
     <div className="yhteystiedot">
         <p><b>Yhteystietoja:</b></p>
         {props.contacts.map((c) =>
-            <a onClick={props.selectAsOnlySubItemcontent(c.nameId, c)}>
+            <a onClick={props.selectSubItem(c.nameId, c, 'noMap')}>
                 <Showcase src={c.url} />
             </a>
         )}
