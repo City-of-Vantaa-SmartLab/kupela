@@ -5,7 +5,7 @@ const Palovaroittimet = (props) => (
     <div className="palovaroittimet">
         <p><b>Palovaroittimet:</b></p>
         {props.firealarms.map((alarm) =>
-            <a onClick={props.selectSubItem(alarm.nameId, alarm)}>
+            <a onClick={props.selectSubItem(alarm.nameId, alarm, 'yesMap')}>
                 <Showcase src={alarm.url} />
             </a>
         )}

@@ -5,7 +5,7 @@ const Sprinklerit = (props) => (
     <div className="sprinklerit">
         <p><b>Sprinklerit:</b></p>
         {props.sprinklers.map((s) =>
-            <a onClick={props.selectSubItem(s.nameId, s)}>
+            <a onClick={props.selectSubItem(s.nameId, s, 'yesMap')}>
                 <Showcase src={s.url} />
             </a>
         )}

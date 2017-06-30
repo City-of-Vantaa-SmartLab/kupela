@@ -13,6 +13,7 @@ export const SHARE_BUTTON_CLICKED = 'SHARE_BUTTON_CLICKED';
 export const ADD_SUBITEM_FILTER = 'ADD_SUBITEM_FILTER';
 export const RESET_FILTER_ARRAY = 'RESET_FILTER_ARRAY';
 export const RESET_SUB_TABCONTENT = 'RESET_SUB_TABCONTENT';
+export const SET_SUBITEM_AS_SUBCONTENT = 'SET_SUBITEM_AS_SUBCONTENT';
 
 export function setCurrentTab(id) {
     return {
@@ -107,12 +108,13 @@ export function setSharedButton(id, isShared) {
     }
 }
 
-export function addNewFilter(id, subitem) {
+export function addNewFilter(id, subitem, itemType) {
     return {
         type: ADD_SUBITEM_FILTER,
         filters: {
             id,
-            subitem
+            subitem,
+            itemType
         }
     }
 }
