@@ -1,11 +1,11 @@
-import { CLICKED_SUBITEM } from './actions';
+import { LOAD_HENKILOSTO } from './actions';
 
 const initialState = [];
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case CLICKED_SUBITEM:
-            return action.subitemId;
+        case LOAD_HENKILOSTO:
+            return action.henkilosto;
         default:
             return state;
     }

@@ -11,8 +11,8 @@ const Uutiset = (props) =>
                 </a>
                 <input className="share-btn"
                        type="button"
-                       onClick={props.clickShare("Jaettu", n.nameId, n)}
-                       value={props.button.label}
+                       onClick={props.clickShare(true, n.nameId, n)}
+                       value={(props.button.isShared ? 'Jaettu' : 'Jaa johtoautoon')}
                        key={n.nameId}
                 />
             </div>

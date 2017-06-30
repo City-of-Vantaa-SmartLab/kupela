@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import Basic from '../reusables/templates/Basic';
 
 const Jaetut = (props) =>
@@ -12,8 +11,4 @@ const Jaetut = (props) =>
         )}
     </div>;
 
-const mapStateToProps = ({ tab: { shared_info } }) => ({
-    shared_info
-});
-
-export default connect(mapStateToProps, null)(Jaetut);
+export default Jaetut;

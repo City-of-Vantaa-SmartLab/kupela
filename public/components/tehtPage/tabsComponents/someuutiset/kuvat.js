@@ -11,8 +11,10 @@ const Kuvat = (props) =>
                 </a>
                 <input className="share-btn"
                        type="button"
-                       onClick={props.clickShare("Jaettu", img.nameId, img)}
-                       value={props.button.label}/>
+                       onClick={props.clickShare(true, img.nameId, img)}
+                       value={(props.button.isShared ? 'Jaettu' : 'Jaa johtoautoon')}
+                       key={img.nameId}
+                       />
             </div>
         )}
     </div>;
