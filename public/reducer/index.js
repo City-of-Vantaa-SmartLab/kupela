@@ -19,6 +19,10 @@ import aerialviews from './aerialviews';
 import roadmaps from './roadmaps';
 import gatheringplaces from './gatheringplaces';
 import kohdekortit from './kohdekortit';
+import floorplans from './floorplans';
+import henkilosto from './turvallisuushenkilosto';
+import rescueplans from './rescueplans';
+import contacts from './contacts';
 
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/
 export default combineReducers({
@@ -41,5 +45,9 @@ export default combineReducers({
     aerialviews,
     roadmaps,
     gatheringplaces,
-    kohdekortit
+    kohdekortit,
+    floorplans,
+    henkilosto,
+    rescueplans,
+    contacts
 });

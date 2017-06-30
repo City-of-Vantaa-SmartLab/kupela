@@ -1,5 +1,5 @@
 import React from 'react';
-import Showcase from './templates/Showcase';
+import Showcase from '../reusables/templates/Showcase';
 import { connect } from 'react-redux';
 
 const Kohdekortti = (props) => (

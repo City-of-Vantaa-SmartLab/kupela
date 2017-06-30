@@ -1,11 +1,11 @@
-import { CLICKED_SUBITEM } from './actions';
+import { LOAD_RESCUEPLANS } from './actions';
 
 const initialState = [];
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case CLICKED_SUBITEM:
-            return action.subitemId;
+        case LOAD_RESCUEPLANS:
+            return action.rescueplans;
         default:
             return state;
     }

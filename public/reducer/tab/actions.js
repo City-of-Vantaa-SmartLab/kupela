@@ -12,6 +12,7 @@ export const SET_INFO_SHARED = 'SET_INFO_SHARED';
 export const SHARE_BUTTON_CLICKED = 'SHARE_BUTTON_CLICKED';
 export const ADD_SUBITEM_FILTER = 'ADD_SUBITEM_FILTER';
 export const RESET_FILTER_ARRAY = 'RESET_FILTER_ARRAY';
+export const RESET_SUB_TABCONTENT = 'RESET_SUB_TABCONTENT';
 
 export function setCurrentTab(id) {
     return {
@@ -75,6 +76,12 @@ export function showSubTabcontent(subcontent) {
     }
 }
 
+export function resetSubtabToInitialstate() {
+    return {
+        type: RESET_SUB_TABCONTENT
+    }
+}
+
 export function setCurrentSubItem(subitemId) {
     return {
         type: CLICKED_SUBITEM,
@@ -92,11 +99,11 @@ export function shareInformation(id, content) {
     }
 }
 
-export function setSharedButton(id, label) {
+export function setSharedButton(id, isShared) {
     return {
         type: SHARE_BUTTON_CLICKED,
         id,
-        label
+        isShared
     }
 }
 

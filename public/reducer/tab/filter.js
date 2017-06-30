@@ -1,4 +1,4 @@
-import { ADD_SUBITEM_FILTER, RESET_FILTER_ARRAY } from './actions';
+import { ADD_SUBITEM_FILTER, RESET_FILTER_ARRAY, SET_SUBITEM_AS_SUBCONTENT } from './actions';
 
 const initialState = {
     arr: []
@@ -17,7 +17,7 @@ export default (state = initialState, action) => {
                     arr: [
                         ...state.arr.filter((item) => item.id !== action.filters.id)
                     ]
-                })
+                });
             }
         case RESET_FILTER_ARRAY:
             return initialState;

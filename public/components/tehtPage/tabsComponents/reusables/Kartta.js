@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import Showcase from './templates/Showcase';
 
 const Kartta = (props) => (
@@ -7,14 +6,10 @@ const Kartta = (props) => (
         <p><b>Kartta:</b></p>
         {props.roadmaps.map((road) =>
             <a onClick={props.selectSubItem(road.nameId, road)}>
-                <Showcase src={road.url} {...props}/>
+                <Showcase src={road.url} />
             </a>
         )}
     </div>
 );
 
-const mapStateToProps = ({ roadmaps }) => ({
-    roadmaps
-});
-
-export default connect(mapStateToProps, null)(Kartta);
+export default Kartta;

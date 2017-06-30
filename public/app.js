@@ -23,6 +23,10 @@ import { getAerialViews } from './reducer/aerialviews/actions';
 import { getRoadmaps } from './reducer/roadmaps/actions';
 import { getGatherPlaces } from './reducer/gatheringplaces/actions';
 import { getKohdekortit } from './reducer/kohdekortit/actions';
+import { getFloorplans } from './reducer/floorplans/actions';
+import { getHenkilosto } from './reducer/turvallisuushenkilosto/actions';
+import { getRescueplans } from './reducer/rescueplans/actions';
+import { getContacts } from './reducer/contacts/actions';
 
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/setting-up-the-redux-store
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -48,6 +52,10 @@ store.dispatch(getAerialViews());
 store.dispatch(getRoadmaps());
 store.dispatch(getGatherPlaces());
 store.dispatch(getKohdekortit());
+store.dispatch(getFloorplans());
+store.dispatch(getHenkilosto());
+store.dispatch(getRescueplans());
+store.dispatch(getContacts());
 
 ReactDOM.render(
     <Provider store={store}>

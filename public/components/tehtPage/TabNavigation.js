@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { setCurrentTab, showCurrentTabcontent, setOriginalTemplate, resetFiltersToNull } from '../../reducer/tab/actions';
+import { setCurrentTab, showCurrentTabcontent, setOriginalTemplate, resetFiltersToNull, resetSubtabToInitialstate } from '../../reducer/tab/actions';
 
 const TabNavigation = ({ tabs, profile, selectTab }) => (
     <div>
@@ -27,6 +27,7 @@ const mapDispatchToProps = dispatch => ({
             dispatch(showCurrentTabcontent(object));
             dispatch(setOriginalTemplate());
             dispatch(resetFiltersToNull());
+            dispatch(resetSubtabToInitialstate());
         };
     }
 });

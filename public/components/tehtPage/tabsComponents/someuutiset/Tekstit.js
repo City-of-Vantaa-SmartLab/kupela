@@ -11,8 +11,10 @@ const Tekstit = (props) =>
                 </a>
                 <input className="share-btn"
                        type="button"
-                       onClick={props.clickShare("Jaettu", text.nameId, text)}
-                       value={props.button.label}/>
+                       onClick={props.clickShare(true, text.nameId, text)}
+                       value={(props.button.isShared ? 'Jaettu' : 'Jaa johtoautoon')}
+                       key={text.nameId}
+                />
             </div>
         )}
     </div>;
