@@ -1,6 +1,7 @@
 import React from 'react';
 import SubitemContent from './subcontent/SubitemContent';
 import SubitemMenu from './subcontent/SubitemMenu';
+import { connect } from 'react-redux';
 
 const Vaarallisetaineet = (props) =>
     <div className="subtablayout">
@@ -8,4 +9,12 @@ const Vaarallisetaineet = (props) =>
         <SubitemContent />
     </div>;
 
-export default Vaarallisetaineet;
+const mapStateToProps = ({ dangerfloorplans, listofsubstances, chemicalcards, smokespreading, escape }) => ({
+    dangerfloorplans,
+    listofsubstances,
+    chemicalcards,
+    smokespreading,
+    escape
+});
+
+export default connect(mapStateToProps, null)(Vaarallisetaineet);

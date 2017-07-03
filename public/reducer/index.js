@@ -23,6 +23,11 @@ import floorplans from './floorplans';
 import henkilosto from './turvallisuushenkilosto';
 import rescueplans from './rescueplans';
 import contacts from './contacts';
+import dangerfloorplans from './dangerfloorplans';
+import listofsubstances from './listofsubstances';
+import chemicalcards from './chemicalcards';
+import smokespreading from './smokespreading';
+import escape from './escape';
 
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/
 export default combineReducers({
@@ -49,5 +54,10 @@ export default combineReducers({
     floorplans,
     henkilosto,
     rescueplans,
-    contacts
+    contacts,
+    dangerfloorplans,
+    listofsubstances,
+    chemicalcards,
+    smokespreading,
+    escape
 });

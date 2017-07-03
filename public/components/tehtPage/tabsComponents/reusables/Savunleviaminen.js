@@ -1,9 +1,14 @@
 import React from 'react';
-import Test from './templates/Test';
+import Showcase from './templates/Showcase';
 
-const Savunleviaminen = () => (
+const Savunleviaminen = (props) => (
     <div className="savunleviaminen">
-        <Test title="Savun leviäminen:" info="TESTI"/>;
+        <p><b>Savun leviäminen:</b></p>
+        {props.smokespreading.map((smoke) =>
+            <a onClick={props.selectSubItem(smoke.nameId, smoke, 'noMap')}>
+                <Showcase src={smoke.url}/>
+            </a>
+        )}
     </div>
 );
 
