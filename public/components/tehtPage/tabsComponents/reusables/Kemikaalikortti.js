@@ -1,9 +1,14 @@
 import React from 'react';
-import Test from './templates/Test';
+import Showcase from './templates/Showcase';
 
-const Kemikaalikortti = () => (
+const Kemikaalikortti = (props) => (
     <div className="kemikaalikortti">
-        <Test title="Kemikaalikortti:" info="TESTI"/>
+        <p><b>Kemikaalikortti:</b></p>
+        {props.chemicalcards.map((card) =>
+            <a onClick={props.selectSubItem(card.nameId, card, 'noMap')}>
+                <Showcase src={card.url}/>
+            </a>
+        )}
     </div>
 );
 

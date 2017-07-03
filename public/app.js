@@ -27,6 +27,11 @@ import { getFloorplans } from './reducer/floorplans/actions';
 import { getHenkilosto } from './reducer/turvallisuushenkilosto/actions';
 import { getRescueplans } from './reducer/rescueplans/actions';
 import { getContacts } from './reducer/contacts/actions';
+import { getDangerFloorplans } from './reducer/dangerfloorplans/actions';
+import { getListofSubstances } from './reducer/listofsubstances/actions';
+import { getChemicalcards } from './reducer/chemicalcards/actions';
+import { getSmokespreading } from './reducer/smokespreading/actions';
+import { getEscape } from './reducer/escape/actions';
 
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/setting-up-the-redux-store
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -56,6 +61,11 @@ store.dispatch(getFloorplans());
 store.dispatch(getHenkilosto());
 store.dispatch(getRescueplans());
 store.dispatch(getContacts());
+store.dispatch(getDangerFloorplans());
+store.dispatch(getListofSubstances());
+store.dispatch(getChemicalcards());
+store.dispatch(getSmokespreading());
+store.dispatch(getEscape());
 
 ReactDOM.render(
     <Provider store={store}>

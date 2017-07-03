@@ -7,7 +7,7 @@ const initialState = {
 export default (state = initialState, action) => {
     switch (action.type) {
         case ADD_SUBITEM_FILTER:
-            //noMap-tyyppiset komponentit
+            //noMap-type components
             if(action.filters.itemType === 'noMap'){
                 let type = state.arr.findIndex((item) => item.itemType === 'yesMap');
                 if(type === -1) {
@@ -26,7 +26,7 @@ export default (state = initialState, action) => {
                     });
                 }
             } else {
-                //yesMap-tyyppiset komponentit
+                //yesMap-type components
                 let type = state.arr.findIndex((item) => item.itemType === 'noMap');
                 if(type === -1) {
                     let index = state.arr.findIndex((item) => item.id === action.filters.id);

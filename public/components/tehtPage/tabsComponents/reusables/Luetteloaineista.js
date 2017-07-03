@@ -1,9 +1,14 @@
 import React from 'react';
-import Test from './templates/Test';
+import Showcase from './templates/Showcase';
 
-const Luetteloaineista = () => (
+const Luetteloaineista = (props) => (
     <div className="luetteloaineista">
-        <Test title="Luettelo vaarallisista aineista:" info="TESTI"/>
+        <p><b>Luettelo vaarallisista aineista:</b></p>
+        {props.listofsubstances.map((list) =>
+            <a onClick={props.selectSubItem(list.nameId, list, 'noMap')}>
+                <Showcase src={list.url}/>
+            </a>
+        )}
     </div>
 );
 

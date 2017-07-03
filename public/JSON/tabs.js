@@ -45,6 +45,7 @@ import Kokoontumispaikka from '../components/tehtPage/tabsComponents/reusables/K
 import Palovaroittimet from '../components/tehtPage/tabsComponents/reusables/Palovaroittimet';
 import Kartta from '../components/tehtPage/tabsComponents/reusables/Kartta';
 import PohjaStreetView from '../components/tehtPage/tabsComponents/reusables/PohjaStreetView';
+import VaarallisetPohjapiirros from '../components/tehtPage/tabsComponents/reusables/VaarallisetPohjapiirros';
 
 const tabs = [
     {
@@ -151,7 +152,7 @@ const tabs = [
                             },
                             {
                                 name: 'Street view',
-                                nameId: 'streetview',
+                                nameId: 'pohjastreetview',
                                 component: PohjaStreetView
                             },
                             {
@@ -197,8 +198,8 @@ const tabs = [
                         routes: [
                             {
                                 name: 'Pohjapiirros',
-                                nameId: 'pohjapiirros',
-                                component: Pohjapiirros
+                                nameId: 'vaarallisetpohjapiirros',
+                                component: VaarallisetPohjapiirros
                             },
                             {
                                 name: 'Savun leviäminen',
