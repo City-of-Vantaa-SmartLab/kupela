@@ -14,6 +14,7 @@ export const ADD_SUBITEM_FILTER = 'ADD_SUBITEM_FILTER';
 export const RESET_FILTER_ARRAY = 'RESET_FILTER_ARRAY';
 export const RESET_SUB_TABCONTENT = 'RESET_SUB_TABCONTENT';
 export const SET_SUBITEM_AS_SUBCONTENT = 'SET_SUBITEM_AS_SUBCONTENT';
+export const RETURN_MAP_TYPE = 'RETURN_MAP_TYPE';
 
 export function setCurrentTab(id) {
     return {
@@ -116,6 +117,13 @@ export function addNewFilter(id, subitem, itemType) {
             subitem,
             itemType
         }
+    }
+}
+
+export function getMapType(mapType) {
+    return {
+        type: RETURN_MAP_TYPE,
+        mapType
     }
 }
 

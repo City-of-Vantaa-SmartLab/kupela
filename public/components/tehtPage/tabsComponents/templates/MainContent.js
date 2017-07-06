@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 const MainContent = (props) => {
     if(props.template.templateType === 'GET_some') {
         return <ShareContent {...props}/>;
-    } else if (props.template.templateType === 'GET_kuvatvideot') {
+    } else {
         return <BasicContent {...props}/>
     }
 };

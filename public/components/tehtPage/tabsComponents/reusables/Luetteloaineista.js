@@ -5,7 +5,7 @@ const Luetteloaineista = (props) => (
     <div className="luetteloaineista">
         <p><b>Luettelo vaarallisista aineista:</b></p>
         {props.listofsubstances.map((list) =>
-            <a onClick={props.selectSubItem(list.nameId, list, 'noMap')}>
+            <a onClick={props.selectSubItem(list.nameId, list, 'noLayer', 'none')}>
                 <Showcase src={list.url}/>
             </a>
         )}

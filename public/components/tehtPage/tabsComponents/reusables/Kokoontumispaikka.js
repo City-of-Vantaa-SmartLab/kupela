@@ -5,7 +5,7 @@ const Kokoontumispaikka = (props) => (
     <div className="kokoontumispaikka">
         <p><b>Kokoontumispaikka:</b></p>
         {props.gatheringplaces.map((place) =>
-            <a onClick={props.selectSubItem(place.nameId, place, 'yesMap')}>
+            <a onClick={props.selectSubItem(place.nameId, place, 'yesLayer', 'image')}>
                 <Showcase src={place.url} />
             </a>
         )}
