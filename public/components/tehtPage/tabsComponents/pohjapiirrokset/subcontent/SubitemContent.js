@@ -5,16 +5,7 @@ import SubitemImage from '../../reusables/templates/SubitemImage';
 
 const SubitemContent = (props) => {
     if(props.maptype === 'gmap') {
-        return <GMap
-            containerElement={
-                <div style={{ height: '100%'}} />
-            }
-            mapElement={
-                <div style={{ height: '70%', width: '70%'}} />
-            }
-            center={new google.maps.LatLng(60.192059, 24.945831)}
-            zoom={10}
-        />;
+        return <GMap {...props}/>;
     } else if(props.maptype === 'aerial') {
         return <span/>;
     } else {
