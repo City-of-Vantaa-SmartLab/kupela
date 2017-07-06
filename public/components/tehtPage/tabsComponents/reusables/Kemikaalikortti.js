@@ -5,7 +5,7 @@ const Kemikaalikortti = (props) => (
     <div className="kemikaalikortti">
         <p><b>Kemikaalikortti:</b></p>
         {props.chemicalcards.map((card) =>
-            <a onClick={props.selectSubItem(card.nameId, card, 'noMap')}>
+            <a onClick={props.selectSubItem(card.nameId, card, 'noLayer', 'none')}>
                 <Showcase src={card.url}/>
             </a>
         )}

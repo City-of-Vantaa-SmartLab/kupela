@@ -8,6 +8,7 @@ import template from './template';
 import button from './button';
 import shared_info from './shared_info';
 import filter from './filter';
+import maptype from './maptype';
 
 export default combineReducers ({
     id,
@@ -18,5 +19,6 @@ export default combineReducers ({
     template,
     button,
     shared_info,
-    filter
+    filter,
+    maptype
 });

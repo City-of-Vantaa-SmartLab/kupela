@@ -5,7 +5,7 @@ const Escape = (props) => (
     <div className="escape">
         <p><b>ESCAPE:</b></p>
         {props.escape.map((e) =>
-            <a onClick={props.selectSubItem(e.nameId, e, 'noMap')}>
+            <a onClick={props.selectSubItem(e.nameId, e, 'noLayer', 'none')}>
                 <Showcase src={e.url}/>
             </a>
         )}
