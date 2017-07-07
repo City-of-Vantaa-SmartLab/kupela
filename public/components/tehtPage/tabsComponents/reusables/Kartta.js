@@ -7,8 +7,8 @@ const Kartta = (props) => (
     <div className="kartta">
         <p><b>Kartta:</b></p>
         {props.roadmaps.map((m) =>
-            <a onClick={props.selectSubItem(m.nameId, m, 'noLayer', 'gmap')}>
-                <img src={staticMapUrl1 + m.name + staticMapUrl2}/>
+            <a onClick={props.selectSubItem(m.nameId, m, 'noLayer', 'roadmap')}>
+                <img src={staticMapUrl1 + m.lat + ',' + m.lng + staticMapUrl2}/>
             </a>
         )}
     </div>

@@ -1,4 +1,4 @@
-import {  withGoogleMap, GoogleMap, StreetViewPanorama } from 'react-google-maps';
+import { withGoogleMap, GoogleMap, StreetViewPanorama } from 'react-google-maps';
 
 const StartStreetView = withGoogleMap(props => (
     <GoogleMap
