@@ -11,13 +11,14 @@ const GMap = (props) =>
     <div className="subitemContent">
         {props.filter.arr.map((item) =>
             <GettingStartedGoogleMap
+                key={item.id}
                 containerElement={
                     <div style={{height: '100%'}}/>
                 }
                 mapElement={
                     <div style={{height: '100%', width: '100%'}}/>
                 }
-                zoom={13}
+                zoom={11}
                 center={new google.maps.LatLng(item.subitem.lat, item.subitem.lng)}
             />
         )}
