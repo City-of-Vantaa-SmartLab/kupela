@@ -23,7 +23,7 @@ const GStreetView = (props) =>
                     <div style={{height: '100%'}}/>
                 }
                 center={{ lat: item.subitem.lat, lng: item.subitem.lng }}
-                zoom={10}
+                zoom={13}
             />
         )}
     </div>;

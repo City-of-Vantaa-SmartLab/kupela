@@ -1,4 +1,4 @@
-import { withGoogleMap, GoogleMap } from 'react-google-maps';
+import { withGoogleMap, GoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
 const StartRoadMap = withGoogleMap(props => (
     <GoogleMap
@@ -19,9 +19,10 @@ const GMap = (props) =>
                 mapElement={
                     <div style={{ height: '100%', width: '100%' }}/>
                 }
-                zoom={11}
+                zoom={13}
                 center={ new google.maps.LatLng(item.subitem.lat, item.subitem.lng )}
                 mapTypeId={ props.maptype }
+                {...props}
             />
         )}
     </div>;

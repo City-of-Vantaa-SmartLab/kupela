@@ -3,7 +3,6 @@ export const SHOW_CURRENT_TABCONTENT = 'SHOW_CURRENT_TABCONTENT';
 export const SHOW_CURRENT_SUB_TABCONTENT = 'SHOW_CURRENT_SUB_TABCONTENT';
 export const SET_CURRENT_SUB_TAB = 'SET_CURRENT_SUB_TAB';
 export const CLICKED_SUBITEM = 'CLICKED_SUBITEM';
-export const SET_SUBITEM_MENU = 'SET_SUBITEM_MENU';
 export const CHANGE_TEMPLATE = 'CHANGE_TEMPLATE';
 export const RETURN_ORIGINAL_TEMPLATE = 'RETURN_ORIGINAL_TEMPLATE';
 export const SET_AS_MAIN_CONTENT = 'SET_AS_MAIN_CONTENT';
@@ -13,8 +12,8 @@ export const SHARE_BUTTON_CLICKED = 'SHARE_BUTTON_CLICKED';
 export const ADD_SUBITEM_FILTER = 'ADD_SUBITEM_FILTER';
 export const RESET_FILTER_ARRAY = 'RESET_FILTER_ARRAY';
 export const RESET_SUB_TABCONTENT = 'RESET_SUB_TABCONTENT';
-export const SET_SUBITEM_AS_SUBCONTENT = 'SET_SUBITEM_AS_SUBCONTENT';
 export const RETURN_MAP_TYPE = 'RETURN_MAP_TYPE';
+export const HANDLE_ITEM_LOAD = 'HANDLE_ITEM_LOAD';
 
 export function setCurrentTab(id) {
     return {
@@ -130,5 +129,12 @@ export function getMapType(mapType) {
 export function resetFiltersToNull() {
     return {
         type: RESET_FILTER_ARRAY
+    }
+}
+
+export function handleItemLoad(event) {
+    return {
+        type: HANDLE_ITEM_LOAD,
+        event
     }
 }

@@ -9,6 +9,7 @@ import button from './button';
 import shared_info from './shared_info';
 import filter from './filter';
 import maptype from './maptype';
+import carousel from './carousel';
 
 export default combineReducers ({
     id,
@@ -20,5 +21,6 @@ export default combineReducers ({
     button,
     shared_info,
     filter,
-    maptype
+    maptype,
+    carousel
 });
