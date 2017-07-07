@@ -5,10 +5,8 @@ import GStreetView from '../../reusables/templates/GStreetView';
 import SubitemImage from '../../reusables/templates/SubitemImage';
 
 const SubitemContent = (props) => {
-    if(props.maptype === 'gmap') {
+    if(props.maptype === 'roadmap' || props.maptype === 'satellite') {
         return <GMap {...props} />;
-    } else if(props.maptype === 'aerial') {
-        return <span/>;
     } else if (props.maptype === 'streetview'){
         return <GStreetView {...props} />;
     } else {
