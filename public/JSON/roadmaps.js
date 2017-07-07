@@ -1,7 +1,7 @@
 const roadmaps = [
     {
-        name: 'Kartta 1',
-        nameId: 'kartta1',
+        name: 'Teknobulevardi 3',
+        nameId: 'teknobulevardi3',
         url: '../../../../pics/kartta.png',
         lat: 60.305571,
         lng: 24.964321
