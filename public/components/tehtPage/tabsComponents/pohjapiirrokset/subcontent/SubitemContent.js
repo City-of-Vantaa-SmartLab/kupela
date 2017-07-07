@@ -1,15 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import GMap from '../../reusables/templates/GMap';
+import GStreetView from '../../reusables/templates/GStreetView';
 import SubitemImage from '../../reusables/templates/SubitemImage';
 
 const SubitemContent = (props) => {
     if(props.maptype === 'gmap') {
-        return <GMap {...props}/>;
+        return <GMap {...props} />;
     } else if(props.maptype === 'aerial') {
         return <span/>;
+    } else if (props.maptype === 'streetview'){
+        return <GStreetView {...props} />;
     } else {
-        return <SubitemImage {...props}/>;
+        return <SubitemImage {...props} />;
     }
 };
 
