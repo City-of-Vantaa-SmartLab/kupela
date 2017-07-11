@@ -14,6 +14,7 @@ const StartStreetView = withGoogleMap(props => (
 const GStreetView = (props) =>
     <div className="subitemContent">
         {props.filter.arr.map((item) =>
+
             <StartStreetView
                 key={item.id}
                 containerElement={

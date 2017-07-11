@@ -9,11 +9,12 @@ const Saapuminen = (props) =>
         <SubitemContent />
     </div>;
 
-const mapStateToProps = ({ roadmaps, gatheringplaces, aerialviews, streetviews }) => ({
+const mapStateToProps = ({ roadmaps, gatheringplaces, aerialviews, streetviews, tab: { carousel } }) => ({
     roadmaps,
     gatheringplaces,
     aerialviews,
-    streetviews
+    streetviews,
+    carousel
 });
 
 export default connect(mapStateToProps, null)(Saapuminen);

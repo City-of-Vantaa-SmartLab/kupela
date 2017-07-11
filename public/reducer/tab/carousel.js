@@ -1,11 +1,17 @@
-import { HANDLE_ITEM_LOAD } from './actions';
+import { ARROW_BUTTON_CLICKED } from './actions';
 
-const initialState = [];
+const initialState = {
+    index: 0,
+    direction: null
+};
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case HANDLE_ITEM_LOAD:
-            return action.event;
+        case ARROW_BUTTON_CLICKED:
+            return Object.assign({}, state, {
+                index: action.index,
+                direction: action.direction
+            });
         default:
             return state;
     }

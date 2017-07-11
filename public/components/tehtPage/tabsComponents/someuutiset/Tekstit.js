@@ -1,5 +1,6 @@
 import React from 'react';
 import Basic from '../reusables/templates/Basic';
+import ShareButton from './ShareButton';
 
 const Tekstit = (props) =>
     <div className="tekstit">
@@ -9,12 +10,8 @@ const Tekstit = (props) =>
                 <a onClick={props.selectItem(text.nameId, 'GET_some', text)}>
                     <Basic src={text.url} title={text.name} key={text.nameId}/>
                 </a>
-                <input className="share-btn"
-                       type="button"
-                       onClick={props.clickShare(true, text.nameId, text)}
-                       value={(props.button.isShared ? 'Jaettu' : 'Jaa johtoautoon')}
-                       key={text.nameId}
-                />
+                <ShareButton onClick={props.clickShare(true, text.nameId, text)}
+                             key={text.nameId} {...props}/>
             </div>
         )}
     </div>;

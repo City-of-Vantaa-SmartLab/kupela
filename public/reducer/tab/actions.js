@@ -13,7 +13,7 @@ export const ADD_SUBITEM_FILTER = 'ADD_SUBITEM_FILTER';
 export const RESET_FILTER_ARRAY = 'RESET_FILTER_ARRAY';
 export const RESET_SUB_TABCONTENT = 'RESET_SUB_TABCONTENT';
 export const RETURN_MAP_TYPE = 'RETURN_MAP_TYPE';
-export const HANDLE_ITEM_LOAD = 'HANDLE_ITEM_LOAD';
+export const ARROW_BUTTON_CLICKED = 'ARROW_BUTTON_CLICKED';
 
 export function setCurrentTab(id) {
     return {
@@ -132,9 +132,10 @@ export function resetFiltersToNull() {
     }
 }
 
-export function handleItemLoad(event) {
+export function showNewItem(index, e) {
     return {
-        type: HANDLE_ITEM_LOAD,
-        event
+        type: ARROW_BUTTON_CLICKED,
+        index,
+        direction: e.direction
     }
 }

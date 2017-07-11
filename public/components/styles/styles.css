@@ -179,6 +179,7 @@ img {
                          "c"
                          "d"
                          "e";
+    padding-right: 15px;
     height: 55vh;
 }
 
@@ -319,4 +320,13 @@ img {
     background-color: #1c1c3a;
     color: white;
     border: none;
+}
+
+.carousel-indicators li {
+    display: none;
+}
+
+.carousel-control {
+    opacity: 1;
+    width: 10%;
 }
