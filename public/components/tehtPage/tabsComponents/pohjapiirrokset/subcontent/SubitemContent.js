@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import GMap from '../../reusables/templates/GMap';
-import GStreetView from '../../reusables/templates/GStreetView';
+import GMap from '../../reusables/googleMaps/GMap';
+import GStreetView from '../../reusables/googleMaps/GStreetView';
 import SubitemImage from '../../reusables/templates/SubitemImage';
 
 const SubitemContent = (props) => {

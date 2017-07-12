@@ -9,7 +9,7 @@ export default (state = initialState, action) => {
         case ADD_CAROUSEL:
             if(action.itemArray.length > 1) {
                 return Object.assign({}, state, {
-                    carousel: !carousel
+                    carousel: !state.carousel
                 });
             } else {
                 return initialState;

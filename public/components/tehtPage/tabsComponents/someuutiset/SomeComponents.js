@@ -9,23 +9,23 @@ const SomeComponents = (props) =>
         )}
     </div>;
 
-const mapStateToProps = ({ images, texts, news, tab: { button, shared_info }}) => ({
+const mapStateToProps = ({ images, texts, news, tab: { buttons, shared_info }}) => ({
     images,
     texts,
     news,
     shared_info,
-    button
+    buttons
 });
 
 const mapDispatchToProps = dispatch => ({
     selectItem(id, type, content) {
-        return () => {
+        return() => {
             dispatch(changeCurrentTemplate(id, type, content));
         }
     },
-    clickShare(isShared, id, content) {
-        return () => {
-            dispatch(setSharedButton(id, isShared));
+    clickShare(id, content) {
+        return() => {
+            dispatch(setSharedButton(id));
             dispatch(shareInformation(id, content));
         }
     }
