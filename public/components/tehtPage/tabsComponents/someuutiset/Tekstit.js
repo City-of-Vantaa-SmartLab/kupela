@@ -8,10 +8,10 @@ const Tekstit = (props) =>
         {props.texts.map((text) =>
             <div>
                 <a onClick={props.selectItem(text.nameId, 'GET_some', text)}>
-                    <Basic src={text.url} title={text.name} key={text.nameId}/>
+                    <Basic src={text.url} title={text.name} key={text.nameId} />
                 </a>
-                <ShareButton onClick={props.clickShare(true, text.nameId, text)}
-                             key={text.nameId} {...props}/>
+                <ShareButton onClick={props.clickShare(text.nameId, text)}
+                             key={text.nameId} {...props} />
             </div>
         )}
     </div>;

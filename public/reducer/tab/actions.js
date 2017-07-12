@@ -14,6 +14,7 @@ export const RESET_FILTER_ARRAY = 'RESET_FILTER_ARRAY';
 export const RESET_SUB_TABCONTENT = 'RESET_SUB_TABCONTENT';
 export const RETURN_MAP_TYPE = 'RETURN_MAP_TYPE';
 export const ADD_CAROUSEL = 'ADD_CAROUSEL';
+export const ADD_SHAREABLE_ITEM = 'ADD_SHAREABLE_ITEM';
 
 export function setCurrentTab(id) {
     return {
@@ -100,11 +101,17 @@ export function shareInformation(id, content) {
     }
 }
 
-export function setSharedButton(id, isShared) {
+export function setSharedButton(id) {
     return {
         type: SHARE_BUTTON_CLICKED,
-        id,
-        isShared
+        id
+    }
+}
+
+export function addShareableItem(id) {
+    return {
+        type: ADD_SHAREABLE_ITEM,
+        id
     }
 }
 

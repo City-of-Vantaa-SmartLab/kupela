@@ -1,12 +1,4 @@
-import { withGoogleMap, GoogleMap, Marker, InfoWindow } from 'react-google-maps';
-
-const StartRoadMap = withGoogleMap(props => (
-    <GoogleMap
-        defaultCenter={ props.center }
-        defaultZoom={ props.zoom }
-        defaultMapTypeId={ props.mapTypeId }
-    />
-));
+import StartRoadMap from './StartRoadMap';
 
 const GMap = (props) =>
     <div className="subitemContent">

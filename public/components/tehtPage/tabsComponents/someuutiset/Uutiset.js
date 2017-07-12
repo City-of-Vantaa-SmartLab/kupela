@@ -8,9 +8,9 @@ const Uutiset = (props) =>
         {props.news.map((n) =>
             <div>
                 <a onClick={props.selectItem(n.nameId, 'GET_some', n)}>
-                    <Basic src={n.url} title={n.name} key={n.nameId}/>
+                    <Basic src={n.url} title={n.name} key={n.nameId} />
                 </a>
-                <ShareButton onClick={props.clickShare(true, n.nameId, n)}
+                <ShareButton onClick={props.clickShare(n.nameId, n)}
                              key={n.nameId} {...props}/>
             </div>
         )}

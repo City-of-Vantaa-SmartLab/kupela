@@ -255,6 +255,7 @@ img {
 .modalcontent {
     grid-area: b;
     display: inline-block;
+    padding: 10px;
 }
 
 .modalmenu {
@@ -264,6 +265,7 @@ img {
     grid-template-areas: "a"
                          "b"
                          "c";
+    padding: 10px;
 }
 
 .modalmenu > a > .ilmakuva {

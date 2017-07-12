@@ -7,15 +7,15 @@ const TabNavigation = ({ tabs, profile, selectTab }) => (
     <div>
         <ul className="nav nav-pills" id="maintabs">
             {tabs.map((tab) =>
-                <li onClick={selectTab(tab.nameId, tab)}>
-                    <Link to={`/tehtavat/${profile.name}/${tab.nameId}`}>{tab.name}</Link>
+                <li onClick={ selectTab(tab.nameId, tab) }>
+                    <Link to={`/tehtavat/${ profile.name }/${ tab.nameId }`}>{ tab.name }</Link>
                 </li>
             )}
         </ul>
     </div>
 );
 
-const mapStateToProps = ({ tabs, tehtava: {profile} }) => ({
+const mapStateToProps = ({ tabs, tehtava: { profile } }) => ({
     tabs,
     profile
 });

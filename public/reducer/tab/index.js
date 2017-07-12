@@ -5,7 +5,7 @@ import subid from './subid';
 import subcontent from './subcontent';
 import subitem_id from './subitem_id';
 import template from './template';
-import button from './button';
+import buttons from './buttons';
 import shared_info from './shared_info';
 import filter from './filter';
 import maptype from './maptype';
@@ -18,7 +18,7 @@ export default combineReducers ({
     subcontent,
     subitem_id,
     template,
-    button,
+    buttons,
     shared_info,
     filter,
     maptype,
