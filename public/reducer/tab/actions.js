@@ -13,7 +13,7 @@ export const ADD_SUBITEM_FILTER = 'ADD_SUBITEM_FILTER';
 export const RESET_FILTER_ARRAY = 'RESET_FILTER_ARRAY';
 export const RESET_SUB_TABCONTENT = 'RESET_SUB_TABCONTENT';
 export const RETURN_MAP_TYPE = 'RETURN_MAP_TYPE';
-export const ARROW_BUTTON_CLICKED = 'ARROW_BUTTON_CLICKED';
+export const ADD_CAROUSEL = 'ADD_CAROUSEL';
 
 export function setCurrentTab(id) {
     return {
@@ -132,10 +132,9 @@ export function resetFiltersToNull() {
     }
 }
 
-export function showNewItem(index, e) {
+export function addCarousel(itemArray) {
     return {
-        type: ARROW_BUTTON_CLICKED,
-        index,
-        direction: e.direction
+        type: ADD_CAROUSEL,
+        itemArray
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setCurrentSubItem, addNewFilter, getMapType, showNewItem} from '../../../../../reducer/tab/actions';
+import { setCurrentSubItem, addNewFilter, getMapType, addCarousel } from '../../../../../reducer/tab/actions';
 
 const SubitemMenu = (props) => (
     <div className="subitemMenu">
@@ -12,15 +12,15 @@ const SubitemMenu = (props) => (
 
 const mapDispatchToProps = dispatch => ({
     selectSubItem(subitemId, subitemContent, itemType, mapType) {
-        return () => {
+        return() => {
             dispatch(setCurrentSubItem(subitemId));
             dispatch(addNewFilter(subitemId, subitemContent, itemType));
             dispatch(getMapType(mapType));
         }
     },
-    loadingNextItem(index, direction) {
-        return () => {
-            dispatch(showNewItem(index, direction));
+    settingCarousel(subitemArray) {
+        return() => {
+            dispatch(addCarousel(subitemArray));
         }
     }
 });

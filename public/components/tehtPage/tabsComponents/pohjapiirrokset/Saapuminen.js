@@ -1,13 +1,9 @@
 import React from 'react';
-import SubitemContent from './subcontent/SubitemContent';
-import SubitemMenu from './subcontent/SubitemMenu';
+import SubitemWrapper from './subcontent/SubitemWrapper';
 import { connect } from 'react-redux';
 
 const Saapuminen = (props) =>
-    <div className="subtablayout">
-        <SubitemMenu {...props}/>
-        <SubitemContent />
-    </div>;
+    <SubitemWrapper {...props} />;
 
 const mapStateToProps = ({ roadmaps, gatheringplaces, aerialviews, streetviews, tab: { carousel } }) => ({
     roadmaps,
