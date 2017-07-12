@@ -1,17 +1,19 @@
-import { ARROW_BUTTON_CLICKED } from './actions';
+import { ADD_CAROUSEL } from './actions';
 
 const initialState = {
-    index: 0,
-    direction: null
+    carousel: true
 };
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case ARROW_BUTTON_CLICKED:
-            return Object.assign({}, state, {
-                index: action.index,
-                direction: action.direction
-            });
+        case ADD_CAROUSEL:
+            if(action.itemArray.length > 1) {
+                return Object.assign({}, state, {
+                    carousel: !carousel
+                });
+            } else {
+                return initialState;
+            }
         default:
             return state;
     }

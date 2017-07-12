@@ -162,6 +162,10 @@ img {
     overflow-y: scroll;
 }
 
+.someuutiset > .tekstit, .someuutiset > .uutiset, .someuutiset > .kuvat {
+    padding-right: 15px;
+}
+
 .subtablayout {
     display: grid;
     grid-template-columns: 10% 20% 50% 10%;
@@ -209,10 +213,6 @@ img {
 .pelastussuunnitelma, .kemikaalikortti, .subitemMenu > .streetview {
     grid-area: c;
     display: inline-block;
-}
-
-.subitemMenu > .streetview {
-    overflow-y: scroll;
 }
 
 .ilmakuva, .yhteystiedot, .escape {
