@@ -24,7 +24,7 @@ app.use('/', express.static(path.join(__dirname, 'public')));
 
 //Set response to all GET calls
 app.get('/', function(req,res) {
-    res.sendfile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 //Set up http server and listen to port 8080
