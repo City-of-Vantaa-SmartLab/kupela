@@ -15,12 +15,25 @@ import { getTexts } from './reducer/texts/actions';
 import { getNews } from './reducer/news/actions';
 import { getSecurityCams } from './reducer/securitycams/actions';
 import { getRoadCams } from './reducer/roadcams/actions';
-import { getMaps } from './reducer/maps/actions';
+import { get3DMaps } from './reducer/maps/actions';
 import { getStreetViews } from './reducer/streetviews/actions';
 import { getFirealarms } from './reducer/firealarms/actions';
 import { getSprinklers } from './reducer/sprinklers/actions';
+import { getAerialViews } from './reducer/aerialviews/actions';
+import { getRoadmaps } from './reducer/roadmaps/actions';
+import { getGatherPlaces } from './reducer/gatheringplaces/actions';
+import { getKohdekortit } from './reducer/kohdekortit/actions';
+import { getFloorplans } from './reducer/floorplans/actions';
+import { getHenkilosto } from './reducer/turvallisuushenkilosto/actions';
+import { getRescueplans } from './reducer/rescueplans/actions';
+import { getContacts } from './reducer/contacts/actions';
+import { getDangerFloorplans } from './reducer/dangerfloorplans/actions';
+import { getListofSubstances } from './reducer/listofsubstances/actions';
+import { getChemicalcards } from './reducer/chemicalcards/actions';
+import { getSmokespreading } from './reducer/smokespreading/actions';
+import { getEscape } from './reducer/escape/actions';
 
-//code from: https://scotch.io/courses/getting-started-with-react-and-redux/setting-up-the-redux-store
+//based on: https://scotch.io/courses/getting-started-with-react-and-redux/setting-up-the-redux-store
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, composeEnhancers(
     applyMiddleware(thunk),
@@ -36,10 +49,23 @@ store.dispatch(getTexts());
 store.dispatch(getNews());
 store.dispatch(getSecurityCams());
 store.dispatch(getRoadCams());
-store.dispatch(getMaps());
+store.dispatch(get3DMaps());
 store.dispatch(getStreetViews());
 store.dispatch(getFirealarms());
 store.dispatch(getSprinklers());
+store.dispatch(getAerialViews());
+store.dispatch(getRoadmaps());
+store.dispatch(getGatherPlaces());
+store.dispatch(getKohdekortit());
+store.dispatch(getFloorplans());
+store.dispatch(getHenkilosto());
+store.dispatch(getRescueplans());
+store.dispatch(getContacts());
+store.dispatch(getDangerFloorplans());
+store.dispatch(getListofSubstances());
+store.dispatch(getChemicalcards());
+store.dispatch(getSmokespreading());
+store.dispatch(getEscape());
 
 ReactDOM.render(
     <Provider store={store}>

@@ -12,7 +12,7 @@ const Content = ({ content }) =>
     </div>;
 
 const mapStateToProps = ({ tab: { content } }) => ({
-    content,
+    content
 });
 
 export default connect(mapStateToProps, null)(Content);

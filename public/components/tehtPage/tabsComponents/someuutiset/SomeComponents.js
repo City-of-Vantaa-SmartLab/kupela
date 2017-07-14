@@ -5,22 +5,30 @@ import { changeCurrentTemplate, shareInformation, setSharedButton } from '../../
 const SomeComponents = (props) =>
     <div className="someuutiset">
         {props.routes.map((comp) =>
-            <comp.component key={comp.nameId} {...props}/>
+            <comp.component key={comp.nameId} {...props} />
         )}
     </div>;
 
+const mapStateToProps = ({ images, texts, news, tab: { buttons, shared_info }}) => ({
+    images,
+    texts,
+    news,
+    shared_info,
+    buttons
+});
+
 const mapDispatchToProps = dispatch => ({
     selectItem(id, type, content) {
-        return () => {
+        return() => {
             dispatch(changeCurrentTemplate(id, type, content));
         }
     },
-    clickShare(label, id, content) {
-        return () => {
-            dispatch(setSharedButton(label));
+    clickShare(id, content) {
+        return() => {
+            dispatch(setSharedButton(id));
             dispatch(shareInformation(id, content));
         }
     }
 });
 
-export default connect(null, mapDispatchToProps)(SomeComponents);
+export default connect(mapStateToProps, mapDispatchToProps)(SomeComponents);

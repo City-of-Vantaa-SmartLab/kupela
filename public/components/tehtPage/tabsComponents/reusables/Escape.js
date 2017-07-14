@@ -1,9 +1,14 @@
 import React from 'react';
-import Test from './templates/Test';
+import Showcase from './templates/Showcase';
 
-const Escape = () => (
+const Escape = (props) => (
     <div className="escape">
-        <Test className="escape" title="ESCAPE:" info="TESTI"/>
+        <p><b>ESCAPE:</b></p>
+        {props.escape.map((e) =>
+            <a onClick={props.selectSubItem(e.nameId, e, 'noLayer', 'none')}>
+                <Showcase src={e.url}/>
+            </a>
+        )}
     </div>
 );
 

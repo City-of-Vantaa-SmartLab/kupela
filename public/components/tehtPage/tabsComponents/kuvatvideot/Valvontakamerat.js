@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import Basic from '../reusables/templates/Basic';
 
 const Valvontakamerat = (props) =>
@@ -12,8 +11,4 @@ const Valvontakamerat = (props) =>
         )}
     </div>;
 
-const mapStateToProps = ({ securitycams }) => ({
-    securitycams
-});
-
-export default connect(mapStateToProps, null)(Valvontakamerat);
+export default Valvontakamerat;

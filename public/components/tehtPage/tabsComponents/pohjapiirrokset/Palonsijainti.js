@@ -1,11 +1,13 @@
 import React from 'react';
-import SubitemContent from './subcontent/SubitemContent';
-import SubitemMenu from './subcontent/SubitemMenu';
+import SubitemWrapper from './subcontent/SubitemWrapper';
+import { connect } from 'react-redux';
 
 const Palonsijainti = (props) =>
-    <div className="subtablayout">
-        <SubitemMenu {...props}/>
-        <SubitemContent/>
-    </div>;
+    <SubitemWrapper {...props} />;
 
-export default Palonsijainti;
+const mapStateToProps = ({ firealarms, sprinklers }) => ({
+    firealarms,
+    sprinklers
+});
+
+export default connect(mapStateToProps, null)(Palonsijainti);

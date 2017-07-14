@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import Basic from '../reusables/templates/Basic';
 
 const Tieliikennekamerat = (props) =>
@@ -12,8 +11,4 @@ const Tieliikennekamerat = (props) =>
         )}
     </div>;
 
-const mapStateToProps = ({ roadcams }) => ({
-    roadcams
-});
-
-export default connect(mapStateToProps, null)(Tieliikennekamerat);
+export default Tieliikennekamerat;
