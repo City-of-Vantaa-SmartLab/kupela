@@ -11,7 +11,8 @@ const Tekstit = (props) =>
                     <Basic src={text.url} title={text.name} key={text.nameId} />
                 </a>
                 <ShareButton onClick={props.clickShare(text.nameId, text)}
-                             key={text.nameId} {...props} />
+                             key={text.nameId}
+                             isShared={text.isShared} />
             </div>
         )}
     </div>;

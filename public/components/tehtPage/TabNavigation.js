@@ -3,21 +3,22 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setCurrentTab, showCurrentTabcontent, setOriginalTemplate, resetFiltersToNull, resetSubtabToInitialstate } from '../../reducer/tab/actions';
 
-const TabNavigation = ({ tabs, profile, selectTab }) => (
+const TabNavigation = (props) => (
     <div>
         <ul className="nav nav-pills" id="maintabs">
-            {tabs.map((tab) =>
-                <li onClick={ selectTab(tab.nameId, tab) }>
-                    <Link to={`/tehtavat/${ profile.name }/${ tab.nameId }`}>{ tab.name }</Link>
+            {props.tabs.map((tab) =>
+                <li onClick={ props.selectTab(tab.nameId, tab) }>
+                    <Link to={`/tehtavat/${ props.profile.name }/${ tab.nameId }`}>{ tab.name }</Link>
                 </li>
             )}
         </ul>
     </div>
 );
 
-const mapStateToProps = ({ tabs, tehtava: { profile } }) => ({
+const mapStateToProps = ({ tabs, tehtava: { profile }, news, images, texts }) => ({
     tabs,
-    profile
+    profile,
+    news, images, texts
 });
 
 const mapDispatchToProps = dispatch => ({

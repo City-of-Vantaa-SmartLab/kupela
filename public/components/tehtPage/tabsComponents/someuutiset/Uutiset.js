@@ -11,7 +11,8 @@ const Uutiset = (props) =>
                     <Basic src={n.url} title={n.name} key={n.nameId} />
                 </a>
                 <ShareButton onClick={props.clickShare(n.nameId, n)}
-                             key={n.nameId} {...props}/>
+                             key={n.nameId}
+                             isShared={n.isShared} />
             </div>
         )}
     </div>;

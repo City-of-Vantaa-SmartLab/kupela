@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { changeCurrentTemplate, shareInformation, setSharedButton } from '../../../../reducer/tab/actions';
+import { changeCurrentTemplate } from '../../../../reducer/tab/actions';
+import { shareInformation, setSharedButton, addShareableItem } from '../../../../reducer/tab/actions';
 
 const SomeComponents = (props) =>
     <div className="someuutiset">
@@ -9,7 +10,7 @@ const SomeComponents = (props) =>
         )}
     </div>;
 
-const mapStateToProps = ({ images, texts, news, tab: { buttons, shared_info }}) => ({
+const mapStateToProps = ({ images, texts, news, tab: { shared_info, buttons} }) => ({
     images,
     texts,
     news,
@@ -25,8 +26,9 @@ const mapDispatchToProps = dispatch => ({
     },
     clickShare(id, content) {
         return() => {
-            dispatch(setSharedButton(id));
+            dispatch(addShareableItem(id));
             dispatch(shareInformation(id, content));
+            dispatch(setSharedButton(id));
         }
     }
 });
