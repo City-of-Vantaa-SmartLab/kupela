@@ -2,13 +2,15 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import FrontPage from './frontPage/FrontPage';
 import TehtPage from './tehtPage/TehtPage';
+import AdminPage from './ozadmin/AdminPage';
 import NotFound from './NotFound';
 
 const Routes = () => (
     <Switch>
-        <Route exact="/tehtavat/:name" component={TehtPage}/>
-        <Route exact="/tehtavat" component={FrontPage}/>
-        <Route component={NotFound}/>
+      <Route path="/main" component={FrontPage}/>
+      <Route path="/tehtavat" component={TehtPage}/>
+      <Route path="/ozadmin" component={AdminPage}/>
+      <Route component={NotFound}/>
     </Switch>
 );
 

@@ -6,7 +6,7 @@ import reducer from './reducer';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk'
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { HashRouter, BrowsRouter as Router, Route} from 'react-router-dom';
 import { getTehtavat } from './reducer/tehtavat/actions';
 import { getTabs } from './reducer/tabs/actions';
 import { getPages } from './reducer/pages/actions';
@@ -70,9 +70,11 @@ store.dispatch(getEscape());
 ReactDOM.render(
     <Provider store={store}>
         <AppContainer>
-            <Router history={history}>
-                <Route component={App}/>
-            </Router>
+            <HashRouter>
+                <Route path="/" component={App}>
+
+                </Route>
+            </HashRouter>
         </AppContainer>
     </Provider>,
     container

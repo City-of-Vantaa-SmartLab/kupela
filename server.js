@@ -22,14 +22,9 @@ app.use(session({secret: 'secret', key: 'express.sid'}));
 //Serve static html page from public directory
 app.use('/', express.static(path.join(__dirname, 'public')));
 
-//Respomse for admin calls
-app.get('/ozadmin', function(req, res) {
-  res.sendfile(path.join(__dirname, 'public/indexadmin.html'));
-});
-
 //Set response to all GET calls
 app.get('/', function(req,res) {
-    res.sendfile(path.join(__dirname, 'public/index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 //Set up http server and listen to port 8080
