@@ -11,7 +11,8 @@ const Kuvat = (props) =>
                     <Basic src={img.url} title={img.name} key={img.nameId} />
                 </a>
                 <ShareButton onClick={props.clickShare(img.nameId, img)}
-                             key={img.nameId} {...props}/>
+                             key={img.nameId}
+                             isShared={img.isShared} />
             </div>
         )}
     </div>;

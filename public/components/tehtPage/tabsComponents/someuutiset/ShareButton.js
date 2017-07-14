@@ -6,7 +6,7 @@ const ShareButton = (props) => (
             onClick={props.onClick}
             key={props.key}
     >
-        {props.buttons.isShared ? 'Jaettu' : 'Jaa johtoautoon'}
+        {props.isShared ? 'Jaettu' : 'Jaa johtoautoon'}
     </button>
 );
 
