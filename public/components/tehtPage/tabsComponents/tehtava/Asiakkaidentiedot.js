@@ -1,7 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-const Asiakkaidentiedot = ({}) =>
+const Asiakkaidentiedot = () =>
     <div className="asiakkaidentiedot">
         <p><b>Asiakkaiden tiedot:</b></p>
         <p>
@@ -10,8 +9,4 @@ const Asiakkaidentiedot = ({}) =>
         </p>
     </div>;
 
-const mapStateToProps = () => ({
-
-});
-
-export default connect(mapStateToProps)(Asiakkaidentiedot);
+export default Asiakkaidentiedot;
