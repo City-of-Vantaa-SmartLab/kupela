@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import FrontPage from './frontPage/FrontPage';
+import FrontPage from './frontPage/frontPage';
 import TehtPage from './tehtPage/TehtPage';
 import AdminPage from './ozadmin/AdminPage';
 import NotFound from './NotFound';
