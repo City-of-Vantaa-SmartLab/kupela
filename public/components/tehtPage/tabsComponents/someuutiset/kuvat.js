@@ -10,6 +10,9 @@ const Kuvat = (props) =>
                 <a onClick={props.selectItem(img.nameId, 'GET_some', img)}>
                     <Basic src={img.url} title={img.name} key={img.nameId} />
                 </a>
+                {props.buttons.map((b) =>
+                    {img.nameId===b.id ? img.isShared=b.isShared : false }
+                )}
                 <ShareButton onClick={props.clickShare(img.nameId, img)}
                              key={img.nameId}
                              isShared={img.isShared} />

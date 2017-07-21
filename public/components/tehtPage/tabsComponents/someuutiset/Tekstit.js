@@ -10,6 +10,10 @@ const Tekstit = (props) =>
                 <a onClick={props.selectItem(text.nameId, 'GET_some', text)}>
                     <Basic src={text.url} title={text.name} key={text.nameId} />
                 </a>
+
+                {props.buttons.map((b) =>
+                    {text.nameId===b.id ? text.isShared=b.isShared : false }
+                )}
                 <ShareButton onClick={props.clickShare(text.nameId, text)}
                              key={text.nameId}
                              isShared={text.isShared} />
