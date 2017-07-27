@@ -15,6 +15,7 @@ import maps from './maps';
 import streetviews from './streetviews';
 import firealarms from './firealarms';
 import sprinklers from './sprinklers';
+import ozadmin from './ozadmin';
 
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/
 export default combineReducers({
@@ -33,5 +34,6 @@ export default combineReducers({
     maps,
     streetviews,
     firealarms,
-    sprinklers
+    sprinklers,
+    ozadmin
 });
