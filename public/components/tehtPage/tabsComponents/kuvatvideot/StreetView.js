@@ -1,6 +1,5 @@
 import React from 'react';
 import Basic from '../reusables/templates/Basic';
-import { connect } from 'react-redux';
 
 const StreetView = (props) =>
     <div className="streetview">
@@ -12,8 +11,4 @@ const StreetView = (props) =>
         )}
     </div>;
 
-const mapStateToProps = ({ streetviews }) => ({
-    streetviews
-});
-
-export default connect(mapStateToProps, null)(StreetView);
+export default StreetView;

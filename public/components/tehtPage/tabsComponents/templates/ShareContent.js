@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Share from '../../tabsComponents/reusables/templates/Share';
+import Basic from '../../tabsComponents/reusables/templates/Basic';
 import { setOriginalTemplate } from '../../../../reducer/tab/actions';
 
 const ShareContent = (props) => (
@@ -8,7 +8,7 @@ const ShareContent = (props) => (
         <button type="button" className="return-btn" onClick={props.goBack()}>
             X
         </button>
-        <Share src={props.url} title={props.name}/>
+        <Basic src={props.url} title={props.name}/>
     </div>
 );
 

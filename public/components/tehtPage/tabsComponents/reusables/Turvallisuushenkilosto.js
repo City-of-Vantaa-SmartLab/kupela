@@ -1,9 +1,14 @@
 import React from 'react';
-import Test from './templates/Test';
+import Showcase from './templates/Showcase';
 
-const Turvallisuushenkilosto = () => (
+const Turvallisuushenkilosto = (props) => (
     <div className="turvallisuushenkilosto">
-        <Test title="Turvallisuushenkilöstö:" info="TESTI"/>
+        <p><b>Turvallisuushenkilöstö:</b></p>
+        {props.henkilosto.map((h) =>
+            <a onClick={props.selectSubItem(h.nameId, h, 'noLayer', 'none')}>
+                <Showcase src={h.url} />
+            </a>
+        )}
     </div>
 );
 

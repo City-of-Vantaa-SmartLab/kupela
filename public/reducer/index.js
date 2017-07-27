@@ -15,7 +15,22 @@ import maps from './maps';
 import streetviews from './streetviews';
 import firealarms from './firealarms';
 import sprinklers from './sprinklers';
+import aerialviews from './aerialviews';
+import roadmaps from './roadmaps';
+import gatheringplaces from './gatheringplaces';
+import kohdekortit from './kohdekortit';
+import floorplans from './floorplans';
+import henkilosto from './turvallisuushenkilosto';
+import rescueplans from './rescueplans';
+import contacts from './contacts';
+import dangerfloorplans from './dangerfloorplans';
+import listofsubstances from './listofsubstances';
+import chemicalcards from './chemicalcards';
+import smokespreading from './smokespreading';
+import escape from './escape';
+
 import ozadmin from './ozadmin';
+
 
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/
 export default combineReducers({
@@ -35,5 +50,18 @@ export default combineReducers({
     streetviews,
     firealarms,
     sprinklers,
+    aerialviews,
+    roadmaps,
+    gatheringplaces,
+    kohdekortit,
+    floorplans,
+    henkilosto,
+    rescueplans,
+    contacts,
+    dangerfloorplans,
+    listofsubstances,
+    chemicalcards,
+    smokespreading,
+    escape,
     ozadmin
 });

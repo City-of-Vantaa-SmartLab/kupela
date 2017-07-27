@@ -9,6 +9,13 @@ const KuvatVideotComponents = (props) =>
         )}
     </div>;
 
+const mapStateToProps = ({ streetviews, roadcams, securitycams, maps }) => ({
+    streetviews,
+    roadcams,
+    securitycams,
+    maps
+});
+
 const mapDispatchToProps = dispatch => ({
     selectItem(id, type, content) {
         return() => {
@@ -17,4 +24,4 @@ const mapDispatchToProps = dispatch => ({
     }
 });
 
-export default connect(null, mapDispatchToProps)(KuvatVideotComponents);
+export default connect(mapStateToProps, mapDispatchToProps)(KuvatVideotComponents);

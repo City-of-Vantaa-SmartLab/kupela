@@ -3,6 +3,9 @@ import Asiakkaidentiedot from '../components/tehtPage/tabsComponents/tehtava/Asi
 import Rakennuksentiedot from '../components/tehtPage/tabsComponents/tehtava/Rakennuksentiedot';
 import GraphicsInfo from '../components/tehtPage/tabsComponents/tehtava/GraphicsInfo';
 import Kohdetiedot from '../components/tehtPage/tabsComponents/tehtava/Kohdetiedot';
+import KohdeIlmakuva from '../components/tehtPage/tabsComponents/tehtava/KohdeIlmakuva';
+import Kohdeyhteystiedot from '../components/tehtPage/tabsComponents/tehtava/Kohdeyhteystiedot';
+import Kohdekortti from '../components/tehtPage/tabsComponents/tehtava/Kohdekortti';
 import Tehtava from '../components/tehtPage/tabsComponents/layouts/Tehtava';
 
 import Palonsijainti from '../components/tehtPage/tabsComponents/pohjapiirrokset/Palonsijainti';
@@ -30,7 +33,6 @@ import Dokumentaatio from '../components/tehtPage/tabsComponents/layouts/Dokumen
 
 import Ilmakuva from '../components/tehtPage/tabsComponents/reusables/Ilmakuva';
 import Yhteystiedot from '../components/tehtPage/tabsComponents/reusables/Yhteystiedot';
-import Kohdekortti from '../components/tehtPage/tabsComponents/reusables/Kohdekortti';
 import Pohjapiirros from '../components/tehtPage/tabsComponents/reusables/Pohjapiirros';
 import Turvallisuushenkilosto from '../components/tehtPage/tabsComponents/reusables/Turvallisuushenkilosto';
 import Pelastus from '../components/tehtPage/tabsComponents/reusables/Pelastus';
@@ -43,6 +45,7 @@ import Kokoontumispaikka from '../components/tehtPage/tabsComponents/reusables/K
 import Palovaroittimet from '../components/tehtPage/tabsComponents/reusables/Palovaroittimet';
 import Kartta from '../components/tehtPage/tabsComponents/reusables/Kartta';
 import PohjaStreetView from '../components/tehtPage/tabsComponents/reusables/PohjaStreetView';
+import VaarallisetPohjapiirros from '../components/tehtPage/tabsComponents/reusables/VaarallisetPohjapiirros';
 
 const tabs = [
     {
@@ -84,12 +87,12 @@ const tabs = [
                             {
                                 name: 'Ilmakuva',
                                 nameId: 'ilmakuva',
-                                component: Ilmakuva
+                                component: KohdeIlmakuva
                             },
                             {
                                 name: 'Yhteystiedot',
                                 nameId: 'yhteystiedot',
-                                component: Yhteystiedot
+                                component: Kohdeyhteystiedot
                             },
                             {
                                 name: 'Kohdekortti',
@@ -149,7 +152,7 @@ const tabs = [
                             },
                             {
                                 name: 'Street view',
-                                nameId: 'streetview',
+                                nameId: 'pohjastreetview',
                                 component: PohjaStreetView
                             },
                             {
@@ -195,8 +198,8 @@ const tabs = [
                         routes: [
                             {
                                 name: 'Pohjapiirros',
-                                nameId: 'pohjapiirros',
-                                component: Pohjapiirros
+                                nameId: 'vaarallisetpohjapiirros',
+                                component: VaarallisetPohjapiirros
                             },
                             {
                                 name: 'Savun leviäminen',

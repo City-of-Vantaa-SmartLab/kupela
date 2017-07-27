@@ -1,9 +1,14 @@
 import React from 'react';
-import Test from './templates/Test';
+import Showcase from './templates/Showcase';
 
-const Yhteystiedot = () => (
+const Yhteystiedot = (props) => (
     <div className="yhteystiedot">
-        <Test title="Yhteystiedot:" info="TESTI"/>
+        <p><b>Yhteystietoja:</b></p>
+        {props.contacts.map((c) =>
+            <a onClick={props.selectSubItem(c.nameId, c, 'noLayer', 'none')}>
+                <Showcase src={c.url} />
+            </a>
+        )}
     </div>
 );
 

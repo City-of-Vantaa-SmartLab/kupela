@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Basic from '../../tabsComponents/reusables/templates/Basic';
 import { setOriginalTemplate } from '../../../../reducer/tab/actions';
 
-const ShareContent = (props) => (
+const BasicContent = (props) => (
     <div className={props.className}>
         <button type="button" className="return-btn" onClick={props.goBack()}>
             X
@@ -20,4 +20,4 @@ const mapDispatchToProps = dispatch => ({
     }
 });
 
-export default connect(null, mapDispatchToProps)(ShareContent);
+export default connect(null, mapDispatchToProps)(BasicContent);

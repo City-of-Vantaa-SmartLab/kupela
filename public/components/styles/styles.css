@@ -10,8 +10,8 @@ h1, h2, p, ul, li {
 }
 
 img {
-    width: 55%;
-    height: 55%;
+    width: 50%;
+    height: 50%;
 }
 
 .content {
@@ -24,8 +24,7 @@ img {
 }
 
 .header-box {
-    margin: 0;
-    padding: 30px;
+    padding: 10px;
 }
 
 #teht-title {
@@ -87,7 +86,7 @@ img {
     grid-template-areas: "b"
                          "a";
     background-color: white;
-    height: 75vh;
+    height: 90vh;
 }
 
 .tehtava {
@@ -97,7 +96,7 @@ img {
     grid-template-areas: "a b d e"
                          "a c d e";
     background-color: white;
-    height: 75vh;
+    height: 90vh;
 }
 
 .kohdetiedot {
@@ -108,7 +107,7 @@ img {
                          "b"
                          "c";
     background-color: white;
-    height: 75vh;
+    height: 90vh;
 }
 
 .someuutiset, .kuvatvideot {
@@ -118,7 +117,7 @@ img {
     grid-template-areas: "a b c d"
                          "a b c d";
     background-color: white;
-    height: 75vh;
+    height: 90vh;
 }
 
 .dokumentaatio {
@@ -128,7 +127,7 @@ img {
     grid-template-areas: "a b c"
                          "a b c";
     background-color: white;
-    height: 75vh;
+    height: 90vh;
 }
 
 .graphicsinfo, .subcontent, .kohdetiedot > .ilmakuva, .someuutiset > .tekstit, .kuvatvideot > .streetview, .dokumentaatio > .lisatiedot {
@@ -163,41 +162,40 @@ img {
     overflow-y: scroll;
 }
 
+.someuutiset > .tekstit, .someuutiset > .uutiset, .someuutiset > .kuvat {
+    padding-right: 15px;
+}
+
 .subtablayout {
     display: grid;
-    grid-template-columns: 20% 20% 70% 20%;
+    grid-template-columns: 10% 20% 50% 10%;
     grid-template-rows: 50% 50%;
     grid-template-areas: "c a b d"
                          "c a b d";
-    height: 75vh;
 }
 
 .subitemMenu {
     grid-area: a;
     display: grid;
-    grid-template-rows: 50% 50% 50% 50% 50%;
+    grid-template-rows: 30% 30% 30% 30% 30%;
     grid-template-areas: "a"
                          "b"
                          "c"
                          "d"
                          "e";
-    height: 25vh;
-}
-
-.subitem_menu {
-    display: inline-block;
+    padding-right: 15px;
+    height: 55vh;
 }
 
 .subitemContent {
     grid-area: b;
     display: inline-block;
     position: relative;
-    height: 55vh;
 }
 
 .subitemContent > img {
-    width: 75%;
-    height: 75%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     opacity: 0.7;
 }
@@ -212,7 +210,7 @@ img {
     display: inline-block;
 }
 
-.pelastussuunnitelma, .kemikaalikortti {
+.pelastussuunnitelma, .kemikaalikortti, .subitemMenu > .streetview {
     grid-area: c;
     display: inline-block;
 }
@@ -257,11 +255,29 @@ img {
 .modalcontent {
     grid-area: b;
     display: inline-block;
+    padding: 10px;
 }
 
 .modalmenu {
     grid-area: a;
-    display: inline-block;
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-areas: "a"
+                         "b"
+                         "c";
+    padding: 10px;
+}
+
+.modalmenu > a > .ilmakuva {
+    grid-area: a;
+}
+
+.modalmenu > a > .yhteystiedot {
+    grid-area: b;
+}
+
+.modalmenu > a > .kohdekortti {
+    grid-area: c;
 }
 
 .some-grid {
@@ -303,9 +319,18 @@ img {
 }
 
 .share-btn {
-    background-color: darkblue;
+    background-color: #1c1c3a;
     color: white;
     border: none;
+}
+
+.carousel-indicators li {
+    display: none;
+}
+
+.carousel-control {
+    opacity: 1;
+    width: 10%;
 }
 
 /*Admin page CSS*/

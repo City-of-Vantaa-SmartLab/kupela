@@ -1,7 +1,6 @@
 import { CLICKED_SUBITEM } from './actions';
-import sprinklers from '../../JSON/sprinklers';
 
-const initialState = sprinklers[0].nameId;
+const initialState = [];
 
 export default (state = initialState, action) => {
     switch (action.type) {

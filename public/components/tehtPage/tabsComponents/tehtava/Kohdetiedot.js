@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { showCurrentModal, setModalMenu } from '../../../../reducer/modal/actions';
 
-const Kohdetiedot = (comp) => (
+const Kohdetiedot = (props) => (
     <div className="kohdetiedot">
-        {comp.components.map((c) =>
-            <a onClick={comp.selectItem(c.nameId, 'GET_INFO', c, comp.components)}>
-                <c.component key={c.nameId}/>
+        {props.components.map((c) =>
+            <a onClick={props.selectItem(c.nameId, 'GET_INFO', c, props.components)}>
+                <c.component key={c.nameId} />
             </a>
         )}
     </div>
