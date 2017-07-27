@@ -8,12 +8,12 @@ export const RETURN_ORIGINAL_TEMPLATE = 'RETURN_ORIGINAL_TEMPLATE';
 export const SET_AS_MAIN_CONTENT = 'SET_AS_MAIN_CONTENT';
 export const SET_MENU = 'SET_MENU';
 export const SET_INFO_SHARED = 'SET_INFO_SHARED';
-export const SHARE_BUTTON_CLICKED = 'SHARE_BUTTON_CLICKED';
 export const ADD_SUBITEM_FILTER = 'ADD_SUBITEM_FILTER';
 export const RESET_FILTER_ARRAY = 'RESET_FILTER_ARRAY';
 export const RESET_SUB_TABCONTENT = 'RESET_SUB_TABCONTENT';
 export const RETURN_MAP_TYPE = 'RETURN_MAP_TYPE';
 export const ADD_CAROUSEL = 'ADD_CAROUSEL';
+export const SHARE_BUTTON_CLICKED = 'SHARE_BUTTON_CLICKED';
 export const ADD_SHAREABLE_ITEM = 'ADD_SHAREABLE_ITEM';
 
 export function setCurrentTab(id) {
@@ -91,30 +91,6 @@ export function setCurrentSubItem(subitemId) {
     }
 }
 
-export function shareInformation(id, content) {
-    return {
-        type: SET_INFO_SHARED,
-        infoProps: {
-            id,
-            content
-        }
-    }
-}
-
-export function setSharedButton(id) {
-    return {
-        type: SHARE_BUTTON_CLICKED,
-        id
-    }
-}
-
-export function addShareableItem(id) {
-    return {
-        type: ADD_SHAREABLE_ITEM,
-        id
-    }
-}
-
 export function addNewFilter(id, subitem, itemType) {
     return {
         type: ADD_SUBITEM_FILTER,
@@ -139,9 +115,31 @@ export function resetFiltersToNull() {
     }
 }
 
-export function addCarousel(itemArray) {
+export function addCarousel(subitem) {
     return {
         type: ADD_CAROUSEL,
-        itemArray
+        subitem
+    }
+}
+
+export function shareInformation(id, content) {
+    return {
+        type: SET_INFO_SHARED,
+        id,
+        content
+    }
+}
+
+export function setSharedButton(id) {
+    return {
+        type: SHARE_BUTTON_CLICKED,
+        id
+    }
+}
+
+export function addShareableItem(id) {
+    return {
+        type: ADD_SHAREABLE_ITEM,
+        id
     }
 }

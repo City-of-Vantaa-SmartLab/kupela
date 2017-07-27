@@ -1,4 +1,4 @@
-import FrontPage from '../components/frontPage/FrontPage';
+import FrontPage from '../components/frontPage/frontPage';
 import TehtPage from '../components/tehtPage/TehtPage';
 import AdminPage from '../components/ozadmin/AdminPage';
 

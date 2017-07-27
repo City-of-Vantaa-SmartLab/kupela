@@ -6,7 +6,7 @@ import reducer from './reducer';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk'
-import { HashRouter, BrowsRouter as Router, Route} from 'react-router-dom';
+import { HashRouter, Route} from 'react-router-dom';
 import { getTehtavat } from './reducer/tehtavat/actions';
 import { getTabs } from './reducer/tabs/actions';
 import { getPages } from './reducer/pages/actions';
@@ -85,9 +85,9 @@ if(module.hot) {
         ReactDOM.render(
             <Provider store={store}>
                 <AppContainer>
-                    <Router history={history}>
+                    <HashRouter>
                         <Route component={App}/>
-                    </Router>
+                    </HashRouter>
                 </AppContainer>
             </Provider>,
             container

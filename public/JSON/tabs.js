@@ -15,7 +15,7 @@ import Vaarallisetaineet from '../components/tehtPage/tabsComponents/pohjapiirro
 import Pohjapiirrokset from '../components/tehtPage/tabsComponents/layouts/Pohjapiirrokset';
 
 import Jaetut from '../components/tehtPage/tabsComponents/someuutiset/Jaetut';
-import Kuvat from '../components/tehtPage/tabsComponents/someuutiset/Kuvat';
+import Kuvat from '../components/tehtPage/tabsComponents/someuutiset/kuvat';
 import Uutiset from '../components/tehtPage/tabsComponents/someuutiset/Uutiset';
 import Tekstit from '../components/tehtPage/tabsComponents/someuutiset/Tekstit';
 import SomeUutiset from '../components/tehtPage/tabsComponents/layouts/SomeUutiset';
@@ -326,6 +326,9 @@ const tabs = [
                 ]
             }
         ]
+    },
+    {
+
     }
 ];
 
