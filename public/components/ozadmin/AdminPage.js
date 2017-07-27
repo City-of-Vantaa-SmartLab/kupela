@@ -1,8 +1,11 @@
 import React from 'react';
+import ButtonArea from './ButtonArea';
+import LogDisplay from './LogDisplay';
 
 const AdminPage = () =>
-    <div>
-      <p>I am empty admin page!</p>
+    <div className="admincontent">
+      <ButtonArea/>
+      <LogDisplay/>
     </div>;
 
 export default AdminPage;

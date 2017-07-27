@@ -29,6 +29,9 @@ import chemicalcards from './chemicalcards';
 import smokespreading from './smokespreading';
 import escape from './escape';
 
+import ozadmin from './ozadmin';
+
+
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/
 export default combineReducers({
     tehtavat,
@@ -59,5 +62,6 @@ export default combineReducers({
     listofsubstances,
     chemicalcards,
     smokespreading,
-    escape
+    escape,
+    ozadmin
 });
