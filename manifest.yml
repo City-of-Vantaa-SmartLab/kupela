@@ -1,0 +1,4 @@
+applications:
+  - name: kupela
+    random-route: true
+    memory: 128M
