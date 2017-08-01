@@ -78,12 +78,6 @@ app.get('/api/books', function(req,res){
     });
 });
 
-app.get('/api/books', function(req,res){
-    Book.find(function(err, books){
-        if(err) return res.status(500).send({error: 'database failure'});
-        res.json(books);
-    });
-});
 
 // GET SINGLE BOOK , find ID to print out book documnet from database
 app.get('/api/books/:book_id', function(req, res){
