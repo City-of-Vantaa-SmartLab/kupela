@@ -333,6 +333,10 @@ img {
     width: 10%;
 }
 
+.selected{
+    background-color: darkgoldenrod;
+}
+
 /*Admin page CSS*/
 .admincontent {
   display: grid;
