@@ -332,6 +332,38 @@ img {
     opacity: 1;
     width: 10%;
 }
+
 .selected{
     background-color: darkgoldenrod;
+}
+
+/*Admin page CSS*/
+.admincontent {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: "a b";
+  background-color: white;
+}
+
+.buttonArea {
+  grid-area: a;
+  padding: 5px;
+  border: solid black;
+  border-width: 3px;
+  display: inline-block;;
+}
+
+.logDisplay {
+  grid-area: b;
+  padding: 5px;
+  border: solid black;
+  border-width: 3px;
+  display: inline-block;
+}
+
+.oz-btn {
+    background-color: darkblue;
+    color: white;
+    border: none;
 }

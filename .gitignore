@@ -3,7 +3,7 @@ node_modules
 public/node_modules
 
 # production
-public/dist
+public/dist/bundle.js
 
 # miscellaneous
 npm-debug.log
