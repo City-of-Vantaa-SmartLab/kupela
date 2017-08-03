@@ -10,7 +10,6 @@ import shared_info from './shared_info';
 import filter from './filter';
 import maptype from './maptype';
 import carousel from './carousel';
-import li_class from './li_class';
 
 export default combineReducers ({
     id,
@@ -23,6 +22,5 @@ export default combineReducers ({
     shared_info,
     filter,
     maptype,
-    carousel,
-    li_class
+    carousel
 });
