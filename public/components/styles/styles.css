@@ -333,6 +333,9 @@ img {
     width: 10%;
 }
 
+#maintabs.nav-pills > li.selected > a:active, #maintabs.nav-pills > li.selected > a:focus, #maintabs.nav-pills > li.selected > a:hover {
+    background-color: darkgoldenrod;
+}
 .selected{
     background-color: darkgoldenrod;
 }
