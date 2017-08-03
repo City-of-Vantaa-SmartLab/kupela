@@ -6,12 +6,9 @@ import { setCurrentSubTab, showSubTabcontent, resetFiltersToNull } from '../../.
 const SubTabs = (props) => (
     <div className="subtabsmenu">
         <ul className="nav nav-pills" id="subtabs">
-            {console.log(props)}
-            {console.log(props.subid)}
             {props.routes.map((tab) =>
                 <li className={tab.nameId===props.subid ? "selected" : "unselected"} onClick={props.selectSubTab(tab.nameId, tab)}>
-                    <Link to={tab.nameId}>{tab.name}
-                        {console.log(tab.nameId)}</Link>
+                    <Link to={tab.nameId}>{tab.name}</Link>
                 </li>
             )}
         </ul>
