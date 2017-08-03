@@ -15,7 +15,6 @@ export const RETURN_MAP_TYPE = 'RETURN_MAP_TYPE';
 export const ADD_CAROUSEL = 'ADD_CAROUSEL';
 export const SHARE_BUTTON_CLICKED = 'SHARE_BUTTON_CLICKED';
 export const ADD_SHAREABLE_ITEM = 'ADD_SHAREABLE_ITEM';
-export const SET_TAB_CLASS = 'SET_TAB_CLASS';
 
 export function setCurrentTab(id) {
     return {
@@ -143,11 +142,4 @@ export function addShareableItem(id) {
         type: ADD_SHAREABLE_ITEM,
         id
     }
-}
-
-export function setTabClass(id) {
-    return {
-        type: SET_TAB_CLASS,
-        id
-    };
 }

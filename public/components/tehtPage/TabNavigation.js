@@ -7,7 +7,7 @@ const TabNavigation = (props) => (
     <div>
         <ul className="nav nav-pills" id="maintabs">
             {props.tabs.map((tab) =>
-                <li className={props.li_class[props.li_class.findIndex(a => a.nameId===tab.nameId)].liClass} onClick={ props.selectTab(tab.nameId, tab) }>
+                <li className={props.id===tab.nameId ? "selected" : "unselected"} onClick={ props.selectTab(tab.nameId, tab) }>
                     <Link to={`/tehtavat/${ props.profile.name }/${ tab.nameId }`}>{ tab.name }</Link>
                 </li>
             )}
@@ -15,8 +15,8 @@ const TabNavigation = (props) => (
     </div>
 );
 
-const mapStateToProps = ({ tab: { li_class }, tabs, tehtava: { profile } }) => ({
-    li_class,
+const mapStateToProps = ({ tab: { id }, tabs, tehtava: { profile } }) => ({
+    id,
     tabs,
     profile
 });
@@ -25,7 +25,6 @@ const mapDispatchToProps = dispatch => ({
     selectTab(id, object) {
         return() => {
             dispatch(setCurrentTab(id));
-            dispatch(setTabClass(id));
             dispatch(showCurrentTabcontent(object));
             dispatch(setOriginalTemplate());
             dispatch(resetFiltersToNull());
