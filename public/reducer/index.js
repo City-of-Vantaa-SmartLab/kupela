@@ -30,6 +30,7 @@ import smokespreading from './smokespreading';
 import escape from './escape';
 
 import ozadmin from './ozadmin';
+import serverConnection from './serverConnection';
 
 
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/
@@ -63,5 +64,6 @@ export default combineReducers({
     chemicalcards,
     smokespreading,
     escape,
+    serverConnection,
     ozadmin
 });

@@ -4,13 +4,11 @@
 * between clients and server.
 */
 
-var projectId = '';
-
 //Import Socket.IO
-var socketio = require('socket.io');
+/*var socketio = require('socket.io');
 
 //Initialization of application instance
-//Called by app.js after server is created
+//Called by server.js after server is created
 module.exports.listen = function(app) {
   var io = socketio.listen(app);
 
@@ -24,4 +22,33 @@ module.exports.listen = function(app) {
 
 function initTikeApp() {
 
-}
+}*/
+//Import Socket.IO
+var socketio = require('socket.io');
+//import io from 'socket.io';
+
+module.exports.listen = function(server) {
+
+  const socketServer = socketio(server);
+  const connections = [];
+
+  socketServer.on('connection', socket => {
+    console.log("Client connected!");
+    connections.push(socket);
+
+    socket.on('message', data => {
+      console.log("Message received: " + data);
+      connections.forEach(connectedSocket => {
+        if(connectedSocket !== socket) {
+          connectedSocket.emit('message', data);
+        }
+      });
+    });
+
+    socket.on('disconnect', () => {
+      const index = connections.indexOf(socket);
+      connections.splice(index, 1);
+    });
+  });
+
+};
