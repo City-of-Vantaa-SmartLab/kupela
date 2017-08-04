@@ -33,10 +33,16 @@ import { getChemicalcards } from './reducer/chemicalcards/actions';
 import { getSmokespreading } from './reducer/smokespreading/actions';
 import { getEscape } from './reducer/escape/actions';
 
+import startServerConnection, {messageMiddleware} from './components/serverConnection';
+
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/setting-up-the-redux-store
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const initialState = window.INITIAL_STATE;
+
 const store = createStore(reducer, composeEnhancers(
     applyMiddleware(thunk),
+    applyMiddleware(messageMiddleware)
 ));
 
 const container = document.querySelector('#app-container');
@@ -66,6 +72,8 @@ store.dispatch(getListofSubstances());
 store.dispatch(getChemicalcards());
 store.dispatch(getSmokespreading());
 store.dispatch(getEscape());
+
+startServerConnection(store);
 
 ReactDOM.render(
     <Provider store={store}>
