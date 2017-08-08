@@ -6,14 +6,22 @@ import tabs from '../../JSON/tabs';
 var str = window.location.href;
 var res = str.split("#/");
 res = res[1].split("/");
-const initialState = res[2];
+var index=tabs[0].nameId;
+if(tabs.findIndex((item) => item.nameId === res[2])!=-1){
+    index=res[2];
+}
+const initialState = index;
 export default (state = initialState, action) => {
     switch (action.type) {
         case SET_CURRENT_TAB:
             var str = window.location.href;
             var res = str.split("#/");
             res = res[1].split("/");
-            return res[2];
+            var index=tabs[0].nameId;
+            if(tabs.findIndex((item) => item.nameId === res[2])!=-1){
+                index=res[2];
+            }
+            return index;
         default:
             return state;
     }

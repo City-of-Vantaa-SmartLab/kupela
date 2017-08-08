@@ -5,7 +5,11 @@ import { SHOW_CURRENT_TABCONTENT } from './actions';
 var str = window.location.href;
 var res = str.split("#/");
 res = res[1].split("/");
-const initialState = tabs[tabs.findIndex((item) => item.nameId === res[2])];
+var index=0;
+if(tabs.findIndex((item) => item.nameId === res[2])!=-1){
+    index=tabs.findIndex((item) => item.nameId === res[2]);
+}
+    const initialState = tabs[index];
 export default (state = initialState, action) => {
     switch (action.type) {
         case SHOW_CURRENT_TABCONTENT:
