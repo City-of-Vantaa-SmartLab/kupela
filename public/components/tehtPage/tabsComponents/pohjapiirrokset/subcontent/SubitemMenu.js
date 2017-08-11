@@ -5,7 +5,9 @@ import { setCurrentSubItem, addNewFilter, getMapType } from '../../../../../redu
 const SubitemMenu = (props) => (
     <div className="subitemMenu">
         {props.routes.map((item) =>
-            <item.component key={item.nameId} {...props}/>
+            <div>
+             <item.component key={item.nameId} {...props}/>
+            </div>
         )}
     </div>
 );
@@ -20,4 +22,8 @@ const mapDispatchToProps = dispatch => ({
     }
 });
 
-export default connect(null, mapDispatchToProps)(SubitemMenu);
+const mapStateToProps = ({ tab: { filter } }) => ({
+    filter
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SubitemMenu);
