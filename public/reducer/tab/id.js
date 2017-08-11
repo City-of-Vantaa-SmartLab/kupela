@@ -15,9 +15,9 @@ export default (state = initialState, action) => {
     switch (action.type) {
         case SET_CURRENT_TAB:
             var str = window.location.href;
-            var res = str.split("#/");
+            var res = str.split("#/");{console.log(props)}
             res = res[1].split("/");
-            var index=tabs[0].nameId;
+            var index=action.id;
             if(tabs.findIndex((item) => item.nameId === res[2])!=-1){
                 index=res[2];
             }
