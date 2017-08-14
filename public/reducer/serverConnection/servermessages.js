@@ -1,37 +1,38 @@
 import {combineReducers} from 'redux';
-import {UPDATE_MESSAGE, ADD_MESSAGE, ADD_RESPONSE} from './actions';
+import {SEND_MESSAGE, RECEIVE_RESPONSE} from './actions';
 
 const initialState = {
-  currentMessage: '',
-  messages: []
+  latestMessage: '',
+  messages: [],
+  latestResponse: '',
+  responses: []
 };
 
 export default (state = initialState, action) => {
-  function messages(currentMessages = initialState.messages, action) {
-    const messages = currentMessages.map(message => Object.assign({}, message));
-
-    switch(action.type) {
-      case ADD_RESPONSE:
-        messages.push(Object.assign({}, action.message));
-        break;
-      case ADD_MESSAGE:
-        console.log("Pushing message");
-        messages.push({id: messages.length + 1, text: action.message});
+    switch (action.type) {
+        case SEND_MESSAGE:
+            if(action.message.length > 0) {
+              console.log("New message saved: " + action.message);
+              state.latestMessage = action.message;
+              state.messages.push(action.message);
+              return state;
+            }
+            else {
+              console.log("Too short message. Cannot send!");
+              return state;
+            }
+        case RECEIVE_RESPONSE:
+            if(action.message.length > 0) {
+              console.log("New response saved: " + action.message);
+              state.latestResponse = action.message;
+              state.responses.push(action.message);
+              return state;
+            }
+            else {
+              console.log("Weird response received, cannot proceed!");
+              return state;
+            }
+        default:
+            return state;
     }
-
-    return messages;
-  }
-
-  function currentMessage(currentMessage = initialState.currentMessage, action) {
-    switch(action.type) {
-      case UPDATE_MESSAGE:
-        return action.message;
-      case ADD_MESSAGE:
-        return '';
-      default:
-        return currentMessage;
-    }
-  }
-
-  return combineReducers({currentMessage, messages});
 }

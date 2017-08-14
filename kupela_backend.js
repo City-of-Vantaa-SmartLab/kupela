@@ -42,6 +42,9 @@ module.exports.listen = function(server) {
         if(connectedSocket !== socket) {
           connectedSocket.emit('message', data);
         }
+        else {
+          socket.emit('message', 'Default response');
+        }
       });
     });
 
