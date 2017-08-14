@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { sendMessages } from '../../reducer/ozadmin/actions';
-import { addMessage } from '../../reducer/serverConnection/actions';
+import { sendMessage } from '../../reducer/serverConnection/actions';
 
 const ButtonArea = (props) =>
   <div className='buttonArea'>
@@ -16,8 +16,8 @@ const mapStateToProps = (ozbutton) => ({
 const mapDispatchToProps = dispatch => ({
   clickSendMessages(){
     return () => {
-      dispatch(addMessage("test message"));
-      //dispatch(sendMessages("test message"));
+      dispatch(sendMessage("test message"));
+
       console.log("Dispatched sendMessages(message)");
     }
   }
