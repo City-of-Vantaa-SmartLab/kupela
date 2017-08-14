@@ -6,9 +6,13 @@ var express = require('express');
 var path = require('path');
 //Import fs-extra
 var fse = require('fs-extra');
-
 //Import express-session
 var session = require('express-session');
+
+//Import database related modules
+var bodyParser = require('body-parser'); // To parse by json type
+var mongoose = require('mongoose');
+var formidable = require('formidable'); // To bring Form tag data
 
 //Create new instance of Express
 var app = express();
