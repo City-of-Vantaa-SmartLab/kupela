@@ -123,14 +123,9 @@ const tabs = [
                         component: Palonsijainti,
                         routes: [
                             {
-                                name: 'Sprinklerit',
+                                name: 'Kerrokset',
                                 nameId: 'sprinklerit',
                                 component: Sprinklerit
-                            },
-                            {
-                                name: 'Palovaroittimet',
-                                nameId: 'palovaroittimet',
-                                component: Palovaroittimet
                             }
                         ]
                     },
@@ -169,11 +164,6 @@ const tabs = [
                         component: Pelastussuunnitelma,
                         routes: [
                             {
-                                name: 'Pohjapiirros',
-                                nameId: 'pohjapiirros',
-                                component: Pohjapiirros
-                            },
-                            {
                                 name: 'Turvallisuushenkilöstö',
                                 nameId: 'turvallisuushenkilosto',
                                 component: Turvallisuushenkilosto
@@ -196,11 +186,6 @@ const tabs = [
                         nameId: 'vaarallisetaineet',
                         component: Vaarallisetaineet,
                         routes: [
-                            {
-                                name: 'Pohjapiirros',
-                                nameId: 'vaarallisetpohjapiirros',
-                                component: VaarallisetPohjapiirros
-                            },
                             {
                                 name: 'Savun leviäminen',
                                 nameId: 'savunleviaminen',
@@ -326,9 +311,6 @@ const tabs = [
                 ]
             }
         ]
-    },
-    {
-
     }
 ];
 

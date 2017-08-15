@@ -1,4 +1,4 @@
-import floorplans from '../../JSON/floorplans';
+import floorplans from '../../JSON/rescuefloorplan';
 export const LOAD_FLOORPLANS = 'LOAD_FLOORPLANS';
 
 export function getFloorplans() {

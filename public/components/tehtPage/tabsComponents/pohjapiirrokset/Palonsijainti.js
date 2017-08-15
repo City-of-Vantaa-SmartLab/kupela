@@ -5,9 +5,8 @@ import { connect } from 'react-redux';
 const Palonsijainti = (props) =>
     <SubitemWrapper {...props} />;
 
-const mapStateToProps = ({ firealarms, sprinklers }) => ({
-    firealarms,
-    sprinklers
+const mapStateToProps = ({ floorplans }) => ({
+    floorplans
 });
 
 export default connect(mapStateToProps, null)(Palonsijainti);
