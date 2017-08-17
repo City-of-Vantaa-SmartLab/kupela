@@ -1,5 +1,4 @@
-import {combineReducers} from 'redux';
-import {SEND_MESSAGE, RECEIVE_RESPONSE} from './actions';
+import {SEND_MESSAGE, RECEIVE_RESPONSE, INIT_SOCKET } from './actions';
 
 const initialState = {
   latestMessage: '',
@@ -32,6 +31,15 @@ export default (state = initialState, action) => {
               console.log("Weird response received, cannot proceed!");
               return state;
             }
+        case INIT_SOCKET:
+            console.log("Initializing socket connection based on version");
+            if(action.isTike == 'true') {
+              console.log("Connecting as TIKE");
+            }
+            else {
+              console.log("Connecting as FieldClient");
+            }
+            return state;
         default:
             return state;
     }
