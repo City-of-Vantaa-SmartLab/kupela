@@ -343,6 +343,12 @@ img {
     background-color: darkgoldenrod;
 }
 
+.user-btn {
+    background-color: darkblue;
+    color: white;
+    border: none;
+}
+
 /*Admin page CSS*/
 .admincontent {
   display: grid;
