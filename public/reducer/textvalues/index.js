@@ -1,7 +1,7 @@
 import { CHANGE_TEXT } from './actions';
 
 const initialState = {
-  currentText: '';
+  currentText: '',
   allTexts: []
 };
 
