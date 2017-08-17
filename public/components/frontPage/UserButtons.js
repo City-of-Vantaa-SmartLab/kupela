@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { initSocketVersion, sendMessage, getSomeMessages } from '../../reducer/serverConnection/actions';
+import { changeText } from '../../reducer/textvalues/actions';
 
 const UserButtons = (props) =>
   <div className='userButtonArea'>
@@ -15,6 +16,7 @@ const UserButtons = (props) =>
       return () => {
         dispatch(initSocketVersion('true'));
         dispatch(getSomeMessages('Thank you!'));
+        dispatch(changeText("This is new text row"));
       }
     },
     clickSelectKentta(){

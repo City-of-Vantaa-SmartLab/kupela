@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 const ChangingContent = (props) =>
   <div className="contentArea">
     <p className="changingText"> This text changes </p>
+    <p>{props.currentText}</p>
   </div>
 
-const mapStateToProps = (textvalues) => ({
+const mapStateToProps = ({ textvalues }) => ({
   textvalues
 });
 
