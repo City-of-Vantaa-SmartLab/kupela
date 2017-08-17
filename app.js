@@ -7,6 +7,9 @@ var bodyParser  = require('body-parser'); // To parse by json type
 var mongoose    = require('mongoose');
 var formidable = require('formidable'); // To bring Form tag data
 var fs = require('fs-extra'); // To copy file or directory
+var path = require('path'); // Import path module(packaged with Node.js)
+var mongodb = require('mongodb');
+var mongojs = require('mongojs');
 
 // CONNECT TO MONGODB SERVER
 mongoose.connect('mongodb://localhost/facebook');
@@ -35,6 +38,10 @@ image : {data:1010101, contentsType:'picture' },
 description : 'Building in London got big fire',
 });
 
+var showPage = function(page){
+  return db.books.find();
+}
+
 book.save(function(err){
   if(err)
   console.log('error ocurr='+err);
@@ -47,7 +54,8 @@ app.use(bodyParser.json()); // Parsing part
 // APIs for save data to database
 
 app.get('/',function(req,res){
-  res.render('routes/index'); // show index.ejs file
+    res.render(path.join(__dirname, 'views/index.ejs'));
+  //res.render('routes/index'); // show index.ejs file
 });
 
 app.post('/api/books', function(req, res){
@@ -68,6 +76,7 @@ app.post('/api/books', function(req, res){
         }
         res.json({result: 1});
     });
+
 });
 
 // GET ALL BOOKS , API searching all data
@@ -76,6 +85,7 @@ app.get('/api/books', function(req,res){
         if(err) return res.status(500).send({error: 'database failure'});
         res.json(books);
     });
+    //showPage();
 });
 
 
