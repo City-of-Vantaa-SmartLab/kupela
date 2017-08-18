@@ -31,6 +31,7 @@ import escape from './escape';
 
 import ozadmin from './ozadmin';
 import serverConnection from './serverConnection';
+import textvalues from './textvalues';
 
 
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/
@@ -65,5 +66,6 @@ export default combineReducers({
     smokespreading,
     escape,
     serverConnection,
+    textvalues,
     ozadmin
 });
