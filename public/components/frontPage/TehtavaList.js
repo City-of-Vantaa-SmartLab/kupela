@@ -4,7 +4,7 @@ import { setCurrentTehtava, getTehtavaProfile } from '../../reducer/tehtava/acti
 
 //code from: https://scotch.io/courses/getting-started-with-react-and-redux/displaying-our-characters
 const TehtavaList = ({ tehtavat, setTehtava }) =>
-    <div id='tehtava-list' className="col-md-3">
+    <div id='tehtava-list' className="frontpageMissionArea">
         <ul id="tehtava-ul">
             {tehtavat.map((c, i) =>
                 <li onClick={setTehtava(i + 1)}

@@ -5,7 +5,7 @@ import UserButtons from './UserButtons';
 import ChangingContent from './ChangingContent';
 
 const FrontPage = () =>
-    <div className="content">
+    <div className="frontpageContent">
         <Map/>
         <TehtavaList/>
         <UserButtons/>

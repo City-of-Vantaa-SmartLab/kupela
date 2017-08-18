@@ -1,14 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-const ChangingContent = (props) =>
-  <div className="contentArea">
+const ChangingContent = ({textvalues}) =>
+  <div className="changingcontentArea">
     <p className="changingText"> This text changes </p>
-    <p>{props.currentText}</p>
+    <p>{textvalues.currentText}</p>
   </div>
 
-const mapStateToProps = ({ textvalues }) => ({
-  textvalues
+const mapStateToProps = ({textvalues}) => ({
+    textvalues
 });
+
 
 export default connect(mapStateToProps, null)(ChangingContent);
