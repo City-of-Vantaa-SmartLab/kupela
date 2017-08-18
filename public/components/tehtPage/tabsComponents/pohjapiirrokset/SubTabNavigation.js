@@ -7,13 +7,17 @@ const SubTabs = (props) => (
     <div className="subtabsmenu">
         <ul className="nav nav-pills" id="subtabs">
             {props.routes.map((tab) =>
-                <li onClick={props.selectSubTab(tab.nameId, tab)}>
+                <li className={tab.nameId===props.subid ? "selected" : "unselected"} onClick={props.selectSubTab(tab.nameId, tab)}>
                     <Link to={tab.nameId}>{tab.name}</Link>
                 </li>
             )}
         </ul>
     </div>
 );
+
+const mapStateToProps = ({ tab: { subid } }) => ({
+    subid
+});
 
 const mapDispatchToProps = dispatch => ({
     selectSubTab (id, object) {
@@ -25,4 +29,4 @@ const mapDispatchToProps = dispatch => ({
     }
 });
 
-export default connect(null, mapDispatchToProps)(SubTabs);
+export default connect(mapStateToProps, mapDispatchToProps)(SubTabs);

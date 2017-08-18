@@ -5,8 +5,7 @@ import { connect } from 'react-redux';
 const Pelastussuunnitelma = (props) =>
     <SubitemWrapper {...props} />;
 
-const mapStateToProps = ({ floorplans, henkilosto, rescueplans, contacts }) => ({
-    floorplans,
+const mapStateToProps = ({ henkilosto, rescueplans, contacts }) => ({
     henkilosto,
     rescueplans,
     contacts

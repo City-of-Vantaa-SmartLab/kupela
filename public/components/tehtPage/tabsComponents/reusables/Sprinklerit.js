@@ -3,11 +3,13 @@ import Showcase from './templates/Showcase';
 
 const Sprinklerit = (props) => (
     <div className="sprinklerit">
-        <p><b>Sprinklerit:</b></p>
-        {props.sprinklers.map((s) =>
-            <a onClick={props.selectSubItem(s.nameId, s, 'yesLayer', 'image')}>
-                <Showcase src={s.url} />
-            </a>
+        <p><b>Kerrokset:</b></p>
+        {props.floorplans.map((s) =>
+            <div className={ props.filter.arr.findIndex(a => a.id===s.nameId)!=-1 ? "selected" : "unselected"}>
+                <a onClick={props.selectSubItem(s.nameId, s, 'noLayer', 'image')}>
+                    <p>{s.name}</p>
+                </a>
+            </div>
         )}
     </div>
 );
