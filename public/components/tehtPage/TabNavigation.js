@@ -15,7 +15,7 @@ const TabNavigation = (props) => (
     </div>
 );
 
-const mapStateToProps = ({ tab: { id }, tabs, tehtava: { profile } }) => ({
+const mapStateToProps = ({ tab: { id }, tabs, mission: { profile } }) => ({
     id,
     tabs,
     profile
