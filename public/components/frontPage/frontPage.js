@@ -1,5 +1,5 @@
 import React from 'react';
-import TehtavaList from './TehtavaList';
+import MissionList from './MissionList';
 import Map from './Map';
 import UserButtons from './UserButtons';
 import ChangingContent from './ChangingContent';
@@ -7,7 +7,7 @@ import ChangingContent from './ChangingContent';
 const FrontPage = () =>
     <div className="frontpageContent">
         <Map/>
-        <TehtavaList/>
+        <MissionList/>
         <UserButtons/>
         <ChangingContent/>
     </div>;

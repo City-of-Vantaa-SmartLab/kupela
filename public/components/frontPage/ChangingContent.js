@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 const ChangingContent = ({textvalues}) =>
   <div className="changingcontentArea">
-    <p className="changingText"> This text changes </p>
+    <p className="changingText"> </p>
     <p>{textvalues.currentText}</p>
   </div>
 
