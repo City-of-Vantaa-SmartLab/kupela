@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk'
 import { HashRouter, Route} from 'react-router-dom';
-import { getTehtavat } from './reducer/tehtavat/actions';
+import { getMissions } from './reducer/missions/actions';
 import { getTabs } from './reducer/tabs/actions';
 import { getPages } from './reducer/pages/actions';
 import { getImages } from './reducer/images/actions';
@@ -47,7 +47,7 @@ const store = createStore(reducer, composeEnhancers(
 
 const container = document.querySelector('#app-container');
 
-store.dispatch(getTehtavat());
+store.dispatch(getMissions());
 store.dispatch(getTabs());
 store.dispatch(getPages());
 store.dispatch(getImages());
