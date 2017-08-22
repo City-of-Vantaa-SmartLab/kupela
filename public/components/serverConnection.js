@@ -39,4 +39,7 @@ export default function (store) {
   socket.on('dataIncoming', data => {
     store.dispatch(actions.receiveData(data));
   });
+  socket.on('versionReady', data => {
+    //Dispatch version type state saving
+  });
 }
