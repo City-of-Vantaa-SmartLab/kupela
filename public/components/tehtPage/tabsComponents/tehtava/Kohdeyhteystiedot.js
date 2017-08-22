@@ -5,14 +5,14 @@ import { connect } from 'react-redux';
 const Kohdeyhteystiedot = (props) => (
     <div className="yhteystiedot">
         <p><b>Yhteystietoja:</b></p>
-        {props.pelastussuunnitelmatab.map((c) =>
-            { c.nameId.localeCompare("contacts1")===0 ? <Showcase src={c.url} /> : false}
+        {props.contacts.map((c) =>
+            <Showcase src={c.url} />
         )}
     </div>
 );
 
-const mapStateToProps = ({ pelastussuunnitelmatab }) => ({
-    pelastussuunnitelmatab
+const mapStateToProps = ({ contacts }) => ({
+    contacts
 });
 
 export default connect(mapStateToProps, null)(Kohdeyhteystiedot);
