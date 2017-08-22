@@ -33,6 +33,7 @@ import { getChemicalcards } from './reducer/chemicalcards/actions';
 import { getSmokespreading } from './reducer/smokespreading/actions';
 import { getEscape } from './reducer/escape/actions';
 import { getPelastussuunnitelmatab } from './reducer/pelastussuunnitelmatab/actions';
+import { getVaarallisetaineettab } from './reducer/vaarallisetaineettab/actions';
 
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/setting-up-the-redux-store
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -68,6 +69,7 @@ store.dispatch(getChemicalcards());
 store.dispatch(getSmokespreading());
 store.dispatch(getEscape());
 store.dispatch(getPelastussuunnitelmatab());
+store.dispatch(getVaarallisetaineettab());
 
 ReactDOM.render(
     <Provider store={store}>

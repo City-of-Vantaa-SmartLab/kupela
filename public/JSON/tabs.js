@@ -36,6 +36,7 @@ import Yhteystiedot from '../components/tehtPage/tabsComponents/reusables/Yhteys
 import Pohjapiirros from '../components/tehtPage/tabsComponents/reusables/Pohjapiirros';
 import Turvallisuushenkilosto from '../components/tehtPage/tabsComponents/reusables/Turvallisuushenkilosto';
 import ItemContainer from '../components/tehtPage/tabsComponents/reusables/ItemContainer';
+import VaarallisetItemContainer from '../components/tehtPage/tabsComponents/reusables/VaarallisetItemContainer';
 import Pelastus from '../components/tehtPage/tabsComponents/reusables/Pelastus';
 import Savunleviaminen from '../components/tehtPage/tabsComponents/reusables/Savunleviaminen';
 import Kemikaalikortti from '../components/tehtPage/tabsComponents/reusables/Kemikaalikortti';
@@ -108,7 +109,7 @@ const tabs = [
     },
     {
         id: 2,
-        name: 'Pohjapiirrokset',
+        name: 'Kohteen Lisätiedot',
         type: 'tab',
         nameId: 'pohjapiirrokset',
         components: [
@@ -183,19 +184,9 @@ const tabs = [
                                 component: Savunleviaminen
                             },
                             {
-                                name: 'Kemikaalikortti',
-                                nameId: 'kemikaalikortti',
-                                component: Kemikaalikortti
-                            },
-                            {
-                                name: 'ESCAPE',
-                                nameId: 'escape',
-                                component: Escape
-                            },
-                            {
-                                name: 'Luettelo vaarallisista aineista',
-                                nameId: 'luetteloaineista',
-                                component: Luetteloaineista
+                                name: 'Vaarallisetaineettab',
+                                nameId: 'vaarallisetaineettab',
+                                component: VaarallisetItemContainer
                             }
                         ]
                     }

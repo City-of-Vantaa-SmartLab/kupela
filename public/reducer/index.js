@@ -29,6 +29,7 @@ import chemicalcards from './chemicalcards';
 import smokespreading from './smokespreading';
 import escape from './escape';
 import pelastussuunnitelmatab from './pelastussuunnitelmatab';
+import vaarallisetaineettab from './vaarallisetaineettab';
 
 import ozadmin from './ozadmin';
 
@@ -65,5 +66,6 @@ export default combineReducers({
     smokespreading,
     escape,
     pelastussuunnitelmatab,
+    vaarallisetaineettab,
     ozadmin
 });
