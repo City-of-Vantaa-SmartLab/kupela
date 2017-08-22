@@ -4,6 +4,7 @@ import { setCurrentMission, getMissionProfile } from '../../reducer/mission/acti
 
 const MissionList = ({ missions, setMission }) =>
     <div id='mission-list' className="frontpageMissionArea">
+        <h1>Tehtävät:</h1>
         <ul id="mission-ul">
             {missions.map((c, i) =>
                 <li onClick={setMission(i + 1)}

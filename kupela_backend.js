@@ -36,6 +36,11 @@ module.exports.listen = function(server) {
 
     socket.on('versionInit', data => {
       console.log("Initializing connection, is TIKE: " + data);
+      var type = "field";
+      if(data == true){
+        type = "tike";
+      }
+      socket.emit('versionReady', {profiletype: type});
     });
 
     socket.on('getSomeMessages', data => {
