@@ -8,11 +8,6 @@ const pelastussuunnitelmatab = [
         name: 'Pelastussuunnitelma 1',
         nameId: 'pelastus1',
         url: '../../../../pics/pelastussuunnitelma.png'
-    },
-    {
-        name: 'Contacts 1',
-        nameId: 'contacts1',
-        url: '../../../../pics/yhteystiedot.png'
     }
 ];
 
