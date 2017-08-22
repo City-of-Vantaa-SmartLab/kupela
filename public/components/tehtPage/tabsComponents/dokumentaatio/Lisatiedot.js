@@ -8,7 +8,7 @@ const Lisatiedot = ({ profile }) => (
     </div>
 );
 
-const mapStateToProps = ({ tehtava: profile}) => ({
+const mapStateToProps = ({ mission: profile}) => ({
     profile
 });
 
