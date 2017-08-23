@@ -5,24 +5,24 @@ import { showCurrentPage } from '../reducer/page/actions';
 import Login from './authentication/Login';
 
 
-const Header = ({ profile, selectTehtava, pages}) =>
+const Header = ({ profile, selectMission, pages}) =>
     <div className="header-box">
         <div>
             <h1 id="teht-title"
                 key={profile.name}
-                onClick={selectTehtava(pages[1])}>
+                onClick={selectMission(pages[1])}>
                 <Link to={`/tehtavat/${profile.name}`}>Luokitus / {profile.name}</Link>
             </h1>
         </div>
     </div>;
 
-const mapStateToProps = ({ tehtava: { profile }, pages}) => ({
+const mapStateToProps = ({ mission: { profile }, pages}) => ({
     profile,
     pages
 });
 
 const mapDispatchToProps = dispatch => ({
-    selectTehtava(page) {
+    selectMission(page) {
         return () => {
             dispatch(showCurrentPage(page));
         }

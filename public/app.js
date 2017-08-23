@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk'
 import { HashRouter, Route} from 'react-router-dom';
-import { getTehtavat } from './reducer/tehtavat/actions';
+import { getMissions } from './reducer/missions/actions';
 import { getTabs } from './reducer/tabs/actions';
 import { getPages } from './reducer/pages/actions';
 import { getImages } from './reducer/images/actions';
@@ -35,15 +35,21 @@ import { getEscape } from './reducer/escape/actions';
 import { getPelastussuunnitelmatab } from './reducer/pelastussuunnitelmatab/actions';
 import { getVaarallisetaineettab } from './reducer/vaarallisetaineettab/actions';
 
+import startServerConnection, {messageMiddleware} from './components/serverConnection';
+
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/setting-up-the-redux-store
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const initialState = window.INITIAL_STATE;
+
 const store = createStore(reducer, composeEnhancers(
     applyMiddleware(thunk),
+    applyMiddleware(messageMiddleware)
 ));
 
 const container = document.querySelector('#app-container');
 
-store.dispatch(getTehtavat());
+store.dispatch(getMissions());
 store.dispatch(getTabs());
 store.dispatch(getPages());
 store.dispatch(getImages());
@@ -70,6 +76,8 @@ store.dispatch(getSmokespreading());
 store.dispatch(getEscape());
 store.dispatch(getPelastussuunnitelmatab());
 store.dispatch(getVaarallisetaineettab());
+
+startServerConnection(store);
 
 ReactDOM.render(
     <Provider store={store}>
