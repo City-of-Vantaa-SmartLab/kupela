@@ -1,6 +1,4 @@
 import { combineReducers } from 'redux';
-import tehtavat from './tehtavat';
-import tehtava from './tehtava';
 import tabs from './tabs';
 import tab from './tab';
 import pages from './pages';
@@ -32,12 +30,15 @@ import pelastussuunnitelmatab from './pelastussuunnitelmatab';
 import vaarallisetaineettab from './vaarallisetaineettab';
 
 import ozadmin from './ozadmin';
-
+import serverConnection from './serverConnection';
+import textvalues from './textvalues';
+import missions from './missions';
+import mission from './mission';
 
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/
 export default combineReducers({
-    tehtavat,
-    tehtava,
+    missions,
+    mission,
     tabs,
     tab,
     pages,
@@ -67,5 +68,7 @@ export default combineReducers({
     escape,
     pelastussuunnitelmatab,
     vaarallisetaineettab,
+    serverConnection,
+    textvalues,
     ozadmin
 });
