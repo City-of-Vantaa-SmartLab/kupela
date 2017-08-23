@@ -8,7 +8,7 @@ export function getMissionProfile(id) {
     return dispatch => {
       missions.map((c, i) => {
         if(i+1 == id) {
-           var profile = c;
+          var profile = c;
           dispatch(setMissionProfile(profile));
         }
       }
