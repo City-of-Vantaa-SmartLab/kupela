@@ -5,10 +5,8 @@ import { connect } from 'react-redux';
 const Pelastussuunnitelma = (props) =>
     <SubitemWrapper {...props} />;
 
-const mapStateToProps = ({ henkilosto, rescueplans, contacts }) => ({
-    henkilosto,
-    rescueplans,
-    contacts
+const mapStateToProps = ({ pelastussuunnitelmatab }) => ({
+    pelastussuunnitelmatab
 });
 
 export default connect(mapStateToProps, null)(Pelastussuunnitelma);

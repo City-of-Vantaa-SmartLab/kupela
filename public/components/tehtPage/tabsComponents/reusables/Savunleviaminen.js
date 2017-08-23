@@ -5,12 +5,15 @@ const staticMapUrl2 = '&zoom=13&size=600x300&maptype=roadmap&key=AIzaSyCIr0jpTVj
 
 const Savunleviaminen = (props) => (
     <div className="savunleviaminen">
-        <p><b>Savun leviäminen:</b></p>
+        <ul>
         {props.smokespreading.map((smoke) =>
+            <li className={ props.filter.arr.findIndex(a => a.id===smoke.nameId)!=-1 ? "selected" : "unselected"}>
             <a onClick={ props.selectSubItem(smoke.nameId, smoke, 'yesLayer', 'roadmap') }>
-                <img src={ staticMapUrl1 + smoke.lat + ',' + smoke.lng + staticMapUrl2 }/>
+                <p><b>Savun leviäminen</b></p>
             </a>
+            </li>
         )}
+        </ul>
     </div>
 );
 
