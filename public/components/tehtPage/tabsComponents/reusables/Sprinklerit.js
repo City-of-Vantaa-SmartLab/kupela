@@ -1,16 +1,17 @@
 import React from 'react';
-import Showcase from './templates/Showcase';
 
 const Sprinklerit = (props) => (
     <div className="sprinklerit">
         <p><b>Kerrokset:</b></p>
-        {props.floorplans.map((s) =>
-            <div className={ props.filter.arr.findIndex(a => a.id===s.nameId)!=-1 ? "selected" : "unselected"}>
-                <a onClick={props.selectSubItem(s.nameId, s, 'noLayer', 'image')}>
-                    <p>{s.name}</p>
-                </a>
-            </div>
-        )}
+        <ul className="nav nav-pills">
+            {props.floorplans.map((s) =>
+                    <li className={ props.filter.arr.findIndex(a => a.id===s.nameId)!=-1 ? "selected" : "unselected"}>
+                        <a onClick={props.selectSubItem(s.nameId, s, 'noLayer', 'image')}>
+                            <p>{s.name}</p>
+                        </a>
+                    </li>
+            )}
+        </ul>
     </div>
 );
 
