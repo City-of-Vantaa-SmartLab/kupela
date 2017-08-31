@@ -1,4 +1,5 @@
 import * as actions from '../reducer/serverConnection/actions';
+import { addMission } from '../reducer/missions/actions';
 import io from 'socket.io-client';
 
 var socket = null;
@@ -21,6 +22,10 @@ export function messageMiddleware(store) {
         socket.emit('getSomeMessages', action.message);
         console.log('Some messages data request sent to socket');
       }
+      else if(action.type == actions.SEND_OZ_COMMAND) {
+        socket.emit('ozCommand', action.data);
+        console.log("OZ command sent to socket!");
+      }
     }
   };
 }
@@ -37,7 +42,14 @@ export default function (store) {
     store.dispatch(actions.receiveResponse(message));
   });
   socket.on('dataIncoming', data => {
-    store.dispatch(actions.receiveData(data));
+    if(data.datatype == "someMessages") {
+      store.dispatch(actions.receiveData(data));
+    }
+    else if(data.datatype == "mission") {
+      console.log("New mission received");
+      console.log(data.content);
+      store.dispatch(addMission(data.content));
+    }
   });
   socket.on('versionReady', data => {
     //Dispatch version type state saving

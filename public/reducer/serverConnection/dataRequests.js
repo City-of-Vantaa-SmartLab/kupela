@@ -1,4 +1,5 @@
 import { GET_SOME_MESSAGES, RECEIVE_DATA } from './actions';
+import { addMission } from '../missions/actions';
 
 const initialState = {
   latestMessage: '',
@@ -10,10 +11,13 @@ export default (state = initialState, action) => {
         case GET_SOME_MESSAGES:
           return state;
         case RECEIVE_DATA:
-          console.log("No of Messages: " + state.messages.length);
           if(action.data.datatype == "someMessages") {
             state.latestMessage = action.data.content;
             state.messages.push(action.data.content);
+          }
+          else if(action.data.datatype == "mission") {
+            console.log("New mission received");
+            console.log(action.data.content);
           }
           return state;
         default:
