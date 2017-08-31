@@ -1,8 +1,8 @@
 const rescuefloorplan = [
     {
-        name: 'Floor 1',
+        name: 'Sähköpuoli',
         nameId: 'floor1',
-        url: '../../../../pics/floorplanF1.png'
+        url: '../../../../pics/KUPELA-pohjapiirrokset.png'
     },
     {
         name: 'Floor 2',
