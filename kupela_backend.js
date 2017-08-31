@@ -9,6 +9,7 @@ var socketio = require('socket.io');
 
 //Global serverside JSON objects
 var messages, images, videos, news;
+var sentMessagesSets = 0;
 
 module.exports.listen = function(server) {
 
@@ -58,6 +59,24 @@ module.exports.listen = function(server) {
           });
         }
       }
+      if(data.type == "send") {
+        if(data.command == "messages") {
+          console.log("Sending message set " + sentMessagesSets+1);
+          var newset = '';
+          if(sentMessagesSets == 0){
+            newset = loadFirstSetOfMessages();
+            sentMessagesSets++;
+          }
+          connections.forEach(connectedSocket => {
+            if(connectedSocket !== socket) {
+              connectedSocket.emit('dataIncoming', {datatype: "messageset", content: newset});
+            }
+            else {
+              socket.emit('message', 'Message set sent!');
+            }
+          });
+        }
+      }
     });
 
     socket.on('getSomeMessages', data => {
@@ -82,6 +101,10 @@ function loadBackEndData() {
       ']}';
 }
 
+/*
+ * HARDCODED APPLICATION DATA FOR KUPELA
+ */
+
 function loadActiveMission() {
   var missiondata = {
       "id": "1",
@@ -91,4 +114,16 @@ function loadActiveMission() {
   };
 
   return missiondata;
+}
+
+function loadFirstSetOfMessages() {
+  var messages = { "messages" : [
+      { "nameId": "teksti11", "sender": "Pekka", "message": "Ajattelin lähettää tällasta spämmiä", "time": "12:47", "location": "Tikkurila", "tags": "Fire", "priority": "2" },
+      { "nameId": "teksti12", "sender": "Pekka", "message": "Ajattelin lähettää tällasta spämmiä", "time": "12:47", "location": "Tikkurila", "tags": "Fire", "priority": "2" },
+      { "nameId": "teksti13", "sender": "Pekka", "message": "Ajattelin lähettää tällasta spämmiä", "time": "12:47", "location": "Tikkurila", "tags": "Fire", "priority": "2" },
+      { "nameId": "teksti14", "sender": "Pekka", "message": "Ajattelin lähettää tällasta spämmiä", "time": "12:47", "location": "Tikkurila", "tags": "Fire", "priority": "2" },
+      { "nameId": "teksti15", "sender": "Santeri", "message": "Pekka lopeta spämmi, ei näy muiden viestit!", "time": "12:48", "location": "Tikkurila", "tags": "Fire", "priority": "1" }
+  ]};
+
+  return messages;
 }

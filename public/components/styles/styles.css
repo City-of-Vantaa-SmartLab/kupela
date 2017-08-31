@@ -378,13 +378,40 @@ img {
 }
 
 .user-btn {
-    background-color: darkblue;
-    color: white;
-    border: none;
-    padding: 5px;
-    margin: 10px;
-    height: 50%;
-    width: 30%;
+  background-color: darkblue;
+  color: white;
+  border: none;
+  padding: 5px;
+  margin: 10px;
+  height: 50%;
+  width: 30%;
+}
+
+/*Some page CSS */
+.someText {
+  border: solid black;
+  border-width: 2px;
+  margin:2%;
+}
+
+.priority {
+  background-color: red;
+}
+
+.nonpriority {
+  display: none;
+}
+
+.visible {
+  display: inline;
+}
+
+.notVisible {
+  display: none;
+}
+
+.somebtn {
+  margin: 2%;
 }
 
 /*Admin page CSS*/
