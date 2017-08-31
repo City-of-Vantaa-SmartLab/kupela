@@ -15,7 +15,7 @@ img {
 }
 
 .content {
-    background-color: blue;
+    background-color: #f5f3f4;
     overflow: auto;
     padding: 10px;
     width: 100vw;
@@ -96,7 +96,7 @@ img {
     grid-template-rows: 50% 50%;
     grid-template-areas: "a b d e"
                          "a c d e";
-    background-color: red;
+    background-color: whitesmoke;
     height: 90vh;
 }
 
@@ -109,7 +109,7 @@ img {
                          "c";
     background-color: white;
     //height: 90vh;
-    margin: 10px 10px 10px 10px;
+    margin: 5px 5px 5px 10px;
     padding: 5px;
 }
 
@@ -138,7 +138,7 @@ img {
     background-color: white;
     display: inline-block;
     padding: 5px;
-    margin: 10px 0 10px 10px;
+    margin: 5px 0 5px 5px;
 }
 
 .ilmoittajatiedot, .subtabsmenu, .kohdetiedot > .yhteystiedot, .someuutiset > .kuvat, .kuvatvideot > .valvontakamerat, .dokumentaatio > .tilannepaivakirja {
@@ -146,7 +146,7 @@ img {
     background-color: white;
     display: inline-block;
     padding: 5px;
-    margin: 10px 0 0 10px
+    margin: 5px 0 0 10px
 }
 
 .asiakkaidentiedot, .tehtava > .kohdekortti, .someuutiset > .uutiset, .kuvatvideot > .tieliikennekamerat, .dokumentaatio > .dokukuvat {
@@ -154,7 +154,7 @@ img {
     background-color: white;
     display: inline-block;
     padding: 5px;
-    margin: 10px 0 10px 10px;
+    margin: 10px 0 5px 10px;
 }
 
 .rakennuksentiedot, .someuutiset > .jaetut, .kuvatvideot > .kolmiulotteinen {
@@ -162,7 +162,7 @@ img {
     background-color: white;
     display: inline-block;
     padding: 5px;
-    margin: 10px 0 10px 10px;
+    margin: 5px 0 5px 10px;
 }
 
 .someuutiset > .jaetut {
