@@ -6,7 +6,7 @@ const staticAirUrl2 = '&zoom=13&size=600x300&maptype=satellite&key=AIzaSyCIr0jpT
 
 const KohdeIlmakuva = (props) => (
     <div className="ilmakuva">
-        <p><b>Ilmakuva:</b></p>
+        <h2>Ilmakuva:</h2>
         {props.aerialviews.map((view) =>
             <img src={ staticAirUrl1 + view.lat + ',' + view.lng + staticAirUrl2 }/>
         )}

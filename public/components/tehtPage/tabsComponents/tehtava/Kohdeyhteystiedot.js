@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 const Kohdeyhteystiedot = (props) => (
     <div className="yhteystiedot">
-        <p><b>Yhteystietoja:</b></p>
+        <h2>Yhteystietoja:</h2>
         {props.contacts.map((c) =>
             <Showcase src={c.url} />
         )}

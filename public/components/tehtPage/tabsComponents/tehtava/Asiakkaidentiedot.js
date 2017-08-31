@@ -2,7 +2,7 @@ import React from 'react';
 
 const Asiakkaidentiedot = () =>
     <div className="asiakkaidentiedot">
-        <p><b>Asiakkaiden tiedot:</b></p>
+        <h2>Asiakkaiden tiedot:</h2>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget nibh tristique, aliquam diam eu, convallis risus.
             Nulla fringilla tortor libero.

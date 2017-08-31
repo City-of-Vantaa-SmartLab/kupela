@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:100,200,300,400,500,600,700,800,900');
 html, body {
     background-color: #1c1c3a;
     overflow-x: hidden;
@@ -5,8 +6,28 @@ html, body {
 
 h1, h2, p, ul, li {
     font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Encode Sans';
     color: black;
     list-style-type: none;
+}
+
+h2 {
+    font-size: 190%;
+    font-weight: 700;
+    
+}
+
+
+p {
+    font-weight: 400;
+    font-size: 120%;
+}
+
+ul, li {
+    font-size: 130%;
+    font-weight: 600;
+    color: white;
+    
 }
 
 img {
@@ -16,7 +37,7 @@ img {
 
 .content {
     background-color: #f5f3f4;
-    overflow: auto;
+    overflow: hidden;
     padding: 10px;
     width: 100vw;
     height: 80vh;
@@ -94,19 +115,19 @@ img {
     display: grid;
     grid-template-columns: 20% 40% 20% 20%;
     grid-template-rows: 50% 50%;
-    grid-template-areas: "a b d e"
-                         "a c d e";
+    grid-template-areas: "a b d f"
+                         "a c d f";
     background-color: whitesmoke;
-    height: 90vh;
+    height: 78vh;
+    bottom: 50px;
 }
 
 .kohdetiedot {
-    grid-area: e;
+    grid-area: f;
     display: grid;
-    grid-template-rows: 33% 33% 33%;
+    grid-template-rows: 33% 33%;
     grid-template-areas: "a"
-                         "b"
-                         "c";
+                         "b";
     background-color: white;
     //height: 90vh;
     margin: 5px 5px 5px 10px;
@@ -133,7 +154,7 @@ img {
     height: 90vh;
 }
 
-.graphicsinfo, .subconten .kohdetiedot > .ilmakuva, .someuutiset > .tekstit, .kuvatvideot > .streetview, .dokumentaatio > .lisatiedot {
+.graphicsinfo, .subconten .kohdetiedot > .someuutiset > .tekstit, .kuvatvideot > .streetview, .dokumentaatio > .lisatiedot {
     grid-area: a;
     background-color: white;
     display: inline-block;
@@ -222,7 +243,7 @@ img {
     display: inline-block;
 }
 
-.ilmakuva, .yhteystiedot, .escape {
+.yhteystiedot, .escape {
     grid-area: d;
     display: inline-block;
 }
@@ -275,18 +296,17 @@ img {
     padding: 10px;
 }
 
-.modalmenu > a > .ilmakuva {
+.modalmenu > a > .yhteystiedot {
     grid-area: a;
 }
 
-.modalmenu > a > .yhteystiedot {
+.modalmenu > a > .kohdekortti {
     grid-area: b;
 }
 
-.modalmenu > a > .kohdekortti {
+.modalmenu > a > .ilmakuva {
     grid-area: c;
 }
-
 .some-grid {
     display: grid;
     grid-template-columns: 100%;
@@ -423,4 +443,8 @@ img {
     background-color: darkblue;
     color: white;
     border: none;
+}
+
+a:first-of-type{
+    display: none;
 }
