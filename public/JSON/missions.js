@@ -1,23 +1,21 @@
 const missions = [
   {
-      "id": "1",
-      "name": "Tulipalo Variassa",
-      "location": "Myyrmäki"
-  },
-  {
       "id": "2",
       "name": "Kissa puussa",
-      "location": "Leppävaara"
+      "location": "Leppävaara",
+      "priority": "2"
   },
   {
       "id": "3",
       "name": "Kolari",
-      "location": "Arabia"
+      "location": "Arabia",
+      "priority": "2"
   },
   {
       "id": "4",
       "name": "Savuhavainto",
-      "location": "Helsinki-Vantaan Lentoasema"
+      "location": "HEL Lentoasema",
+      "priority": "2"
   }
 ];
 

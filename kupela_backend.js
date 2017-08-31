@@ -43,6 +43,23 @@ module.exports.listen = function(server) {
       socket.emit('versionReady', {profiletype: type});
     });
 
+    socket.on('ozCommand', data => {
+      console.log("Oz command received!");
+      if(data.type == "activation") {
+        if(data.command == "mission") {
+          console.log("activating mission");
+          connections.forEach(connectedSocket => {
+            if(connectedSocket !== socket) {
+              connectedSocket.emit('dataIncoming', {datatype: "mission", content: loadActiveMission()});
+            }
+            else {
+              socket.emit('message', 'Mission activated');
+            }
+          });
+        }
+      }
+    });
+
     socket.on('getSomeMessages', data => {
       console.log("Some messages requested!");
       socket.emit('dataIncoming', {datatype: "someMessages", content: messages});
@@ -63,4 +80,15 @@ function loadBackEndData() {
       '{ "priority" : "2", "message" : "This is not an important message!", "sender" : "Matti Testaaja", "time" : "10:37 06/08/2017" }' +
       '{ "priority" : "2", "message" : "Why am I even sending this?", "sender" : "Matti Testaaja", "time" : "14:35 06/08/2017" }' +
       ']}';
+}
+
+function loadActiveMission() {
+  var missiondata = {
+      "id": "1",
+      "name": "Tulipalo",
+      "location": "Varia, Myyrmäki",
+      "priority": "1"
+  };
+
+  return missiondata;
 }
