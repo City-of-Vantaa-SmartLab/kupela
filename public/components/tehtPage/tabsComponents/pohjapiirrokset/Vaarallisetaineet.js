@@ -6,8 +6,7 @@ const Vaarallisetaineet = (props) =>
     <SubitemWrapper {...props} />;
 
 const mapStateToProps = ({ vaarallisetaineettab, smokespreading }) => ({
-    vaarallisetaineettab,
-    smokespreading
+    vaarallisetaineettab
 });
 
 export default connect(mapStateToProps, null)(Vaarallisetaineet);

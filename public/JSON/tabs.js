@@ -114,7 +114,7 @@ const tabs = [
                 component: Pohjapiirrokset,
                 routes: [
                     {
-                        name: 'Palon sijainti',
+                        name: 'Rakennus',
                         type: 'subtab',
                         nameId: 'palonsijainti',
                         component: Palonsijainti,
@@ -123,56 +123,48 @@ const tabs = [
                                 name: 'Kerrokset',
                                 nameId: 'sprinklerit',
                                 component: Sprinklerit
-                            }
-                        ]
-                    },
-                    {
-                        name: 'Saapuminen',
-                        type: 'subtab',
-                        nameId: 'saapuminen',
-                        component: Saapuminen,
-                        routes: [
+                            },
                             {
                                 name: 'Kokoontumispaikka',
                                 nameId: 'kokoontumispaikka',
                                 component: Kokoontumispaikka
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Ympäristö',
+                        type: 'subtab',
+                        nameId: 'saapuminen',
+                        component: Saapuminen,
+                        routes: [
                             {
                                 name: 'Kartta',
                                 nameId: 'kartta',
                                 component: Kartta
                             },
                             {
+                                name: 'Street view',
+                                nameId: 'pohjastreetview',
+                                component: PohjaStreetView
+                            },
+                            {
                                 name: 'Ilmakuva',
                                 nameId: 'ilmakuva',
                                 component: Ilmakuva
-                            }
-                        ]
-                    },
-                    {
-                        name: 'Pelastussuunnitelma',
-                        type: 'subtab',
-                        nameId: 'pelastussuunnitelma',
-                        component: Pelastussuunnitelma,
-                        routes: [
-                            {
-                                name: 'content',
-                                nameId: 'content',
-                                component: ItemContainer
-                            }
-                        ]
-                    },
-                    {
-                        name: 'Vaaralliset aineet',
-                        type: 'subtab',
-                        nameId: 'vaarallisetaineet',
-                        component: Vaarallisetaineet,
-                        routes: [
+                            },
                             {
                                 name: 'Savun leviäminen',
                                 nameId: 'savunleviaminen',
                                 component: Savunleviaminen
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        name: 'Dokumentit',
+                        type: 'subtab',
+                        nameId: 'vaarallisetaineet',
+                        component: Vaarallisetaineet,
+                        routes: [
                             {
                                 name: 'Vaarallisetaineettab',
                                 nameId: 'vaarallisetaineettab',
