@@ -143,11 +143,6 @@ const tabs = [
                                 component: Kartta
                             },
                             {
-                                name: 'Street view',
-                                nameId: 'pohjastreetview',
-                                component: PohjaStreetView
-                            },
-                            {
                                 name: 'Ilmakuva',
                                 nameId: 'ilmakuva',
                                 component: Ilmakuva
