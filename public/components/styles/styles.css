@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans:100,200,300,400,500,600,700,800,900');
-html, body {
+html,
+body {
     background-color: #1c1c3a;
     overflow-x: hidden;
 }
 
-h1, h2, p, ul, li {
+h1,
+h2,
+p,
+ul,
+li {
     font-family: Helvetica, Arial, sans-serif;
     font-family: 'Encode Sans';
     color: black;
@@ -14,20 +19,18 @@ h1, h2, p, ul, li {
 h2 {
     font-size: 190%;
     font-weight: 700;
-
 }
-
 
 p {
     font-weight: 400;
     font-size: 120%;
 }
 
-ul, li {
+ul,
+li {
     font-size: 130%;
     font-weight: 600;
     color: white;
-
 }
 
 img {
@@ -64,18 +67,21 @@ img {
     min-height: 45%;
 }
 
-#map, #tehtava-list {
+#map,
+#tehtava-list {
     float: left;
     display: inline;
 }
 
-#maintabs.nav-pills > li, #subtabs.nav-pills > li {
+#maintabs.nav-pills > li,
+#subtabs.nav-pills > li {
     display: inline-block;
     float: none;
     margin-right: 10px;
 }
 
-#maintabs.nav-pills, #subtabs.nav-pills {
+#maintabs.nav-pills,
+#subtabs.nav-pills {
     padding-bottom: 5px;
     text-align: center;
 }
@@ -90,13 +96,17 @@ img {
     border-radius: 0;
 }
 
-#maintabs.nav-pills > li > a:active, #maintabs.nav-pills > li > a:hover, #maintabs.nav-pills > li > a:focus {
+#maintabs.nav-pills > li > a:active,
+#maintabs.nav-pills > li > a:hover,
+#maintabs.nav-pills > li > a:focus {
     background-color: #1c1c3a;
     color: #d9d9dd;
     text-decoration: underline;
 }
 
-#subtabs.nav-pills > li > a:active, #subtabs.nav-pills > li > a:hover, #subtabs.nav-pills > li > a:focus {
+#subtabs.nav-pills > li > a:active,
+#subtabs.nav-pills > li > a:hover,
+#subtabs.nav-pills > li > a:focus {
     color: orange;
     background-color: white;
     text-decoration: underline;
@@ -105,8 +115,7 @@ img {
 .pohjapiirrokset {
     display: grid;
     grid-template-rows: 10% 90%;
-    grid-template-areas: "b"
-                         "a";
+    grid-template-areas: "b" "a";
     background-color: white;
     height: 90vh;
 }
@@ -115,31 +124,28 @@ img {
     display: grid;
     grid-template-columns: 20% 40% 20% 20%;
     grid-template-rows: 50% 50%;
-    grid-template-areas: "a b d f"
-                         "a c d f";
+    grid-template-areas: "a b d e" "a c d e";
     background-color: whitesmoke;
     height: 78vh;
     bottom: 50px;
 }
 
 .kohdetiedot {
-    grid-area: f;
+    grid-area: e;
     display: grid;
-    grid-template-rows: 33% 33%;
-    grid-template-areas: "a"
-                         "b";
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "a" "b";
     background-color: white;
     //height: 90vh;
     margin: 5px 5px 5px 10px;
-    padding: 5px;
+    padding: 15px;
 }
 
 .kuvatvideot {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 50% 50%;
-    grid-template-areas: "a b c d"
-                         "a b c d";
+    grid-template-areas: "a b c d" "a b c d";
     background-color: white;
     height: 90vh;
 }
@@ -148,43 +154,57 @@ img {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 50% 50%;
-    grid-template-areas: "a b c"
-                         "a b c";
+    grid-template-areas: "a b c" "a b c";
     background-color: white;
     height: 90vh;
 }
 
-.graphicsinfo, .subconten .kohdetiedot > .someuutiset > .tekstit, .kuvatvideot > .streetview, .dokumentaatio > .lisatiedot {
+.graphicsinfo,
+.subconten .kohdetiedot > .someuutiset > .tekstit,
+.kuvatvideot > .streetview,
+.dokumentaatio > .lisatiedot {
     grid-area: a;
     background-color: white;
     display: inline-block;
-    padding: 5px;
+    padding: 15px;
     margin: 5px 0 5px 5px;
 }
 
-.ilmoittajatiedot, .subtabsmenu, .kohdetiedot > .yhteystiedot, .someuutiset > .kuvat, .kuvatvideot > .valvontakamerat, .dokumentaatio > .tilannepaivakirja {
+.ilmoittajatiedot,
+.subtabsmenu,
+.kohdetiedot > .yhteystiedot,
+.someuutiset > .kuvat,
+.kuvatvideot > .valvontakamerat,
+.dokumentaatio > .tilannepaivakirja {
     grid-area: b;
     background-color: white;
     display: inline-block;
-    padding: 5px;
+    padding: 15px;
     margin: 5px 0 0 10px
 }
 
-.asiakkaidentiedot, .tehtava > .kohdekortti, .someuutiset > .uutiset, .kuvatvideot > .tieliikennekamerat, .dokumentaatio > .dokukuvat {
+.asiakkaidentiedot,
+.tehtava > .kohdekortti,
+.someuutiset > .uutiset,
+.kuvatvideot > .tieliikennekamerat,
+.dokumentaatio > .dokukuvat {
     grid-area: c;
     background-color: white;
     display: inline-block;
-    padding: 5px;
+    padding: 15px;
     margin: 10px 0 5px 10px;
 }
 
-.rakennuksentiedot, .someuutiset > .jaetut, .kuvatvideot > .kolmiulotteinen {
+.rakennuksentiedot,
+.someuutiset > .jaetut,
+.kuvatvideot > .kolmiulotteinen {
     grid-area: d;
     background-color: white;
     display: inline-block;
-    padding: 5px;
+    padding: 15px;
     margin: 5px 0 5px 10px;
 }
+
 
 .someuutiset > .tekstit, .someuutiset > .uutiset, .someuutiset > .kuvat {
     padding-right: 15px;
@@ -194,19 +214,14 @@ img {
     display: grid;
     grid-template-columns: 10% 20% 50% 10%;
     grid-template-rows: 50% 50%;
-    grid-template-areas: "c a b d"
-                         "c a b d";
+    grid-template-areas: "c a b d" "c a b d";
 }
 
 .subitemMenu {
     grid-area: a;
     display: grid;
     grid-template-rows: 30% 30% 30% 30% 30%;
-    grid-template-areas: "a"
-                         "b"
-                         "c"
-                         "d"
-                         "e";
+    grid-template-areas: "a" "b" "c" "d" "e";
     padding-right: 15px;
     height: 55vh;
 }
@@ -224,22 +239,30 @@ img {
     opacity: 0.7;
 }
 
-.sprinklerit, .kokoontumispaikka, .pohjapiirros {
+.sprinklerit,
+.kokoontumispaikka,
+.pohjapiirros {
     grid-area: a;
     display: inline-block;
 }
 
-.palovaroittimet, .kartta, .turvallisuushenkilosto, .savunleviaminen {
+.palovaroittimet,
+.kartta,
+.turvallisuushenkilosto,
+.savunleviaminen {
     grid-area: b;
     display: inline-block;
 }
 
-.pelastussuunnitelma, .kemikaalikortti, .subitemMenu > .streetview {
+.pelastussuunnitelma,
+.kemikaalikortti,
+.subitemMenu > .streetview {
     grid-area: c;
     display: inline-block;
 }
 
-.yhteystiedot, .escape {
+.yhteystiedot,
+.escape {
     grid-area: d;
     display: inline-block;
 }
@@ -272,8 +295,7 @@ img {
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: 50% 50%;
-    grid-template-areas: "a b"
-                         "a b";
+    grid-template-areas: "a b" "a b";
 }
 
 .modalcontent {
@@ -286,9 +308,7 @@ img {
     grid-area: a;
     display: grid;
     grid-template-rows: 33% 33% 33%;
-    grid-template-areas: "a"
-                         "b"
-                         "c";
+    grid-template-areas: "a" "b" "c";
     padding: 10px;
 }
 
@@ -300,15 +320,11 @@ img {
     grid-area: b;
 }
 
-.modalmenu > a > .ilmakuva {
-    grid-area: c;
-}
 .some-grid {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 50% 50%;
-    grid-template-areas: "b"
-                         "b";
+    grid-template-areas: "b" "b";
     background-color: white;
     height: 75vh;
     padding: 5px;
@@ -323,8 +339,7 @@ img {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 50% 50%;
-    grid-template-areas: "b"
-                         "b";
+    grid-template-areas: "b" "b";
     background-color: white;
     height: 75vh;
     padding: 5px;
@@ -356,59 +371,67 @@ img {
     width: 10%;
 }
 
-#maintabs.nav-pills > li.selected > a:active, #maintabs.nav-pills > li.selected > a:focus, #maintabs.nav-pills > li.selected > a:hover {
-    background-color: darkgoldenrod;
-}
-#subtabs.nav-pills > li.selected > a:active, #subtabs.nav-pills > li.selected > a:focus, #subtabs.nav-pills > li.selected > a:hover {
-    background-color: darkgoldenrod;
-}
-.selected{
+#maintabs.nav-pills > li.selected > a:active,
+#maintabs.nav-pills > li.selected > a:focus,
+#maintabs.nav-pills > li.selected > a:hover {
     background-color: darkgoldenrod;
 }
 
+#subtabs.nav-pills > li.selected > a:active,
+#subtabs.nav-pills > li.selected > a:focus,
+#subtabs.nav-pills > li.selected > a:hover {
+    background-color: darkgoldenrod;
+}
+
+.selected {
+    background-color: darkgoldenrod;
+}
+
+
 /* Front page CSS */
+
 .frontpageContent {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 70% 30%;
-  grid-template-areas: "a b"
-                       "c d";
-  background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70% 30%;
+    grid-template-areas: "a b" "c d";
+    background-color: white;
 }
 
 .frontpageMissionArea {
-  grid-area: a;
-  padding: 5px;
-  display: inline-block;
+    grid-area: a;
+    padding: 5px;
+    display: inline-block;
 }
 
 .frontpageMapArea {
-  grid-area: b;
-  padding: 5px;
-  display: inline-block;
+    grid-area: b;
+    padding: 5px;
+    display: inline-block;
 }
 
 .userButtonArea {
-  grid-area: c;
-  padding: 5px;
-  display: inline-block;
+    grid-area: c;
+    padding: 5px;
+    display: inline-block;
 }
 
 .changingcontentArea {
-  grid-area: d;
-  padding: 5px;
-  display: inline-block;
+    grid-area: d;
+    padding: 5px;
+    display: inline-block;
 }
 
 .user-btn {
-  background-color: darkblue;
-  color: white;
-  border: none;
-  padding: 5px;
-  margin: 10px;
-  height: 50%;
-  width: 30%;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin: 10px;
+    height: 50%;
+    width: 30%;
 }
+
 
 /*Some page CSS */
 .someuutiset {
@@ -429,9 +452,9 @@ img {
 }
 
 .someText {
-  border: solid black;
-  border-width: 2px;
-  margin:2%;
+    border: solid black;
+    border-width: 2px;
+    margin: 2%;
 }
 
 .someImg {
@@ -445,7 +468,7 @@ img {
 }
 
 .priority {
-  background-color: red;
+    background-color: red;
 }
 
 .nonpriority {
@@ -457,46 +480,48 @@ img {
 }
 
 .notVisible {
-  display: none;
+    display: none;
 }
 
 .somebtn {
-  margin: 2%;
+    margin: 2%;
 }
 
+
 /*Admin page CSS*/
+
 .admincontent {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100%;
-  grid-template-areas: "a b";
-  background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: "a b";
+    background-color: white;
 }
 
 .buttonArea {
-  grid-area: a;
-  padding: 5px;
-  border: solid black;
-  border-width: 3px;
-  display: inline-block;
+    grid-area: a;
+    padding: 5px;
+    border: solid black;
+    border-width: 3px;
+    display: inline-block;
 }
 
 .logDisplay {
-  grid-area: b;
-  padding: 5px;
-  border: solid black;
-  border-width: 3px;
-  display: inline-block;
+    grid-area: b;
+    padding: 5px;
+    border: solid black;
+    border-width: 3px;
+    display: inline-block;
 }
 
 .ozbuttontextarea {
-  padding: 2%;
-  margin: 5px;
+    padding: 2%;
+    margin: 5px;
 }
 
 .oztext {
-  margin: 5px;
-  display: inline-block;
+    margin: 5px;
+    display: inline-block;
 }
 
 .oz-btn {
@@ -508,4 +533,12 @@ img {
     margin: 5px;
     float: right;
     display: inline-block;
+}
+
+.yhteystiedot {
+    grid-area: a;
+}
+
+.kohdekortti {
+    grid-area: b;
 }
