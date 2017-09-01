@@ -2,7 +2,7 @@ import React from 'react';
 
 const GraphicsInfo = () => (
     <div className="graphicsinfo">
-        <p><b>Tähän tulee säätiedot, tilastot ja aika</b></p>
+        <h2>Säätiedot, tilastot ja aika:</h2>
     </div>
 );
 
