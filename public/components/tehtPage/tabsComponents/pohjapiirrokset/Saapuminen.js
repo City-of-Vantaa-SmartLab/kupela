@@ -5,12 +5,13 @@ import { connect } from 'react-redux';
 const Saapuminen = (props) =>
     <SubitemWrapper {...props} />;
 
-const mapStateToProps = ({ roadmaps, gatheringplaces, aerialviews, streetviews, tab: { carousel } }) => ({
+const mapStateToProps = ({ roadmaps, gatheringplaces, aerialviews, streetviews, tab: { carousel }, smokespreading }) => ({
     roadmaps,
     gatheringplaces,
     aerialviews,
     streetviews,
-    carousel
+    carousel,
+    smokespreading
 });
 
 export default connect(mapStateToProps, null)(Saapuminen);

@@ -9,6 +9,7 @@ var socketio = require('socket.io');
 
 //Global serverside JSON objects
 var messages, images, videos, news;
+var sentMessagesSets = 0;
 
 module.exports.listen = function(server) {
 
@@ -43,6 +44,41 @@ module.exports.listen = function(server) {
       socket.emit('versionReady', {profiletype: type});
     });
 
+    socket.on('ozCommand', data => {
+      console.log("Oz command received!");
+      if(data.type == "activation") {
+        if(data.command == "mission") {
+          console.log("activating mission");
+          connections.forEach(connectedSocket => {
+            if(connectedSocket !== socket) {
+              connectedSocket.emit('dataIncoming', {datatype: "mission", content: loadActiveMission()});
+            }
+            else {
+              socket.emit('message', 'Mission activated');
+            }
+          });
+        }
+      }
+      if(data.type == "send") {
+        if(data.command == "messages") {
+          console.log("Sending message set " + sentMessagesSets+1);
+          var newset = '';
+          if(sentMessagesSets == 0){
+            newset = loadFirstSetOfMessages();
+            sentMessagesSets++;
+          }
+          connections.forEach(connectedSocket => {
+            if(connectedSocket !== socket) {
+              connectedSocket.emit('dataIncoming', {datatype: "messageset", content: newset});
+            }
+            else {
+              socket.emit('message', 'Message set sent!');
+            }
+          });
+        }
+      }
+    });
+
     socket.on('getSomeMessages', data => {
       console.log("Some messages requested!");
       socket.emit('dataIncoming', {datatype: "someMessages", content: messages});
@@ -63,4 +99,31 @@ function loadBackEndData() {
       '{ "priority" : "2", "message" : "This is not an important message!", "sender" : "Matti Testaaja", "time" : "10:37 06/08/2017" }' +
       '{ "priority" : "2", "message" : "Why am I even sending this?", "sender" : "Matti Testaaja", "time" : "14:35 06/08/2017" }' +
       ']}';
+}
+
+/*
+ * HARDCODED APPLICATION DATA FOR KUPELA
+ */
+
+function loadActiveMission() {
+  var missiondata = {
+      "id": "1",
+      "name": "Tulipalo",
+      "location": "Varia, Myyrmäki",
+      "priority": "1"
+  };
+
+  return missiondata;
+}
+
+function loadFirstSetOfMessages() {
+  var messages = { "messages" : [
+      { "nameId": "teksti11", "sender": "Pekka", "message": "Ajattelin lähettää tällasta spämmiä", "time": "12:47", "location": "Tikkurila", "tags": "Fire", "priority": "2" },
+      { "nameId": "teksti12", "sender": "Pekka", "message": "Ajattelin lähettää tällasta spämmiä", "time": "12:47", "location": "Tikkurila", "tags": "Fire", "priority": "2" },
+      { "nameId": "teksti13", "sender": "Pekka", "message": "Ajattelin lähettää tällasta spämmiä", "time": "12:47", "location": "Tikkurila", "tags": "Fire", "priority": "2" },
+      { "nameId": "teksti14", "sender": "Pekka", "message": "Ajattelin lähettää tällasta spämmiä", "time": "12:47", "location": "Tikkurila", "tags": "Fire", "priority": "2" },
+      { "nameId": "teksti15", "sender": "Santeri", "message": "Pekka lopeta spämmi, ei näy muiden viestit!", "time": "12:48", "location": "Tikkurila", "tags": "Fire", "priority": "1" }
+  ]};
+
+  return messages;
 }

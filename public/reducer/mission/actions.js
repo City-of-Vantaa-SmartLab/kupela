@@ -7,13 +7,11 @@ export const SET_MISSION_PROFILE = 'SET_MISSION_PROFILE';
 export function getMissionProfile(id) {
     return dispatch => {
       missions.map((c, i) => {
-        if(i+1 == id) {
+        if(c.id == id) {
           var profile = c;
           dispatch(setMissionProfile(profile));
         }
       }
-
-
       );
     };
 }
