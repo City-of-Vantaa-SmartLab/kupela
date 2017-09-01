@@ -11,6 +11,10 @@ const ButtonArea = (props) =>
       <input className="oz-btn" type="button" onClick={props.clickActivateMission()} value="ACTIVATE MISSION"/>
     </div>
     <div className="ozbuttontextarea">
+      <p className="oztext">SEND FIRST MESSAGES</p>
+      <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(1)} value="ACTIVATE MISSION"/>
+    </div>
+    <div className="ozbuttontextarea">
     <p className="oztext">PLACEHOLDER TEXT</p>
     <input className="oz-btn" type="button" onClick={props.clickSendMessages()} value="Placeholder Messages"/>
     </div>
@@ -29,6 +33,17 @@ const mapDispatchToProps = dispatch => ({
       dispatch(sendOzCommand(data));
 
       console.log("Activate mission clicked!");
+    }
+  },
+  clickSendMessageSet(setNo){
+    return () => {
+      var data = {};
+      data.type = "send";
+      data.command = "messages";
+      data.noOfSet = setNo;
+      dispatch(sendOzCommand(data));
+
+      console.log("Send messages " + setNo + " clicked!");
     }
   },
   clickSendMessages(){

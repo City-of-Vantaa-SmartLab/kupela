@@ -9,7 +9,6 @@ var socketio = require('socket.io');
 
 //Global serverside JSON objects
 var messages, images, videos, news;
-var sentMessagesSets = 0;
 
 module.exports.listen = function(server) {
 
@@ -61,11 +60,10 @@ module.exports.listen = function(server) {
       }
       if(data.type == "send") {
         if(data.command == "messages") {
-          console.log("Sending message set " + sentMessagesSets+1);
+          console.log("Sending message set " + data.noOfSet);
           var newset = '';
-          if(sentMessagesSets == 0){
+          if(data.noOfSet == 1){
             newset = loadFirstSetOfMessages();
-            sentMessagesSets++;
           }
           connections.forEach(connectedSocket => {
             if(connectedSocket !== socket) {
