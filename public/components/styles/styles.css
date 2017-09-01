@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans:100,200,300,400,500,600,700,800,900');
-html, body {
-
+html,
+body {
     background-color: #1c1c3a;
     overflow-x: hidden;
 }
@@ -19,16 +19,15 @@ li {
 h2 {
     font-size: 190%;
     font-weight: 700;
-
 }
+
 p {
     font-weight: 400;
     font-size: 120%;
 }
 
-
-
-ul, li {
+ul,
+li {
     font-size: 130%;
     font-weight: 600;
     color: white;
@@ -125,25 +124,21 @@ img {
     display: grid;
     grid-template-columns: 20% 40% 20% 20%;
     grid-template-rows: 50% 50%;
-
     grid-template-areas: "a b d e" "a c d e";
-
     background-color: whitesmoke;
     height: 78vh;
     bottom: 50px;
 }
 
 .kohdetiedot {
-    grid-area: f;
+    grid-area: e;
     display: grid;
-
     grid-template-rows: 50% 50%;
     grid-template-areas: "a" "b";
     background-color: white;
     //height: 90vh;
     margin: 5px 5px 5px 10px;
     padding: 15px;
-
 }
 
 .someuutiset,
@@ -165,7 +160,6 @@ img {
     height: 90vh;
 }
 
-
 .graphicsinfo,
 .subconten .kohdetiedot > .someuutiset > .tekstit,
 .kuvatvideot > .streetview,
@@ -174,7 +168,6 @@ img {
     background-color: white;
     display: inline-block;
     padding: 15px;
-
     margin: 5px 0 5px 5px;
 }
 
@@ -187,9 +180,7 @@ img {
     grid-area: b;
     background-color: white;
     display: inline-block;
-
     padding: 15px;
-
     margin: 5px 0 0 10px
 }
 
@@ -201,9 +192,7 @@ img {
     grid-area: c;
     background-color: white;
     display: inline-block;
-
     padding: 15px;
-
     margin: 10px 0 5px 10px;
 }
 
@@ -213,9 +202,7 @@ img {
     grid-area: d;
     background-color: white;
     display: inline-block;
-
     padding: 15px;
-
     margin: 5px 0 5px 10px;
 }
 
@@ -280,12 +267,8 @@ img {
     display: inline-block;
 }
 
-
 .yhteystiedot,
 .escape {
-
-.yhteystiedot, .escape {
-
     grid-area: d;
     display: inline-block;
 }
@@ -337,12 +320,12 @@ img {
 
 .modalmenu > a > .yhteystiedot {
     grid-area: a;
-
 }
 
 .modalmenu > a > .kohdekortti {
     grid-area: b;
 }
+
 .some-grid {
     display: grid;
     grid-template-columns: 100%;
@@ -530,7 +513,6 @@ img {
     margin: 5px;
     float: right;
     display: inline-block;
-
 }
 
 .yhteystiedot {
@@ -539,5 +521,4 @@ img {
 
 .kohdekortti {
     grid-area: b;
-
 }
