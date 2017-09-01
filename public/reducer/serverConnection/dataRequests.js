@@ -1,10 +1,9 @@
 import { GET_SOME_MESSAGES, RECEIVE_DATA } from './actions';
-import { addMission } from '../missions/actions';
+import { initialState } from './dataLoaders';
 
-const initialState = {
-  latestMessage: '',
+/*const initialState = {
   messages : []
-};
+};*/
 
 export default (state = initialState, action) => {
     switch (action.type) {
@@ -12,12 +11,11 @@ export default (state = initialState, action) => {
           return state;
         case RECEIVE_DATA:
           if(action.data.datatype == "someMessages") {
-            state.latestMessage = action.data.content;
-            state.messages.push(action.data.content);
+            console.log("Test function completed");
           }
-          else if(action.data.datatype == "mission") {
-            console.log("New mission received");
-            console.log(action.data.content);
+          else if(action.data.datatype == "messageset") {
+            console.log("New messages received");
+
           }
           return state;
         default:
