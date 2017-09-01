@@ -42,13 +42,13 @@ export default function (store) {
     store.dispatch(actions.receiveResponse(message));
   });
   socket.on('dataIncoming', data => {
-    if(data.datatype == "someMessages") {
-      store.dispatch(actions.receiveData(data));
-    }
-    else if(data.datatype == "mission") {
+    if(data.datatype == "mission") {
       console.log("New mission received");
       console.log(data.content);
       store.dispatch(addMission(data.content));
+    }
+    else {
+      store.dispatch(actions.receiveData(data));
     }
   });
   socket.on('versionReady', data => {

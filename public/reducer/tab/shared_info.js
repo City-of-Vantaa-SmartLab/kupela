@@ -9,6 +9,7 @@ export default (state = initialState, action) => {
             if(index === -1) {
                 return [...state, {
                     id: action.id,
+                    itemtype: action.itemtype,
                     content: action.content
                 }]
             } else {

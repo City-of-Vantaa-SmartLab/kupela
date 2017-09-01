@@ -1,11 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ShareButton from './ShareButton';
+import { showAllTexts, showPrioTexts } from '../../../../reducer/texts/actions';
 
 const Tekstit = (props) =>
     <div className="tekstit">
         <p><b>Viestit:</b></p>
-        {props.texts.map((text) =>
+        <div className="scrollableArea">
+        {props.texts.messages.map((text) =>
+          <div className={text.visible === true ? "visible" : "notVisible"}>
           <div className={text.priority === "1" ? "someText priority" : "someText nonpriority"}>
             <a onClick={props.selectItem(text.id, 'GET_some', text)}>
               <div className="someTextBlock">
@@ -20,26 +23,27 @@ const Tekstit = (props) =>
             {props.buttons.map((b) =>
                 {text.nameId===b.id ? text.isShared=b.isShared : false }
             )}
-            <ShareButton onClick={props.clickShare(text.nameId, text)}
+            <ShareButton onClick={props.clickShare(text.nameId, "1", text)}
                          key={text.nameId}
                          isShared={text.isShared} />
           </div>
+          </div>
         )}
-
-        <input className="showAllTextsButton visible somebtn" type="button" onClick={props.clickShowAllTexts()} value="Näytä kaikki"/>
-        <input className="showPriorityTextsButton notVisible somebtn" type="button" onClick={props.clickShowPriorityTexts()} value="Näytä tärkeät"/>
+        </div>
+        <input className="showAllTextsButton somebtn" type="button" onClick={props.clickShowAllTexts()} value="Näytä kaikki"/>
+        <input className="showPriorityTextsButton somebtn" type="button" onClick={props.clickShowPriorityTexts()} value="Näytä tärkeät"/>
 
     </div>;
 
 const mapDispatchToProps = dispatch => ({
-    clickShowAllTexts(id, type, content) {
+    clickShowAllTexts() {
         return() => {
-
+          dispatch(showAllTexts());
         }
     },
-    clickShowPriorityTexts(id, content) {
+    clickShowPriorityTexts() {
         return() => {
-
+          dispatch(showPrioTexts());
         }
     }
 });
