@@ -489,7 +489,3 @@ img {
     float: right;
     display: inline-block;
 }
-
-a:first-of-type{
-    display: none;
-}
