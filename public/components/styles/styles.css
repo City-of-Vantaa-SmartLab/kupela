@@ -14,7 +14,7 @@ h1, h2, p, ul, li {
 h2 {
     font-size: 190%;
     font-weight: 700;
-    
+
 }
 
 
@@ -27,7 +27,7 @@ ul, li {
     font-size: 130%;
     font-weight: 600;
     color: white;
-    
+
 }
 
 img {
@@ -134,7 +134,7 @@ img {
     padding: 5px;
 }
 
-.someuutiset, .kuvatvideot {
+.kuvatvideot {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 50% 50%;
@@ -184,10 +184,6 @@ img {
     display: inline-block;
     padding: 5px;
     margin: 5px 0 5px 10px;
-}
-
-.someuutiset > .jaetut {
-    overflow-y: scroll;
 }
 
 .someuutiset > .tekstit, .someuutiset > .uutiset, .someuutiset > .kuvat {
@@ -415,9 +411,36 @@ img {
 }
 
 /*Some page CSS */
+.someuutiset {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: "a b c d";
+    background-color: white;
+    height: 100%;
+}
+
+.tekstit, .kuvat, .uutiset {
+  height: 650px;
+}
+
+.scrollableArea {
+  height: 95%;
+  overflow-y: scroll;
+}
+
 .someText {
   border: solid black;
   border-width: 2px;
+  margin:2%;
+}
+
+.someImg {
+  padding:2%;
+  margin:2%;
+}
+
+.someNews {
+  padding:2%;
   margin:2%;
 }
 
@@ -426,11 +449,11 @@ img {
 }
 
 .nonpriority {
-  display: none;
+
 }
 
 .visible {
-  display: inline;
+  display: block;
 }
 
 .notVisible {

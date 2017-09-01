@@ -1,6 +1,3 @@
-import texts from '../../JSON/texts';
-export const LOAD_TEXTS = 'LOAD_TEXTS';
-
 export const SEND_MESSAGE = "SEND_MESSAGE";
 export const INIT_SOCKET = "INIT_SOCKET";
 export const GET_SOME_MESSAGES = "GET_SOME_MESSAGES";
@@ -9,13 +6,6 @@ export const RECEIVE_RESPONSE = "RECEIVE_RESPONSE";
 export const RECEIVE_DATA = "RECEIVE_DATA";
 
 export const SEND_OZ_COMMAND = "SEND_OZ_COMMAND";
-
-export function getTexts() {
-    return {
-        type: LOAD_TEXTS,
-        texts
-    }
-}
 
 export function sendMessage(message) {
   return { type: SEND_MESSAGE, message };
