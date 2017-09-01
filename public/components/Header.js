@@ -11,7 +11,7 @@ const Header = ({ profile, selectMission, pages}) =>
             <h1 id="teht-title"
                 key={profile.name}
                 onClick={selectMission(pages[1])}>
-                <Link to={`/tehtavat/${profile.name}`}>Luokitus / {profile.name}</Link>
+                <Link to={`/tehtavat/${profile.name}`}>Prioriteetti: {profile.priority} / {profile.name}, {profile.location}</Link>
             </h1>
         </div>
     </div>;
