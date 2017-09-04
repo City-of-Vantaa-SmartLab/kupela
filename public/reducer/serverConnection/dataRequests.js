@@ -1,9 +1,8 @@
 import { GET_SOME_MESSAGES, RECEIVE_DATA } from './actions';
-import { initialState } from './dataLoaders';
 
-/*const initialState = {
-  messages : []
-};*/
+const initialState = {
+
+};
 
 export default (state = initialState, action) => {
     switch (action.type) {
@@ -13,12 +12,8 @@ export default (state = initialState, action) => {
           if(action.data.datatype == "someMessages") {
             console.log("Test function completed");
           }
-          else if(action.data.datatype == "messageset") {
-            console.log("New messages received");
-
-          }
           return state;
         default:
-            return state;
+          return state;
     }
 }

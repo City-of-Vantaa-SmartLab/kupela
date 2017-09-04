@@ -24,10 +24,10 @@ const mapDispatchToProps = dispatch => ({
             dispatch(changeCurrentTemplate(id, type, content));
         }
     },
-    clickShare(id, content) {
+    clickShare(id, type, content) {
         return() => {
             dispatch(addShareableItem(id));
-            dispatch(shareInformation(id, content));
+            dispatch(shareInformation(id, type, content));
             dispatch(setSharedButton(id));
         }
     }

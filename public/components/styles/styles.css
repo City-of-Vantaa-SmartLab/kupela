@@ -141,7 +141,6 @@ img {
     padding: 15px;
 }
 
-.someuutiset,
 .kuvatvideot {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -206,13 +205,8 @@ img {
     margin: 5px 0 5px 10px;
 }
 
-.someuutiset > .jaetut {
-    overflow-y: scroll;
-}
 
-.someuutiset > .tekstit,
-.someuutiset > .uutiset,
-.someuutiset > .kuvat {
+.someuutiset > .tekstit, .someuutiset > .uutiset, .someuutiset > .kuvat {
     padding-right: 15px;
 }
 
@@ -440,6 +434,22 @@ img {
 
 
 /*Some page CSS */
+.someuutiset {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: "a b c d";
+    background-color: white;
+    height: 100%;
+}
+
+.tekstit, .kuvat, .uutiset {
+  height: 650px;
+}
+
+.scrollableArea {
+  height: 95%;
+  overflow-y: scroll;
+}
 
 .someText {
     border: solid black;
@@ -447,16 +457,26 @@ img {
     margin: 2%;
 }
 
+.someImg {
+  padding:2%;
+  margin:2%;
+}
+
+.someNews {
+  padding:2%;
+  margin:2%;
+}
+
 .priority {
     background-color: red;
 }
 
 .nonpriority {
-    display: none;
+
 }
 
 .visible {
-    display: inline;
+  display: block;
 }
 
 .notVisible {
@@ -525,3 +545,4 @@ FIT THESE!!!!!!!!!!!
 .kohdekortti {
     grid-area: b;
 }
+//

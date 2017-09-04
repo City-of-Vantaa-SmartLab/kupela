@@ -122,10 +122,11 @@ export function addCarousel(subitem) {
     }
 }
 
-export function shareInformation(id, content) {
+export function shareInformation(id, itemtype, content) {
     return {
         type: SET_INFO_SHARED,
         id,
+        itemtype,
         content
     }
 }
