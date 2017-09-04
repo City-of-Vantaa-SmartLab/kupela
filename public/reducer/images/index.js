@@ -1,7 +1,9 @@
 import { LOAD_IMAGES, SHOW_ALL_IMAGES, SHOW_PRIOIMG_ONLY } from '../images/actions';
+import { SET_INFO_SHARED } from '../tab/actions';
 
 const initialState = {
-    images: []
+    images: [],
+    sharedimages: []
 };
 
 export default (state = initialState, action) => {
@@ -42,6 +44,17 @@ export default (state = initialState, action) => {
           return {
             ...state,
             images: newimages
+          }
+        case SET_INFO_SHARED:
+          if(action.itemtype == 2)
+          {
+            return {
+              ...state,
+              sharedimages: state.sharedimages.concat(action.content)
+            }
+          }
+          else {
+            return state;
           }
         default:
             return state;
