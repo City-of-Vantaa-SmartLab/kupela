@@ -34,8 +34,13 @@ li {
 }
 
 img {
-    width: 100%;
-    //height: 50%;
+    width: 50%;
+    height: 50%;
+       width:auto;
+height:auto;
+max-width:90%;
+max-height:10%;
+
 }
 
 .content {
@@ -535,11 +540,31 @@ img {
     display: inline-block;
 }
 
-.yhteystiedot {
+a .yhteystiedot {
     grid-area: a;
+/*
+    border: 1px solid green;
+    padding: 10px;
+*/
     
 }
+.component img {
+    margin: 0 0 0 10%;
+/*    border: 1px solid yellow;*/
+}
 
+.component {
+/*    border: 1px solid purple;*/
+}
 .kohdekortti {
     grid-area: b;
+    position: relative;
+
+}
+
+.kohdetiedot a{
+/*    border: 1px solid blue;*/
+    height: 100%;
+    position: relative;
+    padding: 10px;
 }
