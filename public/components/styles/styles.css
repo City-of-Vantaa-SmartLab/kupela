@@ -537,9 +537,9 @@ img {
 
 .yhteystiedot {
     grid-area: a;
+    
 }
 
 .kohdekortti {
     grid-area: b;
 }
-//
