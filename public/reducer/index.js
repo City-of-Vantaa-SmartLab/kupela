@@ -34,6 +34,7 @@ import serverConnection from './serverConnection';
 import textvalues from './textvalues';
 import missions from './missions';
 import mission from './mission';
+import user from './user';
 
 
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/
@@ -71,5 +72,6 @@ export default combineReducers({
     vaarallisetaineettab,
     serverConnection,
     textvalues,
+    user,
     ozadmin
 });

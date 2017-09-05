@@ -1,8 +1,10 @@
 import { LOAD_TEXTS, SHOW_ALL_TEXTS, SHOW_PRIO_ONLY } from './actions';
 import { RECEIVE_DATA } from '../serverConnection/actions';
+import { SET_INFO_SHARED } from '../tab/actions';
 
 const initialState = {
-    messages: []
+    messages: [],
+    sharedmessages: []
 };
 
 export default (state = initialState, action) => {
@@ -61,6 +63,17 @@ export default (state = initialState, action) => {
           return {
             ...state,
             messages: newmessages
+          }
+        case SET_INFO_SHARED:
+          if(action.itemtype == 1)
+          {
+            return {
+              ...state,
+              sharedmessages: state.sharedmessages.concat(action.content)
+            }
+          }
+          else {
+            return state;
           }
         default:
             return state;

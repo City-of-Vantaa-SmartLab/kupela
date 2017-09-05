@@ -1,7 +1,9 @@
 import { LOAD_NEWS, SHOW_ALL_NEWS, SHOW_PRIONEWS_ONLY } from './actions';
+import { SET_INFO_SHARED } from '../tab/actions';
 
 const initialState = {
-  newsitems: []
+  newsitems: [],
+  sharednews: []
 };
 
 export default (state = initialState, action) => {
@@ -42,6 +44,17 @@ export default (state = initialState, action) => {
           return {
             ...state,
             newsitems: newnews
+          }
+        case SET_INFO_SHARED:
+          if(action.itemtype == 3)
+          {
+            return {
+              ...state,
+              sharednews: state.sharednews.concat(action.content)
+            }
+          }
+          else {
+            return state;
           }
         default:
             return state;

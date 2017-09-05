@@ -398,31 +398,31 @@ max-height:10%;
 .frontpageContent {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 70% 30%;
+    grid-template-rows: 30% 70%;
     grid-template-areas: "a b" "c d";
     background-color: white;
 }
 
 .frontpageMissionArea {
-    grid-area: a;
-    padding: 5px;
-    display: inline-block;
-}
-
-.frontpageMapArea {
-    grid-area: b;
-    padding: 5px;
-    display: inline-block;
-}
-
-.userButtonArea {
     grid-area: c;
     padding: 5px;
     display: inline-block;
 }
 
-.changingcontentArea {
+.frontpageMapArea {
     grid-area: d;
+    padding: 5px;
+    display: inline-block;
+}
+
+.userButtonArea {
+    grid-area: a;
+    padding: 5px;
+    display: inline-block;
+}
+
+.changingcontentArea {
+    grid-area: b;
     padding: 5px;
     display: inline-block;
 }
@@ -437,6 +437,12 @@ max-height:10%;
     width: 30%;
 }
 
+.missionItem {
+  border: solid black;
+  border-width: 2px;
+  margin: 2%;
+}
+
 
 /*Some page CSS */
 .someuutiset {
@@ -445,6 +451,14 @@ max-height:10%;
     grid-template-areas: "a b c d";
     background-color: white;
     height: 100%;
+}
+
+.someuutisetfield {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas: "a b c";
+  background-color: white;
+  height: 100%;
 }
 
 .tekstit, .kuvat, .uutiset {
@@ -542,6 +556,7 @@ max-height:10%;
 
 a .yhteystiedot {
     grid-area: a;
+
 /*
     border: 1px solid green;
     padding: 10px;

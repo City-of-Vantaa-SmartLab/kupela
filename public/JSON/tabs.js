@@ -211,7 +211,7 @@ const tabs = [
             }
         ]
     },
-    {
+    /*{
         id: 4,
         name: 'Kuvat ja videot',
         type: 'tab',
@@ -275,7 +275,7 @@ const tabs = [
                 ]
             }
         ]
-    }
+    }*/
 ];
 
 export default tabs;
