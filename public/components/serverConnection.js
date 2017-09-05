@@ -1,5 +1,6 @@
 import * as actions from '../reducer/serverConnection/actions';
 import { addMission } from '../reducer/missions/actions';
+import { setUser } from '../reducer/user/actions';
 import io from 'socket.io-client';
 
 var socket = null;
@@ -52,6 +53,6 @@ export default function (store) {
     }
   });
   socket.on('versionReady', data => {
-    //Dispatch version type state saving
+    store.dispatch(setUser(data.profiletype));
   });
 }

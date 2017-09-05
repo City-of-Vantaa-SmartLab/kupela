@@ -2,7 +2,7 @@ import React from 'react';
 import Basic from '../reusables/templates/Basic';
 
 const Jaetut = (props) =>
-    <div className="jaetut">
+    <div className={props.user.usertype === "field" ? "notVisible" : "jaetut" }>
         <p><b>Jaetut:</b></p>
         <div className="scrollableArea">
         {props.shared_info.map((a) =>
