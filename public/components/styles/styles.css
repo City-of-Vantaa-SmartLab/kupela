@@ -122,7 +122,7 @@ img {
 
 .tehtava {
     display: grid;
-    grid-template-columns: 20% 40% 20% 20%;
+    grid-template-columns: 35% 25% 20% 20%;
     grid-template-rows: 50% 50%;
     grid-template-areas: "a b d e" "a c d e";
     background-color: whitesmoke;
@@ -159,7 +159,6 @@ img {
     height: 90vh;
 }
 
-.graphicsinfo,
 .subconten .kohdetiedot > .someuutiset > .tekstit,
 .kuvatvideot > .streetview,
 .dokumentaatio > .lisatiedot {
@@ -438,6 +437,25 @@ img {
   margin: 2%;
 }
 
+/*Tehtava page CSS */
+.graphicsinfo {
+  grid-area: a;
+  height: 100%;
+  padding: 5px;
+}
+
+.journalViewArea {
+  height: 60%;
+}
+
+.journalInputArea {
+  height: 30%;
+}
+
+.journalInput {
+  margin-bottom: 5px;
+  width: 80%;
+}
 
 /*Some page CSS */
 .someuutiset {
