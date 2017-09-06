@@ -7,7 +7,9 @@ const ModalContent = (props) => (
         <button type="button" className="return-btn" onClick={props.closeModal()}>
             X
         </button>
-        <props.component/>
+        <div className="scrollableArea">
+          <props.component/>
+        </div>
     </div>
 );
 

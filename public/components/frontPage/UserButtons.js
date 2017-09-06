@@ -7,7 +7,7 @@ import { changeText } from '../../reducer/textvalues/actions';
 const UserButtons = (props, {profile}) =>
   <div className='userButtonArea'>
 
-    <p>Valitse toimija {getSelectedUserType(props.user.usertype)}</p>
+    <p className="userInputTitle">Valitse toimija {getSelectedUserType(props.user.usertype)}</p>
     <input type="button" className="user-btn" onClick={props.clickSelectTike()} value="Tilannekeskus"/>
     <input type="button" className="user-btn" onClick={props.clickSelectKentta()} value="Kenttähenkilöstö"/>
     <UserInputHandler/>

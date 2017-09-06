@@ -41,7 +41,7 @@ export default function (store) {
   //Connect to socket server, either localhost or bluemix
   //CHANGE THIS TO RUN LOCALLY
   //socket = io.connect('localhost:80');
-    socket = io.connect('https://kupela.eu-de.mybluemix.net');
+  socket = io.connect('https://kupela.eu-de.mybluemix.net');
 
 
   socket.on('message', message => {
