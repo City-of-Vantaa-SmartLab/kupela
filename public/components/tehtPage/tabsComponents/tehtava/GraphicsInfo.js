@@ -1,8 +1,11 @@
 import React from 'react';
+import JournalView from './JournalView';
+import JournalInput from './JournalInput';
 
 const GraphicsInfo = () => (
     <div className="graphicsinfo">
-        <h2>Säätiedot, tilastot ja aika:</h2>
+        <JournalView/>
+        <JournalInput/>
     </div>
 );
 
