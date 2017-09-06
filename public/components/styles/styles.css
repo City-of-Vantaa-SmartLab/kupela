@@ -28,9 +28,13 @@ p {
 
 ul,
 li {
-    font-size: 130%;
-    font-weight: 600;
-    color: white;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+#maintabs > li {
+  font-size: 150%;
+  font-weight: 600;
 }
 
 img {
@@ -395,6 +399,7 @@ img {
     grid-template-rows: 30% 70%;
     grid-template-areas: "a b" "c d";
     background-color: white;
+    padding-left: 1.5%;
 }
 
 .frontpageMissionArea {
@@ -431,10 +436,26 @@ img {
     width: 30%;
 }
 
+.missionList {
+  padding: 0px;
+}
+
 .missionItem {
   border: solid black;
   border-width: 2px;
   margin: 2%;
+  padding: 1%;
+  padding-left: 5%;
+}
+
+.missionTitle {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.userInputTitle {
+  font-size: 120%;
+  font-weight: bold;
 }
 
 /*Tehtava page CSS */
@@ -445,11 +466,11 @@ img {
 }
 
 .journalViewArea {
-  height: 60%;
+  height: 75%;
 }
 
 .journalInputArea {
-  height: 30%;
+  height: 15%;
 }
 
 .journalInput {
