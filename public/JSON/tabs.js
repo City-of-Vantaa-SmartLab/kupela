@@ -123,12 +123,12 @@ const tabs = [
                                 name: 'Kerrokset',
                                 nameId: 'sprinklerit',
                                 component: Sprinklerit
-                            },
+                            }/*,
                             {
                                 name: 'Kokoontumispaikka',
                                 nameId: 'kokoontumispaikka',
                                 component: Kokoontumispaikka
-                            }
+                            }*/
                         ]
                     },
                     {
@@ -169,6 +169,11 @@ const tabs = [
                                 name: 'Vaarallisetaineettab',
                                 nameId: 'vaarallisetaineettab',
                                 component: VaarallisetItemContainer
+                            },
+                            {
+                                name: 'Kemikaalikortti',
+                                nameId: 'Kemikaalikortit',
+                                component: Kemikaalikortti
                             }
                         ]
                     }

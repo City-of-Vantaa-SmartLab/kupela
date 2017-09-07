@@ -5,11 +5,14 @@ const Sprinklerit = (props) => (
         <p><b>Kerrokset:</b></p>
         <ul className="nav nav-pills">
             {props.floorplans.map((s) =>
-                    <li className={ props.filter.arr.findIndex(a => a.id===s.nameId)!=-1 ? "selected" : "unselected"}>
+                <span>
+                    <p><b>{s.title}</b></p>
+                    <li className={props.filter.arr.findIndex(a => a.id === s.nameId) != -1 ? "selected" : "unselected"}>
                         <a onClick={props.selectSubItem(s.nameId, s, 'noLayer', 'image')}>
                             <p>{s.name}</p>
                         </a>
                     </li>
+                </span>
             )}
         </ul>
     </div>
