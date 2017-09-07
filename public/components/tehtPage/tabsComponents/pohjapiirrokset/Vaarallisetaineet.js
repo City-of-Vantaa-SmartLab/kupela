@@ -5,8 +5,9 @@ import { connect } from 'react-redux';
 const Vaarallisetaineet = (props) =>
     <SubitemWrapper {...props} />;
 
-const mapStateToProps = ({ vaarallisetaineettab, smokespreading }) => ({
-    vaarallisetaineettab
+const mapStateToProps = ({ vaarallisetaineettab, chemicalcards }) => ({
+    vaarallisetaineettab,
+    chemicalcards
 });
 
 export default connect(mapStateToProps, null)(Vaarallisetaineet);
