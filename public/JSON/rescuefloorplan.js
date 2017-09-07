@@ -18,37 +18,37 @@ const rescuefloorplan = [
         url: '../../../../resources/images/Pohjapiirros-sahkosiipi-saapuminen1.png'
     },
     {
-        title: 'Sähkösiipi',
+        title: '',
         name: 'Uloskäynnit',
         nameId: 'sahk2',
         url: '../../../../resources/images/'
     },
     {
-        title: 'Sähkösiipi',
+        title: '',
         name: 'Savun leviäminen',
         nameId: 'sahk3',
         url: '../../../../resources/images/Pohjapiirros-sahkosiipi-savu1.png'
     },
     {
-        title: 'Sähkösiipi',
+        title: '',
         name: 'Liiketunnistimet',
         nameId: 'sahk4',
         url: '../../../../resources/images/Pohjapiirros-sahkosiipi-liiketunnistin.png'
     },
     {
-        title: 'Sähkösiipi',
+        title: '',
         name: 'Reitti liiketunnistimelle',
         nameId: 'sahk5',
         url: '../../../../resources/images/'
     },
     {
-        title: 'Sähkösiipi',
+        title: '',
         name: 'Turvakamerat',
         nameId: 'sahk6',
         url: '../../../../resources/images/Pohjapiirros-sahkosiipi-turvakamerat.png'
     },
     {
-        title: 'Sähkösiipi',
+        title: '',
         name: 'Kokoontumispaikka',
         nameId: 'sahk7',
         url: '../../../../resources/images/Pohjapiirros-sahkosiipi-kokoontumispaikka.png'
