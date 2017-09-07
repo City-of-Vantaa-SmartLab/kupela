@@ -1,18 +1,18 @@
 const vaarallisetaineettab = [
     {
-        name: 'Sijainti',
-        nameId: 'vaarallisetpohja1',
-        url: '../../../../pics/pohjapiirros2.png'
-    },
-    {
-        name: 'Turvallisuushenkilosto 1',
-        nameId: 'turvallisuushenkilosto1',
-        url: '../../../../pics/turvallisuushenkilosto.png'
-    },
-    {
-        name: 'Pelastussuunnitelma 1',
+        name: 'Pelastussuunnitelma',
         nameId: 'pelastus1',
-        url: '../../../../pics/pelastussuunnitelma.png'
+        url: '../../../../resources/images/pelastussuunnitelma.png'
+    },
+    {
+        name: 'Yhteystiedot',
+        nameId: 'yhteystiedot1',
+        url: '../../../../resources/images/yhteystiedot.png'
+    },
+    {
+        name: 'Kohdekortti',
+        nameId: 'kohdekortti1',
+        url: '../../../../resources/images/kohdekortti.png'
     }
 ];
 
