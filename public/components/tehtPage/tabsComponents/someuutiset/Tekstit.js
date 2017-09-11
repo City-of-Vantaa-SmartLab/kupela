@@ -6,10 +6,14 @@ import { showAllTexts, showPrioTexts } from '../../../../reducer/texts/actions';
 const Tekstit = (props) =>
     <div className="tekstit">
         <p><b>Viestit:</b></p>
+        <input className="showAllTextsButton somebtn" type="button" onClick={props.clickShowAllTexts()} value="Näytä kaikki"/>
+        <input className="showPriorityTextsButton somebtn" type="button" onClick={props.clickShowPriorityTexts()} value="Näytä tärkeät"/>
+
         <div className="scrollableArea">
         {props.texts.messages.map((text) =>
           <div className={text.visible === true ? "visible" : "notVisible"}>
           <div className={text.priority === "1" ? "someText priority" : "someText nonpriority"}>
+            <div className="innerSomeText">
             <a onClick={props.selectItem(text.id, 'GET_some', text)}>
               <div className="someTextBlock">
                 <p className="someSender">{text.sender}</p>
@@ -20,6 +24,7 @@ const Tekstit = (props) =>
                 </div>
               </div>
             </a>
+            </div>
             {props.buttons.map((b) =>
                 {text.nameId===b.id ? text.isShared=b.isShared : false }
             )}
@@ -30,8 +35,6 @@ const Tekstit = (props) =>
           </div>
         )}
         </div>
-        <input className="showAllTextsButton somebtn" type="button" onClick={props.clickShowAllTexts()} value="Näytä kaikki"/>
-        <input className="showPriorityTextsButton somebtn" type="button" onClick={props.clickShowPriorityTexts()} value="Näytä tärkeät"/>
 
     </div>;
 
