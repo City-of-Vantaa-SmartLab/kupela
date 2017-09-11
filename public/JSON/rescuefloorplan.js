@@ -1,28 +1,57 @@
 const rescuefloorplan = [
     {
-        name: 'Floor 1',
+        title: '1.kerros, pääosa',
+        name: 'Reitti kohteeseen',
         nameId: 'floor1',
-        url: '../../../../pics/floorplanF1.png'
+        url: '../../../../resources/images/Pohjapiirros-reitti2.png'
     },
     {
-        name: 'Floor 2',
-        nameId: 'floor2',
-        url: '../../../../pics/floorplanF2.png'
+        title: '2.kerros, pääosa',
+        name: 'Reitti kohteeseen',
+        nameId: 'floorplan1',
+        url: '../../../../resources/images/Pohjapiirros-reitti1.png'
     },
     {
-        name: 'Floor 3',
-        nameId: 'floor3',
-        url: '../../../../pics/floorplanF3.png'
+        title: 'Sähkösiipi',
+        name: 'Reitti kohteeseen',
+        nameId: 'sahk1',
+        url: '../../../../resources/images/Pohjapiirros-sahkosiipi-saapuminen1.png'
     },
     {
-        name: 'Floor 4',
-        nameId: 'floor4',
-        url: '../../../../pics/floorplanF4.png'
+        title: '',
+        name: 'Uloskäynnit',
+        nameId: 'sahk2',
+        url: '../../../../resources/images/'
     },
     {
-        name: 'Floor 5',
-        nameId: 'floor5',
-        url: '../../../../pics/floorplanF5.png'
+        title: '',
+        name: 'Savun leviäminen',
+        nameId: 'sahk3',
+        url: '../../../../resources/images/Pohjapiirros-sahkosiipi-savu1.png'
+    },
+    {
+        title: '',
+        name: 'Liiketunnistimet',
+        nameId: 'sahk4',
+        url: '../../../../resources/images/Pohjapiirros-sahkosiipi-liiketunnistin.png'
+    },
+    {
+        title: '',
+        name: 'Reitti liiketunnistimelle',
+        nameId: 'sahk5',
+        url: '../../../../resources/images/'
+    },
+    {
+        title: '',
+        name: 'Turvakamerat',
+        nameId: 'sahk6',
+        url: '../../../../resources/images/Pohjapiirros-sahkosiipi-turvakamerat.png'
+    },
+    {
+        title: '',
+        name: 'Kokoontumispaikka',
+        nameId: 'sahk7',
+        url: '../../../../resources/images/Pohjapiirros-sahkosiipi-kokoontumispaikka.png'
     }
 ];
 

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 const Kohdekortti = (props) => (
     <div className="kohdekortti">
-        <p><b>Kohdekortti:</b></p>
+        <h2>Kohdekortti:</h2>
         {props.kohdekortit.map((card) =>
             <Showcase src={card.url}/>
         )}

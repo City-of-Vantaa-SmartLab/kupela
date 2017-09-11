@@ -32,6 +32,8 @@ import { getListofSubstances } from './reducer/listofsubstances/actions';
 import { getChemicalcards } from './reducer/chemicalcards/actions';
 import { getSmokespreading } from './reducer/smokespreading/actions';
 import { getEscape } from './reducer/escape/actions';
+import { getPelastussuunnitelmatab } from './reducer/pelastussuunnitelmatab/actions';
+import { getVaarallisetaineettab } from './reducer/vaarallisetaineettab/actions';
 
 import startServerConnection, {messageMiddleware} from './components/serverConnection';
 
@@ -72,6 +74,8 @@ store.dispatch(getListofSubstances());
 store.dispatch(getChemicalcards());
 store.dispatch(getSmokespreading());
 store.dispatch(getEscape());
+store.dispatch(getPelastussuunnitelmatab());
+store.dispatch(getVaarallisetaineettab());
 
 startServerConnection(store);
 

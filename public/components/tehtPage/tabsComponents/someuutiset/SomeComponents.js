@@ -4,18 +4,19 @@ import { changeCurrentTemplate } from '../../../../reducer/tab/actions';
 import { shareInformation, setSharedButton, addShareableItem } from '../../../../reducer/tab/actions';
 
 const SomeComponents = (props) =>
-    <div className="someuutiset">
+    <div className={props.user.usertype === "field" ? "someuutisetfield" : "someuutiset"}>
         {props.routes.map((comp) =>
             <comp.component key={comp.nameId} {...props} />
         )}
     </div>;
 
-const mapStateToProps = ({ images, texts, news, tab: { shared_info, buttons} }) => ({
+const mapStateToProps = ({ user, images, texts, news, tab: { shared_info, buttons} }) => ({
+    user,
     images,
     texts,
     news,
     shared_info,
-    buttons
+    buttons,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -24,10 +25,10 @@ const mapDispatchToProps = dispatch => ({
             dispatch(changeCurrentTemplate(id, type, content));
         }
     },
-    clickShare(id, content) {
+    clickShare(id, type, content) {
         return() => {
             dispatch(addShareableItem(id));
-            dispatch(shareInformation(id, content));
+            dispatch(shareInformation(id, type, content));
             dispatch(setSharedButton(id));
         }
     }

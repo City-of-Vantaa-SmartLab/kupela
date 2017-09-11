@@ -1,8 +1,7 @@
 import { GET_SOME_MESSAGES, RECEIVE_DATA } from './actions';
 
 const initialState = {
-  latestMessage: '',
-  messages : []
+
 };
 
 export default (state = initialState, action) => {
@@ -10,13 +9,11 @@ export default (state = initialState, action) => {
         case GET_SOME_MESSAGES:
           return state;
         case RECEIVE_DATA:
-          console.log("No of Messages: " + state.messages.length);
           if(action.data.datatype == "someMessages") {
-            state.latestMessage = action.data.content;
-            state.messages.push(action.data.content);
+            console.log("Test function completed");
           }
           return state;
         default:
-            return state;
+          return state;
     }
 }

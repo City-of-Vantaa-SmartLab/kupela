@@ -8,16 +8,15 @@ const Ilmakuva = (props) => {
     if(props.carousel.carousel === true) {
         return (
             <div className="ilmakuva">
-                <p><b>Ilmakuva:</b></p>
-                <Carousel>
+                <ul>
                     {props.aerialviews.map((view) =>
-                        <Carousel.Item>
+                        <li className={ props.filter.arr.findIndex(a => a.id===view.nameId)!=-1 ? "selected" : "unselected"}>
                             <a onClick={props.selectSubItem(view.nameId, view, 'noLayer', 'satellite')}>
-                                <img src={ staticAirUrl1 + view.lat + ',' + view.lng + staticAirUrl2 } />
+                                <p><b>{view.name}</b></p>
                             </a>
-                        </Carousel.Item>
+                        </li>
                     )}
-                </Carousel>
+                </ul>
             </div>
         );
     } else {

@@ -1,33 +1,54 @@
 import React from 'react';
-import Basic from '../reusables/templates/Basic';
+import { connect } from 'react-redux';
 import ShareButton from './ShareButton';
+import { showAllTexts, showPrioTexts } from '../../../../reducer/texts/actions';
 
 const Tekstit = (props) =>
-    <div className="tekstit" style="overflow:scroll;">
-        <p><b>Tekstit:</b></p>
-        {props.texts.map((text) =>
-            <div>
-                <a onClick={props.selectItem(text.nameId, 'GET_some', text)}>
-                    <Basic src={text.url} title={text.name} key={text.nameId} />
-                </a>
-                {props.buttons.map((b) =>
-                    {text.nameId===b.id ? text.isShared=b.isShared : false }
-                )}
-                <ShareButton onClick={props.clickShare(text.nameId, text)}
-                             key={text.nameId}
-                             isShared={text.isShared} />
-              <p>Sender name:{text.sender}</p>
-              <p>Message:{text.message}</p>
-              <p>Location:{text.location}</p>
-              <p>Hashtags:{text.hasgtags}</p>
-              <p>Comments:{text.comments}</p>
-                 <a onClick={props.selectItem(text.nameId, 'GET_some', text)}>
-                     <Basic src={text.url} title={text.name} key={text.nameId} />
-                 </a>
+    <div className="tekstit">
+        <p><b>Viestit:</b></p>
+        <input className="showAllTextsButton somebtn" type="button" onClick={props.clickShowAllTexts()} value="Näytä kaikki"/>
+        <input className="showPriorityTextsButton somebtn" type="button" onClick={props.clickShowPriorityTexts()} value="Näytä tärkeät"/>
+
+        <div className="scrollableArea">
+        {props.texts.messages.map((text) =>
+          <div className={text.visible === true ? "visible" : "notVisible"}>
+          <div className={text.priority === "1" ? "someText priority" : "someText nonpriority"}>
+            <div className="innerSomeText">
+            <a onClick={props.selectItem(text.id, 'GET_some', text)}>
+              <div className="someTextBlock">
+                <p className="someSender">{text.sender}</p>
+                <p className="someMessage">{text.message}</p>
+                <div className="someOther">
+                  <p className="someTime">{text.time}</p>
+                  <p className="someLoc">{text.location}</p>
+                </div>
+              </div>
+            </a>
             </div>
+            {props.buttons.map((b) =>
+                {text.nameId===b.id ? text.isShared=b.isShared : false }
+            )}
+            <ShareButton onClick={props.clickShare(text.nameId, "1", text)}
+                         key={text.nameId}
+                         isShared={text.isShared} />
+          </div>
+          </div>
         )}
-        {console.log(props)}
+        </div>
+
     </div>;
 
+const mapDispatchToProps = dispatch => ({
+    clickShowAllTexts() {
+        return() => {
+          dispatch(showAllTexts());
+        }
+    },
+    clickShowPriorityTexts() {
+        return() => {
+          dispatch(showPrioTexts());
+        }
+    }
+});
 
-export default Tekstit;
+export default connect(null, mapDispatchToProps)(Tekstit);
