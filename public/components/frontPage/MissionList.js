@@ -3,23 +3,28 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setCurrentMission, setMissionProfile } from '../../reducer/mission/actions';
 
-const MissionList = ({ missions, setMission }) =>
-    <div id='mission-list' className="frontpageMissionArea scrollableArea">
+const MissionList = ({ missions, profile, setMission }) =>
+    <div id='mission-list' className="frontpageMissionArea">
+      <div className="scrollableArea">
         <h1>Tehtävät:</h1>
-        <ul id="mission-ul">
+        <ul className="missionList" id="mission-ul">
             {missions.missiondata.map((c, i) =>
                 <li className="missionItem" onClick={setMission(c)}
                     key={c.name}>
-                    <p>{c.name}</p>
+                    <p className="missionTitle">{c.name}</p>
                     <p>Sijainti: {c.location}, Prioriteetti: {c.priority}</p>
-                    <Link to={c.priority == "1" ? '/tehtavat/' : '/main/'}><input className="user-btn" type="button" value="Aloita tehtävä"/></Link>
                 </li>
             )}
         </ul>
+      </div>
+      <Link to={profile.priority == "1" ? '/tehtavat/' : '/main/'}>
+        <input className="user-btn" type="button" value={profile.priority == "1" ? 'Aloita tehtävä' : 'Tehtävä ei saatavilla'}/>
+      </Link>
     </div>;
 
-const mapStateToProps = ({ missions }) => ({
-    missions
+const mapStateToProps = ({ missions, mission: { profile } }) => ({
+    missions,
+    profile
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -35,6 +35,7 @@ import textvalues from './textvalues';
 import missions from './missions';
 import mission from './mission';
 import user from './user';
+import journal from './journal';
 
 
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/
@@ -73,5 +74,6 @@ export default combineReducers({
     serverConnection,
     textvalues,
     user,
+    journal,
     ozadmin
 });

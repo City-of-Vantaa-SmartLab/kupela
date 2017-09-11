@@ -36,16 +36,15 @@ const staticMapUrl2 = '&zoom=13&size=600x300&maptype=roadmap&key=AIzaSyCIr0jpTVj
 
 const Kartta = (props) => (
     <div className="kartta">
-        <p><b>Kartta:</b></p>
-        <Carousel>
+        <ul>
             {props.roadmaps.map((m) =>
-                <Carousel.Item>
+                <li className={ props.filter.arr.findIndex(a => a.id===m.nameId)!=-1 ? "selected" : "unselected"}>
                     <a onClick={ props.selectSubItem(m.nameId, m, 'noLayer', 'roadmap') }>
-                        <img src={ staticMapUrl1 + m.lat + ',' + m.lng + staticMapUrl2 }/>
+                        <p><b>{m.name}</b></p>
                     </a>
-                </Carousel.Item>
+                </li>
             )}
-        </Carousel>
+        </ul>
     </div>
 );
 

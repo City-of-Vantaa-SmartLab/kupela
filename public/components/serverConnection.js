@@ -1,5 +1,6 @@
 import * as actions from '../reducer/serverConnection/actions';
 import { addMission } from '../reducer/missions/actions';
+import { addJournalEntry } from '../reducer/journal/actions';
 import { setUser } from '../reducer/user/actions';
 import io from 'socket.io-client';
 
@@ -23,6 +24,11 @@ export function messageMiddleware(store) {
         socket.emit('getSomeMessages', action.message);
         console.log('Some messages data request sent to socket');
       }
+      else if(action.type === actions.JOURNAL_INPUT_BUTTON_CLICKED) {
+        var data = {"input": action.input, "unit": action.unit};
+        socket.emit("journalInput", data);
+        console.log("Journal input sent to socket!");
+      }
       else if(action.type == actions.SEND_OZ_COMMAND) {
         socket.emit('ozCommand', action.data);
         console.log("OZ command sent to socket!");
@@ -33,10 +39,9 @@ export function messageMiddleware(store) {
 
 export default function (store) {
   //Connect to socket server, either localhost or bluemix
-  socket = io.connect('localhost:8080');
-  if(socket == null){
-    socket = io.connect('https://kupela.eu-de.mybluemix.net:8080');
-  }
+  //CHANGE THIS TO RUN LOCALLY
+  //socket = io.connect('localhost:80');
+  socket = io.connect('https://kupela.eu-de.mybluemix.net');
 
 
   socket.on('message', message => {
@@ -47,6 +52,10 @@ export default function (store) {
       console.log("New mission received");
       console.log(data.content);
       store.dispatch(addMission(data.content));
+    }
+    else if(data.datatype == "journal") {
+      console.log("New journal input received!");
+      store.dispatch(addJournalEntry(data));
     }
     else {
       store.dispatch(actions.receiveData(data));

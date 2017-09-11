@@ -17,10 +17,12 @@
     "babel-register": "^6.24.1",
     "babel-standalone": "^6.24.0",
     "body-parser": "^1.17.1",
+    "cfenv": "^1.0.4",
     "express": "^4.13.4",
     "express-session": "^1.15.0",
     "fs-extra": "^2.1.2",
     "redux-thunk": "^2.2.0",
-    "socket.io": "^1.7.0"
+    "socket.io": "^1.7.0",
+    "ws": "^3.1.0"
   }
 }

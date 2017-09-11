@@ -1,6 +1,7 @@
 export const SEND_MESSAGE = "SEND_MESSAGE";
 export const INIT_SOCKET = "INIT_SOCKET";
 export const GET_SOME_MESSAGES = "GET_SOME_MESSAGES";
+export const JOURNAL_INPUT_BUTTON_CLICKED = "JOURNAL_INPUT_BUTTON_CLICKED";
 
 export const RECEIVE_RESPONSE = "RECEIVE_RESPONSE";
 export const RECEIVE_DATA = "RECEIVE_DATA";
@@ -17,6 +18,15 @@ export function initSocketVersion(isTike) {
 
 export function getSomeMessages(message) {
   return { type: GET_SOME_MESSAGES, message };
+}
+
+
+export function sendJournalInput(input, unit) {
+  return {
+    type: JOURNAL_INPUT_BUTTON_CLICKED,
+    input,
+    unit
+  }
 }
 
 export function receiveResponse(message) {
