@@ -36,10 +36,7 @@ li {
 img {
     width: 50%;
     height: 50%;
-       width:auto;
-height:auto;
-max-width:90%;
-max-height:10%;
+       
 
 }
 
@@ -564,9 +561,6 @@ a .yhteystiedot {
     border: 1px solid yellow;
 }
 
-.component {
-border: 1px solid purple;
-}
 .kohdekortti {
     grid-area: b;
     position: relative;
@@ -578,4 +572,39 @@ border: 1px solid purple;
     height: 100%;
     position: relative;
     padding: 10px;
+}
+
+.modalmenu img{
+    border: 1px solid red;
+/*}
+.modalcontent .yhteystiedot{
+    margin: 10px 10px 10px 30px;
+}
+.modalmenu .kohdekortti {
+    margin: 50px 10px 10px 30px;
+}
+.modalcontent .yhteystiedot h2 {
+    margin: 40px 0 20px 45px;
+}
+.modalmenu .yhteystiedot h2 {
+    margin: 0 10px 10px 20px;
+}
+.modalmenu .kohdekortti h2 {
+    margin: 0 0 10px 20px;
+}*/
+}
+
+.kohdetiedot img {
+    width:auto;
+height:auto;
+max-width:90%;
+max-height:10%;
+}
+.modalmenu .yhteystiedot {
+    padding: 0 auto 0 auto;
+    width: auto;
+    height: auto;
+}
+.modalmenu .kohdekortti {
+    padding: 0 auto 0 auto;
 }
