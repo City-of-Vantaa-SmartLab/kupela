@@ -9,7 +9,7 @@ const rescuefloorplan = [
         title: '2.kerros, pääosa',
         name: 'Reitti kohteeseen',
         nameId: 'floorplan1',
-        url: '../../../../resources/images/Pohjapiirros-reitti2.png'
+        url: '../../../../resources/images/Pohjapiirros-reitti1.png'
     },
     {
         title: 'Sähkösiipi',

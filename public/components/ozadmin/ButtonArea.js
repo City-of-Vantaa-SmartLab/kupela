@@ -11,8 +11,16 @@ const ButtonArea = (props) =>
       <input className="oz-btn" type="button" onClick={props.clickActivateMission()} value="ACTIVATE MISSION"/>
     </div>
     <div className="ozbuttontextarea">
-      <p className="oztext">SEND FIRST MESSAGES</p>
-      <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(1)} value="ACTIVATE MISSION"/>
+      <p className="oztext">SEND FIRST MESSAGESET, 12:30</p>
+      <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(1)} value="SEND MESSAGES"/>
+    </div>
+    <div className="ozbuttontextarea">
+      <p className="oztext">SEND SECOND MESSAGES, 12:35</p>
+      <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(2)} value="SEND MESSAGES"/>
+    </div>
+    <div className="ozbuttontextarea">
+      <p className="oztext">SEND THIRD MESSAGES, 12:39</p>
+      <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(3)} value="SEND MESSAGES"/>
     </div>
     <div className="ozbuttontextarea">
     <p className="oztext">PLACEHOLDER TEXT</p>
