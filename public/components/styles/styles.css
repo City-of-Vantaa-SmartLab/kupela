@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:100,200,300,400,500,600,700,800,900');
+html,
+body {
+    background-color: #1c1c3a;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+p,
+ul,
+li {
+    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Encode Sans';
+    color: black;
+    list-style-type: none;
+}
+
+h2 {
+    font-size: 190%;
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+    font-size: 120%;
+}
+
+ul,
+li {
+    font-size: 100%;
+    font-weight: 500;
+}
+
+#maintabs > li {
+  font-size: 150%;
+  font-weight: 600;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+    width:auto;
+    height:auto;
+    max-width:90%;
+
+}
+
+.content {
+    background-color: #f5f3f4;
+    overflow: hidden;
+    padding: 10px;
+    width: 100vw;
+    height: 80vh;
+    overflow-x: hidden;
+    margin-bottom: 10px;
+}
+
+.header-box {
+    padding: 10px;
+}
+
+#teht-title {
+    text-align: center;
+}
+
+#teht-title > a {
+    color: white;
+}
+
+#map {
+    max-width: 45%;
+    max-height: 45%;
+    min-width: 45%;
+    min-height: 45%;
+}
+
+#map,
+#tehtava-list {
+    float: left;
+    display: inline;
+}
+
+#maintabs.nav-pills > li,
+#subtabs.nav-pills > li {
+    display: inline-block;
+    float: none;
+    margin-right: 10px;
+}
+
+#maintabs.nav-pills,
+#subtabs.nav-pills {
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+#maintabs.nav-pills > li > a {
+    color: #d9d9dd;
+    border-radius: 0;
+}
+
+#subtabs.nav-pills > li > a {
+    color: #1c1c3a;
+    border-radius: 0;
+}
+
+#maintabs.nav-pills > li > a:active,
+#maintabs.nav-pills > li > a:hover,
+#maintabs.nav-pills > li > a:focus {
+    background-color: #1c1c3a;
+    color: #d9d9dd;
+    text-decoration: underline;
+}
+
+#subtabs.nav-pills > li > a:active,
+#subtabs.nav-pills > li > a:hover,
+#subtabs.nav-pills > li > a:focus {
+    color: orange;
+    background-color: white;
+    text-decoration: underline;
+}
+
+.pohjapiirrokset {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: "b" "a";
+    background-color: white;
+    height: 90vh;
+}
+
+.tehtava {
+    display: grid;
+    grid-template-columns: 35% 25% 20% 20%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "a b d e" "a c d e";
+    background-color: whitesmoke;
+    height: 78vh;
+    bottom: 50px;
+}
+
+.kohdetiedot {
+    grid-area: e;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "a" "b";
+    background-color: white;
+    //height: 90vh;
+    margin: 5px 5px 5px 10px;
+    padding: 15px;
+}
+
+.kuvatvideot {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "a b c d" "a b c d";
+    background-color: white;
+    height: 90vh;
+}
+
+.dokumentaatio {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "a b c" "a b c";
+    background-color: white;
+    height: 90vh;
+}
+
+.subconten .kohdetiedot > .someuutiset > .tekstit,
+.kuvatvideot > .streetview,
+.dokumentaatio > .lisatiedot {
+    grid-area: a;
+    background-color: white;
+    display: inline-block;
+    padding: 15px;
+    margin: 5px 0 5px 5px;
+}
+
+.ilmoittajatiedot,
+.subtabsmenu,
+.kohdetiedot > .yhteystiedot,
+.someuutiset > .kuvat,
+.kuvatvideot > .valvontakamerat,
+.dokumentaatio > .tilannepaivakirja {
+    grid-area: b;
+    background-color: white;
+    display: inline-block;
+    padding: 15px;
+    margin: 5px 0 0 10px
+}
+
+.asiakkaidentiedot,
+.tehtava > .kohdekortti,
+.someuutiset > .uutiset,
+.kuvatvideot > .tieliikennekamerat,
+.dokumentaatio > .dokukuvat {
+    grid-area: c;
+    background-color: white;
+    display: inline-block;
+    padding: 15px;
+    margin: 10px 0 5px 10px;
+}
+
+.rakennuksentiedot,
+.someuutiset > .jaetut,
+.kuvatvideot > .kolmiulotteinen {
+    grid-area: d;
+    background-color: white;
+    display: inline-block;
+    padding: 15px;
+    margin: 5px 0 5px 10px;
+}
+
+.subtablayout {
+    display: grid;
+    grid-template-columns: 10% 20% 50% 10%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "c a b d" "c a b d";
+}
+
+.subitemMenu {
+    grid-area: a;
+    display: grid;
+    grid-template-rows: 30% 30% 30% 30% 30%;
+    grid-template-areas: "a" "b" "c" "d" "e";
+    padding-right: 15px;
+    height: 55vh;
+}
+
+.subitemContent {
+    grid-area: b;
+    display: inline-block;
+    position: relative;
+}
+
+.subitemContent > img {
+    width: 100%;
+    position: absolute;
+    opacity: 0.7;
+}
+
+.sprinklerit,
+.kokoontumispaikka,
+.pohjapiirros {
+    grid-area: a;
+    display: inline-block;
+}
+
+.palovaroittimet,
+.kartta,
+.turvallisuushenkilosto,
+.savunleviaminen {
+    grid-area: b;
+    display: inline-block;
+}
+
+.pelastussuunnitelma,
+.kemikaalikortti,
+.subitemMenu > .streetview {
+    grid-area: c;
+    display: inline-block;
+}
+
+.yhteystiedot,
+.escape {
+    grid-area: d;
+    display: inline-block;
+}
+
+.luetteloaineista {
+    grid-area: e;
+    display: inline-block;
+}
+
+.infomodal {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    bottom: 10%;
+    right: 15%;
+    background: #fff;
+    display: inline-block;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.infomodal-grid {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "a b" "a b";
+}
+
+.modalcontent {
+    grid-area: b;
+    display: inline-block;
+    padding: 10px;
+}
+
+.modalmenu {
+    grid-area: a;
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-areas: "a" "b" "c";
+    padding: 10px;
+}
+
+.modalmenu > a > .yhteystiedot {
+    grid-area: a;
+}
+
+.modalmenu > a > .kohdekortti {
+    grid-area: b;
+}
+
+.some-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "b" "b";
+    background-color: white;
+    height: 75vh;
+    padding: 5px;
+}
+
+.somecontent {
+    grid-area: b;
+    display: inline-block;
+}
+
+.kuvatvideot-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "b" "b";
+    background-color: white;
+    height: 75vh;
+    padding: 5px;
+}
+
+.kuvatvideotcontent {
+    grid-area: b;
+}
+
+.return-btn {
+    float: right;
+    border-color: black;
+    border-width: 1px;
+    background-color: white;
+}
+
+.share-btn {
+    background-color: #1c1c3a;
+    color: white;
+    border: none;
+}
+
+.carousel-indicators li {
+    display: none;
+}
+
+.carousel-control {
+    opacity: 1;
+    width: 10%;
+}
+
+#maintabs.nav-pills > li.selected > a:active,
+#maintabs.nav-pills > li.selected > a:focus,
+#maintabs.nav-pills > li.selected > a:hover {
+    background-color: darkgoldenrod;
+}
+
+#subtabs.nav-pills > li.selected > a:active,
+#subtabs.nav-pills > li.selected > a:focus,
+#subtabs.nav-pills > li.selected > a:hover {
+    background-color: darkgoldenrod;
+}
+
+.selected {
+    background-color: darkgoldenrod;
+}
+
+
+/* Front page CSS */
+
+.frontpageContent {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 70%;
+    grid-template-areas: "a b" "c d";
+    background-color: white;
+    padding-left: 1.5%;
+}
+
+.frontpageMissionArea {
+    grid-area: c;
+    padding: 5px;
+    display: inline-block;
+}
+
+.frontpageMapArea {
+    grid-area: d;
+    padding: 5px;
+    display: inline-block;
+}
+
+.userButtonArea {
+    grid-area: a;
+    padding: 5px;
+    display: inline-block;
+}
+
+.changingcontentArea {
+    grid-area: b;
+    padding: 5px;
+    display: inline-block;
+}
+
+.user-btn {
+    background-color: darkblue;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin: 10px;
+    height: 50%;
+    width: 30%;
+}
+
+.missionList {
+  padding: 0px;
+}
+
+.missionItem {
+  border: solid black;
+  border-width: 2px;
+  margin: 2%;
+  padding: 1%;
+  padding-left: 5%;
+}
+
+.missionTitle {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.userInputTitle {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+/*Tehtava page CSS */
+.graphicsinfo {
+  grid-area: a;
+  height: 100%;
+  padding: 5px;
+}
+
+.journalViewArea {
+  height: 75%;
+}
+
+.journalInputArea {
+  height: 15%;
+}
+
+.journalInput {
+  margin-bottom: 5px;
+  width: 80%;
+}
+
+/*Some page CSS */
+.someuutiset {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-areas: "a b c d";
+    background-color: white;
+    height: 100%;
+}
+
+.someuutisetfield {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas: "a b c";
+  background-color: white;
+  height: 100%;
+}
+
+.tekstit, .kuvat, .uutiset {
+  height: 650px;
+  padding: 15px;
+}
+
+.scrollableArea {
+  height: 95%;
+  overflow-y: scroll;
+}
+
+.someText {
+    border: solid black;
+    border-width: 2px;
+    margin: 2%;
+}
+
+.innerSomeText {
+  margin: 10px;
+  background-color: white;
+}
+
+.someTextBlock {
+  margin: 3px;
+}
+
+.innerSomeText > img {
+  width: 100%;
+}
+
+.someImg {
+  padding:2%;
+  margin:2%;
+}
+
+.someNews {
+  padding:2%;
+  margin:2%;
+}
+
+.priority {
+    background-color: red;
+}
+
+.nonpriority {
+
+}
+
+.visible {
+  display: block;
+}
+
+.notVisible {
+    display: none;
+}
+
+.somebtn {
+    margin: 2%;
+}
+
+
+/*Admin page CSS*/
+
+.admincontent {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: "a b";
+    background-color: white;
+}
+
+.buttonArea {
+    grid-area: a;
+    padding: 5px;
+    border: solid black;
+    border-width: 3px;
+    display: inline-block;
+}
+
+.logDisplay {
+    grid-area: b;
+    padding: 5px;
+    border: solid black;
+    border-width: 3px;
+    display: inline-block;
+}
+
+.ozbuttontextarea {
+    padding: 2%;
+    margin: 5px;
+}
+
+.oztext {
+    margin: 5px;
+    display: inline-block;
+}
+
+.oz-btn {
+    background-color: darkblue;
+    color: white;
+    width: 40%;
+    border: solid blue;
+    border-width: 4px;
+    margin: 5px;
+    float: right;
+    display: inline-block;
+}
+
+a .yhteystiedot {
+    grid-area: a;
+
+/*
+    border: 1px solid green;
+    padding: 10px;
+*/
+
+}
+.component img {
+    /*margin: 0 0 0 10%;*/
+/*    border: 1px solid yellow;*/
+}
+
+.component {
+/*    border: 1px solid purple;*/
+}
+.kohdekortti {
+    grid-area: b;
+    position: relative;
+
+}
+
+.kohdetiedot a{
+/*    border: 1px solid blue;*/
+    height: 100%;
+    position: relative;
+    padding: 10px;
+}
