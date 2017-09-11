@@ -40,6 +40,9 @@ li {
 img {
     width: 50%;
     height: 50%;
+    width:auto;
+    height:auto;
+    max-width:90%;
 
 }
 
@@ -207,11 +210,6 @@ img {
     display: inline-block;
     padding: 15px;
     margin: 5px 0 5px 10px;
-}
-
-
-.someuutiset > .tekstit, .someuutiset > .uutiset, .someuutiset > .kuvat {
-    padding-right: 15px;
 }
 
 .subtablayout {
@@ -497,6 +495,7 @@ img {
 
 .tekstit, .kuvat, .uutiset {
   height: 650px;
+  padding: 15px;
 }
 
 .scrollableArea {
@@ -508,6 +507,19 @@ img {
     border: solid black;
     border-width: 2px;
     margin: 2%;
+}
+
+.innerSomeText {
+  margin: 10px;
+  background-color: white;
+}
+
+.someTextBlock {
+  margin: 3px;
+}
+
+.innerSomeText > img {
+  width: 100%;
 }
 
 .someImg {
@@ -590,13 +602,16 @@ img {
 
 a .yhteystiedot {
     grid-area: a;
+
+/*
     border: 1px solid green;
-    padding: 10px;    
+    padding: 10px;
+*/
+
 }
 .component img {
-    margin: 0 0 0 10%;
-    border: 1px solid yellow;
-
+    /*margin: 0 0 0 10%;*/
+/*    border: 1px solid yellow;*/
 }
 
 .component {
@@ -606,48 +621,6 @@ a .yhteystiedot {
     grid-area: b;
     position: relative;
 
-}
-
-.kohdetiedot a{
-    border: 1px solid blue;
-    height: 100%;
-    position: relative;
-    padding: 10px;
-}
-
-.modalmenu img{
-    border: 1px solid red;
-/*}
-.modalcontent .yhteystiedot{
-    margin: 10px 10px 10px 30px;
-}
-.modalmenu .kohdekortti {
-    margin: 50px 10px 10px 30px;
-}
-.modalcontent .yhteystiedot h2 {
-    margin: 40px 0 20px 45px;
-}
-.modalmenu .yhteystiedot h2 {
-    margin: 0 10px 10px 20px;
-}
-.modalmenu .kohdekortti h2 {
-    margin: 0 0 10px 20px;
-}*/
-}
-
-.kohdetiedot img {
-    width:auto;
-height:auto;
-max-width:90%;
-max-height:10%;
-}
-.modalmenu .yhteystiedot {
-    padding: 0 auto 0 auto;
-    width: auto;
-    height: auto;
-}
-.modalmenu .kohdekortti {
-    padding: 0 auto 0 auto;
 }
 
 .kohdetiedot a{
