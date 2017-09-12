@@ -63,6 +63,12 @@ module.exports.listen = function(server) {
             }
           });
         }
+        else if(data.command == "arrival") {
+          console.log("Changing arrival");
+          connections.forEach(connectedSocket => {
+            connectedSocket.emit('dataIncoming', {datatype: "arrival", content: "next"});
+          });
+        }
       }
       if(data.type == "send") {
         if(data.command == "messages") {

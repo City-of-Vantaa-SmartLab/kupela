@@ -34,6 +34,7 @@ import { getSmokespreading } from './reducer/smokespreading/actions';
 import { getEscape } from './reducer/escape/actions';
 import { getPelastussuunnitelmatab } from './reducer/pelastussuunnitelmatab/actions';
 import { getVaarallisetaineettab } from './reducer/vaarallisetaineettab/actions';
+import { getArrivals } from './reducer/arrival/actions';
 
 import startServerConnection, {messageMiddleware} from './components/serverConnection';
 
@@ -76,6 +77,7 @@ store.dispatch(getSmokespreading());
 store.dispatch(getEscape());
 store.dispatch(getPelastussuunnitelmatab());
 store.dispatch(getVaarallisetaineettab());
+store.dispatch(getArrivals());
 
 startServerConnection(store);
 
