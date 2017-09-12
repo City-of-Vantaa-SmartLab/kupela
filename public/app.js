@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk'
 import { HashRouter, Route} from 'react-router-dom';
-import { getMissions } from './reducer/missions/actions';
+import { getMissions, getOldMissions } from './reducer/missions/actions';
 import { getTabs } from './reducer/tabs/actions';
 import { getPages } from './reducer/pages/actions';
 import { getImages } from './reducer/images/actions';
@@ -80,6 +80,8 @@ store.dispatch(getVaarallisetaineettab());
 store.dispatch(getArrivals());
 
 startServerConnection(store);
+
+store.dispatch(getOldMissions());
 
 ReactDOM.render(
     <Provider store={store}>

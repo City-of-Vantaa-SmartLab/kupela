@@ -10,6 +10,8 @@ var socketio = require('socket.io');
 //Journal messages
 var journal = { "journalmessages": []};
 
+var addedMissions = [];
+
 module.exports.listen = function(server) {
 
   const socketServer = socketio(server);
@@ -40,6 +42,11 @@ module.exports.listen = function(server) {
       socket.emit('versionReady', {profiletype: type});
     });
 
+    socket.on('getMissions', data => {
+      var message = {"datatype": "oldMissions", "content": addedMissions}
+      socket.emit('dataIncoming', message);
+    });
+
     socket.on('journalInput', data => {
       console.log("Journal input received: " + data.unit + ": " + data.input);
       var message = {"datatype": "journal", "sender": data.unit, "time": getTime(), "message": data.input};
@@ -62,9 +69,11 @@ module.exports.listen = function(server) {
       if(data.type == "activation") {
         if(data.command == "mission") {
           console.log("activating mission");
+          var mission = loadActiveMission();
+          addMission(mission);
           connections.forEach(connectedSocket => {
             if(connectedSocket !== socket) {
-              connectedSocket.emit('dataIncoming', {datatype: "mission", content: loadActiveMission()});
+              connectedSocket.emit('dataIncoming', {datatype: "mission", content: mission});
             }
             else {
               socket.emit('message', 'Mission activated');
@@ -74,11 +83,16 @@ module.exports.listen = function(server) {
         else if(data.command == "arrival") {
           console.log("Changing arrival");
           connections.forEach(connectedSocket => {
+            if(connectedSocket !== socket) {
             connectedSocket.emit('dataIncoming', {datatype: "arrival", content: "next"});
+            }
+            else {
+              socket.emit('message', 'Arrival changed');
+            }
           });
         }
       }
-      if(data.type == "send") {
+      else if(data.type == "send") {
         if(data.command == "messages") {
           console.log("Sending message set " + data.noOfSet);
           var newset = loadSetOfMessages(data.noOfSet);
@@ -90,6 +104,15 @@ module.exports.listen = function(server) {
             else {
               socket.emit('message', 'Message set sent!');
             }
+          });
+        }
+      }
+      else if(data.type == "reset") {
+        if(data.command == "hard") {
+          resetExercise();
+
+          connections.forEach(connectedSocket => {
+            connectedSocket.emit('message', 'Exercise reset!');
           });
         }
       }
@@ -107,6 +130,12 @@ module.exports.listen = function(server) {
  * HARDCODED APPLICATION DATA FOR KUPELA
  */
 
+//RESET EVERYTHING
+function resetExercise() {
+  addedMissions = [];
+  journal = { "journalmessages": []};
+}
+
 function loadActiveMission() {
   var missiondata = {
       "id": "1",
@@ -116,6 +145,10 @@ function loadActiveMission() {
   };
 
   return missiondata;
+}
+
+function addMission(mission) {
+  addedMissions.push(mission);
 }
 
 function loadSetOfMessages(no) {
@@ -174,4 +207,3 @@ const messageset3 = {"messages" : [
   {"nameId": "teksti35", "sender": "Milla Kompura > Vantaan Puskaradio", "message": "Lea Kolminen, se on sellainen kuva- ja videopalvelu puhelimelle. Silloinkin tietyllä alueella vain näkyy julkiset videot ehkä, mutta ei kai muuta. Harmi, onneksi teidän tyttö kuitenkin turvassa?", "time": "12:38", "location": "Kuohukuja, Vantaa", "tags": "", "priority": "2" },
   {"nameId": "teksti36", "sender": "Tero Loimu > Vantaan YH-vanhemmat", "message": "Toisessa ryhmässä juuri ilmoitettiin samasta asiasta. Siellä ollut joku räjähdys, kuulemma joku kateissa!", "time": "12:38", "location": "Kankaankuja, Vantaa", "tags": "", "priority": "1" }
 ]};
-//

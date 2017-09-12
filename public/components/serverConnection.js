@@ -1,5 +1,6 @@
 import * as actions from '../reducer/serverConnection/actions';
-import { addMission } from '../reducer/missions/actions';
+import { GET_OLD_MISSIONS } from '../reducer/missions/actions';
+import { addMission, addOldMissions } from '../reducer/missions/actions';
 import { addJournalEntry } from '../reducer/journal/actions';
 import { changeArrival } from '../reducer/arrival/actions';
 import { addSharedText } from '../reducer/texts/actions';
@@ -19,6 +20,9 @@ export function messageMiddleware(store) {
       if(action.type === actions.INIT_SOCKET) {
         socket.emit('versionInit', action.isTike);
         console.log("Initialization sent to socket");
+      }
+      else if(action.type === GET_OLD_MISSIONS) {
+        socket.emit('getMissions', "");
       }
       else if(action.type === actions.SEND_MESSAGE) {
         socket.emit('message', action.message);
@@ -61,6 +65,10 @@ export default function (store) {
     if(data.datatype == "mission") {
       console.log("New mission received");
       store.dispatch(addMission(data.content));
+    }
+    else if(data.datatype == "oldMissions") {
+      console.log("Loaded old missions");
+      store.dispatch(addOldMissions(data.content));
     }
     else if(data.datatype == "arrival") {
       console.log("Arrival changed received");
