@@ -1,4 +1,4 @@
-import { LOAD_IMAGES, SHOW_ALL_IMAGES, SHOW_PRIOIMG_ONLY } from '../images/actions';
+import { LOAD_IMAGES, SHOW_ALL_IMAGES, SHOW_PRIOIMG_ONLY, SHARED_IMAGE_ADDED } from '../images/actions';
 import { SET_INFO_SHARED } from '../tab/actions';
 
 const initialState = {
@@ -55,6 +55,21 @@ export default (state = initialState, action) => {
           }
           else {
             return state;
+          }
+        case SHARED_IMAGE_ADDED:
+          var img = action.image;
+          img.isShared = true;
+          if(state.sharedimages.length > 0) {
+            return {
+              ...state,
+              sharedimages: state.sharedimages.concat(img)
+            }
+          }
+          else {
+            return {
+              ...state,
+              sharedimages: [img]
+            }
           }
         default:
             return state;

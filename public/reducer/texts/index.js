@@ -1,4 +1,4 @@
-import { LOAD_TEXTS, SHOW_ALL_TEXTS, SHOW_PRIO_ONLY } from './actions';
+import { LOAD_TEXTS, SHOW_ALL_TEXTS, SHOW_PRIO_ONLY, SHARED_TEXT_ADDED } from './actions';
 import { RECEIVE_DATA } from '../serverConnection/actions';
 import { SET_INFO_SHARED } from '../tab/actions';
 
@@ -12,6 +12,7 @@ export default (state = initialState, action) => {
         case LOAD_TEXTS:
           var newmessages = action.texts;
           newmessages.map((c) => {
+            c.isShared = false;
             if(c.priority === "1" ) {
               c.visible = true;
             }
@@ -74,6 +75,21 @@ export default (state = initialState, action) => {
           }
           else {
             return state;
+          }
+        case SHARED_TEXT_ADDED:
+          var message = action.text;
+          message.isShared = true;
+          if(state.sharedmessages.length > 0) {
+            return {
+              ...state,
+              sharedmessages: state.sharedmessages.concat(message)
+            }
+          }
+          else {
+            return {
+              ...state,
+              sharedmessages: [message]
+            }
           }
         default:
             return state;

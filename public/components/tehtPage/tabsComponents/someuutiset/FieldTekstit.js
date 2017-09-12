@@ -3,15 +3,14 @@ import { connect } from 'react-redux';
 import ShareButton from './ShareButton';
 import { showAllTexts, showPrioTexts } from '../../../../reducer/texts/actions';
 
-const Tekstit = (props) =>
+const FieldTekstit = (props) =>
     <div className="tekstit">
         <p><b>Viestit:</b></p>
-        <input className="showAllTextsButton somebtn" type="button" onClick={props.clickShowAllTexts()} value="Näytä kaikki"/>
-        <input className="showPriorityTextsButton somebtn" type="button" onClick={props.clickShowPriorityTexts()} value="Näytä tärkeät"/>
 
+        {props.texts.sharedmessages.length > 0 ? (
         <div className="scrollableArea">
-        {props.texts.messages.map((text) =>
-            <div className={text.visible === true ? "visible" : "notVisible"}>
+        {props.texts.sharedmessages.map((text) =>
+          <div className={text.isShared === true ? "visible" : "notVisible"}>
             <div className={text.priority === "1" ? "someText priority" : "someText nonpriority"}>
               <div className="innerSomeText">
               <a onClick={props.selectItem(text.id, 'GET_some', text)}>
@@ -25,30 +24,14 @@ const Tekstit = (props) =>
                 </div>
               </a>
               </div>
-              {props.buttons.map((b) =>
-                  {text.nameId===b.id ? text.isShared=b.isShared : false }
-              )}
-              <ShareButton onClick={props.clickShare(text.nameId, "1", text)}
-                           key={text.nameId}
-                           isShared={text.isShared} />
             </div>
-            </div>
+          </div>
         )}
-        </div>
+        </div>) : (<p className="someInfoText">Ei vielä jaettuja viestejä.</p>)}
 
     </div>;
 
 const mapDispatchToProps = dispatch => ({
-    clickShowAllTexts() {
-        return() => {
-          dispatch(showAllTexts());
-        }
-    },
-    clickShowPriorityTexts() {
-        return() => {
-          dispatch(showPrioTexts());
-        }
-    }
 });
 
-export default connect(null, mapDispatchToProps)(Tekstit);
+export default connect(null, mapDispatchToProps)(FieldTekstit);

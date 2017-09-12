@@ -2,6 +2,9 @@ import * as actions from '../reducer/serverConnection/actions';
 import { addMission } from '../reducer/missions/actions';
 import { addJournalEntry } from '../reducer/journal/actions';
 import { changeArrival } from '../reducer/arrival/actions';
+import { addSharedText } from '../reducer/texts/actions';
+import { addSharedImage } from '../reducer/images/actions';
+import { addSharedNews } from '../reducer/news/actions';
 import { setUser } from '../reducer/user/actions';
 import io from 'socket.io-client';
 
@@ -30,6 +33,11 @@ export function messageMiddleware(store) {
         socket.emit("journalInput", data);
         console.log("Journal input sent to socket!");
       }
+      else if(action.type == actions.CONTENT_SHARED) {
+        var data = {"contenttype": action.contenttype, "content": action.content};
+        socket.emit("share", data);
+        console.log("Shared content sent to socket");
+      }
       else if(action.type == actions.SEND_OZ_COMMAND) {
         socket.emit('ozCommand', action.data);
         console.log("OZ command sent to socket!");
@@ -41,13 +49,14 @@ export function messageMiddleware(store) {
 export default function (store) {
   //Connect to socket server, either localhost or bluemix
   //CHANGE THIS TO RUN LOCALLY
-  socket = io.connect('localhost:80');
-  //socket = io.connect('https://kupela.eu-de.mybluemix.net');
+  //socket = io.connect('localhost:80');
+  socket = io.connect('https://kupela.eu-de.mybluemix.net');
 
 
   socket.on('message', message => {
     store.dispatch(actions.receiveResponse(message));
   });
+
   socket.on('dataIncoming', data => {
     if(data.datatype == "mission") {
       console.log("New mission received");
@@ -65,6 +74,21 @@ export default function (store) {
       store.dispatch(actions.receiveData(data));
     }
   });
+
+  socket.on('sharedData', data => {
+    console.log("Shared data received");
+    if(data.datatype == "text"){
+      store.dispatch(addSharedText(data.content));
+    }
+    else if(data.datatype == "image") {
+      store.dispatch(addSharedImage(data.content));
+    }
+    else if(data.datatype == "news") {
+      store.dispatch(addSharedNews(data.content));
+    }
+
+  });
+
   socket.on('versionReady', data => {
     store.dispatch(setUser(data.profiletype));
   });

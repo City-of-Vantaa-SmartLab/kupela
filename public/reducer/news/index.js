@@ -1,4 +1,4 @@
-import { LOAD_NEWS, SHOW_ALL_NEWS, SHOW_PRIONEWS_ONLY } from './actions';
+import { LOAD_NEWS, SHOW_ALL_NEWS, SHOW_PRIONEWS_ONLY, SHARED_NEWS_ADDED } from './actions';
 import { SET_INFO_SHARED } from '../tab/actions';
 
 const initialState = {
@@ -55,6 +55,21 @@ export default (state = initialState, action) => {
           }
           else {
             return state;
+          }
+        case SHARED_NEWS_ADDED:
+          var news = action.news;
+          news.isShared = true;
+          if(state.sharednews.length > 0) {
+            return {
+              ...state,
+              sharednews: state.sharednews.concat(news)
+            }
+          }
+          else {
+            return {
+              ...state,
+              sharednews: [news]
+            }
           }
         default:
             return state;
