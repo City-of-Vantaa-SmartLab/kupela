@@ -3,13 +3,13 @@ const rescuefloorplan = [
         title: '1.kerros, pääosa',
         name: 'Reitti kohteeseen',
         nameId: 'floor1',
-        url: '../../../../resources/images/Pohjapiirros-reitti2.png'
+        url: '../../../../resources/images/Pohjapiirros-reitti2-1.png'
     },
     {
         title: '2.kerros, pääosa',
         name: 'Reitti kohteeseen',
         nameId: 'floorplan1',
-        url: '../../../../resources/images/Pohjapiirros-reitti1.png'
+        url: '../../../../resources/images/Pohjapiirros-reitti1-molemmat.png'
     },
     {
         title: 'Sähkösiipi',
@@ -18,13 +18,13 @@ const rescuefloorplan = [
         url: '../../../../resources/images/Pohjapiirros-sahkosiipi-saapuminen1.png'
     },
     {
-        title: '',
+        title: 'Uloskäynnit',
         name: 'Uloskäynnit',
         nameId: 'sahk2',
-        url: '../../../../resources/images/'
+        url: '../../../../resources/images/19Pohjapiirros-sahkosiipi-reitit-suljetutreitit.png'
     },
     {
-        title: '',
+        title: 'Savu1',
         name: 'Savun leviäminen',
         nameId: 'sahk3',
         url: '../../../../resources/images/Pohjapiirros-sahkosiipi-savu1.png'
@@ -33,19 +33,19 @@ const rescuefloorplan = [
         title: '',
         name: 'Liiketunnistimet',
         nameId: 'sahk4',
-        url: '../../../../resources/images/Pohjapiirros-sahkosiipi-liiketunnistin.png'
+        url: '../../../../resources/images/21Pohjapiirros-sahkosiipi-liiketun-oik.png'
     },
     {
         title: '',
         name: 'Reitti liiketunnistimelle',
         nameId: 'sahk5',
-        url: '../../../../resources/images/'
+        url: '../../../../resources/images/20Pohjapiirros-sahkosiipi-reittiuhrille.png'
     },
     {
         title: '',
         name: 'Turvakamerat',
         nameId: 'sahk6',
-        url: '../../../../resources/images/Pohjapiirros-sahkosiipi-turvakamerat.png'
+        url: '../../../../resources/images/23Pohjapiirros-sahkosiipi-numeroidut-kamerat.png'
     },
     {
         title: '',
