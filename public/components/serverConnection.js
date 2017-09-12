@@ -1,6 +1,7 @@
 import * as actions from '../reducer/serverConnection/actions';
 import { addMission } from '../reducer/missions/actions';
 import { addJournalEntry } from '../reducer/journal/actions';
+import { changeArrival } from '../reducer/arrival/actions';
 import { setUser } from '../reducer/user/actions';
 import io from 'socket.io-client';
 
@@ -40,8 +41,8 @@ export function messageMiddleware(store) {
 export default function (store) {
   //Connect to socket server, either localhost or bluemix
   //CHANGE THIS TO RUN LOCALLY
-  //socket = io.connect('localhost:80');
-  socket = io.connect('https://kupela.eu-de.mybluemix.net');
+  socket = io.connect('localhost:80');
+  //socket = io.connect('https://kupela.eu-de.mybluemix.net');
 
 
   socket.on('message', message => {
@@ -50,8 +51,11 @@ export default function (store) {
   socket.on('dataIncoming', data => {
     if(data.datatype == "mission") {
       console.log("New mission received");
-      console.log(data.content);
       store.dispatch(addMission(data.content));
+    }
+    else if(data.datatype == "arrival") {
+      console.log("Arrival changed received");
+      store.dispatch(changeArrival());
     }
     else if(data.datatype == "journal") {
       console.log("New journal input received!");

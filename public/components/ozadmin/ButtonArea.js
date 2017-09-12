@@ -11,20 +11,20 @@ const ButtonArea = (props) =>
       <input className="oz-btn" type="button" onClick={props.clickActivateMission()} value="ACTIVATE MISSION"/>
     </div>
     <div className="ozbuttontextarea">
-      <p className="oztext">SEND FIRST MESSAGESET, 12:30</p>
+      <p className="oztext">SEND FIRST MESSAGESET, 12:30, HÄLYTYS</p>
       <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(1)} value="SEND MESSAGES"/>
     </div>
     <div className="ozbuttontextarea">
-      <p className="oztext">SEND SECOND MESSAGES, 12:35</p>
+      <p className="oztext">SEND SECOND MESSAGES, 12:35, EKA AUTO MATKALLA</p>
       <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(2)} value="SEND MESSAGES"/>
     </div>
     <div className="ozbuttontextarea">
-      <p className="oztext">SEND THIRD MESSAGES, 12:39</p>
-      <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(3)} value="SEND MESSAGES"/>
+      <p className="oztext">CHANGE ARRIVAL, 12:37, EKA PAIKALLA</p>
+      <input className="oz-btn" type="button" onClick={props.clickChangeArrival()} value="CHANGE ARRIVAL"/>
     </div>
     <div className="ozbuttontextarea">
-    <p className="oztext">PLACEHOLDER TEXT</p>
-    <input className="oz-btn" type="button" onClick={props.clickSendMessages()} value="Placeholder Messages"/>
+      <p className="oztext">SEND THIRD MESSAGES, 12:39, EKA PAIKALLA, TOINEN MATKALLA</p>
+      <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(3)} value="SEND MESSAGES"/>
     </div>
   </div>;
 
@@ -54,11 +54,14 @@ const mapDispatchToProps = dispatch => ({
       console.log("Send messages " + setNo + " clicked!");
     }
   },
-  clickSendMessages(){
+  clickChangeArrival(){
     return () => {
-      dispatch(sendMessage("test message"));
+      var data = {};
+      data.type = "activation";
+      data.command = "arrival";
+      dispatch(sendOzCommand(data));
 
-      console.log("Dispatched sendMessages(message)");
+      console.log("Arrival change clicked!");
     }
   }
 });
