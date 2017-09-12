@@ -9,7 +9,8 @@ h1,
 h2,
 p,
 ul,
-li {
+li,
+.graphicsinfo{
     font-family: Helvetica, Arial, sans-serif;
     font-family: 'Encode Sans';
     color: black;
@@ -457,18 +458,20 @@ img {
 }
 
 /*Tehtava page CSS */
+/*
 .graphicsinfo {
   grid-area: a;
   height: 100%;
   padding: 5px;
 }
+*/
 
 .journalViewArea {
   height: 75%;
 }
 
 .journalInputArea {
-  height: 15%;
+  height: auto;
 }
 
 .journalInput {
@@ -628,4 +631,51 @@ a .yhteystiedot {
     height: 100%;
     position: relative;
     padding: 10px;
+}
+.journalInputButton {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2px;
+    margin-top: 20px;
+    font-family: 'Encode Sans';
+}
+.journalInputButton:active{
+    color: whitesmoke;
+    
+}
+.journalInput{
+    border: 2px solid #008CBA;
+    margin-top: 15px;
+    
+}
+
+.graphicsinfo {
+    background-color: white;
+    padding: 10px 0 0 20px;
+    grid-area: a;
+    margin: 5px 0 5px 5px
+}
+
+.journalTextView{
+    font-size: 190%;
+    font-weight: 700;
+}
+
+.journalEntry:first-child {
+    margin-top: 20px;
+}
+.journalEntry {
+    font-size: 60%;
+    font-weight: 400;
+}
+
+.journalInputText {
+    font-size: 120%;
+    font-weight: 700;
 }
