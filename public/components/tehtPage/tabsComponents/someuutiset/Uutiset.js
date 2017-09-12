@@ -6,7 +6,7 @@ import { showAllNews, showPrioNews } from '../../../../reducer/news/actions';
 
 const Uutiset = (props) =>
     <div className="uutiset">
-      <p><b>Kuvat:</b></p>
+      <p><b>Uutiset:</b></p>
       <input className="showAllNewsButton somebtn" type="button" onClick={props.clickShowAllNews()} value="Näytä kaikki"/>
       <input className="showPriorityNewsButton somebtn" type="button" onClick={props.clickShowPriorityNews()} value="Näytä tärkeät"/>
 
@@ -23,7 +23,7 @@ const Uutiset = (props) =>
             {props.buttons.map((b) =>
                 {newsitem.nameId===b.id ? newsitem.isShared=b.isShared : false }
             )}
-            <ShareButton onClick={props.clickShare(newsitem.nameId, 2, newsitem)}
+            <ShareButton onClick={props.clickShare(newsitem.nameId, 3, newsitem)}
                          url={newsitem.url}
                          key={newsitem.nameId}
                          isShared={newsitem.isShared} />

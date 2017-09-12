@@ -5,6 +5,7 @@ import GraphicsInfo from '../components/tehtPage/tabsComponents/tehtava/Graphics
 import Kohdetiedot from '../components/tehtPage/tabsComponents/tehtava/Kohdetiedot';
 import KohdeIlmakuva from '../components/tehtPage/tabsComponents/tehtava/KohdeIlmakuva';
 import Kohdeyhteystiedot from '../components/tehtPage/tabsComponents/tehtava/Kohdeyhteystiedot';
+import Kohdesaapuminen from '../components/tehtPage/tabsComponents/tehtava/Kohdesaapuminen';
 import Kohdekortti from '../components/tehtPage/tabsComponents/tehtava/Kohdekortti';
 import Tehtava from '../components/tehtPage/tabsComponents/layouts/Tehtava';
 
@@ -87,9 +88,9 @@ const tabs = [
                         component: Kohdetiedot,
                         components: [
                             {
-                                name: 'Yhteystiedot',
-                                nameId: 'yhteystiedot',
-                                component: Kohdeyhteystiedot
+                                name: 'Saapuminen',
+                                nameId: 'saapuminen',
+                                component: Kohdesaapuminen
                             },
                             {
                                 name: 'Kohdekortti',

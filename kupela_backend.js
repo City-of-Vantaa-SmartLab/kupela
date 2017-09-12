@@ -49,6 +49,14 @@ module.exports.listen = function(server) {
       });
     });
 
+    socket.on('share', data => {
+      console.log("Shared content received: " + data.contenttype);
+      var data = {"datatype": data.contenttype, "content": data.content};
+      connections.forEach(connectedSocket => {
+          connectedSocket.emit('sharedData', data);
+      });
+    });
+
     socket.on('ozCommand', data => {
       console.log("Oz command received!");
       if(data.type == "activation") {
@@ -61,6 +69,12 @@ module.exports.listen = function(server) {
             else {
               socket.emit('message', 'Mission activated');
             }
+          });
+        }
+        else if(data.command == "arrival") {
+          console.log("Changing arrival");
+          connections.forEach(connectedSocket => {
+            connectedSocket.emit('dataIncoming', {datatype: "arrival", content: "next"});
           });
         }
       }
