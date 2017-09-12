@@ -467,7 +467,7 @@ img {
 */
 
 .journalViewArea {
-  height: 75%;
+  height: 60%;
 }
 
 .journalInputArea {
@@ -647,12 +647,12 @@ a .yhteystiedot {
 }
 .journalInputButton:active{
     color: whitesmoke;
-    
+
 }
 .journalInput{
     border: 2px solid #008CBA;
     margin-top: 15px;
-    
+
 }
 
 .graphicsinfo {
