@@ -18,13 +18,13 @@ const rescuefloorplan = [
         url: '../../../../resources/images/Pohjapiirros-sahkosiipi-saapuminen1.png'
     },
     {
-        title: 'Uloskäynnit',
+        title: '',
         name: 'Uloskäynnit',
         nameId: 'sahk2',
         url: '../../../../resources/images/19Pohjapiirros-sahkosiipi-reitit-suljetutreitit.png'
     },
     {
-        title: 'Savu1',
+        title: '',
         name: 'Savun leviäminen',
         nameId: 'sahk3',
         url: '../../../../resources/images/Pohjapiirros-sahkosiipi-savu1.png'
