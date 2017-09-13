@@ -7,6 +7,10 @@ const ButtonArea = (props) =>
   <div className='buttonArea'>
     <p>Buttons for application management:</p>
     <div className="ozbuttontextarea">
+      <p className="oztext">RESET EXERCISE</p>
+      <input className="oz-btn" type="button" onClick={props.clickReset()} value="RESET"/>
+    </div>
+    <div className="ozbuttontextarea">
       <p className="oztext">ACTIVATE VARIA MISSION</p>
       <input className="oz-btn" type="button" onClick={props.clickActivateMission()} value="ACTIVATE MISSION"/>
     </div>
@@ -33,6 +37,14 @@ const mapStateToProps = (ozbutton) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  clickReset() {
+    return () => {
+      var data = {};
+      data.type = "reset";
+      data.command = "hard";
+      dispatch(sendOzCommand(data));
+    }
+  },
   clickActivateMission(){
     return () => {
       var data = {};
