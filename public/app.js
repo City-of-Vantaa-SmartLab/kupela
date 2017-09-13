@@ -8,7 +8,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk'
 import { HashRouter, Route} from 'react-router-dom';
 import { getMissions, getOldMissions } from './reducer/missions/actions';
-import { getTabs } from './reducer/tabs/actions';
+import { getTabs, initNewTabs } from './reducer/tabs/actions';
 import { getPages } from './reducer/pages/actions';
 import { getImages } from './reducer/images/actions';
 import { getTexts } from './reducer/texts/actions';
@@ -52,6 +52,7 @@ const container = document.querySelector('#app-container');
 
 store.dispatch(getMissions());
 store.dispatch(getTabs());
+store.dispatch(initNewTabs());
 store.dispatch(getPages());
 store.dispatch(getImages());
 store.dispatch(getTexts());
