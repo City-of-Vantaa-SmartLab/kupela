@@ -729,3 +729,9 @@ a .yhteystiedot {
     font-size: 190%;
     font-weight: 700;
 }
+
+.newItem {
+  background-color: red;
+  display: inline-block;
+}
+

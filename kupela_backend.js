@@ -53,6 +53,9 @@ module.exports.listen = function(server) {
       addJournalMessage(message);
       connections.forEach(connectedSocket => {
           connectedSocket.emit('dataIncoming', message);
+          if(connectedSocket !== socket) {
+            connectedSocket.emit('newItems', {"page": "tehtava", "tikeOnly": "false"});
+          }
       });
     });
 
@@ -61,6 +64,9 @@ module.exports.listen = function(server) {
       var data = {"datatype": data.contenttype, "content": data.content};
       connections.forEach(connectedSocket => {
           connectedSocket.emit('sharedData', data);
+          if(connectedSocket !== socket) {
+            connectedSocket.emit('newItems', {"page": "someuutiset", "tikeOnly": "false"});
+          }
       });
     });
 
@@ -100,6 +106,7 @@ module.exports.listen = function(server) {
           connections.forEach(connectedSocket => {
             if(connectedSocket !== socket) {
               connectedSocket.emit('dataIncoming', {datatype: "messageset", content: newset});
+              connectedSocket.emit('newItems', {"page": "someuutiset", "tikeOnly": "true"});
             }
             else {
               socket.emit('message', 'Message set sent!');
@@ -172,7 +179,8 @@ function addJournalMessage(message) {
 
 function getTime() {
   var date = new Date();
-  var time = ((date.getHours()+3 < 10) ? "0":"") + date.getHours()+3;
+  var hours = date.getHours() + 3;
+  var time = ((hours < 10) ? "0":"") + hours;
   time += ":" + ((date.getMinutes() < 10) ? "0":"") + date.getMinutes();
   time += ":" + ((date.getSeconds() < 10) ? "0":"") + date.getSeconds();
   console.log(time);
