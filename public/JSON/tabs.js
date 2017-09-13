@@ -124,12 +124,7 @@ const tabs = [
                                 name: 'Kerrokset',
                                 nameId: 'sprinklerit',
                                 component: Sprinklerit
-                            }/*,
-                            {
-                                name: 'Kokoontumispaikka',
-                                nameId: 'kokoontumispaikka',
-                                component: Kokoontumispaikka
-                            }*/
+                            }
                         ]
                     },
                     {
@@ -152,11 +147,6 @@ const tabs = [
                                 name: 'Ilmakuva',
                                 nameId: 'ilmakuva',
                                 component: Ilmakuva
-                            },
-                            {
-                                name: 'Savun leviäminen',
-                                nameId: 'savunleviaminen',
-                                component: Savunleviaminen
                             }
                         ]
                     },

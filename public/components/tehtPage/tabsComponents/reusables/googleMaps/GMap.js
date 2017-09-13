@@ -11,7 +11,7 @@ const GMap = (props) =>
                 mapElement={
                     <div style={{ height: '100%', width: '100%' }}/>
                 }
-                zoom={13}
+                zoom={17}
                 center={ new google.maps.LatLng(item.subitem.lat, item.subitem.lng )}
                 mapTypeId={ props.maptype }
                 {...props}

@@ -1,5 +1,11 @@
 const rescuefloorplan = [
     {
+        title: '',
+        name: 'Saapuminen',
+        nameId: 'arrivalB',
+        url: '../../../../resources/images/reittikartta_molemmatreitit.png'
+    },
+    {
         title: '1.kerros, pääosa',
         name: 'Reitti kohteeseen',
         nameId: 'floor1',
