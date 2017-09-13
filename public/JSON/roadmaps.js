@@ -1,10 +1,10 @@
 const roadmaps = [
     {
-        name: 'Teknobulevardi 3',
+        name: 'Ojahaantie 5',
         nameId: 'teknobulevardi3',
         url: '../../../../pics/kartta.png',
-        lat: 60.305571,
-        lng: 24.964321
+        lat: 60.2657108,
+        lng: 24.8588994
     }
 ];
 
