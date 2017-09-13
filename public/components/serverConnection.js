@@ -7,6 +7,7 @@ import { addSharedText } from '../reducer/texts/actions';
 import { addSharedImage } from '../reducer/images/actions';
 import { addSharedNews } from '../reducer/news/actions';
 import { setUser } from '../reducer/user/actions';
+import { addNewItems } from '../reducer/tabs/actions';
 import io from 'socket.io-client';
 
 var socket = null;
@@ -53,8 +54,8 @@ export function messageMiddleware(store) {
 export default function (store) {
   //Connect to socket server, either localhost or bluemix
   //CHANGE THIS TO RUN LOCALLY
-  //socket = io.connect('localhost:80');
-  socket = io.connect('https://kupela.eu-de.mybluemix.net');
+  socket = io.connect('localhost:80');
+  //socket = io.connect('https://kupela.eu-de.mybluemix.net');
 
 
   socket.on('message', message => {
@@ -77,6 +78,7 @@ export default function (store) {
     else if(data.datatype == "journal") {
       console.log("New journal input received!");
       store.dispatch(addJournalEntry(data));
+      //store.dispatch(addNewItems("tehtava", 1));
     }
     else {
       store.dispatch(actions.receiveData(data));
@@ -87,14 +89,28 @@ export default function (store) {
     console.log("Shared data received");
     if(data.datatype == "text"){
       store.dispatch(addSharedText(data.content));
+      //store.dispatch(addNewItems("someuutiset", 1));
     }
     else if(data.datatype == "image") {
       store.dispatch(addSharedImage(data.content));
+      //store.dispatch(addNewItems("someuutiset", 1));
     }
     else if(data.datatype == "news") {
       store.dispatch(addSharedNews(data.content));
+      //store.dispatch(addNewItems("someuutiset", 1));
     }
 
+  });
+
+  socket.on('newItems', data => {
+    if(data.tikeOnly == "false"){
+      store.dispatch(addNewItems(data.page, 1));
+    }
+    else {
+      if(store.props.user.usertype == "tike") {
+        store.dispatch(addNewItems(data.page, 1));
+      }
+    }
   });
 
   socket.on('versionReady', data => {
