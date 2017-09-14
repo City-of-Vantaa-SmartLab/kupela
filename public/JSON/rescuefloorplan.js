@@ -20,8 +20,8 @@ const rescuefloorplan = [
     {
         title: 'Sähkösiipi',
         name: 'Reitti kohteeseen',
-        nameId: 'sahk1',
-        url: '../../../../resources/images/Pohjapiirros-sahkosiipi-saapuminen1.png'
+        nameId: 'reittisahko',
+        url: '../../../../resources/images/26Pohjapiirros-sahkosiipi-suljetutreitit-reittipalopaikalle.png'
     },
     {
         title: '',
@@ -32,13 +32,13 @@ const rescuefloorplan = [
     {
         title: '',
         name: 'Savun leviäminen',
-        nameId: 'sahk3',
-        url: '../../../../resources/images/Pohjapiirros-sahkosiipi-savu1.png'
+        nameId: 'smoke',
+        url: '../../../../resources/images/27Pohjapiirros-sahkosiipi-savu1.png'
     },
     {
         title: '',
         name: 'Liiketunnistimet',
-        nameId: 'sahk4',
+        nameId: 'motion',
         url: '../../../../resources/images/21Pohjapiirros-sahkosiipi-liiketun-oik.png'
     },
     {
@@ -56,8 +56,8 @@ const rescuefloorplan = [
     {
         title: '',
         name: 'Kokoontumispaikka',
-        nameId: 'sahk7',
-        url: '../../../../resources/images/Pohjapiirros-sahkosiipi-kokoontumispaikka.png'
+        nameId: 'kokoontuminen',
+        url: '../../../../resources/images/28Pohjapiirros-sahkosiipi-kokoontumispaikka.png'
     }
 ];
 

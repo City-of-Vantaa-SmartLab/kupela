@@ -14,7 +14,7 @@ const Tekstit = (props) =>
             <div className={text.visible === true ? "visible" : "notVisible"}>
             <div className={text.priority === "1" ? "someText priority" : "someText nonpriority"}>
               <div className="innerSomeText">
-              <a onClick={props.selectItem(text.id, 'GET_some', text)}>
+              <a>
                 <div className="someTextBlock">
                   <p className="someSender">{text.sender}</p>
                   <p className="someMessage">{text.message}</p>
@@ -52,3 +52,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(null, mapDispatchToProps)(Tekstit);
+
+
+//onClick={props.selectItem(text.id, 'GET_some', text)}

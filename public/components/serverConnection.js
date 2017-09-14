@@ -8,6 +8,7 @@ import { addSharedImage } from '../reducer/images/actions';
 import { addSharedNews } from '../reducer/news/actions';
 import { setUser } from '../reducer/user/actions';
 import { addNewItems } from '../reducer/tabs/actions';
+import { changeUrl } from '../reducer/floorplans/actions';
 import io from 'socket.io-client';
 
 var socket = null;
@@ -74,6 +75,10 @@ export default function (store) {
     else if(data.datatype == "arrival") {
       console.log("Arrival changed received");
       store.dispatch(changeArrival());
+    }
+    else if(data.datatype == "url") {
+      console.log("URL change received");
+      store.dispatch(changeUrl(data.plantype, data.url));
     }
     else if(data.datatype == "journal") {
       console.log("New journal input received!");
