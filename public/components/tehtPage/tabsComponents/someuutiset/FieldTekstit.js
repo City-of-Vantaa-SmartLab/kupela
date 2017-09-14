@@ -13,16 +13,13 @@ const FieldTekstit = (props) =>
           <div className={text.isShared === true ? "visible" : "notVisible"}>
             <div className={text.priority === "1" ? "someText priority" : "someText nonpriority"}>
               <div className="innerSomeText">
-              <a onClick={props.selectItem(text.id, 'GET_some', text)}>
                 <div className="someTextBlock">
                   <p className="someSender">{text.sender}</p>
                   <p className="someMessage">{text.message}</p>
                   <div className="someOther">
                     <p className="someTime">{text.time}</p>
-                    <p className="someLoc">{text.location}</p>
                   </div>
                 </div>
-              </a>
               </div>
             </div>
           </div>

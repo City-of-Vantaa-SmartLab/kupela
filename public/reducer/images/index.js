@@ -1,4 +1,5 @@
 import { LOAD_IMAGES, SHOW_ALL_IMAGES, SHOW_PRIOIMG_ONLY, SHARED_IMAGE_ADDED } from '../images/actions';
+import { RECEIVE_DATA } from '../serverConnection/actions';
 import { SET_INFO_SHARED } from '../tab/actions';
 
 const initialState = {
@@ -22,6 +23,24 @@ export default (state = initialState, action) => {
             ...state,
             images: newimages
           }
+        case RECEIVE_DATA:
+          if(action.data.datatype == "imageset") {
+            console.log("Images received");
+            var newimages = action.data.content.images;
+            newimages.map((c) => {
+              if(c.priority === "1" ) {
+                c.visible = true;
+              }
+              else {
+                c.visible = false;
+              }
+            });
+            return {
+              ...state,
+              images: newimages.concat(state.images)
+            }
+          }
+          return state;
         case SHOW_ALL_IMAGES:
           var newimages = state.images;
           newimages.map((c) => {

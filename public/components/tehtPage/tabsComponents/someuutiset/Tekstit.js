@@ -14,16 +14,15 @@ const Tekstit = (props) =>
             <div className={text.visible === true ? "visible" : "notVisible"}>
             <div className={text.priority === "1" ? "someText priority" : "someText nonpriority"}>
               <div className="innerSomeText">
-              <a>
+
                 <div className="someTextBlock">
                   <p className="someSender">{text.sender}</p>
                   <p className="someMessage">{text.message}</p>
                   <div className="someOther">
                     <p className="someTime">{text.time}</p>
-                    <p className="someLoc">{text.location}</p>
                   </div>
                 </div>
-              </a>
+
               </div>
               {props.buttons.map((b) =>
                   {text.nameId===b.id ? text.isShared=b.isShared : false }

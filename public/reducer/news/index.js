@@ -1,4 +1,5 @@
 import { LOAD_NEWS, SHOW_ALL_NEWS, SHOW_PRIONEWS_ONLY, SHARED_NEWS_ADDED } from './actions';
+import { RECEIVE_DATA } from '../serverConnection/actions';
 import { SET_INFO_SHARED } from '../tab/actions';
 
 const initialState = {
@@ -22,6 +23,24 @@ export default (state = initialState, action) => {
             ...state,
             newsitems: newnews
           }
+        case RECEIVE_DATA:
+          if(action.data.datatype == "newsset") {
+            console.log("News received");
+            var newmessages = action.data.content.newsitems;
+            newmessages.map((c) => {
+              if(c.priority === "1" ) {
+                c.visible = true;
+              }
+              else {
+                c.visible = false;
+              }
+            });
+            return {
+              ...state,
+              newsitems: newmessages.concat(state.newsitems)
+            }
+          }
+          return state;
         case SHOW_ALL_NEWS:
           var newnews = state.newsitems;
           newnews.map((c) => {
