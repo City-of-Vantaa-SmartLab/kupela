@@ -47,6 +47,10 @@ module.exports.listen = function(server) {
       socket.emit('dataIncoming', message);
     });
 
+    socket.on('getJournal', data => {
+      var message = {"datatype": "oldJournal", "content": journal};
+    });
+
     socket.on('journalInput', data => {
       console.log("Journal input received: " + data.unit + ": " + data.input);
       var message = {"datatype": "journal", "sender": data.unit, "time": getTime(), "message": data.input};

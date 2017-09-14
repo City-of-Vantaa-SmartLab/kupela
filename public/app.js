@@ -36,6 +36,7 @@ import { getPelastussuunnitelmatab } from './reducer/pelastussuunnitelmatab/acti
 import { getVaarallisetaineettab } from './reducer/vaarallisetaineettab/actions';
 import { getArrivals } from './reducer/arrival/actions';
 import { loadFrontpageMaps } from './reducer/frontpagemap/actions';
+import { getOldJournal } from './reducer/journal/actions';
 
 import startServerConnection, {messageMiddleware} from './components/serverConnection';
 
@@ -86,6 +87,7 @@ store.dispatch(getArrivals());
 startServerConnection(store);
 
 store.dispatch(getOldMissions());
+store.dispatch(getOldJournal());
 
 ReactDOM.render(
     <Provider store={store}>
