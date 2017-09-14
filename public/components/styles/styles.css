@@ -405,12 +405,16 @@ img {
     grid-area: c;
     padding: 5px;
     display: inline-block;
+    height: 80%;
 }
 
 .frontpageMapArea {
     grid-area: d;
     padding: 5px;
     display: inline-block;
+}
+
+.testArea { 
 }
 
 .userButtonArea {
@@ -808,6 +812,7 @@ a .yhteystiedot {
     float: left;
 }
 
+
 .kuvat img, .uutiset img, .jaetut img{
     max-width: 100%;
     object-fit: cover;
@@ -841,5 +846,3 @@ a .yhteystiedot {
     border-radius: 10px;  
     background-color: #ffffff; 
 }
-
-/* Stretch image */

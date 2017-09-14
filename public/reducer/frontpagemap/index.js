@@ -2,7 +2,7 @@ import { FRONT_MAP_LOAD, SELECT_MAP } from './actions';
 
 const initialState = {
   maps: [],
-  selectedMap: '0'
+  selectedMap: '2'
 };
 
 export default(state = initialState, action) => {
@@ -11,7 +11,7 @@ export default(state = initialState, action) => {
           return {
             ...state,
             maps: action.frontmaps,
-            selectedMap: '0'
+            selectedMap: '2'
           }
         case SELECT_MAP:
           return {

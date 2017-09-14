@@ -11,6 +11,7 @@ export function loadFrontpageMaps() {
 }
 
 export function selectMap(index) {
+  console.log("Selecting map: " + index);
   return {
     type: SELECT_MAP,
     index

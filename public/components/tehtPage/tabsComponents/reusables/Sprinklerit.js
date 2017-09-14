@@ -4,7 +4,7 @@ const Sprinklerit = (props) => (
     <div className="sprinklerit">
         <p><b>Kerrokset:</b></p>
         <ul className="nav nav-pills">
-            {props.floorplans.map((s) =>
+            {props.floorplans.floorplans.map((s) =>
                 <span>
                     <p><b>{s.title}</b></p>
                     <li className={props.filter.arr.findIndex(a => a.id === s.nameId) != -1 ? "selected" : "unselected"}>

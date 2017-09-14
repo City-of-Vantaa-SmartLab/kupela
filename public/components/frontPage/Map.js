@@ -5,14 +5,15 @@ import StartRoadMap from '../tehtPage/tabsComponents/reusables/googleMaps/StartR
 
 const Map = (props) => (
     <div className="frontpageMapArea">
-        <p><b>Tehtävät kartalla: {props.frontpagemap.maps.length}</b></p>
+        <p><b>Tehtävät kartalla:</b></p>
+        <div className="scrollableArea">
         {props.frontpagemap.maps.map((frontmap) => (
-          <div className="scrollableArea">
+          <div className="testArea">
           {props.frontpagemap.selectedMap == frontmap.index ? (
             <StartRoadMap
                 key={frontmap.nameId}
                 containerElement={
-                    <div style={{ height: '100%', width: '100%' }}/>
+                    <div style={{ height: '650px', width: '850px' }}/>
                 }
                 mapElement={
                     <div style={{ height: '100%', width: '100%' }}/>
@@ -22,10 +23,10 @@ const Map = (props) => (
                 mapTypeId={ frontmap.maptype }
                 {...props}
             />
-          ) : (<p>Karttaa ei saatavilla</p>)}
-        </div>
+          ) : (null)}
+          </div>
         ))}
-
+        </div>
     </div>
 );
 

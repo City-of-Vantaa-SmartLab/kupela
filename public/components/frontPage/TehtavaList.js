@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { setCurrentTehtava, getTehtavaProfile } from '../../reducer/tehtava/actions';
 
+
 //code from: https://scotch.io/courses/getting-started-with-react-and-redux/displaying-our-characters
 const TehtavaList = ({ tehtavat, setTehtava }) =>
     <div id='tehtava-list' className="frontpageMissionArea">
@@ -24,6 +25,7 @@ const mapDispatchToProps = dispatch => ({
         return() => {
             dispatch(setCurrentTehtava(id));
             dispatch(getTehtavaProfile(id));
+            
         };
     },
 });
