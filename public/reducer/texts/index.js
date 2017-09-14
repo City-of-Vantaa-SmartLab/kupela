@@ -38,7 +38,7 @@ export default (state = initialState, action) => {
             });
             return {
               ...state,
-              messages: state.messages.concat(newmessages)
+              messages: newmessages.concat(state.messages)
             }
           }
           return state;

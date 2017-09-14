@@ -172,7 +172,7 @@ function loadActiveMission() {
 }
 
 function addMission(mission) {
-  addedMissions.push(mission);
+  addedMissions.unshift(mission);
 }
 
 function loadSetOfMessages(no) {
@@ -191,7 +191,7 @@ function loadSetOfMessages(no) {
 }
 
 function addJournalMessage(message) {
-  journal.journalmessages.push(message);
+  journal.journalmessages.unshift(message);
 }
 
 function getTime() {
