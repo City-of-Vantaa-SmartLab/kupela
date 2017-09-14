@@ -167,7 +167,7 @@ img {
     height: 90vh;
 }
 
-.subconten .kohdetiedot > .someuutiset > .tekstit,
+.subcontent .kohdetiedot > .someuutiset > .tekstit,
 .kuvatvideot > .streetview,
 .dokumentaatio > .lisatiedot {
     grid-area: a;
@@ -213,10 +213,10 @@ img {
 }
 
 .subtablayout {
+    height: 86%;
     display: grid;
-    grid-template-columns: 10% 20% 50% 10%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "c a b d" "c a b d";
+    grid-template-columns: 10% 20% 60%;
+    grid-template-areas: "c a b " "c a b ";
 }
 
 .subitemMenu {
