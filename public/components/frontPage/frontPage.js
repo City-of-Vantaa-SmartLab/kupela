@@ -7,8 +7,10 @@ import ChangingContent from './ChangingContent';
 const FrontPage = () =>
     <div className="frontpageContent">
         <Map/>
-        <UserButtons/>
-        <MissionList/>
+        <div className="frontPageLeftContent">
+          <UserButtons/>
+          <MissionList/>
+        </div>
     </div>;
 
 export default FrontPage;
