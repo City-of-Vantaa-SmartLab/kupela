@@ -42,6 +42,10 @@ const ButtonArea = (props) =>
       <p className="oztext">CHANGE MOTION, 12:50, KAIKKI PAIKALLA</p>
       <input className="oz-btn" type="button" onClick={props.clickChangeUrl("motion", "../../../../resources/images/22Pohjapiirros-sahkosiipi-liiketun-molemmat.png")} value="CHANGE MOTION"/>
     </div>
+    <div className="ozbuttontextarea">
+      <p className="oztext">CHANGE MOTION ROUTE, 12:50, KAIKKI PAIKALLA</p>
+      <input className="oz-btn" type="button" onClick={props.clickChangeUrl("routeMotion", "../../../../resources/images/15Pohjapiirros-sahkosiipi-staattiset-kaikki+halytin+liiketun-oikvas-reitti5.png")} value="CHANGE MOTION ROUTE"/>
+    </div>
   </div>;
 
 const mapStateToProps = (ozbutton) => ({

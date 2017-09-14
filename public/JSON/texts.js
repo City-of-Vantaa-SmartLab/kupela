@@ -1,57 +1,48 @@
 const texts = [
     {
-        nameId: "teksti1",
-        sender: "Taeyang",
-        message: "Fire emergency",
-        time: "12:22",
-        location: "Tikkurila",
+        nameId: "teksti01",
+        sender: "Vantaan ammattiopisto Varia - Vantaa Vocational College Varia",
+        message: "Tervetuloa #maahanmuuttaja messuille torstaina #vantaanvaria'an Hyvää ohjelmaa, hauskoja ihmisiä, tietoa #ammatillinenkoulutus #vantaa'lla https://t.co/P4V64z8tRf",
+        time: "Tiistaina, 19:20",
+        location: "Vantaa",
         tags: "Fire",
-        priority: "1"
+        priority: "2"
     },
     {
-        nameId: "teksti2",
-        sender: "Matti",
-        message: "Mitä se sanoi?",
-        time: "12:24",
+        nameId: "teksti02",
+        sender: "Vantaan ammattiopisto Varia - Vantaa Vocational College Varia",
+        message: "Varian Suomi 100 -tempaukset starttaavat syksyn osalta: Varian korjausrakentajien aikuisryhmä ehti ekana! Joukko opiskelijoita keittää nimittäin asiakkaille punamultaa Övre Nybackan Rakennusperinnepäivillä ensi lauantaina 9.9. #tervetuloa #punamulta #ammatillinenkoulutus #suomi100varia #varia100tuntiaseuraa",
+        time: "Keskiviikkona, 14:58",
+        location: "Vantaa",
+        tags: "Fire",
+        priority: "2"
+    },
+    {
+        nameId: "teksti03",
+        sender: "Varia Hiusala - Facebook",
+        message: "Vapaita aikoja tarjolla päivällä sekä illalla hiuspalveluihin. Varaa omasi netistä www.varia.phorest.me/book tai puhelimitse 0983924125. Tervetuloa ",
+        time: "Keskiviikkona, 19:26",
         location: "Tikkurila",
         tags: "Fire",
         priority: "2"
     },
     {
-        nameId: "teksti3",
-        sender: "Santeri",
-        message: "Vissii tulee jotai savua tuolta",
-        time: "12:25",
-        location: "Tikkurila",
+        nameId: "teksti04",
+        sender: "Suri Lapisto > Myyrmäki",
+        message: "Malminkartanon porrasgate jatkuu :D Nyt oli osa maalattu mustaksi. Tänään portaat saivat kuitenkin väriä pintaan. Tämä lämmittää tällaisen matskufriikin sydäntä. Eiköhän anneta niiden jo olla? Väliin on myös jätetty luvatta maalattuja mustia ja valkoisia portaita.",
+        time: "16.8., 16:17",
+        location: "Vantaa",
         tags: "Fire",
         priority: "1"
     },
     {
-        nameId: "teksti4",
-        sender: "Markus",
-        message: "LOL, varmaa Joelin kone hajos",
-        time: "12:32",
-        location: "Tikkurila",
+        nameId: "teksti05",
+        sender: "Vantti > Varia, Ojahaantie",
+        message: "Power Cup käynnistyy tänään Vantaalla. Vantin keittiöissä valmistaudutaan tuhansien lentopalloilijoiden ruokailuihin. Ammattiopisto Varia Ojahaan keittiössä vanttilaiset valmistavat ja pakkaavat kinkkukiusausta ensimmäisen tapahtumapäivän lounaaksi. Vantti toivottaa hyvää menestystä turnauksen joukkueille! http://www.vantaa.fi/uutisia/kaikki_uutiset/101/0/132674",
+        time: "8.6., 19:01",
+        location: "Vantaa",
         tags: "Fire",
         priority: "2"
-    },
-    {
-        nameId: "teksti5",
-        sender: "Santeri",
-        message: "Käyn kattoos",
-        time: "12:33",
-        location: "Tikkurila",
-        tags: "Fire",
-        priority: "2"
-    },
-    {
-        nameId: "teksti6",
-        sender: "Santeri",
-        message: "Ei hajonnu, oli naapuriluokassa piirtoheitin syttyny tuleen. Nyt siellä oli joku kymmenen kaveria ämpäreiden kanssa kantamassa vettä yhden savuavan koneen päälle. Olis ehkä päässy helpommalla jos olis vaan heittäny sen lumihankeen ikkunasta",
-        time: "12:38",
-        location: "Tikkurila",
-        tags: "Fire",
-        priority: "1"
     },
 ];
 

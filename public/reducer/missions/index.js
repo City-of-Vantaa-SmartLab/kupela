@@ -14,13 +14,14 @@ export default(state = initialState, action) => {
         case ADD_OLD_MISSIONS:
           return {
             ...state,
-            missiondata: state.missiondata.concat(action.missions)
+            missiondata: action.missions.concat(state.missiondata)
           }
         case ADD_MISSION:
           console.log("Adding mission");
+          state.missiondata.unshift(action.mission);
           return {
             ...state,
-            missiondata: state.missiondata.concat(action.mission)
+            missiondata: state.missiondata
           }
         default:
             return state;

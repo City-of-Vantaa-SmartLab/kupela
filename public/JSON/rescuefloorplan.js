@@ -44,8 +44,8 @@ const rescuefloorplan = [
     {
         title: '',
         name: 'Reitti liiketunnistimelle',
-        nameId: 'sahk5',
-        url: '../../../../resources/images/20Pohjapiirros-sahkosiipi-reittiuhrille.png'
+        nameId: 'routeMotion',
+        url: '../../../../resources/images/14Pohjapiirros-sahkosiipi-staattiset-kaikki+halytin+liiketun-oikvas-reitti4.png'
     },
     {
         title: '',

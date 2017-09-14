@@ -49,6 +49,7 @@ module.exports.listen = function(server) {
 
     socket.on('getJournal', data => {
       var message = {"datatype": "oldJournal", "content": journal};
+      socket.emit('dataIncoming', message);
     });
 
     socket.on('journalInput', data => {
@@ -171,7 +172,7 @@ function loadActiveMission() {
 }
 
 function addMission(mission) {
-  addedMissions.push(mission);
+  addedMissions.unshift(mission);
 }
 
 function loadSetOfMessages(no) {
@@ -190,7 +191,7 @@ function loadSetOfMessages(no) {
 }
 
 function addJournalMessage(message) {
-  journal.journalmessages.push(message);
+  journal.journalmessages.unshift(message);
 }
 
 function getTime() {

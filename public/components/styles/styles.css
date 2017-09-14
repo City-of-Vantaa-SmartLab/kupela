@@ -214,9 +214,9 @@ img {
 
 .subtablayout {
     display: grid;
-    grid-template-columns: 10% 20% 50% 10%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "c a b d" "c a b d";
+    grid-template-columns: 20% 80%;
+    grid-template-areas: "a b";
+    height: 85%;
 }
 
 .subitemMenu {
@@ -395,26 +395,32 @@ img {
 .frontpageContent {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 30% 70%;
-    grid-template-areas: "a b" "c d";
+    grid-template-areas: "a b";
     background-color: white;
     padding-left: 1.5%;
+    height: 85vh;
+}
+
+.frontPageLeftContent {
+  display: grid;
+  grid-template-rows: 30% 70%;
+  grid-template-areas: "a" "b";
 }
 
 .frontpageMissionArea {
-    grid-area: c;
+    grid-area: b;
     padding: 5px;
     display: inline-block;
     height: 80%;
 }
 
 .frontpageMapArea {
-    grid-area: d;
+    grid-area: b;
     padding: 5px;
     display: inline-block;
 }
 
-.testArea { 
+.testArea {
 }
 
 .userButtonArea {
@@ -435,7 +441,7 @@ img {
     border: none;
     padding: 5px;
     margin: 10px;
-    height: 50%;
+    height: 20%;
     width: 30%;
 }
 
@@ -452,7 +458,7 @@ img {
 }
 
 .missionTitle {
-  font-size: 120%;
+  font-size: 100%;
   font-weight: bold;
 }
 
@@ -843,6 +849,6 @@ a .yhteystiedot {
 }
 
 ::-webkit-scrollbar-track {
-    border-radius: 10px;  
-    background-color: #ffffff; 
+    border-radius: 10px;
+    background-color: #ffffff;
 }
