@@ -37,6 +37,7 @@ import mission from './mission';
 import user from './user';
 import journal from './journal';
 import arrival from './arrival';
+import frontpagemap from './frontpagemap';
 
 
 //based on: https://scotch.io/courses/getting-started-with-react-and-redux/
@@ -77,5 +78,6 @@ export default combineReducers({
     user,
     journal,
     arrival,
+    frontpagemap,
     ozadmin
 });
