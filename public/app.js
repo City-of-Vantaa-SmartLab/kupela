@@ -35,6 +35,7 @@ import { getEscape } from './reducer/escape/actions';
 import { getPelastussuunnitelmatab } from './reducer/pelastussuunnitelmatab/actions';
 import { getVaarallisetaineettab } from './reducer/vaarallisetaineettab/actions';
 import { getArrivals } from './reducer/arrival/actions';
+import { loadFrontpageMaps } from './reducer/frontpagemap/actions';
 
 import startServerConnection, {messageMiddleware} from './components/serverConnection';
 
@@ -51,6 +52,7 @@ const store = createStore(reducer, composeEnhancers(
 const container = document.querySelector('#app-container');
 
 store.dispatch(getMissions());
+store.dispatch(loadFrontpageMaps());
 store.dispatch(getTabs());
 store.dispatch(initNewTabs());
 store.dispatch(getPages());
@@ -79,6 +81,7 @@ store.dispatch(getEscape());
 store.dispatch(getPelastussuunnitelmatab());
 store.dispatch(getVaarallisetaineettab());
 store.dispatch(getArrivals());
+
 
 startServerConnection(store);
 
