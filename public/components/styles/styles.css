@@ -167,7 +167,7 @@ img {
     height: 90vh;
 }
 
-.subcontent .kohdetiedot > .someuutiset > .tekstit,
+.subconten .kohdetiedot > .someuutiset > .tekstit,
 .kuvatvideot > .streetview,
 .dokumentaatio > .lisatiedot {
     grid-area: a;
@@ -213,10 +213,10 @@ img {
 }
 
 .subtablayout {
-    height: 86%;
     display: grid;
-    grid-template-columns: 10% 20% 60%;
-    grid-template-areas: "c a b " "c a b ";
+    grid-template-columns: 10% 20% 50% 10%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: "c a b d" "c a b d";
 }
 
 .subitemMenu {
@@ -791,4 +791,32 @@ a .yhteystiedot {
 
 .messageButtonArea .journalInputButton {
     float: left;
+}
+
+
+.kuvat img, .uutiset img{
+    max-width: 100%;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;  
+    background-color: #ffffff; 
 }
