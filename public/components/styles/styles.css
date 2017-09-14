@@ -126,7 +126,7 @@ img {
     grid-template-rows: 10% 90%;
     grid-template-areas: "b" "a";
     background-color: white;
-    height: 90vh;
+    height: 80vh;
 }
 
 .tehtava {
@@ -167,7 +167,7 @@ img {
     height: 90vh;
 }
 
-.subconten .kohdetiedot > .someuutiset > .tekstit,
+.subcontent .kohdetiedot > .someuutiset > .tekstit,
 .kuvatvideot > .streetview,
 .dokumentaatio > .lisatiedot {
     grid-area: a;
@@ -224,7 +224,7 @@ img {
     display: grid;
     grid-template-rows: 30% 30% 30% 30% 30%;
     grid-template-areas: "a" "b" "c" "d" "e";
-    padding-right: 15px;
+    padding-right: 5px;
     height: 55vh;
 }
 
@@ -232,7 +232,8 @@ img {
     grid-area: b;
     display: inline-block;
     position: relative;
-    left: 100px;
+    left: 20px;
+    padding: 10px;
 }
 
 .subitemContent > img {
@@ -252,25 +253,25 @@ img {
 .kartta,
 .turvallisuushenkilosto,
 .savunleviaminen {
-    grid-area: b;
+    grid-area: a;
     display: inline-block;
 }
 
 .pelastussuunnitelma,
 .kemikaalikortti,
 .subitemMenu > .streetview {
-    grid-area: c;
+    grid-area: a;
     display: inline-block;
 }
 
 .yhteystiedot,
 .escape {
-    grid-area: d;
+    grid-area: a;
     display: inline-block;
 }
 
 .luetteloaineista {
-    grid-area: e;
+    grid-area: a;
     display: inline-block;
 }
 
@@ -398,7 +399,7 @@ img {
     grid-template-areas: "a b";
     background-color: white;
     padding-left: 1.5%;
-    height: 85vh;
+    height: 80vh;
 }
 
 .frontPageLeftContent {
@@ -418,9 +419,6 @@ img {
     grid-area: b;
     padding: 5px;
     display: inline-block;
-}
-
-.testArea {
 }
 
 .userButtonArea {
@@ -503,7 +501,7 @@ img {
   grid-template-columns: 33% 33% 33%;
   grid-template-areas: "a b c";
   background-color: white;
-  height: 100%;
+  height: 78vh;
 }
 
 .tekstit, .kuvat, .uutiset {
@@ -511,8 +509,17 @@ img {
   padding: 15px;
 }
 
+.tekstit > .scrollableArea, .kuvat > .scrollableArea, .uutiset > .scrollableArea {
+  height: 90%
+}
+
 .scrollableArea {
   height: 95%;
+  overflow-y: scroll;
+}
+
+.someuutisetfield > .tekstit, .someuutisetfield > .kuvat, .someuutisetfield > .uutiset {
+  height: 580px;
   overflow-y: scroll;
 }
 
@@ -801,17 +808,16 @@ a .yhteystiedot {
 }
 
 .ilmakuva {
-    margin-top: 85px;
+    margin-top: 155px;
 }
 
 .sprinklerit {
     position: relative;
-    top: -50px;
 }
 
 .kemikaalikortti {
     position: relative;
-    top: 50px;
+    top: 210px;
 }
 
 .messageButtonArea .journalInputButton {

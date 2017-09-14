@@ -67,9 +67,10 @@ export default (state = initialState, action) => {
         case SET_INFO_SHARED:
           if(action.itemtype == 2)
           {
+            state.sharedimages.unshift(action.content);
             return {
               ...state,
-              sharedimages: state.sharedimages.concat(action.content)
+              sharedimages: state.sharedimages
             }
           }
           else {
@@ -79,9 +80,10 @@ export default (state = initialState, action) => {
           var img = action.image;
           img.isShared = true;
           if(state.sharedimages.length > 0) {
+            state.sharedimages.unshift(img);
             return {
               ...state,
-              sharedimages: state.sharedimages.concat(img)
+              sharedimages: state.sharedimages
             }
           }
           else {

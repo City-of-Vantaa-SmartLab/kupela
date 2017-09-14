@@ -67,9 +67,10 @@ export default (state = initialState, action) => {
         case SET_INFO_SHARED:
           if(action.itemtype == 3)
           {
+            state.sharednews.unshift(action.content);
             return {
               ...state,
-              sharednews: state.sharednews.concat(action.content)
+              sharednews: state.sharednews
             }
           }
           else {
@@ -78,10 +79,12 @@ export default (state = initialState, action) => {
         case SHARED_NEWS_ADDED:
           var news = action.news;
           news.isShared = true;
+
           if(state.sharednews.length > 0) {
+            state.sharednews.unshift(news);
             return {
               ...state,
-              sharednews: state.sharednews.concat(news)
+              sharednews: state.sharednews
             }
           }
           else {

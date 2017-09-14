@@ -68,9 +68,10 @@ export default (state = initialState, action) => {
         case SET_INFO_SHARED:
           if(action.itemtype == 1)
           {
+            state.sharedmessages.unshift(action.content);
             return {
               ...state,
-              sharedmessages: state.sharedmessages.concat(action.content)
+              sharedmessages: state.sharedmessages
             }
           }
           else {
@@ -80,9 +81,10 @@ export default (state = initialState, action) => {
           var message = action.text;
           message.isShared = true;
           if(state.sharedmessages.length > 0) {
+            state.sharedmessages.unshift(message);
             return {
               ...state,
-              sharedmessages: state.sharedmessages.concat(message)
+              sharedmessages: state.sharedmessages
             }
           }
           else {

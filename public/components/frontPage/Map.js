@@ -13,7 +13,7 @@ const Map = (props) => (
             <StartRoadMap
                 key={frontmap.nameId}
                 containerElement={
-                    <div style={{ height: '650px', width: '850px' }}/>
+                    <div style={{ height: '550px', width: '600px' }}/>
                 }
                 mapElement={
                     <div style={{ height: '100%', width: '100%' }}/>
