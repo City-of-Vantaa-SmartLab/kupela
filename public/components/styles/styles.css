@@ -145,7 +145,6 @@ img {
     grid-template-rows: 50% 50%;
     grid-template-areas: "a" "b";
     background-color: white;
-    //height: 90vh;
     margin: 5px 5px 5px 10px;
     padding: 15px;
 }
@@ -233,6 +232,7 @@ img {
     grid-area: b;
     display: inline-block;
     position: relative;
+    left: 100px;
 }
 
 .subitemContent > img {
@@ -699,12 +699,12 @@ a .yhteystiedot {
 
 .sprinklerit .unselected{
     width: 190px;
-    padding: 5px 10px 0 10px;
+    padding: 5px 10px 0px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     border-radius: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-left: 20px;
     font-family: 'Encode Sans';
     cursor: pointer;
@@ -725,13 +725,63 @@ a .yhteystiedot {
     cursor: pointer;
 }
 
-.sprinklerit > p {
+.subitemMenu > p {
     font-size: 190%;
     font-weight: 700;
 }
 
+.subitemMenu .unselected{
+    width: 190px;
+    padding: 5px 10px 0 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    font-family: 'Encode Sans';
+    cursor: pointer;
+    border: 1px solid darkgoldenrod;
+}
+
+.subitemMenu .selected{
+    border: 1px solid darkgoldenrod;
+    width: 190px;
+    padding: 5px 10px 0 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    font-family: 'Encode Sans';
+    cursor: pointer;
+}
+
+.sprinklerit > p {
+    font-size: 190%;
+    font-weight: 700;
+    display: none; /* Text "Kerrokset:" disabled by Hans */
+}
 .newItem {
   background-color: red;
   display: inline-block;
 }
 
+.ilmakuva {
+    margin-top: 75px;
+}
+
+.sprinklerit {
+    position: relative;
+    top: -50px;
+}
+
+.kemikaalikortti {
+    position: relative;
+    top: 50px;
+}
+
+.messageButtonArea .journalInputButton {
+    float: left;
+}
