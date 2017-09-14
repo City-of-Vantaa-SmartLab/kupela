@@ -49,6 +49,7 @@ module.exports.listen = function(server) {
 
     socket.on('getJournal', data => {
       var message = {"datatype": "oldJournal", "content": journal};
+      socket.emit('dataIncoming', message);
     });
 
     socket.on('journalInput', data => {
