@@ -2,7 +2,7 @@ const vaarallisetaineettab = [
     {
         name: 'Pelastussuunnitelma',
         nameId: 'pelastus1',
-        url: '../../../../resources/images/pelastussuunnitelma.png'
+        url: '../../../../resources/docs/Pelsu_Myyrmäki.pdf'
     },
     {
         name: 'Yhteystiedot',
@@ -12,7 +12,7 @@ const vaarallisetaineettab = [
     {
         name: 'Kohdekortti',
         nameId: 'kohdekortti1',
-        url: '../../../../resources/images/kohdekortti.png'
+        url: '../../../../resources/docs/kohdekortti.png'
     }
 ];
 

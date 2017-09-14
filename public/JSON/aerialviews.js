@@ -1,10 +1,10 @@
 const aerialviews = [
     {
-        name: 'Ilmakuva 1',
+        name: 'Ilmakuva, Varia',
         nameId: 'ilmakuva1',
         url: '../../../../pics/ilmakuva.png',
-        lat: 60.305571,
-        lng: 24.964321
+        lat: 60.2657108,
+        lng: 24.8588994
     }
 ];
 
