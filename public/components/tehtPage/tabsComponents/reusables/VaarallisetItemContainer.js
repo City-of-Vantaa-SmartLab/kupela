@@ -2,7 +2,7 @@ import React from 'react';
 
 const ItemContainer = (props) => (
     <div className="">
-        <ul>
+        <ul className="nav nav-pills">
             {props.vaarallisetaineettab.map((h) =>
                 <li className={ props.filter.arr.findIndex(a => a.id===h.nameId)!=-1 ? "selected" : "unselected"}>
                     <a onClick={props.selectSubItem(h.nameId, h, 'noLayer', 'none')}>

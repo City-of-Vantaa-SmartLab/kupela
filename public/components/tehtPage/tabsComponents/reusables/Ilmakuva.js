@@ -8,7 +8,7 @@ const Ilmakuva = (props) => {
     if(props.carousel.carousel === true) {
         return (
             <div className="ilmakuva">
-                <ul>
+                <ul className="nav nav-pills">
                     {props.aerialviews.map((view) =>
                         <li className={ props.filter.arr.findIndex(a => a.id===view.nameId)!=-1 ? "selected" : "unselected"}>
                             <a onClick={props.selectSubItem(view.nameId, view, 'noLayer', 'satellite')}>

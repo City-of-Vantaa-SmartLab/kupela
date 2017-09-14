@@ -4,7 +4,7 @@ import Showcase from './templates/Showcase';
 const Kemikaalikortti = (props) => (
     <div className="kemikaalikortti">
         <p><b>Kemikaalikortit:</b></p>
-        <ul>
+        <ul className="nav nav-pills">
         {props.chemicalcards.map((card) =>
             <a onClick={props.selectSubItem(card.nameId, card, 'noLayer', 'none')}>
                 <li className={ props.filter.arr.findIndex(a => a.id===card.nameId)!=-1 ? "selected" : "unselected"}>

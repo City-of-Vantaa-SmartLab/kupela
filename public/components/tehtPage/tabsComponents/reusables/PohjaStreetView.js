@@ -36,7 +36,7 @@ const staticStreetUrl2 = '&fov=90&heading=235&pitch=10&key=AIzaSyCIr0jpTVj-s9pNn
 
 const PohjaStreetView = (props) => (
     <div className="streetview">
-        <ul>
+        <ul className="nav nav-pills">
             {props.streetviews.map((view) =>
                 <li className={ props.filter.arr.findIndex(a => a.id===view.nameId)!=-1 ? "selected" : "unselected"}>
                     <a onClick={props.selectSubItem(view.nameId, view, 'noLayer', 'streetview')}>

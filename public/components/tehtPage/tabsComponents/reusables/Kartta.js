@@ -36,7 +36,7 @@ const staticMapUrl2 = '&zoom=13&size=600x300&maptype=roadmap&key=AIzaSyCIr0jpTVj
 
 const Kartta = (props) => (
     <div className="kartta">
-        <ul>
+        <ul className="nav nav-pills">
             {props.roadmaps.map((m) =>
                 <li className={ props.filter.arr.findIndex(a => a.id===m.nameId)!=-1 ? "selected" : "unselected"}>
                     <a onClick={ props.selectSubItem(m.nameId, m, 'noLayer', 'roadmap') }>
