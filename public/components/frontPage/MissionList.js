@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setCurrentMission, setMissionProfile } from '../../reducer/mission/actions';
+import { selectMap } from '../../reducer/frontpagemap/actions';
 
 const MissionList = ({ missions, profile, setMission }) =>
     <div id='mission-list' className="frontpageMissionArea">
@@ -32,6 +33,7 @@ const mapDispatchToProps = dispatch => ({
         return() => {
             dispatch(setCurrentMission(mission.id));
             dispatch(setMissionProfile(mission));
+            dispatch(selectMap(mission.id));
         }
     }
 });

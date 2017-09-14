@@ -4,10 +4,13 @@ import { connect } from 'react-redux';
 
 const Kohdesaapuminen = (props) => (
     <div className="saapuminen">
-        <h2>Saapuminen:</h2>
+
         {props.arrival.arrivallist.map((c, i) =>
           i+1 == props.arrival.currentArrival ? (
-            <Showcase src={c.url} />
+            <div>
+              <h2>{c.name}</h2>
+              <Showcase src={c.url} />
+            </div>
           ) : (null)
         )}
     </div>

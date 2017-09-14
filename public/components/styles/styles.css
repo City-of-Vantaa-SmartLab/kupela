@@ -411,13 +411,16 @@ img {
     grid-area: b;
     padding: 5px;
     display: inline-block;
-    height: 85%;
+    height: 80%;
 }
 
 .frontpageMapArea {
     grid-area: b;
     padding: 5px;
     display: inline-block;
+}
+
+.testArea { 
 }
 
 .userButtonArea {
