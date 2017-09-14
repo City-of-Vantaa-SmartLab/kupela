@@ -97,6 +97,18 @@ module.exports.listen = function(server) {
             }
           });
         }
+        else if(data.command == "url") {
+          console.log("Changing url");
+
+          connections.forEach(connectedSocket => {
+            if(connectedSocket !== socket) {
+            connectedSocket.emit('dataIncoming', {datatype: "url", plantype: data.plantype, url: data.url});
+            }
+            else {
+              socket.emit('message', 'URL changed');
+            }
+          });
+        }
       }
       else if(data.type == "send") {
         if(data.command == "messages") {

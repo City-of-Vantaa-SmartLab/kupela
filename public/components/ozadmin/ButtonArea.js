@@ -4,7 +4,7 @@ import { sendMessages } from '../../reducer/ozadmin/actions';
 import { sendMessage, sendOzCommand } from '../../reducer/serverConnection/actions';
 
 const ButtonArea = (props) =>
-  <div className='buttonArea'>
+  <div className='buttonArea scrollableArea'>
     <p>Buttons for application management:</p>
     <div className="ozbuttontextarea">
       <p className="oztext">RESET EXERCISE</p>
@@ -16,11 +16,15 @@ const ButtonArea = (props) =>
     </div>
     <div className="ozbuttontextarea">
       <p className="oztext">SEND FIRST MESSAGESET, 12:30, HÄLYTYS</p>
-      <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(1)} value="SEND MESSAGES"/>
+      <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(1)} value="SEND MESSAGES 1"/>
     </div>
     <div className="ozbuttontextarea">
       <p className="oztext">SEND SECOND MESSAGES, 12:35, EKA AUTO MATKALLA</p>
-      <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(2)} value="SEND MESSAGES"/>
+      <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(2)} value="SEND MESSAGES 2"/>
+    </div>
+    <div className="ozbuttontextarea">
+      <p className="oztext">CHANGE SMOKE, 12:35, KAIKKI MATKALLA</p>
+      <input className="oz-btn" type="button" onClick={props.clickChangeUrl("smoke", "../../../../resources/images/27Pohjapiirros-sahkosiipi-savu2.png")} value="CHANGE SMOKE 1"/>
     </div>
     <div className="ozbuttontextarea">
       <p className="oztext">CHANGE ARRIVAL, 12:37, EKA PAIKALLA</p>
@@ -28,7 +32,15 @@ const ButtonArea = (props) =>
     </div>
     <div className="ozbuttontextarea">
       <p className="oztext">SEND THIRD MESSAGES, 12:39, EKA PAIKALLA, TOINEN MATKALLA</p>
-      <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(3)} value="SEND MESSAGES"/>
+      <input className="oz-btn" type="button" onClick={props.clickSendMessageSet(3)} value="SEND MESSAGES 3"/>
+    </div>
+    <div className="ozbuttontextarea">
+      <p className="oztext">CHANGE SMOKE, 12:40, KAIKKI PAIKALLA</p>
+      <input className="oz-btn" type="button" onClick={props.clickChangeUrl("smoke", "../../../../resources/images/27Pohjapiirros-sahkosiipi-savu3.png")} value="CHANGE SMOKE 2"/>
+    </div>
+    <div className="ozbuttontextarea">
+      <p className="oztext">CHANGE MOTION, 12:50, KAIKKI PAIKALLA</p>
+      <input className="oz-btn" type="button" onClick={props.clickChangeUrl("motion", "../../../../resources/images/22Pohjapiirros-sahkosiipi-liiketun-molemmat.png")} value="CHANGE MOTION"/>
     </div>
   </div>;
 
@@ -64,6 +76,18 @@ const mapDispatchToProps = dispatch => ({
       dispatch(sendOzCommand(data));
 
       console.log("Send messages " + setNo + " clicked!");
+    }
+  },
+  clickChangeUrl(type, url){
+    return () => {
+      var data = {};
+      data.type = "activation";
+      data.command = "url";
+      data.plantype = type;
+      data.url = url;
+      dispatch(sendOzCommand(data));
+
+      console.log("URL change clicked!");
     }
   },
   clickChangeArrival(){
