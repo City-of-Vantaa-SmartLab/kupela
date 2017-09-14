@@ -9,12 +9,12 @@ const JournalInput = (props) =>
     <div className="textInputArea">
       <p className="journalInputText">Viesti Tilannepäiväkirjaan:</p>
       <InputHandler/>
-      <input type="button" className="journalInputButton" onClick={props.sendMessage(props.journalInput.inputValue, props.user.uservalue)} value="Lähetä viesti"/>
+      <input type="button" className="journalInputButtonSend" onClick={props.sendMessage(props.journalInput.inputValue, props.user.uservalue)} value="Lähetä"/>
     </div>
     <div className="messageButtonArea">
-      <input type="button" className="journalInputButton" onClick={props.sendMessage("Yksikkö matkalla!", props.user.uservalue)} value="YKSIKKÖ MATKALLA"/>
-      <input type="button" className="journalInputButton" onClick={props.sendMessage("Yksikkö kohteessa!", props.user.uservalue)} value="YKSIKKÖ KOHTEESSA"/>
-      <input type="button" className="journalInputButton" onClick={props.sendMessage("Tehtävä suoritettu!", props.user.uservalue)} value="TEHTÄVÄ SUORITETTU"/>
+      <input type="button" className="journalInputButton" onClick={props.sendMessage("Yksikkö matkalla!", props.user.uservalue)} value="MATKALLA"/>
+      <input type="button" className="journalInputButton" onClick={props.sendMessage("Yksikkö kohteessa!", props.user.uservalue)} value="KOHTEESSA"/>
+      <input type="button" className="journalInputButton" onClick={props.sendMessage("Tehtävä suoritettu!", props.user.uservalue)} value="SUORITETTU"/>
     </div>
   </div>;
 

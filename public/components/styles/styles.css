@@ -395,27 +395,21 @@ img {
 .frontpageContent {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-areas: "a b";
+    grid-template-rows: 30% 70%;
+    grid-template-areas: "a b" "c d";
     background-color: white;
     padding-left: 1.5%;
-    height: 85vh;
-}
-
-.frontPageLeftContent {
-    display: grid;
-    grid-template-rows: 30% 70%;
-    grid-template-areas: "a" "b";
 }
 
 .frontpageMissionArea {
-    grid-area: b;
+    grid-area: c;
     padding: 5px;
     display: inline-block;
     height: 80%;
 }
 
 .frontpageMapArea {
-    grid-area: b;
+    grid-area: d;
     padding: 5px;
     display: inline-block;
 }
@@ -441,7 +435,7 @@ img {
     border: none;
     padding: 5px;
     margin: 10px;
-    height: 20%;
+    height: 50%;
     width: 30%;
 }
 
@@ -458,7 +452,7 @@ img {
 }
 
 .missionTitle {
-  font-size: 100%;
+  font-size: 120%;
   font-weight: bold;
 }
 
@@ -646,7 +640,7 @@ a .yhteystiedot {
     background-color: #008CBA;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -654,8 +648,30 @@ a .yhteystiedot {
     border-radius: 2px;
     margin-top: 20px;
     font-family: 'Encode Sans';
+    margin-right: 10px;
 }
+
+
 .journalInputButton:active{
+    color: whitesmoke;
+
+}
+
+.journalInputButtonSend{
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 2px 6px 3px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2px;
+    margin-left: 10px;
+    font-family: 'Encode Sans';
+}
+
+.journalInputButtonSend:active{
     color: whitesmoke;
 
 }
@@ -707,7 +723,7 @@ a .yhteystiedot {
     font-weight: 700;
 }
 
-.sprinklerit .unselected{
+.subitemMenu .sprinklerit .unselected{
     width: 190px;
     padding: 5px 10px 0px 10px;
     text-align: center;
@@ -721,7 +737,7 @@ a .yhteystiedot {
     border: 1px solid darkgoldenrod;
 }
 
-.sprinklerit .selected{
+.subitemMenu .sprinklerit .selected{
     border: 1px solid darkgoldenrod;
     width: 190px;
     padding: 5px 10px 0 10px;
@@ -779,7 +795,7 @@ a .yhteystiedot {
 }
 
 .ilmakuva {
-    margin-top: 75px;
+    margin-top: 85px;
 }
 
 .sprinklerit {
@@ -797,8 +813,15 @@ a .yhteystiedot {
 }
 
 
-.kuvat img, .uutiset img{
+.kuvat img, .uutiset img, .jaetut img{
     max-width: 100%;
+    object-fit: cover;
+}
+
+.kohdekortti {
+    position: relative;
+    bottom: 70px;
+    max-height: 100px;
 }
 
 ::-webkit-scrollbar {
