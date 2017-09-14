@@ -1,7 +1,6 @@
 import * as actions from '../reducer/serverConnection/actions';
-import { GET_OLD_MISSIONS } from '../reducer/missions/actions';
-import { addMission, addOldMissions } from '../reducer/missions/actions';
-import { addJournalEntry } from '../reducer/journal/actions';
+import { addMission, addOldMissions, GET_OLD_MISSIONS } from '../reducer/missions/actions';
+import { addJournalEntry, addOldJournal, GET_OLD_JOURNAL } from '../reducer/journal/actions';
 import { changeArrival } from '../reducer/arrival/actions';
 import { addSharedText } from '../reducer/texts/actions';
 import { addSharedImage } from '../reducer/images/actions';
@@ -25,6 +24,9 @@ export function messageMiddleware(store) {
       }
       else if(action.type === GET_OLD_MISSIONS) {
         socket.emit('getMissions', "");
+      }
+      else if(action.type === GET_OLD_JOURNAL) {
+        socket.emit('getJournal', "");
       }
       else if(action.type === actions.SEND_MESSAGE) {
         socket.emit('message', action.message);
@@ -55,8 +57,8 @@ export function messageMiddleware(store) {
 export default function (store) {
   //Connect to socket server, either localhost or bluemix
   //CHANGE THIS TO RUN LOCALLY
-  //socket = io.connect('localhost:80');
-  socket = io.connect('https://kupela.eu-de.mybluemix.net');
+  socket = io.connect('localhost:80');
+  //socket = io.connect('https://kupela.eu-de.mybluemix.net');
 
 
   socket.on('message', message => {
@@ -72,6 +74,10 @@ export default function (store) {
       console.log("Loaded old missions");
       store.dispatch(addOldMissions(data.content));
     }
+    else if(data.datatype == "oldJournal") {
+      console.log("Loaded old journal messages");
+      store.dispatch(addOldJournal(data.content.journalmessages));
+    }
     else if(data.datatype == "arrival") {
       console.log("Arrival changed received");
       store.dispatch(changeArrival());
@@ -83,7 +89,6 @@ export default function (store) {
     else if(data.datatype == "journal") {
       console.log("New journal input received!");
       store.dispatch(addJournalEntry(data));
-      //store.dispatch(addNewItems("tehtava", 1));
     }
     else {
       store.dispatch(actions.receiveData(data));

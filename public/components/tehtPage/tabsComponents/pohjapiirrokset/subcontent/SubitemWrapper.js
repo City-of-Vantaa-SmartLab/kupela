@@ -4,7 +4,9 @@ import SubitemMenu from './SubitemMenu';
 
 const SubitemWrapper = (props) => (
     <div className="subtablayout">
-        <SubitemMenu {...props} />
+        <div className="scrollableArea">
+          <SubitemMenu {...props} />
+        </div>
         <SubitemContent />
     </div>
 );

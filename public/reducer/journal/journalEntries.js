@@ -1,4 +1,4 @@
-import { NEW_JOURNAL_ENTRY } from './actions';
+import { NEW_JOURNAL_ENTRY, ADD_OLD_JOURNAL } from './actions';
 
 const initialState = {
   entries: []
@@ -6,14 +6,19 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch(action.type) {
+    case ADD_OLD_JOURNAL:
+      return {
+        ...state,
+        entries: action.entries
+      }
     case NEW_JOURNAL_ENTRY:
-
       var newentry = {"sender": action.sender, "time": action.time, "message": action.message};
       console.log("New messages received" + newentry.sender + " " + newentry.time + " " + newentry.message);
       console.log("No of entries: " + state.entries.length);
+      state.entries.push(newentry);
       return {
         ...state,
-        messages: state.entries.push(newentry)
+        entries: state.entries
       }
     default:
       return state;
