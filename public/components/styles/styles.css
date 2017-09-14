@@ -395,20 +395,27 @@ img {
 .frontpageContent {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 30% 70%;
-    grid-template-areas: "a b" "c d";
+    grid-template-areas: "a b";
     background-color: white;
     padding-left: 1.5%;
+    height: 85vh;
+}
+
+.frontPageLeftContent {
+    display: grid;
+    grid-template-rows: 30% 70%;
+    grid-template-areas: "a" "b";
 }
 
 .frontpageMissionArea {
-    grid-area: c;
+    grid-area: b;
     padding: 5px;
     display: inline-block;
+    height: 85%;
 }
 
 .frontpageMapArea {
-    grid-area: d;
+    grid-area: b;
     padding: 5px;
     display: inline-block;
 }
@@ -431,7 +438,7 @@ img {
     border: none;
     padding: 5px;
     margin: 10px;
-    height: 50%;
+    height: 20%;
     width: 30%;
 }
 
@@ -448,7 +455,7 @@ img {
 }
 
 .missionTitle {
-  font-size: 120%;
+  font-size: 100%;
   font-weight: bold;
 }
 
