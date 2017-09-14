@@ -636,7 +636,7 @@ a .yhteystiedot {
     background-color: #008CBA;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -644,8 +644,30 @@ a .yhteystiedot {
     border-radius: 2px;
     margin-top: 20px;
     font-family: 'Encode Sans';
+    margin-right: 10px;
 }
+
+
 .journalInputButton:active{
+    color: whitesmoke;
+
+}
+
+.journalInputButtonSend{
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 2px 6px 3px 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2px;
+    margin-left: 10px;
+    font-family: 'Encode Sans';
+}
+
+.journalInputButtonSend:active{
     color: whitesmoke;
 
 }
@@ -697,7 +719,7 @@ a .yhteystiedot {
     font-weight: 700;
 }
 
-.sprinklerit .unselected{
+.subitemMenu .sprinklerit .unselected{
     width: 190px;
     padding: 5px 10px 0px 10px;
     text-align: center;
@@ -711,7 +733,7 @@ a .yhteystiedot {
     border: 1px solid darkgoldenrod;
 }
 
-.sprinklerit .selected{
+.subitemMenu .sprinklerit .selected{
     border: 1px solid darkgoldenrod;
     width: 190px;
     padding: 5px 10px 0 10px;
@@ -769,7 +791,7 @@ a .yhteystiedot {
 }
 
 .ilmakuva {
-    margin-top: 75px;
+    margin-top: 85px;
 }
 
 .sprinklerit {
@@ -786,8 +808,15 @@ a .yhteystiedot {
     float: left;
 }
 
-.kuvat img, .uutiset img{
+.kuvat img, .uutiset img, .jaetut img{
     max-width: 100%;
+    object-fit: cover;
+}
+
+.kohdekortti {
+    position: relative;
+    bottom: 70px;
+    max-height: 100px;
 }
 
 ::-webkit-scrollbar {
@@ -812,3 +841,5 @@ a .yhteystiedot {
     border-radius: 10px;  
     background-color: #ffffff; 
 }
+
+/* Stretch image */
