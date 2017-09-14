@@ -14,13 +14,13 @@ import { contentShared } from '../../../../reducer/serverConnection/actions';
 const SomeComponents = (props) =>
     <div>
       {props.user.usertype === "field" ? (
-        <div className={props.user.usertype === "field" ? "someuutisetfield" : "someuutiset"}>
+        <div className="someuutisetfield">
           <FieldTekstit {...props}/>
           <FieldKuvat {...props}/>
           <FieldUutiset {...props}/>
         </div>
       ) : (
-        <div className={props.user.usertype === "field" ? "someuutisetfield" : "someuutiset"}>
+        <div className="someuutiset">
           <Tekstit {...props}/>
           <Kuvat {...props}/>
           <Uutiset {...props}/>
